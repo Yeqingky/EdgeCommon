@@ -2,6 +2,8 @@
 
 ## v1.4.2-rc.1 (2026-11-13)
 
+- 移除WAF告警动作描述中的商业版标记
+- 授权相关菜单文案改为授权信息和授权认证
 - systemconfigs.AdminUIConfig 移除 ShowOpenSourceInfo 字段
 - 升级 Go 工具链到 1.27.4, 修复标准库 CVE (GO-2026-6859, GO-2026-6809 等)
 - golang.org/x/net v0.26.0 -> v0.62.0, 修复 HTTP/2 系列 DoS 漏洞 (GO-2026-6617, GO-2026-6612, GO-2026-6611, GO-2026-6603, GO-2026-5026)

@@ -113,7 +113,7 @@ const (
 	AdminMenu_ServerWAFPolicies                                 langs.MessageCode = "admin_menu@server_waf_policies"                                      // WAF策略
 	AdminMenu_Servers                                           langs.MessageCode = "admin_menu@servers"                                                  // 网站列表
 	AdminMenu_SettingAdvancedSettings                           langs.MessageCode = "admin_menu@setting_advanced_settings"                                // 高级设置
-	AdminMenu_SettingAuthority                                  langs.MessageCode = "admin_menu@setting_authority"                                        // 商业版本
+	AdminMenu_SettingAuthority                                  langs.MessageCode = "admin_menu@setting_authority"                                        // 授权信息
 	AdminMenu_SettingBasicSettings                              langs.MessageCode = "admin_menu@setting_basic_settings"                                   // 基础设置
 	AdminMenu_Settings                                          langs.MessageCode = "admin_menu@settings"                                                 // 系统设置
 	AdminMenu_TicketCategory                                    langs.MessageCode = "admin_menu@ticket_category"                                          // 分类
@@ -131,7 +131,7 @@ const (
 	AdminSetting_TabAdminServer                                 langs.MessageCode = "admin_setting@tab_admin_server"                                      // Web服务
 	AdminSetting_TabAdminUI                                     langs.MessageCode = "admin_setting@tab_admin_ui"                                          // 管理界面设置
 	AdminSetting_TabAPINodes                                    langs.MessageCode = "admin_setting@tab_api_nodes"                                         // API节点
-	AdminSetting_TabAuthority                                   langs.MessageCode = "admin_setting@tab_authority"                                         // 商业版认证
+	AdminSetting_TabAuthority                                   langs.MessageCode = "admin_setting@tab_authority"                                         // 授权认证
 	AdminSetting_TabBackup                                      langs.MessageCode = "admin_setting@tab_backup"                                            // 备份
 	AdminSetting_TabClientBrowsers                              langs.MessageCode = "admin_setting@tab_client_browsers"                                   // 浏览器库
 	AdminSetting_TabClientOperationSystems                      langs.MessageCode = "admin_setting@tab_client_operation_systems"                          // 操作系统库

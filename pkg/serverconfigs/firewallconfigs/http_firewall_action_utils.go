@@ -62,7 +62,7 @@ var AllActions = []*HTTPFirewallActionDefinition{
 	{
 		Name:        "告警",
 		Code:        HTTPFirewallActionNotify,
-		Description: "向集群的消息接收人发送消息通知（商业版）。",
+		Description: "向集群的消息接收人发送消息通知。",
 		Category:    HTTPFirewallActionCategoryVerify,
 	},
 	{
