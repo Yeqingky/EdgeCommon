@@ -13,7 +13,7 @@ import (
 	"github.com/iwind/TeaGo/types"
 )
 
-// func列表，code => type
+// func列表,code => type
 var funcMap = map[string]reflect.Value{
 	"float":  reflect.ValueOf(FuncFloat),
 	"round":  reflect.ValueOf(FuncRound),
@@ -219,7 +219,7 @@ func callFunc(funcCode string, args []interface{}) (value interface{}, err error
 	return
 }
 
-// 检查字面量，支持true, false, null, nil和整数数字、浮点数数字（不支持e）
+// 检查字面量,支持true, false, null, nil和整数数字,浮点数数字(不支持e)
 func checkLiteral(identifier string) (result interface{}, err error) {
 	if len(identifier) == 0 {
 		return "", nil

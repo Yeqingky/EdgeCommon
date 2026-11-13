@@ -46,7 +46,7 @@ type OriginConfig struct {
 	ResponseHeaderPolicyRef *shared.HTTPHeaderPolicyRef `yaml:"responseHeaderPolicyRef" json:"responseHeaderPolicyRef"` // 响应Header`
 	ResponseHeaderPolicy    *shared.HTTPHeaderPolicy    `yaml:"responseHeaderPolicy" json:"responseHeaderPolicy"`       // 响应Header策略
 
-	// 健康检查URL，目前支持：
+	// 健康检查URL,目前支持:
 	// - http|https 返回2xx-3xx认为成功
 	HealthCheck *HealthCheckConfig `yaml:"healthCheck" json:"healthCheck"` // TODO
 
@@ -57,7 +57,7 @@ type OriginConfig struct {
 	FTPServerRef *FTPServerRef    `yaml:"ftpServerRef" json:"ftpServerRef"` // TODO
 	FTPServer    *FTPServerConfig `yaml:"ftpServer" json:"ftpServer"`       // TODO
 
-	IsOk bool `yaml:"isOk" json:"isOk"` // 是否可以正常访问，仅仅用于运行时检查
+	IsOk bool `yaml:"isOk" json:"isOk"` // 是否可以正常访问,仅仅用于运行时检查
 
 	connTimeoutDuration time.Duration
 	readTimeoutDuration time.Duration

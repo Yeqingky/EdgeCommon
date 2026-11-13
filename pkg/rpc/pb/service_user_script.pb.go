@@ -121,7 +121,7 @@ type FindUserScriptWithMD5Request struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	CodeMD5 string `protobuf:"bytes,1,opt,name=codeMD5,proto3" json:"codeMD5,omitempty"` // 代码MD5（32位）
+	CodeMD5 string `protobuf:"bytes,1,opt,name=codeMD5,proto3" json:"codeMD5,omitempty"` // 代码MD5(32位)
 }
 
 func (x *FindUserScriptWithMD5Request) Reset() {

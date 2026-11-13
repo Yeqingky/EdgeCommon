@@ -31,7 +31,7 @@ type CreateNodeRequest struct {
 	NodeLogin     *NodeLogin `protobuf:"bytes,3,opt,name=nodeLogin,proto3" json:"nodeLogin,omitempty"`          // 节点登录信息
 	NodeGroupId   int64      `protobuf:"varint,4,opt,name=nodeGroupId,proto3" json:"nodeGroupId,omitempty"`     // 节点所属分组
 	// Deprecated: Marked as deprecated in service_node.proto.
-	DnsDomainId  int64    `protobuf:"varint,5,opt,name=dnsDomainId,proto3" json:"dnsDomainId,omitempty"`   // 节点域名ID，此参数已过期，请不要再使用
+	DnsDomainId  int64    `protobuf:"varint,5,opt,name=dnsDomainId,proto3" json:"dnsDomainId,omitempty"`   // 节点域名ID,此参数已过期,请不要再使用
 	DnsRoutes    []string `protobuf:"bytes,6,rep,name=dnsRoutes,proto3" json:"dnsRoutes,omitempty"`        // 节点DNS线路列表
 	NodeRegionId int64    `protobuf:"varint,7,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 节点所属区域
 }
@@ -329,7 +329,7 @@ type ListEnabledNodesMatchRequest struct {
 	Keyword         string `protobuf:"bytes,6,opt,name=keyword,proto3" json:"keyword,omitempty"`              // 关键词
 	NodeGroupId     int64  `protobuf:"varint,7,opt,name=nodeGroupId,proto3" json:"nodeGroupId,omitempty"`     // 节点分组ID
 	NodeRegionId    int64  `protobuf:"varint,8,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"`   // 节点区域ID
-	Level           int32  `protobuf:"varint,9,opt,name=level,proto3" json:"level,omitempty"`                 // 节点级别，目前只有1（L1）和2（L2）
+	Level           int32  `protobuf:"varint,9,opt,name=level,proto3" json:"level,omitempty"`                 // 节点级别,目前只有1(L1)和2(L2)
 	CpuAsc          bool   `protobuf:"varint,20,opt,name=cpuAsc,proto3" json:"cpuAsc,omitempty"`
 	CpuDesc         bool   `protobuf:"varint,21,opt,name=cpuDesc,proto3" json:"cpuDesc,omitempty"`
 	MemoryAsc       bool   `protobuf:"varint,22,opt,name=memoryAsc,proto3" json:"memoryAsc,omitempty"`
@@ -577,7 +577,7 @@ type FindAllEnabledNodesWithNodeClusterIdRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	NodeClusterId    int64 `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`       // 集群ID
-	IncludeSecondary bool  `protobuf:"varint,2,opt,name=includeSecondary,proto3" json:"includeSecondary,omitempty"` // 是否检查节点的从集群，如果为false，则只检查主集群ID
+	IncludeSecondary bool  `protobuf:"varint,2,opt,name=includeSecondary,proto3" json:"includeSecondary,omitempty"` // 是否检查节点的从集群,如果为false,则只检查主集群ID
 }
 
 func (x *FindAllEnabledNodesWithNodeClusterIdRequest) Reset() {
@@ -1093,7 +1093,7 @@ type FindCurrentNodeConfigRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// 由于登录信息中已经包含了节点信息，所以这里不需要nodeId
+	// 由于登录信息中已经包含了节点信息,所以这里不需要nodeId
 	Version         int64 `protobuf:"varint,1,opt,name=version,proto3" json:"version,omitempty"`
 	Compress        bool  `protobuf:"varint,2,opt,name=compress,proto3" json:"compress,omitempty"`               // 是否压缩
 	NodeTaskVersion int64 `protobuf:"varint,3,opt,name=nodeTaskVersion,proto3" json:"nodeTaskVersion,omitempty"` // 通知任务版本
@@ -4366,7 +4366,7 @@ type CountAllNodeRegionInfoRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NodeRegionId int64 `protobuf:"varint,1,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID，可选
+	NodeRegionId int64 `protobuf:"varint,1,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID,可选
 }
 
 func (x *CountAllNodeRegionInfoRequest) Reset() {
@@ -4414,7 +4414,7 @@ type ListNodeRegionInfoRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NodeRegionId int64 `protobuf:"varint,1,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID，可选
+	NodeRegionId int64 `protobuf:"varint,1,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID,可选
 	Offset       int64 `protobuf:"varint,2,opt,name=offset,proto3" json:"offset,omitempty"`
 	Size         int64 `protobuf:"varint,3,opt,name=size,proto3" json:"size,omitempty"`
 }
@@ -5172,7 +5172,7 @@ type UpdateNodeScheduleInfoRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	NodeId             int64    `protobuf:"varint,1,opt,name=nodeId,proto3" json:"nodeId,omitempty"`                         // 节点ID
-	OfflineDay         string   `protobuf:"bytes,2,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期，格式YYYYMMDD
+	OfflineDay         string   `protobuf:"bytes,2,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期,格式YYYYMMDD
 	IsBackupForCluster bool     `protobuf:"varint,3,opt,name=isBackupForCluster,proto3" json:"isBackupForCluster,omitempty"` // 是否为集群备份节点
 	IsBackupForGroup   bool     `protobuf:"varint,4,opt,name=isBackupForGroup,proto3" json:"isBackupForGroup,omitempty"`     // 是否为分组备份节点
 	BackupIPs          []string `protobuf:"bytes,5,rep,name=backupIPs,proto3" json:"backupIPs,omitempty"`                    // 备用IP
@@ -6229,7 +6229,7 @@ type FindNodeScheduleInfoResponse_ScheduleInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	OfflineDay         string   `protobuf:"bytes,1,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期，格式YYYYMMDD
+	OfflineDay         string   `protobuf:"bytes,1,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期,格式YYYYMMDD
 	IsBackupForCluster bool     `protobuf:"varint,2,opt,name=isBackupForCluster,proto3" json:"isBackupForCluster,omitempty"` // 是否为集群备份节点
 	IsBackupForGroup   bool     `protobuf:"varint,3,opt,name=isBackupForGroup,proto3" json:"isBackupForGroup,omitempty"`     // 是否为分组备份节点
 	BackupIPs          []string `protobuf:"bytes,4,rep,name=backupIPs,proto3" json:"backupIPs,omitempty"`                    // 备用IP
@@ -6312,7 +6312,7 @@ type FindAllNodeScheduleInfoWithNodeClusterIdResponse_ScheduleInfo struct {
 	NodeName           string   `protobuf:"bytes,2,opt,name=nodeName,proto3" json:"nodeName,omitempty"`                      // 节点名称
 	NodeGroupId        int64    `protobuf:"varint,3,opt,name=nodeGroupId,proto3" json:"nodeGroupId,omitempty"`               // 节点分组ID
 	NodeGroupName      string   `protobuf:"bytes,4,opt,name=nodeGroupName,proto3" json:"nodeGroupName,omitempty"`            // 节点分组名称
-	OfflineDay         string   `protobuf:"bytes,5,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期，格式YYYYMMDD
+	OfflineDay         string   `protobuf:"bytes,5,opt,name=offlineDay,proto3" json:"offlineDay,omitempty"`                  // 下线日期,格式YYYYMMDD
 	IsBackupForCluster bool     `protobuf:"varint,6,opt,name=isBackupForCluster,proto3" json:"isBackupForCluster,omitempty"` // 是否为集群备份节点
 	IsBackupForGroup   bool     `protobuf:"varint,7,opt,name=isBackupForGroup,proto3" json:"isBackupForGroup,omitempty"`     // 是否为分组备份节点
 	BackupIPs          []string `protobuf:"bytes,8,rep,name=backupIPs,proto3" json:"backupIPs,omitempty"`                    // 备用IP

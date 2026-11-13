@@ -83,7 +83,7 @@ message UpdateAPINodeRequest {
 	bool restIsOn = 8; // 是否启用API
 	bytes restHTTPJSON = 9; // API地址HTTP地址配置 @link json:http_protocol
 	bytes restHTTPSJSON = 10; // API地址HTTPS地址配置 @link json:https_protocol
-	bool isPrimary = 11; // 是否为主要API节点，日常任务主要运行在主要API节点上
+	bool isPrimary = 11; // 是否为主要API节点,日常任务主要运行在主要API节点上
 }
 
 // 删除API节点
@@ -136,9 +136,9 @@ message FindCurrentAPINodeVersionRequest {
 
 message FindCurrentAPINodeVersionResponse {
 	string version = 1; // 版本号
-	string os = 2; // 系统代号，比如linux
-	string arch = 3; // 架构，比如amd64
-	string role = 4; // 角色，通常为api
+	string os = 2; // 系统代号,比如linux
+	string arch = 3; // 架构,比如amd64
+	string role = 4; // 角色,通常为api
 }
 
 // 获取当前API节点的信息

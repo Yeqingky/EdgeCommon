@@ -24,7 +24,7 @@ type HTTPAuthSubRequestMethod struct {
 	URL    string `json:"url"`
 	Method string `json:"method"`
 
-	// TODO 增加自定义Header、超时、证书等
+	// TODO 增加自定义Header,超时,证书等
 
 	isFullURL bool
 }
@@ -94,7 +94,7 @@ func (this *HTTPAuthSubRequestMethod) Filter(req *http.Request, doSubReq func(su
 		return status >= 200 && status < 300, "", false, nil
 	}
 
-	// TODO 需要将Header和StatusCode、ResponseBody输出到客户端
+	// TODO 需要将Header和StatusCode,ResponseBody输出到客户端
 	newReq.Header.Set("Referer", scheme+"://"+host+req.URL.RequestURI())
 	resp, err := httpAuthSubRequestHTTPClient.Do(newReq)
 	if err != nil {

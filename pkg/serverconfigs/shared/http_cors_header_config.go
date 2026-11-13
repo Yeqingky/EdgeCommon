@@ -5,7 +5,7 @@ type HTTPCORSHeaderConfig struct {
 	IsOn              bool     `yaml:"isOn" json:"isOn"`
 	AllowMethods      []string `yaml:"allowMethods" json:"allowMethods"`
 	AllowOrigin       string   `yaml:"allowOrigin" json:"allowOrigin"`           // TODO
-	AllowCredentials  bool     `yaml:"allowCredentials" json:"allowCredentials"` // TODO，实现时需要升级以往的老数据
+	AllowCredentials  bool     `yaml:"allowCredentials" json:"allowCredentials"` // TODO,实现时需要升级以往的老数据
 	ExposeHeaders     []string `yaml:"exposeHeaders" json:"exposeHeaders"`
 	MaxAge            int32    `yaml:"maxAge" json:"maxAge"`
 	RequestHeaders    []string `yaml:"requestHeaders" json:"requestHeaders"` // TODO

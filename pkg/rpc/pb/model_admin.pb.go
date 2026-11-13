@@ -34,7 +34,7 @@ type Admin struct {
 	Modules         []*AdminModule `protobuf:"bytes,7,rep,name=Modules,proto3" json:"Modules,omitempty"`                   // 有权限的模块
 	OtpLogin        *Login         `protobuf:"bytes,8,opt,name=otpLogin,proto3" json:"otpLogin,omitempty"`                 // OTP认证
 	CanLogin        bool           `protobuf:"varint,9,opt,name=canLogin,proto3" json:"canLogin,omitempty"`                // 是否可以登录
-	HasWeakPassword bool           `protobuf:"varint,10,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 是否设置了弱密码，只有超级管理员能看到此项
+	HasWeakPassword bool           `protobuf:"varint,10,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 是否设置了弱密码,只有超级管理员能看到此项
 }
 
 func (x *Admin) Reset() {

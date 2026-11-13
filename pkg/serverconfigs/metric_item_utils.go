@@ -40,12 +40,12 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 	case MetricItemCategoryHTTP:
 		return []*shared.Definition{
 			{
-				Name:        "客户端地址（IP）",
+				Name:        "客户端地址(IP)",
 				Code:        "${remoteAddr}",
-				Description: "会依次根据X-Forwarded-For、X-Real-IP、RemoteAddr获取，适用于前端可能有别的反向代理的情形，存在被伪造的可能",
+				Description: "会依次根据X-Forwarded-For,X-Real-IP,RemoteAddr获取,适用于前端可能有别的反向代理的情形,存在被伪造的可能",
 			},
 			{
-				Name:        "直接客户端地址（IP）",
+				Name:        "直接客户端地址(IP)",
 				Code:        "${rawRemoteAddr}",
 				Description: "返回直接连接服务的客户端原始IP地址",
 			},
@@ -57,12 +57,12 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 			{
 				Name:        "请求URI",
 				Code:        "${requestURI}",
-				Description: "包含参数，比如/hello?name=lily",
+				Description: "包含参数,比如/hello?name=lily",
 			},
 			{
 				Name:        "请求路径",
 				Code:        "${requestPath}",
-				Description: "不包含参数，比如/hello",
+				Description: "不包含参数,比如/hello",
 			},
 			{
 				Name:        "完整URL",
@@ -72,7 +72,7 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 			{
 				Name:        "请求方法",
 				Code:        "${requestMethod}",
-				Description: "比如GET、POST等",
+				Description: "比如GET,POST等",
 			},
 			{
 				Name:        "请求协议Scheme",
@@ -82,12 +82,12 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 			{
 				Name:        "文件扩展名",
 				Code:        "${requestPathExtension}",
-				Description: "请求路径中的文件扩展名，包括点符号，比如.html、.png",
+				Description: "请求路径中的文件扩展名,包括点符号,比如.html,.png",
 			},
 			{
 				Name:        "小写文件扩展名",
 				Code:        "${requestPathLowerExtension}",
-				Description: "请求路径中的文件扩展名小写形式，包括点符号，比如.html、.png",
+				Description: "请求路径中的文件扩展名小写形式,包括点符号,比如.html,.png",
 			},
 			{
 				Name:        "主机名",
@@ -98,7 +98,7 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 			{
 				Name:        "HTTP协议",
 				Code:        "${proto}",
-				Description: "包含版本的HTTP请求协议，类似于HTTP/1.0",
+				Description: "包含版本的HTTP请求协议,类似于HTTP/1.0",
 			},
 			{
 				Name:        "URL参数值",
@@ -118,12 +118,12 @@ func FindAllMetricKeyDefinitions(category MetricItemCategory) []*shared.Definiti
 			{
 				Name:        "Header值",
 				Code:        "${header.NAME}",
-				Description: "单个Header值，比如${header.User-Agent}",
+				Description: "单个Header值,比如${header.User-Agent}",
 			},
 			{
 				Name:        "Cookie值",
 				Code:        "${cookie.NAME}",
-				Description: "单个cookie值，比如${cookie.sid}",
+				Description: "单个cookie值,比如${cookie.sid}",
 			},
 
 			// =========  以下是响应  =========
@@ -239,7 +239,7 @@ func FindMetricValueType(category MetricItemCategory, code string) string {
 	return MetricItemValueTypeCount
 }
 
-// HumanMetricTime 格式化时间，让时间更易读
+// HumanMetricTime 格式化时间,让时间更易读
 func HumanMetricTime(periodUnit MetricItemPeriodUnit, time string) string {
 	switch periodUnit {
 	case MetricItemPeriodUnitMonth:

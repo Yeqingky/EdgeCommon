@@ -27,7 +27,7 @@ type FindTrafficDailyStatWithDayRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Day    string `protobuf:"bytes,1,opt,name=day,proto3" json:"day,omitempty"`       // YYYYMMDD
-	Minute string `protobuf:"bytes,2,opt,name=minute,proto3" json:"minute,omitempty"` // HHIISS，可选项
+	Minute string `protobuf:"bytes,2,opt,name=minute,proto3" json:"minute,omitempty"` // HHIISS,可选项
 }
 
 func (x *FindTrafficDailyStatWithDayRequest) Reset() {

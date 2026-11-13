@@ -29,7 +29,7 @@ func (this *HTTPHeaderReplaceValue) Init() error {
 			return err
 		}
 
-		// TODO 支持匹配名（${name}）和反向引用${1}。。。
+		// TODO 支持匹配名(${name})和反向引用${1}...
 		this.patternReg = reg
 	} else {
 		if this.IsCaseInsensitive {

@@ -31,7 +31,7 @@ type MessageReceiver struct {
 	ServerId              int64                  `protobuf:"varint,4,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	Type                  string                 `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`
 	ParamsJSON            []byte                 `protobuf:"bytes,6,opt,name=paramsJSON,proto3" json:"paramsJSON,omitempty"`
-	Role                  string                 `protobuf:"bytes,9,opt,name=role,proto3" json:"role,omitempty"` // 集群角色：node 或 dns
+	Role                  string                 `protobuf:"bytes,9,opt,name=role,proto3" json:"role,omitempty"` // 集群角色:node 或 dns
 	MessageRecipient      *MessageRecipient      `protobuf:"bytes,7,opt,name=messageRecipient,proto3" json:"messageRecipient,omitempty"`
 	MessageRecipientGroup *MessageRecipientGroup `protobuf:"bytes,8,opt,name=messageRecipientGroup,proto3" json:"messageRecipientGroup,omitempty"`
 }

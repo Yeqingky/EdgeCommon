@@ -73,10 +73,10 @@ func DefaultUserRegisterConfig() *UserRegisterConfig {
 	// 邮箱激活相关
 	config.EmailVerification.CanLogin = true
 	config.EmailVerification.ShowNotice = true
-	config.EmailVerification.Subject = "【${product.name}】Email地址激活"
-	config.EmailVerification.Body = `<p>欢迎你使用 ${product.name} 提供的服务，你需要点击以下链接激活你的Email邮箱：</p>
+	config.EmailVerification.Subject = "[${product.name}]Email地址激活"
+	config.EmailVerification.Body = `<p>欢迎你使用 ${product.name} 提供的服务,你需要点击以下链接激活你的Email邮箱:</p>
 <p><a href="${url.verify}" target="_blank">${url.verify}</a></p>
-<p>如果上面内容不是链接形式，请将该地址手工粘贴到浏览器地址栏再访问。</p>
+<p>如果上面内容不是链接形式,请将该地址手工粘贴到浏览器地址栏再访问.</p>
 <p></p>
 <p>此致</p>
 <p>${product.name} 管理团队</p>
@@ -85,9 +85,9 @@ func DefaultUserRegisterConfig() *UserRegisterConfig {
 
 	// 通过邮件重置密码相关
 	config.EmailResetPassword.IsOn = true
-	config.EmailResetPassword.Subject = "【${product.name}】找回密码"
-	config.EmailResetPassword.Body = `<p>你正在使用 ${product.name} 提供的找回密码功能，你需要将以下的数字验证码输入到找回密码页面中：</p>
-<p><strong>验证码：${code}</strong></p>
+	config.EmailResetPassword.Subject = "[${product.name}]找回密码"
+	config.EmailResetPassword.Body = `<p>你正在使用 ${product.name} 提供的找回密码功能,你需要将以下的数字验证码输入到找回密码页面中:</p>
+<p><strong>验证码:${code}</strong></p>
 <p></p>
 <p>${product.name} 管理团队</p>
 <p><a href="${url.home}" target="_blank">${url.home}</a></p>

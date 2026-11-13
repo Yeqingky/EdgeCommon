@@ -15,11 +15,11 @@ func TestRuleCheckpoint_Markdown(t *testing.T) {
 		def.Description = strings.ReplaceAll(def.Description, "</code-label>", "`")
 
 		var row = "## " + def.Name + "\n"
-		row += "* 名称：" + def.Name + "\n"
-		row += "* 代号：`${" + def.Prefix + "}`\n"
-		row += "* 描述：" + def.Description + "\n"
+		row += "* 名称:" + def.Name + "\n"
+		row += "* 代号:`${" + def.Prefix + "}`\n"
+		row += "* 描述:" + def.Description + "\n"
 		if len(def.Version) > 0 {
-			row += "* 版本：v" + def.Version + "\n"
+			row += "* 版本:v" + def.Version + "\n"
 		}
 		result = append(result, row)
 	}

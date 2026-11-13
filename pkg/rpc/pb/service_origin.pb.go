@@ -26,22 +26,22 @@ type CreateOriginRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name            string          `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`                       // 名称，为可选项
+	Name            string          `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`                       // 名称,为可选项
 	Addr            *NetworkAddress `protobuf:"bytes,2,opt,name=addr,proto3" json:"addr,omitempty"`                       // 源站网络地址
-	OssJSON         []byte          `protobuf:"bytes,15,opt,name=ossJSON,proto3" json:"ossJSON,omitempty"`                // OSS配置信息，源站网络地址中protocol为oss:开头时需要设置此项
-	Description     string          `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`         // 描述，为可选项
-	Weight          int32           `protobuf:"varint,4,opt,name=weight,proto3" json:"weight,omitempty"`                  // 权重，不小于0，一般设置为10
-	IsOn            bool            `protobuf:"varint,5,opt,name=isOn,proto3" json:"isOn,omitempty"`                      // 是否启用，一般为true
-	ConnTimeoutJSON []byte          `protobuf:"bytes,6,opt,name=connTimeoutJSON,proto3" json:"connTimeoutJSON,omitempty"` // 可选项，连接超时时间
-	ReadTimeoutJSON []byte          `protobuf:"bytes,7,opt,name=readTimeoutJSON,proto3" json:"readTimeoutJSON,omitempty"` // 可选项，读取超时时间
-	IdleTimeoutJSON []byte          `protobuf:"bytes,8,opt,name=idleTimeoutJSON,proto3" json:"idleTimeoutJSON,omitempty"` // 可选项，空闲超时时间
-	MaxConns        int32           `protobuf:"varint,9,opt,name=maxConns,proto3" json:"maxConns,omitempty"`              // 可选项，最大连接数
-	MaxIdleConns    int32           `protobuf:"varint,10,opt,name=maxIdleConns,proto3" json:"maxIdleConns,omitempty"`     // 可选项，最大空闲连接数
-	Domains         []string        `protobuf:"bytes,11,rep,name=domains,proto3" json:"domains,omitempty"`                // 可选项，专属域名列表
-	CertRefJSON     []byte          `protobuf:"bytes,12,opt,name=certRefJSON,proto3" json:"certRefJSON,omitempty"`        // 可选项，证书设置
-	Host            string          `protobuf:"bytes,13,opt,name=host,proto3" json:"host,omitempty"`                      // 可选项，回源主机名
-	FollowPort      bool            `protobuf:"varint,14,opt,name=followPort,proto3" json:"followPort,omitempty"`         // 可选项，是否跟随端口
-	Http2Enabled    bool            `protobuf:"varint,16,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`     // 可选项，是否支持HTTP/2，只在HTTPS源站时生效
+	OssJSON         []byte          `protobuf:"bytes,15,opt,name=ossJSON,proto3" json:"ossJSON,omitempty"`                // OSS配置信息,源站网络地址中protocol为oss:开头时需要设置此项
+	Description     string          `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`         // 描述,为可选项
+	Weight          int32           `protobuf:"varint,4,opt,name=weight,proto3" json:"weight,omitempty"`                  // 权重,不小于0,一般设置为10
+	IsOn            bool            `protobuf:"varint,5,opt,name=isOn,proto3" json:"isOn,omitempty"`                      // 是否启用,一般为true
+	ConnTimeoutJSON []byte          `protobuf:"bytes,6,opt,name=connTimeoutJSON,proto3" json:"connTimeoutJSON,omitempty"` // 可选项,连接超时时间
+	ReadTimeoutJSON []byte          `protobuf:"bytes,7,opt,name=readTimeoutJSON,proto3" json:"readTimeoutJSON,omitempty"` // 可选项,读取超时时间
+	IdleTimeoutJSON []byte          `protobuf:"bytes,8,opt,name=idleTimeoutJSON,proto3" json:"idleTimeoutJSON,omitempty"` // 可选项,空闲超时时间
+	MaxConns        int32           `protobuf:"varint,9,opt,name=maxConns,proto3" json:"maxConns,omitempty"`              // 可选项,最大连接数
+	MaxIdleConns    int32           `protobuf:"varint,10,opt,name=maxIdleConns,proto3" json:"maxIdleConns,omitempty"`     // 可选项,最大空闲连接数
+	Domains         []string        `protobuf:"bytes,11,rep,name=domains,proto3" json:"domains,omitempty"`                // 可选项,专属域名列表
+	CertRefJSON     []byte          `protobuf:"bytes,12,opt,name=certRefJSON,proto3" json:"certRefJSON,omitempty"`        // 可选项,证书设置
+	Host            string          `protobuf:"bytes,13,opt,name=host,proto3" json:"host,omitempty"`                      // 可选项,回源主机名
+	FollowPort      bool            `protobuf:"varint,14,opt,name=followPort,proto3" json:"followPort,omitempty"`         // 可选项,是否跟随端口
+	Http2Enabled    bool            `protobuf:"varint,16,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`     // 可选项,是否支持HTTP/2,只在HTTPS源站时生效
 }
 
 func (x *CreateOriginRequest) Reset() {
@@ -244,9 +244,9 @@ type UpdateOriginRequest struct {
 	OriginId        int64           `protobuf:"varint,1,opt,name=originId,proto3" json:"originId,omitempty"`              // 源站ID
 	Name            string          `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`                       // 可选项
 	Addr            *NetworkAddress `protobuf:"bytes,3,opt,name=addr,proto3" json:"addr,omitempty"`                       // 源站网络地址
-	OssJSON         []byte          `protobuf:"bytes,16,opt,name=ossJSON,proto3" json:"ossJSON,omitempty"`                // OSS配置信息，源站网络地址中protocol为oss:开头时需要设置此项
+	OssJSON         []byte          `protobuf:"bytes,16,opt,name=ossJSON,proto3" json:"ossJSON,omitempty"`                // OSS配置信息,源站网络地址中protocol为oss:开头时需要设置此项
 	Description     string          `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`         // 可选项
-	Weight          int32           `protobuf:"varint,5,opt,name=weight,proto3" json:"weight,omitempty"`                  // 权重，不小于0，一般设置为10
+	Weight          int32           `protobuf:"varint,5,opt,name=weight,proto3" json:"weight,omitempty"`                  // 权重,不小于0,一般设置为10
 	IsOn            bool            `protobuf:"varint,6,opt,name=isOn,proto3" json:"isOn,omitempty"`                      // 是否启用
 	ConnTimeoutJSON []byte          `protobuf:"bytes,7,opt,name=connTimeoutJSON,proto3" json:"connTimeoutJSON,omitempty"` // 可选项
 	ReadTimeoutJSON []byte          `protobuf:"bytes,8,opt,name=readTimeoutJSON,proto3" json:"readTimeoutJSON,omitempty"` // 可选项
@@ -257,7 +257,7 @@ type UpdateOriginRequest struct {
 	CertRefJSON     []byte          `protobuf:"bytes,13,opt,name=certRefJSON,proto3" json:"certRefJSON,omitempty"`        // 可选项
 	Host            string          `protobuf:"bytes,14,opt,name=host,proto3" json:"host,omitempty"`                      // 可选项
 	FollowPort      bool            `protobuf:"varint,15,opt,name=followPort,proto3" json:"followPort,omitempty"`         // 可选项
-	Http2Enabled    bool            `protobuf:"varint,17,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`     // 可选项，是否支持HTTP/2，只在HTTPS源站时生效
+	Http2Enabled    bool            `protobuf:"varint,17,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`     // 可选项,是否支持HTTP/2,只在HTTPS源站时生效
 }
 
 func (x *UpdateOriginRequest) Reset() {

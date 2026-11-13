@@ -26,12 +26,12 @@ type CreateLogRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Level               string `protobuf:"bytes,1,opt,name=level,proto3" json:"level,omitempty"`                             // 级别：info, warn, error
+	Level               string `protobuf:"bytes,1,opt,name=level,proto3" json:"level,omitempty"`                             // 级别:info, warn, error
 	Description         string `protobuf:"bytes,2,opt,name=description,proto3" json:"description,omitempty"`                 // 描述
-	Action              string `protobuf:"bytes,3,opt,name=action,proto3" json:"action,omitempty"`                           // 可选项，发生操作所在的页面URL
-	Ip                  string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                                   // 可选项，操作用户IP
+	Action              string `protobuf:"bytes,3,opt,name=action,proto3" json:"action,omitempty"`                           // 可选项,发生操作所在的页面URL
+	Ip                  string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                                   // 可选项,操作用户IP
 	LangMessageCode     string `protobuf:"bytes,5,opt,name=langMessageCode,proto3" json:"langMessageCode,omitempty"`         // 多语言消息
-	LangMessageArgsJSON []byte `protobuf:"bytes,6,opt,name=langMessageArgsJSON,proto3" json:"langMessageArgsJSON,omitempty"` // 多语言消息中的参数项，格式：[arg1, arg2, ...]
+	LangMessageArgsJSON []byte `protobuf:"bytes,6,opt,name=langMessageArgsJSON,proto3" json:"langMessageArgsJSON,omitempty"` // 多语言消息中的参数项,格式:[arg1, arg2, ...]
 }
 
 func (x *CreateLogRequest) Reset() {
@@ -152,11 +152,11 @@ type CountLogRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DayFrom  string `protobuf:"bytes,1,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`   // 可选项，开始日期
-	DayTo    string `protobuf:"bytes,2,opt,name=dayTo,proto3" json:"dayTo,omitempty"`       // 可选项，结束日期
-	Keyword  string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`   // 可选项，关键词
-	UserType string `protobuf:"bytes,4,opt,name=userType,proto3" json:"userType,omitempty"` // 可选项，用户类型：admin|user；用户端固定为user
-	Level    string `protobuf:"bytes,5,opt,name=level,proto3" json:"level,omitempty"`       // 可选项，错误级别：info, warn, error
+	DayFrom  string `protobuf:"bytes,1,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`   // 可选项,开始日期
+	DayTo    string `protobuf:"bytes,2,opt,name=dayTo,proto3" json:"dayTo,omitempty"`       // 可选项,结束日期
+	Keyword  string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`   // 可选项,关键词
+	UserType string `protobuf:"bytes,4,opt,name=userType,proto3" json:"userType,omitempty"` // 可选项,用户类型:admin|user;用户端固定为user
+	Level    string `protobuf:"bytes,5,opt,name=level,proto3" json:"level,omitempty"`       // 可选项,错误级别:info, warn, error
 }
 
 func (x *CountLogRequest) Reset() {
@@ -232,13 +232,13 @@ type ListLogsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Offset   int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`    // 读取位置，从0开始
+	Offset   int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`    // 读取位置,从0开始
 	Size     int64  `protobuf:"varint,2,opt,name=size,proto3" json:"size,omitempty"`        // 读取数量
-	DayFrom  string `protobuf:"bytes,3,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`   // 可选项，开始日期
-	DayTo    string `protobuf:"bytes,4,opt,name=dayTo,proto3" json:"dayTo,omitempty"`       // 可选项，结束日期
-	Keyword  string `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`   // 可选项，关键词
-	UserType string `protobuf:"bytes,6,opt,name=userType,proto3" json:"userType,omitempty"` // 可选项，用户类型：admin|user；用户端固定为user
-	Level    string `protobuf:"bytes,7,opt,name=level,proto3" json:"level,omitempty"`       // 可选项，错误级别：info, warn, error
+	DayFrom  string `protobuf:"bytes,3,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`   // 可选项,开始日期
+	DayTo    string `protobuf:"bytes,4,opt,name=dayTo,proto3" json:"dayTo,omitempty"`       // 可选项,结束日期
+	Keyword  string `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`   // 可选项,关键词
+	UserType string `protobuf:"bytes,6,opt,name=userType,proto3" json:"userType,omitempty"` // 可选项,用户类型:admin|user;用户端固定为user
+	Level    string `protobuf:"bytes,7,opt,name=level,proto3" json:"level,omitempty"`       // 可选项,错误级别:info, warn, error
 }
 
 func (x *ListLogsRequest) Reset() {

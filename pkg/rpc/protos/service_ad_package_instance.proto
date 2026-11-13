@@ -84,18 +84,18 @@ message CountIdleADPackageInstancesRequest {
 
 // 计算实例数量
 message CountADPackageInstancesRequest {
-	int64 adNetworkId = 1; // 可选，线路
-	int64 adPackageId = 2; // 可选，如果不填则表示获取所有实例数量
-	int64 userId = 3; // 可选，用户ID
-	string ip = 4;  // 可选，高防IP
+	int64 adNetworkId = 1; // 可选,线路
+	int64 adPackageId = 2; // 可选,如果不填则表示获取所有实例数量
+	int64 userId = 3; // 可选,用户ID
+	string ip = 4;  // 可选,高防IP
 }
 
 // 列出单页实例
 message ListADPackageInstancesRequest {
-	int64 adNetworkId = 1; // 可选，线路
-	int64 adPackageId = 2; // 可选，如果不填则表示获取所有实例数量
-	int64 userId = 3; // 可选，用户ID
-	string ip = 4; // 可选，高防IP
+	int64 adNetworkId = 1; // 可选,线路
+	int64 adPackageId = 2; // 可选,如果不填则表示获取所有实例数量
+	int64 userId = 3; // 可选,用户ID
+	string ip = 4; // 可选,高防IP
 	int64 offset = 5;
 	int64 size = 6;
 }

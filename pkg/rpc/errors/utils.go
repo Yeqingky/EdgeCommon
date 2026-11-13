@@ -20,13 +20,13 @@ func HumanError(err error, endpoints []string, configFile string) (resultErr err
 	}
 	switch errStatus.Code() {
 	case codes.InvalidArgument:
-		return fmt.Errorf("错误的RPC参数：%w", err), false
+		return fmt.Errorf("错误的RPC参数:%w", err), false
 	case codes.DeadlineExceeded:
-		return fmt.Errorf("RPC操作超时，请重试：%w", err), false
+		return fmt.Errorf("RPC操作超时,请重试:%w", err), false
 	case codes.Unimplemented:
-		return fmt.Errorf("请求的RPC服务或方法不存在，可能是没有升级API节点或者当前节点没有升级：%w", err), false
+		return fmt.Errorf("请求的RPC服务或方法不存在,可能是没有升级API节点或者当前节点没有升级:%w", err), false
 	case codes.Unavailable:
-		return fmt.Errorf("RPC当前不可用：<br/>1、请确认当前节点的%s（<em>%s</em>）配置中的地址（<em>%s</em>）是否已填写正确；<br/>2、请确保API节点已启动，并检查当前节点和API节点之间的网络连接是正常的。<hr/>错误信息：%w", filepath.Base(configFile), configFile, strings.Join(endpoints, ", "), err), true
+		return fmt.Errorf("RPC当前不可用:<br/>1,请确认当前节点的%s(<em>%s</em>)配置中的地址(<em>%s</em>)是否已填写正确;<br/>2,请确保API节点已启动,并检查当前节点和API节点之间的网络连接是正常的.<hr/>错误信息:%w", filepath.Base(configFile), configFile, strings.Join(endpoints, ", "), err), true
 	}
 
 	return err, false

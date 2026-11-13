@@ -20,7 +20,7 @@ func AllServerTypes() []maps.Map {
 		{
 			"name":        "CDN加速",
 			"code":        ServerTypeHTTPProxy,
-			"description": "可以通过CDN边缘节点分发源站内容。",
+			"description": "可以通过CDN边缘节点分发源站内容.",
 		},
 		{
 			"name":        "TCP负载均衡",
@@ -39,7 +39,7 @@ func AllServerTypes() []maps.Map {
 		{
 			"name":        "HTTP Web服务",
 			"code":        ServerTypeHTTPWeb,
-			"description": "普通的HTTP Web服务，可以用来访问边缘节点上的静态文件内容。",
+			"description": "普通的HTTP Web服务,可以用来访问边缘节点上的静态文件内容.",
 		},
 	}
 }

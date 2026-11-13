@@ -828,7 +828,7 @@ type FindServerIdWithIPListIdResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ServerId int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID（如果是公共IP名单，则对应的网站ID为0）
+	ServerId int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID(如果是公共IP名单,则对应的网站ID为0)
 }
 
 func (x *FindServerIdWithIPListIdResponse) Reset() {

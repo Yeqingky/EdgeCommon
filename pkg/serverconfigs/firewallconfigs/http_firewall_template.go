@@ -21,7 +21,7 @@ func HTTPFirewallTemplate() *HTTPFirewallPolicy {
 		group.IsOn = true
 		group.Name = "XSS"
 		group.Code = "xss"
-		group.Description = "防跨站脚本攻击（Cross Site Scripting）"
+		group.Description = "防跨站脚本攻击(Cross Site Scripting)"
 		group.IsTemplate = true
 
 		{
@@ -385,7 +385,7 @@ func HTTPFirewallTemplate() *HTTPFirewallPolicy {
 		var group = &HTTPFirewallRuleGroup{}
 		group.IsOn = true
 		group.Name = "CC攻击"
-		group.Description = "Challenge Collapsar，防止短时间大量请求涌入，请谨慎开启和设置"
+		group.Description = "Challenge Collapsar,防止短时间大量请求涌入,请谨慎开启和设置"
 		group.Code = "cc2"
 		group.IsTemplate = true
 
@@ -487,7 +487,7 @@ func HTTPFirewallTemplate() *HTTPFirewallPolicy {
 		var group = &HTTPFirewallRuleGroup{}
 		group.IsOn = true
 		group.Name = "防盗链"
-		group.Description = "防止第三方网站引用本站资源。"
+		group.Description = "防止第三方网站引用本站资源."
 		group.Code = "referer"
 		group.IsTemplate = true
 
@@ -529,7 +529,7 @@ func HTTPFirewallTemplate() *HTTPFirewallPolicy {
 		var group = &HTTPFirewallRuleGroup{}
 		group.IsOn = true
 		group.Name = "自定义规则分组"
-		group.Description = "我的自定义规则分组，可以将自定义的规则放在这个分组下"
+		group.Description = "我的自定义规则分组,可以将自定义的规则放在这个分组下"
 		group.Code = "custom"
 		group.IsTemplate = true
 		policy.Inbound.Groups = append(policy.Inbound.Groups, group)

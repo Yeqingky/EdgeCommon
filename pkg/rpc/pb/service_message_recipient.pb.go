@@ -29,10 +29,10 @@ type CreateMessageRecipientRequest struct {
 	AdminId                  int64   `protobuf:"varint,1,opt,name=adminId,proto3" json:"adminId,omitempty"`                                          // 关联的管理员ID
 	MessageMediaInstanceId   int64   `protobuf:"varint,2,opt,name=messageMediaInstanceId,proto3" json:"messageMediaInstanceId,omitempty"`            // 媒介实例ID
 	MessageRecipientGroupIds []int64 `protobuf:"varint,3,rep,packed,name=messageRecipientGroupIds,proto3" json:"messageRecipientGroupIds,omitempty"` // 所属分组ID列表
-	Description              string  `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`                                   // 可选项，备注描述
+	Description              string  `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`                                   // 可选项,备注描述
 	User                     string  `protobuf:"bytes,5,opt,name=user,proto3" json:"user,omitempty"`                                                 // 用户标识
-	TimeFrom                 string  `protobuf:"bytes,6,opt,name=timeFrom,proto3" json:"timeFrom,omitempty"`                                         // 可选项，接收消息的，开始时间
-	TimeTo                   string  `protobuf:"bytes,7,opt,name=timeTo,proto3" json:"timeTo,omitempty"`                                             // 可选项，接收消息的，结束时间
+	TimeFrom                 string  `protobuf:"bytes,6,opt,name=timeFrom,proto3" json:"timeFrom,omitempty"`                                         // 可选项,接收消息的,开始时间
+	TimeTo                   string  `protobuf:"bytes,7,opt,name=timeTo,proto3" json:"timeTo,omitempty"`                                             // 可选项,接收消息的,结束时间
 	NodeClusterIds           []int64 `protobuf:"varint,8,rep,packed,name=nodeClusterIds,proto3" json:"nodeClusterIds,omitempty"`                     // 关联的CDN边缘节点集群ID列表
 }
 

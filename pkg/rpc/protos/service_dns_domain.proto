@@ -141,7 +141,7 @@ message ListDNSDomainsWithDNSProviderIdResponse {
 // 同步域名数据
 message SyncDNSDomainDataRequest {
 	int64 dnsDomainId = 1;
-	int64 nodeClusterId = 2; // 如果指定，表示只更新单个集群ID
+	int64 nodeClusterId = 2; // 如果指定,表示只更新单个集群ID
 	bool checkNodeIssues = 3; // 是否检查节点问题
 }
 
@@ -173,7 +173,7 @@ message ExistAvailableDomainsResponse {
 message ExistDNSDomainRecordRequest {
 	int64 dnsDomainId = 1;
 	string name = 2;
-	string type = 3; // 解析类型，比如A, CNAME等
+	string type = 3; // 解析类型,比如A, CNAME等
 	string route = 4; // 线路
 	string value = 5; // 值
 }

@@ -19,5 +19,5 @@ func DefaultThemeBackgroundColors() []string {
 
 // ThemeConfig 风格模板设置
 type ThemeConfig struct {
-	BackgroundColor string `yaml:"backgroundColor" json:"backgroundColor"` // 背景色，16进制，不需要带井号（#）
+	BackgroundColor string `yaml:"backgroundColor" json:"backgroundColor"` // 背景色,16进制,不需要带井号(#)
 }

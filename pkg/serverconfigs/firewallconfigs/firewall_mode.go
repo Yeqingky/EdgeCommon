@@ -15,17 +15,17 @@ func FindAllFirewallModes() []*shared.Definition {
 	return []*shared.Definition{
 		{
 			Name:        "防御模式",
-			Description: "执行正常的防御规则和相应动作。",
+			Description: "执行正常的防御规则和相应动作.",
 			Code:        FirewallModeDefend,
 		},
 		{
 			Name:        "观察模式",
-			Description: "执行正常的防御规则，但只记录日志，不执行动作。",
+			Description: "执行正常的防御规则,但只记录日志,不执行动作.",
 			Code:        FirewallModeObserve,
 		},
 		{
 			Name:        "通过模式",
-			Description: "不执行任何规则，所有的请求都将会直接通过。",
+			Description: "不执行任何规则,所有的请求都将会直接通过.",
 			Code:        FirewallModeBypass,
 		},
 	}

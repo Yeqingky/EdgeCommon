@@ -1,5 +1,5 @@
 {
-  "log_create_cluster": "创建节点集群：%d",
+  "log_create_cluster": "创建节点集群:%d",
   "log_delete_cluster": "删除集群 %d",
   "log_update_cluster_health_check": "修改集群健康检查设置 %d",
   "log_run_cluster_health_check": "执行集群健康检查设置 %d",

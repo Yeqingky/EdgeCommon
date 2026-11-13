@@ -8,7 +8,7 @@ import (
 type HTTPRemoteAddrType = string
 
 const (
-	HTTPRemoteAddrTypeDefault       HTTPRemoteAddrType = "default"       // 默认（直连）
+	HTTPRemoteAddrTypeDefault       HTTPRemoteAddrType = "default"       // 默认(直连)
 	HTTPRemoteAddrTypeProxy         HTTPRemoteAddrType = "proxy"         // 代理
 	HTTPRemoteAddrTypeRequestHeader HTTPRemoteAddrType = "requestHeader" // 请求报头
 	HTTPRemoteAddrTypeVariable      HTTPRemoteAddrType = "variable"      // 变量
@@ -21,7 +21,7 @@ type HTTPRemoteAddrConfig struct {
 	Value   string             `yaml:"value" json:"value"` // 值变量
 	Type    HTTPRemoteAddrType `yaml:"type" json:"type"`   // 类型
 
-	RequestHeaderName string `yaml:"requestHeaderName" json:"requestHeaderName"` // 请求报头名称（type = requestHeader时生效）
+	RequestHeaderName string `yaml:"requestHeaderName" json:"requestHeaderName"` // 请求报头名称(type = requestHeader时生效)
 
 	isEmpty   bool
 	values    []string

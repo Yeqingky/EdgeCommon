@@ -17,11 +17,11 @@ import (
 
 // HTTPRequestCond HTTP请求匹配条件定义
 type HTTPRequestCond struct {
-	Type      string `yaml:"type" json:"type"`           // 类型，在特殊条件时使用
-	IsRequest bool   `yaml:"isRequest" json:"isRequest"` // 是否为请求的条件，用来区分在什么阶段执行
+	Type      string `yaml:"type" json:"type"`           // 类型,在特殊条件时使用
+	IsRequest bool   `yaml:"isRequest" json:"isRequest"` // 是否为请求的条件,用来区分在什么阶段执行
 
 	// 要测试的字符串
-	// 其中可以使用跟请求相关的参数，比如：
+	// 其中可以使用跟请求相关的参数,比如:
 	// ${arg.name}, ${requestPath}
 	Param string `yaml:"param" json:"param"`
 
@@ -153,7 +153,7 @@ func (this *HTTPRequestCond) Init() error {
 	return nil
 }
 
-// Match 将此条件应用于请求，检查是否匹配
+// Match 将此条件应用于请求,检查是否匹配
 func (this *HTTPRequestCond) Match(formatter func(source string) string) bool {
 	b := this.match(formatter)
 	if this.IsReverse {

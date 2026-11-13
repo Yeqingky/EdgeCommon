@@ -26,7 +26,7 @@ type IPItem struct {
 	unknownFields protoimpl.UnknownFields
 
 	Id                            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Value                         string                 `protobuf:"bytes,22,opt,name=value,proto3" json:"value,omitempty"` // 原始值，比如单个IP、IP范围或者CIDR
+	Value                         string                 `protobuf:"bytes,22,opt,name=value,proto3" json:"value,omitempty"` // 原始值,比如单个IP,IP范围或者CIDR
 	IpFrom                        string                 `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"`
 	IpTo                          string                 `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`
 	Version                       int64                  `protobuf:"varint,4,opt,name=version,proto3" json:"version,omitempty"`
@@ -36,8 +36,8 @@ type IPItem struct {
 	IsDeleted                     bool                   `protobuf:"varint,8,opt,name=isDeleted,proto3" json:"isDeleted,omitempty"`
 	Type                          string                 `protobuf:"bytes,9,opt,name=type,proto3" json:"type,omitempty"`
 	EventLevel                    string                 `protobuf:"bytes,10,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"` // 级别
-	ListType                      string                 `protobuf:"bytes,11,opt,name=listType,proto3" json:"listType,omitempty"`     // 所在名单类型，来自名单
-	IsGlobal                      bool                   `protobuf:"varint,20,opt,name=isGlobal,proto3" json:"isGlobal,omitempty"`    // 是否全局，来自名单
+	ListType                      string                 `protobuf:"bytes,11,opt,name=listType,proto3" json:"listType,omitempty"`     // 所在名单类型,来自名单
+	IsGlobal                      bool                   `protobuf:"varint,20,opt,name=isGlobal,proto3" json:"isGlobal,omitempty"`    // 是否全局,来自名单
 	CreatedAt                     int64                  `protobuf:"varint,12,opt,name=createdAt,proto3" json:"createdAt,omitempty"`
 	NodeId                        int64                  `protobuf:"varint,13,opt,name=nodeId,proto3" json:"nodeId,omitempty"`
 	ServerId                      int64                  `protobuf:"varint,14,opt,name=serverId,proto3" json:"serverId,omitempty"`

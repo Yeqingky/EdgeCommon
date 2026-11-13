@@ -31,7 +31,7 @@ message UpdateMessageReceiversRequest {
 	int64 nodeId = 2;
 	int64 serverId = 3;
 	bytes paramsJSON = 5;
-	map<string, RecipientOptions> recipientOptions = 6; // type => options，type为recipient或者group
+	map<string, RecipientOptions> recipientOptions = 6; // type => options,type为recipient或者group
 
 	message RecipientOption {
 		int64 messageRecipientId = 1;
@@ -45,7 +45,7 @@ message UpdateMessageReceiversRequest {
 
 // 查找接收者
 message FindAllEnabledMessageReceiversRequest {
-	string role = 4; // 集群角色：node 或 dns
+	string role = 4; // 集群角色:node 或 dns
 	int64 nodeClusterId = 1; // 集群ID
 	int64 nodeId = 2; // 节点ID
 	int64 serverId = 3; // 网站ID
@@ -71,7 +71,7 @@ message DeleteMessageReceiverRequest {
 
 // 计算接收者数量
 message CountAllEnabledMessageReceiversRequest {
-	string role = 4; // 集群角色：node 或 dns
+	string role = 4; // 集群角色:node 或 dns
 	int64 nodeClusterId = 1; // 集群ID
 	int64 nodeId = 2; // 节点ID
 	int64 serverId = 3;  // 网站ID

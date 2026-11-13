@@ -259,7 +259,7 @@ func (x *CreateNSDomainsResponse) GetNsDomainIds() []int64 {
 }
 
 // 修改域名
-// 注意：名称不允许修改
+// 注意:名称不允许修改
 type UpdateNSDomainRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -600,7 +600,7 @@ type FindNSDomainWithNameRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"` // 用户ID，只有管理员才能指定用户
+	UserId int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"` // 用户ID,只有管理员才能指定用户
 	Name   string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`      // 域名
 }
 
@@ -1520,7 +1520,7 @@ type FindNSDomainVerifyingInfoResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RequireTXT bool   `protobuf:"varint,4,opt,name=requireTXT,proto3" json:"requireTXT,omitempty"` // 是否需要TXT验证，如果不需要（值false），则表示用户不需要手动设置TXT，此时 txt 字段内容可能为空
+	RequireTXT bool   `protobuf:"varint,4,opt,name=requireTXT,proto3" json:"requireTXT,omitempty"` // 是否需要TXT验证,如果不需要(值false),则表示用户不需要手动设置TXT,此时 txt 字段内容可能为空
 	Txt        string `protobuf:"bytes,1,opt,name=txt,proto3" json:"txt,omitempty"`                // TXT记录
 	ExpiresAt  int64  `protobuf:"varint,2,opt,name=expiresAt,proto3" json:"expiresAt,omitempty"`   // TXT过期时间
 	Status     string `protobuf:"bytes,3,opt,name=status,proto3" json:"status,omitempty"`          // 当前状态

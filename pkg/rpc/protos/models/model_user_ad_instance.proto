@@ -14,8 +14,8 @@ message UserADInstance {
 	int64 adPackagePeriodId = 4;
 	int32 adPackagePeriodCount = 5;
 	string adPackagePeriodUnit = 6;
-	string dayFrom = 7; // 开始日期，格式：YYYYMMDD
-	string dayTo = 8; // 结束日期，格式：YYYYMMDD
+	string dayFrom = 7; // 开始日期,格式:YYYYMMDD
+	string dayTo = 8; // 结束日期,格式:YYYYMMDD
 	int64 createdAt = 9;
 	int32 maxObjects = 10;
 	repeated string objectCodes = 11;

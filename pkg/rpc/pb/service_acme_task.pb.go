@@ -128,7 +128,7 @@ type CountAllEnabledACMETasksRequest struct {
 	IsExpired    bool   `protobuf:"varint,4,opt,name=isExpired,proto3" json:"isExpired,omitempty"`
 	ExpiringDays int32  `protobuf:"varint,5,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"`
 	Keyword      string `protobuf:"bytes,6,opt,name=keyword,proto3" json:"keyword,omitempty"`
-	UserOnly     bool   `protobuf:"varint,7,opt,name=userOnly,proto3" json:"userOnly,omitempty"` // 可选项，是否只列出用户上传的证书
+	UserOnly     bool   `protobuf:"varint,7,opt,name=userOnly,proto3" json:"userOnly,omitempty"` // 可选项,是否只列出用户上传的证书
 }
 
 func (x *CountAllEnabledACMETasksRequest) Reset() {
@@ -226,7 +226,7 @@ type ListEnabledACMETasksRequest struct {
 	IsExpired    bool   `protobuf:"varint,6,opt,name=isExpired,proto3" json:"isExpired,omitempty"`
 	ExpiringDays int32  `protobuf:"varint,7,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"`
 	Keyword      string `protobuf:"bytes,8,opt,name=keyword,proto3" json:"keyword,omitempty"`
-	UserOnly     bool   `protobuf:"varint,9,opt,name=userOnly,proto3" json:"userOnly,omitempty"` // 可选项，是否只列出用户上传的证书
+	UserOnly     bool   `protobuf:"varint,9,opt,name=userOnly,proto3" json:"userOnly,omitempty"` // 可选项,是否只列出用户上传的证书
 }
 
 func (x *ListEnabledACMETasksRequest) Reset() {
@@ -377,7 +377,7 @@ type CreateACMETaskRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId        int64    `protobuf:"varint,8,opt,name=userId,proto3" json:"userId,omitempty"` // 平台用户ID，只有管理员才有权限指定
+	UserId        int64    `protobuf:"varint,8,opt,name=userId,proto3" json:"userId,omitempty"` // 平台用户ID,只有管理员才有权限指定
 	AcmeUserId    int64    `protobuf:"varint,1,opt,name=acmeUserId,proto3" json:"acmeUserId,omitempty"`
 	DnsProviderId int64    `protobuf:"varint,2,opt,name=dnsProviderId,proto3" json:"dnsProviderId,omitempty"`
 	DnsDomain     string   `protobuf:"bytes,3,opt,name=dnsDomain,proto3" json:"dnsDomain,omitempty"`
@@ -933,7 +933,7 @@ type FindACMETaskUserResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	User *User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"` // 用户信息，只包含几个基本的信息
+	User *User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"` // 用户信息,只包含几个基本的信息
 }
 
 func (x *FindACMETaskUserResponse) Reset() {

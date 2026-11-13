@@ -13,7 +13,7 @@ var IPLibraryTypes = []maps.Map{
 	{
 		"name":        "ip2region",
 		"code":        IPLibraryTypeIP2Region,
-		"description": "一个开源的IP库：https://github.com/lionsoul2014/ip2region",
+		"description": "一个开源的IP库:https://github.com/lionsoul2014/ip2region",
 		"ext":         ".db",
 	},
 }

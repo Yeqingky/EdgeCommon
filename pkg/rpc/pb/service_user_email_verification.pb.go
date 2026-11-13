@@ -75,7 +75,7 @@ type VerifyUserEmailResponse struct {
 
 	UserId       int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`            // 邮箱对应的用户ID
 	Email        string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`               // 邮箱地址
-	ErrorCode    string `protobuf:"bytes,3,opt,name=errorCode,proto3" json:"errorCode,omitempty"`       // 错误代号，如果为空，说明没有错误
+	ErrorCode    string `protobuf:"bytes,3,opt,name=errorCode,proto3" json:"errorCode,omitempty"`       // 错误代号,如果为空,说明没有错误
 	ErrorMessage string `protobuf:"bytes,4,opt,name=errorMessage,proto3" json:"errorMessage,omitempty"` // 错误信息
 }
 

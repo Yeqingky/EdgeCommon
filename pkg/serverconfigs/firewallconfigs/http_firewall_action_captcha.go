@@ -31,7 +31,7 @@ type HTTPFirewallCaptchaAction struct {
 
 	CookieId string `yaml:"cookieId" json:"cookieId"` // TODO
 
-	Lang string `yaml:"lang" json:"lang"` // 语言，zh-CN, en-US ... TODO 需要实现，目前是根据浏览器Accept-Language动态获取
+	Lang string `yaml:"lang" json:"lang"` // 语言,zh-CN, en-US ... TODO 需要实现,目前是根据浏览器Accept-Language动态获取
 
 	// 极验相关配置
 	// MUST be struct

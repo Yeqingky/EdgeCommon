@@ -57,6 +57,6 @@ message UpdateHTTPCacheTaskKeysStatusRequest {
 
 // 计算当天已经清理的Key数量
 message CountHTTPCacheTaskKeysWithDayRequest {
-	string keyType = 1; // Key类型：清理：purge，预热：fetch
-	string day = 2; // 日期，格式：YYYYMMDD
+	string keyType = 1; // Key类型:清理:purge,预热:fetch
+	string day = 2; // 日期,格式:YYYYMMDD
 }

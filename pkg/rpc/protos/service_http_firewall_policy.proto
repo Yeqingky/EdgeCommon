@@ -10,7 +10,7 @@ import "models/model_region_country.proto";
 import "models/model_region_province.proto";
 import "models/rpc_messages.proto";
 
-// HTTP防火墙（WAF）服务
+// HTTP防火墙(WAF)服务
 service HTTPFirewallPolicyService {
 	// 获取所有可用策略
 	rpc findAllEnabledHTTPFirewallPolicies (FindAllEnabledHTTPFirewallPoliciesRequest) returns (FindAllEnabledHTTPFirewallPoliciesResponse);
@@ -106,7 +106,7 @@ message UpdateHTTPFirewallPolicyRequest {
 	bool useLocalFirewall = 8; // 是否使用本地防火墙
 	bytes synFloodJSON = 9; // SYN Flood相关配置
 	bytes LogJSON = 10; // 日志相关配置
-	int64 maxRequestBodySize = 12; // 最大文件尺寸，单位为字节
+	int64 maxRequestBodySize = 12; // 最大文件尺寸,单位为字节
 	string denyCountryHTML = 13; // 区域封禁提示
 	string denyProvinceHTML = 14; // 省份封禁提示
 }
@@ -194,5 +194,5 @@ message FindServerIdWithHTTPFirewallPolicyIdRequest {
 }
 
 message FindServerIdWithHTTPFirewallPolicyIdResponse {
-	int64 serverId = 1; // 防火墙策略对应的网站ID，公共的防火墙策略的网站ID为0
+	int64 serverId = 1; // 防火墙策略对应的网站ID,公共的防火墙策略的网站ID为0
 }

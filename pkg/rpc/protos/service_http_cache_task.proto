@@ -32,9 +32,9 @@ service HTTPCacheTaskService {
 
 // 创建任务
 message CreateHTTPCacheTaskRequest {
-	string type = 1; // 任务类型，值为 purge 或者 fetch；purge：删除缓存，fetch：预热缓存
-	string keyType = 2; // Key类型，值为 key 或者 prefix；如果是 key 表示处理的是URL，如果是 prefix 表示处理的是目录；预热的时候只能为 key
-	repeated string keys = 3; // 要清理的Key，根据Key类型（keyType）来输入不同的内容
+	string type = 1; // 任务类型,值为 purge 或者 fetch;purge:删除缓存,fetch:预热缓存
+	string keyType = 2; // Key类型,值为 key 或者 prefix;如果是 key 表示处理的是URL,如果是 prefix 表示处理的是目录;预热的时候只能为 key
+	repeated string keys = 3; // 要清理的Key,根据Key类型(keyType)来输入不同的内容
 }
 
 message CreateHTTPCacheTaskResponse {

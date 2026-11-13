@@ -26,9 +26,9 @@ type CreateLoginTicketRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AdminId int64  `protobuf:"varint,1,opt,name=adminId,proto3" json:"adminId,omitempty"` // 管理员ID，和用户ID二选一
+	AdminId int64  `protobuf:"varint,1,opt,name=adminId,proto3" json:"adminId,omitempty"` // 管理员ID,和用户ID二选一
 	UserId  int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`   // 用户ID
-	Ip      string `protobuf:"bytes,3,opt,name=ip,proto3" json:"ip,omitempty"`            // 可选参数，用户客户端IP
+	Ip      string `protobuf:"bytes,3,opt,name=ip,proto3" json:"ip,omitempty"`            // 可选参数,用户客户端IP
 }
 
 func (x *CreateLoginTicketRequest) Reset() {

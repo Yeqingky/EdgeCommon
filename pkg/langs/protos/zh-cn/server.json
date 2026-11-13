@@ -62,9 +62,9 @@
   "menu_setting_traffic_limit": "流量限制",
   "menu_setting_scripts": "边缘脚本",
 
-  "copy_setting_current_group": "当前分组：%s",
-  "copy_setting_current_user": "当前用户：%s",
-  "copy_setting_current_cluster": "当前集群：%s",
+  "copy_setting_current_group": "当前分组:%s",
+  "copy_setting_current_user": "当前用户:%s",
+  "copy_setting_current_cluster": "当前集群:%s",
   "copy_setting_select_group": "选择分组",
   "copy_setting_select_user": "选择用户",
   "copy_setting_select_cluster": "选择集群",

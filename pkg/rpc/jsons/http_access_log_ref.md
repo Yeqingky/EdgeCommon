@@ -11,7 +11,7 @@
   "status4": "是否启用状态4xx",
   "status5": "是否启用状态5xx",
   "enableClientClosed": "是否记录客户端关闭事件",
-  "firewallOnly": "是否只记录防火墙（WAF）相关日志"
+  "firewallOnly": "是否只记录防火墙(WAF)相关日志"
 }
 ~~~
 
@@ -24,7 +24,7 @@
 * `6` - Referer
 * `7` - UserAgent
 * `8` - 请求Body
-* `9` - 响应Body（目前不支持）
+* `9` - 响应Body(目前不支持)
 
 ## 示例
 ~~~json

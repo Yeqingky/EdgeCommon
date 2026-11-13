@@ -45,7 +45,7 @@ func (this *RandomScheduling) Start() {
 		if sumWeight <= 1000 {
 			count = weight
 		} else {
-			count = uint(math.Round(float64(weight*10000) / float64(sumWeight))) // 1% 产生 100个数据，最多支持10000个服务器
+			count = uint(math.Round(float64(weight*10000) / float64(sumWeight))) // 1% 产生 100个数据,最多支持10000个服务器
 		}
 		for i := uint(0); i < count; i++ {
 			this.array = append(this.array, c)

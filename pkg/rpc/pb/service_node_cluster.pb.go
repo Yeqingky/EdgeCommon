@@ -775,9 +775,9 @@ type ListEnabledNodeClustersRequest struct {
 
 	Offset  int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`
 	Size    int64  `protobuf:"varint,2,opt,name=size,proto3" json:"size,omitempty"`
-	Keyword string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"` // 可选项，搜索关键词
-	IdDesc  bool   `protobuf:"varint,4,opt,name=idDesc,proto3" json:"idDesc,omitempty"`  // 可选项，是否按照ID倒序排列
-	IdAsc   bool   `protobuf:"varint,5,opt,name=idAsc,proto3" json:"idAsc,omitempty"`    // 可选项，是否按照ID正序排列
+	Keyword string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"` // 可选项,搜索关键词
+	IdDesc  bool   `protobuf:"varint,4,opt,name=idDesc,proto3" json:"idDesc,omitempty"`  // 可选项,是否按照ID倒序排列
+	IdAsc   bool   `protobuf:"varint,5,opt,name=idAsc,proto3" json:"idAsc,omitempty"`    // 可选项,是否按照ID正序排列
 }
 
 func (x *ListEnabledNodeClustersRequest) Reset() {

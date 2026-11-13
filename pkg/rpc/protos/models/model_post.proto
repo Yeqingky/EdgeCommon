@@ -10,7 +10,7 @@ message Post {
 	int64 id = 1; // ID
 	int64 postCategoryId = 2; // 分类ID
 	string productCode = 3; // 产品代号
-	string type = 4; // 类型：normal, url
+	string type = 4; // 类型:normal, url
 	string subject = 5; // 标题
 	string url = 6; // URL
 	string body = 7; // 内容

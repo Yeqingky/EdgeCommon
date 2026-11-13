@@ -38,7 +38,7 @@ type ServerDailyStatServiceClient interface {
 	UploadServerDailyStats(ctx context.Context, in *UploadServerDailyStatsRequest, opts ...grpc.CallOption) (*RPCSuccess, error)
 	// 按小时读取统计数据
 	FindLatestServerHourlyStats(ctx context.Context, in *FindLatestServerHourlyStatsRequest, opts ...grpc.CallOption) (*FindLatestServerHourlyStatsResponse, error)
-	// 按分钟读取统计数据，并返回秒级平均流量
+	// 按分钟读取统计数据,并返回秒级平均流量
 	FindLatestServerMinutelyStats(ctx context.Context, in *FindLatestServerMinutelyStatsRequest, opts ...grpc.CallOption) (*FindLatestServerMinutelyStatsResponse, error)
 	// 读取某天的5分钟间隔流量
 	FindServer5MinutelyStatsWithDay(ctx context.Context, in *FindServer5MinutelyStatsWithDayRequest, opts ...grpc.CallOption) (*FindServer5MinutelyStatsWithDayResponse, error)
@@ -46,7 +46,7 @@ type ServerDailyStatServiceClient interface {
 	FindLatestServerDailyStats(ctx context.Context, in *FindLatestServerDailyStatsRequest, opts ...grpc.CallOption) (*FindLatestServerDailyStatsResponse, error)
 	// 读取日期段内的流量数据
 	FindServerDailyStatsBetweenDays(ctx context.Context, in *FindServerDailyStatsBetweenDaysRequest, opts ...grpc.CallOption) (*FindServerDailyStatsBetweenDaysResponse, error)
-	// 查找单个服务当前时刻（N分钟内）统计数据
+	// 查找单个服务当前时刻(N分钟内)统计数据
 	SumCurrentServerDailyStats(ctx context.Context, in *SumCurrentServerDailyStatsRequest, opts ...grpc.CallOption) (*SumCurrentServerDailyStatsResponse, error)
 	// 计算单个服务的日统计
 	SumServerDailyStats(ctx context.Context, in *SumServerDailyStatsRequest, opts ...grpc.CallOption) (*SumServerDailyStatsResponse, error)
@@ -151,7 +151,7 @@ type ServerDailyStatServiceServer interface {
 	UploadServerDailyStats(context.Context, *UploadServerDailyStatsRequest) (*RPCSuccess, error)
 	// 按小时读取统计数据
 	FindLatestServerHourlyStats(context.Context, *FindLatestServerHourlyStatsRequest) (*FindLatestServerHourlyStatsResponse, error)
-	// 按分钟读取统计数据，并返回秒级平均流量
+	// 按分钟读取统计数据,并返回秒级平均流量
 	FindLatestServerMinutelyStats(context.Context, *FindLatestServerMinutelyStatsRequest) (*FindLatestServerMinutelyStatsResponse, error)
 	// 读取某天的5分钟间隔流量
 	FindServer5MinutelyStatsWithDay(context.Context, *FindServer5MinutelyStatsWithDayRequest) (*FindServer5MinutelyStatsWithDayResponse, error)
@@ -159,7 +159,7 @@ type ServerDailyStatServiceServer interface {
 	FindLatestServerDailyStats(context.Context, *FindLatestServerDailyStatsRequest) (*FindLatestServerDailyStatsResponse, error)
 	// 读取日期段内的流量数据
 	FindServerDailyStatsBetweenDays(context.Context, *FindServerDailyStatsBetweenDaysRequest) (*FindServerDailyStatsBetweenDaysResponse, error)
-	// 查找单个服务当前时刻（N分钟内）统计数据
+	// 查找单个服务当前时刻(N分钟内)统计数据
 	SumCurrentServerDailyStats(context.Context, *SumCurrentServerDailyStatsRequest) (*SumCurrentServerDailyStatsResponse, error)
 	// 计算单个服务的日统计
 	SumServerDailyStats(context.Context, *SumServerDailyStatsRequest) (*SumServerDailyStatsResponse, error)

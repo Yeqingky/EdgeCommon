@@ -26,27 +26,27 @@ type CreateServerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId      int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`          // 可选项，用户ID，如果不想指定用户，此值可以为0
-	AdminId     int64  `protobuf:"varint,2,opt,name=adminId,proto3" json:"adminId,omitempty"`        // 可选项，管理员ID
-	Type        string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`               // 类型：httpProxy（HTTP反向代理，一般CDN服务都选这个）、httpWeb（静态文件服务，只会从服务器上读取文件内容，不会转发到源站）、tcpProxy（TCP反向代理）、udpProxy（UDP反向代理）
-	Name        string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`               // 网站名称，通常可以是一个域名
-	Description string `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"` // 可选项，网站描述
+	UserId      int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`          // 可选项,用户ID,如果不想指定用户,此值可以为0
+	AdminId     int64  `protobuf:"varint,2,opt,name=adminId,proto3" json:"adminId,omitempty"`        // 可选项,管理员ID
+	Type        string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`               // 类型:httpProxy(HTTP反向代理,一般CDN服务都选这个),httpWeb(静态文件服务,只会从服务器上读取文件内容,不会转发到源站),tcpProxy(TCP反向代理),udpProxy(UDP反向代理)
+	Name        string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`               // 网站名称,通常可以是一个域名
+	Description string `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"` // 可选项,网站描述
 	// 配置相关
 	ServerNamesJSON []byte `protobuf:"bytes,8,opt,name=serverNamesJSON,proto3" json:"serverNamesJSON,omitempty"` // 域名列表 @link json:server_names
 	// Deprecated: Marked as deprecated in service_server.proto.
-	ServerNamesJON   []byte  `protobuf:"bytes,19,opt,name=serverNamesJON,proto3" json:"serverNamesJON,omitempty"`         // 已过期，请使用 serverNamesJSON 代替
-	HttpJSON         []byte  `protobuf:"bytes,9,opt,name=httpJSON,proto3" json:"httpJSON,omitempty"`                      // HTTP协议设置，当type为httpProxy或者httpWeb时填写 @link json:http_protocol
-	HttpsJSON        []byte  `protobuf:"bytes,10,opt,name=httpsJSON,proto3" json:"httpsJSON,omitempty"`                   // HTTPS协议设置，当type为httpProxy或者httpWeb时填写 @link json:https_protocol
-	TcpJSON          []byte  `protobuf:"bytes,11,opt,name=tcpJSON,proto3" json:"tcpJSON,omitempty"`                       // TCP协议设置，当type为tcpProxy时填写 @link json:tcp_protocol
-	TlsJSON          []byte  `protobuf:"bytes,12,opt,name=tlsJSON,proto3" json:"tlsJSON,omitempty"`                       // TLS协议设置，当type为tcpProxy时填写 @link json:tls_protocol
-	UdpJSON          []byte  `protobuf:"bytes,14,opt,name=udpJSON,proto3" json:"udpJSON,omitempty"`                       // UDP协议设置，当type为udpProxy时填写 @link json:udp_protocol
-	WebId            int64   `protobuf:"varint,15,opt,name=webId,proto3" json:"webId,omitempty"`                          // 可选项，Web配置ID，当type为httpProxy或者httpWeb时填写，可以通过 /HTTPWebService/createHTTPWeb 接口创建；如果你需要配置缓存等信息时需要在 HTTPWebService 接口操作
-	ReverseProxyJSON []byte  `protobuf:"bytes,16,opt,name=reverseProxyJSON,proto3" json:"reverseProxyJSON,omitempty"`     // 反向代理（包含源站）配置引用，此项可以在创建网站后再设置 @link json:reverse_proxy_ref
-	ServerGroupIds   []int64 `protobuf:"varint,17,rep,packed,name=serverGroupIds,proto3" json:"serverGroupIds,omitempty"` // 可选项，所属网站分组ID列表
-	UserPlanId       int64   `protobuf:"varint,18,opt,name=userPlanId,proto3" json:"userPlanId,omitempty"`                // 可选项，套餐ID
+	ServerNamesJON   []byte  `protobuf:"bytes,19,opt,name=serverNamesJON,proto3" json:"serverNamesJON,omitempty"`         // 已过期,请使用 serverNamesJSON 代替
+	HttpJSON         []byte  `protobuf:"bytes,9,opt,name=httpJSON,proto3" json:"httpJSON,omitempty"`                      // HTTP协议设置,当type为httpProxy或者httpWeb时填写 @link json:http_protocol
+	HttpsJSON        []byte  `protobuf:"bytes,10,opt,name=httpsJSON,proto3" json:"httpsJSON,omitempty"`                   // HTTPS协议设置,当type为httpProxy或者httpWeb时填写 @link json:https_protocol
+	TcpJSON          []byte  `protobuf:"bytes,11,opt,name=tcpJSON,proto3" json:"tcpJSON,omitempty"`                       // TCP协议设置,当type为tcpProxy时填写 @link json:tcp_protocol
+	TlsJSON          []byte  `protobuf:"bytes,12,opt,name=tlsJSON,proto3" json:"tlsJSON,omitempty"`                       // TLS协议设置,当type为tcpProxy时填写 @link json:tls_protocol
+	UdpJSON          []byte  `protobuf:"bytes,14,opt,name=udpJSON,proto3" json:"udpJSON,omitempty"`                       // UDP协议设置,当type为udpProxy时填写 @link json:udp_protocol
+	WebId            int64   `protobuf:"varint,15,opt,name=webId,proto3" json:"webId,omitempty"`                          // 可选项,Web配置ID,当type为httpProxy或者httpWeb时填写,可以通过 /HTTPWebService/createHTTPWeb 接口创建;如果你需要配置缓存等信息时需要在 HTTPWebService 接口操作
+	ReverseProxyJSON []byte  `protobuf:"bytes,16,opt,name=reverseProxyJSON,proto3" json:"reverseProxyJSON,omitempty"`     // 反向代理(包含源站)配置引用,此项可以在创建网站后再设置 @link json:reverse_proxy_ref
+	ServerGroupIds   []int64 `protobuf:"varint,17,rep,packed,name=serverGroupIds,proto3" json:"serverGroupIds,omitempty"` // 可选项,所属网站分组ID列表
+	UserPlanId       int64   `protobuf:"varint,18,opt,name=userPlanId,proto3" json:"userPlanId,omitempty"`                // 可选项,套餐ID
 	NodeClusterId    int64   `protobuf:"varint,30,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`          // 所部署的集群ID
-	IncludeNodesJSON []byte  `protobuf:"bytes,31,opt,name=includeNodesJSON,proto3" json:"includeNodesJSON,omitempty"`     // 备用参数，不用填写
-	ExcludeNodesJSON []byte  `protobuf:"bytes,32,opt,name=excludeNodesJSON,proto3" json:"excludeNodesJSON,omitempty"`     // 备用参数，不用填写
+	IncludeNodesJSON []byte  `protobuf:"bytes,31,opt,name=includeNodesJSON,proto3" json:"includeNodesJSON,omitempty"`     // 备用参数,不用填写
+	ExcludeNodesJSON []byte  `protobuf:"bytes,32,opt,name=excludeNodesJSON,proto3" json:"excludeNodesJSON,omitempty"`     // 备用参数,不用填写
 }
 
 func (x *CreateServerRequest) Reset() {
@@ -268,12 +268,12 @@ type CreateBasicHTTPServerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NodeClusterId   int64    `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`     // 部署的集群ID，用户创建时不需要指定此项
-	UserId          int64    `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                   // 管理员创建网站时可以指定此用户ID，也可以为0表示不指定
+	NodeClusterId   int64    `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`     // 部署的集群ID,用户创建时不需要指定此项
+	UserId          int64    `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                   // 管理员创建网站时可以指定此用户ID,也可以为0表示不指定
 	Domains         []string `protobuf:"bytes,3,rep,name=domains,proto3" json:"domains,omitempty"`                  // 域名列表
 	SslCertIds      []int64  `protobuf:"varint,4,rep,packed,name=sslCertIds,proto3" json:"sslCertIds,omitempty"`    // HTTPS用到的证书ID列表
-	OriginAddrs     []string `protobuf:"bytes,5,rep,name=originAddrs,proto3" json:"originAddrs,omitempty"`          // 源站地址列表，每一个源站地址需要带协议部分，比如 http://example.com
-	EnableWebsocket bool     `protobuf:"varint,6,opt,name=enableWebsocket,proto3" json:"enableWebsocket,omitempty"` // 可选项，是否启用Websocket
+	OriginAddrs     []string `protobuf:"bytes,5,rep,name=originAddrs,proto3" json:"originAddrs,omitempty"`          // 源站地址列表,每一个源站地址需要带协议部分,比如 http://example.com
+	EnableWebsocket bool     `protobuf:"varint,6,opt,name=enableWebsocket,proto3" json:"enableWebsocket,omitempty"` // 可选项,是否启用Websocket
 }
 
 func (x *CreateBasicHTTPServerRequest) Reset() {
@@ -403,12 +403,12 @@ type CreateBasicTCPServerRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	NodeClusterId int64    `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`  // 部署的集群ID，用户创建时不需要指定此项
-	UserId        int64    `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                // 管理员创建网站时可以指定此用户ID，也可以为0表示不指定
+	NodeClusterId int64    `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`  // 部署的集群ID,用户创建时不需要指定此项
+	UserId        int64    `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                // 管理员创建网站时可以指定此用户ID,也可以为0表示不指定
 	TcpPorts      []int32  `protobuf:"varint,3,rep,packed,name=tcpPorts,proto3" json:"tcpPorts,omitempty"`     // TCP端口
 	TlsPorts      []int32  `protobuf:"varint,4,rep,packed,name=tlsPorts,proto3" json:"tlsPorts,omitempty"`     // TLS端口
 	SslCertIds    []int64  `protobuf:"varint,5,rep,packed,name=sslCertIds,proto3" json:"sslCertIds,omitempty"` // TLS用到的证书ID列表
-	OriginAddrs   []string `protobuf:"bytes,6,rep,name=originAddrs,proto3" json:"originAddrs,omitempty"`       // 源站地址列表，每一个源站地址需要带协议部分，比如 tcp://example.com, tls://example.com
+	OriginAddrs   []string `protobuf:"bytes,6,rep,name=originAddrs,proto3" json:"originAddrs,omitempty"`       // 源站地址列表,每一个源站地址需要带协议部分,比如 tcp://example.com, tls://example.com
 }
 
 func (x *CreateBasicTCPServerRequest) Reset() {
@@ -539,7 +539,7 @@ type AddServerOriginRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId  int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`   // 网站ID
-	OriginId  int64 `protobuf:"varint,2,opt,name=originId,proto3" json:"originId,omitempty"`   // 源站ID，通过 OriginService 创建和查询
+	OriginId  int64 `protobuf:"varint,2,opt,name=originId,proto3" json:"originId,omitempty"`   // 源站ID,通过 OriginService 创建和查询
 	IsPrimary bool  `protobuf:"varint,3,opt,name=isPrimary,proto3" json:"isPrimary,omitempty"` // 是否为主要源站
 }
 
@@ -603,7 +603,7 @@ type DeleteServerOriginRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID
-	OriginId int64 `protobuf:"varint,2,opt,name=originId,proto3" json:"originId,omitempty"` // 源站ID，通过 OriginService 创建和查询
+	OriginId int64 `protobuf:"varint,2,opt,name=originId,proto3" json:"originId,omitempty"` // 源站ID,通过 OriginService 创建和查询
 }
 
 func (x *DeleteServerOriginRequest) Reset() {
@@ -660,11 +660,11 @@ type UpdateServerBasicRequest struct {
 
 	ServerId       int64   `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`                    // 网站ID
 	Name           string  `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`                             // 网站名称
-	Description    string  `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`               // 可选项，网站描述
+	Description    string  `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`               // 可选项,网站描述
 	NodeClusterId  int64   `protobuf:"varint,4,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`          // 集群ID
-	KeepOldConfigs bool    `protobuf:"varint,7,opt,name=keepOldConfigs,proto3" json:"keepOldConfigs,omitempty"`        // 可选项，是否在老节点上保留一段时间配置
+	KeepOldConfigs bool    `protobuf:"varint,7,opt,name=keepOldConfigs,proto3" json:"keepOldConfigs,omitempty"`        // 可选项,是否在老节点上保留一段时间配置
 	IsOn           bool    `protobuf:"varint,5,opt,name=isOn,proto3" json:"isOn,omitempty"`                            // 是否启用
-	ServerGroupIds []int64 `protobuf:"varint,6,rep,packed,name=serverGroupIds,proto3" json:"serverGroupIds,omitempty"` // 可选项，网站分组ID列表
+	ServerGroupIds []int64 `protobuf:"varint,6,rep,packed,name=serverGroupIds,proto3" json:"serverGroupIds,omitempty"` // 可选项,网站分组ID列表
 }
 
 func (x *UpdateServerBasicRequest) Reset() {
@@ -867,7 +867,7 @@ type UpdateServerHTTPRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID
-	HttpJSON []byte `protobuf:"bytes,2,opt,name=httpJSON,proto3" json:"httpJSON,omitempty"`  // HTTP协议设置，当type为httpProxy或者httpWeb时填写 @link json:http_protocol
+	HttpJSON []byte `protobuf:"bytes,2,opt,name=httpJSON,proto3" json:"httpJSON,omitempty"`  // HTTP协议设置,当type为httpProxy或者httpWeb时填写 @link json:http_protocol
 }
 
 func (x *UpdateServerHTTPRequest) Reset() {
@@ -922,7 +922,7 @@ type UpdateServerHTTPSRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId  int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`  // 网站ID
-	HttpsJSON []byte `protobuf:"bytes,2,opt,name=httpsJSON,proto3" json:"httpsJSON,omitempty"` // HTTPS协议设置，当type为httpProxy或者httpWeb时填写 @link json:https_protocol
+	HttpsJSON []byte `protobuf:"bytes,2,opt,name=httpsJSON,proto3" json:"httpsJSON,omitempty"` // HTTPS协议设置,当type为httpProxy或者httpWeb时填写 @link json:https_protocol
 }
 
 func (x *UpdateServerHTTPSRequest) Reset() {
@@ -977,7 +977,7 @@ type UpdateServerTCPRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID
-	TcpJSON  []byte `protobuf:"bytes,2,opt,name=tcpJSON,proto3" json:"tcpJSON,omitempty"`    // TCP协议设置，当type为tcpProxy时填写 @link json:tcp_protocol
+	TcpJSON  []byte `protobuf:"bytes,2,opt,name=tcpJSON,proto3" json:"tcpJSON,omitempty"`    // TCP协议设置,当type为tcpProxy时填写 @link json:tcp_protocol
 }
 
 func (x *UpdateServerTCPRequest) Reset() {
@@ -1032,7 +1032,7 @@ type UpdateServerTLSRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID
-	TlsJSON  []byte `protobuf:"bytes,2,opt,name=tlsJSON,proto3" json:"tlsJSON,omitempty"`    // TLS协议设置，当type为tcpProxy时填写 @link json:tls_protocol
+	TlsJSON  []byte `protobuf:"bytes,2,opt,name=tlsJSON,proto3" json:"tlsJSON,omitempty"`    // TLS协议设置,当type为tcpProxy时填写 @link json:tls_protocol
 }
 
 func (x *UpdateServerTLSRequest) Reset() {
@@ -1087,7 +1087,7 @@ type UpdateServerUDPRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 网站ID
-	UdpJSON  []byte `protobuf:"bytes,2,opt,name=udpJSON,proto3" json:"udpJSON,omitempty"`    // UDP协议设置，当type为udpProxy时填写 @link json:udp_protocol
+	UdpJSON  []byte `protobuf:"bytes,2,opt,name=udpJSON,proto3" json:"udpJSON,omitempty"`    // UDP协议设置,当type为udpProxy时填写 @link json:udp_protocol
 }
 
 func (x *UpdateServerUDPRequest) Reset() {
@@ -1198,7 +1198,7 @@ type UpdateServerReverseProxyRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId         int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`                // 网站ID
-	ReverseProxyJSON []byte `protobuf:"bytes,2,opt,name=reverseProxyJSON,proto3" json:"reverseProxyJSON,omitempty"` // 反向代理（包含源站）配置引用，此项可以在创建网站后再设置 @link json:reverse_proxy_ref
+	ReverseProxyJSON []byte `protobuf:"bytes,2,opt,name=reverseProxyJSON,proto3" json:"reverseProxyJSON,omitempty"` // 反向代理(包含源站)配置引用,此项可以在创建网站后再设置 @link json:reverse_proxy_ref
 }
 
 func (x *UpdateServerReverseProxyRequest) Reset() {
@@ -1755,7 +1755,7 @@ type CountAllEnabledServersMatchRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ServerGroupId  int64  `protobuf:"varint,1,opt,name=serverGroupId,proto3" json:"serverGroupId,omitempty"` // 网站分组ID，如果为-1表示查找未分组
+	ServerGroupId  int64  `protobuf:"varint,1,opt,name=serverGroupId,proto3" json:"serverGroupId,omitempty"` // 网站分组ID,如果为-1表示查找未分组
 	Keyword        string `protobuf:"bytes,2,opt,name=keyword,proto3" json:"keyword,omitempty"`
 	UserId         int64  `protobuf:"varint,3,opt,name=userId,proto3" json:"userId,omitempty"`
 	NodeClusterId  int64  `protobuf:"varint,4,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`
@@ -1853,7 +1853,7 @@ type ListEnabledServersMatchRequest struct {
 
 	Offset             int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`
 	Size               int64  `protobuf:"varint,2,opt,name=size,proto3" json:"size,omitempty"`
-	ServerGroupId      int64  `protobuf:"varint,3,opt,name=serverGroupId,proto3" json:"serverGroupId,omitempty"` // 网站分组ID，如果为-1表示查找未分组
+	ServerGroupId      int64  `protobuf:"varint,3,opt,name=serverGroupId,proto3" json:"serverGroupId,omitempty"` // 网站分组ID,如果为-1表示查找未分组
 	Keyword            string `protobuf:"bytes,4,opt,name=keyword,proto3" json:"keyword,omitempty"`
 	UserId             int64  `protobuf:"varint,5,opt,name=userId,proto3" json:"userId,omitempty"`
 	NodeClusterId      int64  `protobuf:"varint,6,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`
@@ -2114,7 +2114,7 @@ type DeleteServersRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ServerIds []int64 `protobuf:"varint,1,rep,packed,name=serverIds,proto3" json:"serverIds,omitempty"` // 网站ID列表：[1, 2, ...]
+	ServerIds []int64 `protobuf:"varint,1,rep,packed,name=serverIds,proto3" json:"serverIds,omitempty"` // 网站ID列表:[1, 2, ...]
 }
 
 func (x *DeleteServersRequest) Reset() {
@@ -4916,7 +4916,7 @@ func (x *ComposeServerConfigResponse) GetServerConfigJSON() []byte {
 	return nil
 }
 
-// 修改网站UAM（5秒盾）设置
+// 修改网站UAM(5秒盾)设置
 type UpdateServerUAMRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -4972,7 +4972,7 @@ func (x *UpdateServerUAMRequest) GetUamJSON() []byte {
 	return nil
 }
 
-// 查找网站UAM（5秒盾）设置
+// 查找网站UAM(5秒盾)设置
 type FindEnabledServerUAMRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -5186,13 +5186,13 @@ type CopyServerConfigRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId             int64   `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`                                // 被复制网站ID
-	ConfigCode           string  `protobuf:"bytes,2,opt,name=configCode,proto3" json:"configCode,omitempty"`                             // 要拷贝的配置代号：stat 统计；charset 字符编码；userAgent UA名单；referers 防盗链；webp WebP配置；accessLog 访问日志；cc CC配置；hostRedirects URL跳转；root ROOT配置；remoteAddr 访客设置；requestLimit 请求限制；compression 内容压缩设置；optimization 页面优化设置；cache 缓存设置；uam 五秒盾设置；websocket Websocket设置；pages 自定义页面设置；auth 访问鉴权；reverseProxy 反向代理设置；waf WAF设置
-	TargetType           string  `protobuf:"bytes,3,opt,name=targetType,proto3" json:"targetType,omitempty"`                             // 目标类型：servers, groups, cluster（当前集群下所有网站，只有管理员才有权限）、user（当前用户下所有网站）
+	ConfigCode           string  `protobuf:"bytes,2,opt,name=configCode,proto3" json:"configCode,omitempty"`                             // 要拷贝的配置代号:stat 统计;charset 字符编码;userAgent UA名单;referers 防盗链;webp WebP配置;accessLog 访问日志;cc CC配置;hostRedirects URL跳转;root ROOT配置;remoteAddr 访客设置;requestLimit 请求限制;compression 内容压缩设置;optimization 页面优化设置;cache 缓存设置;uam 五秒盾设置;websocket Websocket设置;pages 自定义页面设置;auth 访问鉴权;reverseProxy 反向代理设置;waf WAF设置
+	TargetType           string  `protobuf:"bytes,3,opt,name=targetType,proto3" json:"targetType,omitempty"`                             // 目标类型:servers, groups, cluster(当前集群下所有网站,只有管理员才有权限),user(当前用户下所有网站)
 	TargetServerIds      []int64 `protobuf:"varint,4,rep,packed,name=targetServerIds,proto3" json:"targetServerIds,omitempty"`           // 目标网站ID列表
 	TargetServerGroupIds []int64 `protobuf:"varint,5,rep,packed,name=targetServerGroupIds,proto3" json:"targetServerGroupIds,omitempty"` // 目标网站分组ID列表
 	TargetClusterId      int64   `protobuf:"varint,6,opt,name=targetClusterId,proto3" json:"targetClusterId,omitempty"`                  // 目标集群ID
 	TargetUserId         int64   `protobuf:"varint,7,opt,name=targetUserId,proto3" json:"targetUserId,omitempty"`                        // 目标用户ID
-	WafCopyRegions       bool    `protobuf:"varint,30,opt,name=wafCopyRegions,proto3" json:"wafCopyRegions,omitempty"`                   // 可选项，WAF独立配置：是否拷贝区域封禁设置
+	WafCopyRegions       bool    `protobuf:"varint,30,opt,name=wafCopyRegions,proto3" json:"wafCopyRegions,omitempty"`                   // 可选项,WAF独立配置:是否拷贝区域封禁设置
 }
 
 func (x *CopyServerConfigRequest) Reset() {

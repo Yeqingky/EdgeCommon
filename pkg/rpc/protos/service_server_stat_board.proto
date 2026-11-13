@@ -150,7 +150,7 @@ message ComposeServerStatBoardRequest {
 }
 
 message ComposeServerStatBoardResponse {
-	int64 minutelyPeekBandwidthBytes = 5; // 当前带宽（N分钟峰值）
+	int64 minutelyPeekBandwidthBytes = 5; // 当前带宽(N分钟峰值)
 	int64 dailyPeekBandwidthBytes = 2; // 当天带宽峰值
 	int64 monthlyPeekBandwidthBytes = 3; // 当月带宽峰值
 	int64 lastMonthlyPeekBandwidthBytes = 4; // 上个月带宽峰值

@@ -82,12 +82,12 @@ type CountAllUserBillsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PaidFlag           int32  `protobuf:"varint,1,opt,name=paidFlag,proto3" json:"paidFlag,omitempty"`                     // 可选，0|1|-1
-	UserId             int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                         // 可选，用户ID
-	Month              string `protobuf:"bytes,3,opt,name=month,proto3" json:"month,omitempty"`                            // 可选，月份
-	TrafficRelated     bool   `protobuf:"varint,4,opt,name=trafficRelated,proto3" json:"trafficRelated,omitempty"`         // 可选，是否为流量带宽相关
-	MinDailyBillDays   int32  `protobuf:"varint,5,opt,name=minDailyBillDays,proto3" json:"minDailyBillDays,omitempty"`     // 可选，按日计费账单生成最小天数
-	MinMonthlyBillDays int32  `protobuf:"varint,6,opt,name=minMonthlyBillDays,proto3" json:"minMonthlyBillDays,omitempty"` // 可选，按月计费账单生成最小天数
+	PaidFlag           int32  `protobuf:"varint,1,opt,name=paidFlag,proto3" json:"paidFlag,omitempty"`                     // 可选,0|1|-1
+	UserId             int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                         // 可选,用户ID
+	Month              string `protobuf:"bytes,3,opt,name=month,proto3" json:"month,omitempty"`                            // 可选,月份
+	TrafficRelated     bool   `protobuf:"varint,4,opt,name=trafficRelated,proto3" json:"trafficRelated,omitempty"`         // 可选,是否为流量带宽相关
+	MinDailyBillDays   int32  `protobuf:"varint,5,opt,name=minDailyBillDays,proto3" json:"minDailyBillDays,omitempty"`     // 可选,按日计费账单生成最小天数
+	MinMonthlyBillDays int32  `protobuf:"varint,6,opt,name=minMonthlyBillDays,proto3" json:"minMonthlyBillDays,omitempty"` // 可选,按月计费账单生成最小天数
 }
 
 func (x *CountAllUserBillsRequest) Reset() {
@@ -297,7 +297,7 @@ type FindUserBillRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserBillId int64  `protobuf:"varint,1,opt,name=userBillId,proto3" json:"userBillId,omitempty"` // ID，和单号二选一
+	UserBillId int64  `protobuf:"varint,1,opt,name=userBillId,proto3" json:"userBillId,omitempty"` // ID,和单号二选一
 	Code       string `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`              // 单号
 }
 

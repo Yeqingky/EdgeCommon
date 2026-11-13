@@ -195,7 +195,7 @@ type UpdateAPINodeRequest struct {
 	RestIsOn        bool   `protobuf:"varint,8,opt,name=restIsOn,proto3" json:"restIsOn,omitempty"`              // 是否启用API
 	RestHTTPJSON    []byte `protobuf:"bytes,9,opt,name=restHTTPJSON,proto3" json:"restHTTPJSON,omitempty"`       // API地址HTTP地址配置 @link json:http_protocol
 	RestHTTPSJSON   []byte `protobuf:"bytes,10,opt,name=restHTTPSJSON,proto3" json:"restHTTPSJSON,omitempty"`    // API地址HTTPS地址配置 @link json:https_protocol
-	IsPrimary       bool   `protobuf:"varint,11,opt,name=isPrimary,proto3" json:"isPrimary,omitempty"`           // 是否为主要API节点，日常任务主要运行在主要API节点上
+	IsPrimary       bool   `protobuf:"varint,11,opt,name=isPrimary,proto3" json:"isPrimary,omitempty"`           // 是否为主要API节点,日常任务主要运行在主要API节点上
 }
 
 func (x *UpdateAPINodeRequest) Reset() {
@@ -762,9 +762,9 @@ type FindCurrentAPINodeVersionResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	Version string `protobuf:"bytes,1,opt,name=version,proto3" json:"version,omitempty"` // 版本号
-	Os      string `protobuf:"bytes,2,opt,name=os,proto3" json:"os,omitempty"`           // 系统代号，比如linux
-	Arch    string `protobuf:"bytes,3,opt,name=arch,proto3" json:"arch,omitempty"`       // 架构，比如amd64
-	Role    string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`       // 角色，通常为api
+	Os      string `protobuf:"bytes,2,opt,name=os,proto3" json:"os,omitempty"`           // 系统代号,比如linux
+	Arch    string `protobuf:"bytes,3,opt,name=arch,proto3" json:"arch,omitempty"`       // 架构,比如amd64
+	Role    string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`       // 角色,通常为api
 }
 
 func (x *FindCurrentAPINodeVersionResponse) Reset() {

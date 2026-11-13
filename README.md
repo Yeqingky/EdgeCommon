@@ -1,6 +1,6 @@
-GoEdge公共配置项。
+GoEdge公共配置项.
 
-目录结构：
+目录结构:
 ~~~
 pkg/
   dnsconfigs/ - 域名解析和NameServer相关配置
@@ -24,4 +24,4 @@ pkg/
            model_*.proto RPC数据定义
 ~~~
 
-开发时需要将 `rpc/protos/` 和 `rpc/protos/models/` 两个目录放入到Proto Buffer检查工具可以找到的位置。
+开发时需要将 `rpc/protos/` 和 `rpc/protos/models/` 两个目录放入到Proto Buffer检查工具可以找到的位置.

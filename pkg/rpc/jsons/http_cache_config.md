@@ -4,7 +4,7 @@
 {
   "isPrior": "是否覆盖上级配置",
   "isOn": "是否启用配置",
-  "addStatusHeader": "是否增加命中状态Header（X-Cache）",
+  "addStatusHeader": "是否增加命中状态Header(X-Cache)",
   "addAgeHeader": "是否增加Age Header",
   "enableCacheControlMaxAge": "是否支持Cache-Control: max-age=...",
   "disablePolicyRefs": "是否停用策略中定义的条件",
@@ -15,9 +15,9 @@
   "cacheRefs": ["缓存条件1", "缓存条件2", ...]
 }
 ~~~
-其中：
+其中:
 * `缓存条件` - 参考 {json:http_cache_ref}
-* `主域名配置` 参考本文“主域名”配置部分
+* `主域名配置` 参考本文"主域名"配置部分
 
 ## 示例
 ### 无缓存条件
@@ -99,7 +99,7 @@
 {
   "isOn": "true|false",
   "scheme": "https|http",
-  "host": "域名，必须是当前网站已绑定的域名"
+  "host": "域名,必须是当前网站已绑定的域名"
 }
 ~~~
 
@@ -120,4 +120,4 @@
 }
 ~~~
 
-如果启用主域名，则缓存键值中的域名会被自动换成主域名，清理缓存的时候也需要使用此主域名。
+如果启用主域名,则缓存键值中的域名会被自动换成主域名,清理缓存的时候也需要使用此主域名.

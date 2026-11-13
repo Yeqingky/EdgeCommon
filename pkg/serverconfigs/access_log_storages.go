@@ -36,7 +36,7 @@ func FindAllAccessLogStorageTypes() []*shared.Definition {
 		{
 			Name:        "Syslog",
 			Code:        AccessLogStorageTypeSyslog,
-			Description: "将日志通过syslog输出，仅支持Linux",
+			Description: "将日志通过syslog输出,仅支持Linux",
 		},
 		{
 			Name:        "命令行输入流",

@@ -75,9 +75,9 @@ type FindServerBandwidthStatsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 服务ID
-	Month    string `protobuf:"bytes,2,opt,name=month,proto3" json:"month,omitempty"`        // YYYYMM，month和day二选一
+	Month    string `protobuf:"bytes,2,opt,name=month,proto3" json:"month,omitempty"`        // YYYYMM,month和day二选一
 	Day      string `protobuf:"bytes,3,opt,name=day,proto3" json:"day,omitempty"`            // YYYYMMDD
-	Algo     string `protobuf:"bytes,4,opt,name=algo,proto3" json:"algo,omitempty"`          // 带宽算法，目前支持secondly和avg
+	Algo     string `protobuf:"bytes,4,opt,name=algo,proto3" json:"algo,omitempty"`          // 带宽算法,目前支持secondly和avg
 }
 
 func (x *FindServerBandwidthStatsRequest) Reset() {
@@ -195,7 +195,7 @@ type FindHourlyServerBandwidthStatsRequest struct {
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	Hours    int32  `protobuf:"varint,2,opt,name=hours,proto3" json:"hours,omitempty"`
-	Algo     string `protobuf:"bytes,3,opt,name=algo,proto3" json:"algo,omitempty"` // 带宽算法，目前支持secondly和avg
+	Algo     string `protobuf:"bytes,3,opt,name=algo,proto3" json:"algo,omitempty"` // 带宽算法,目前支持secondly和avg
 }
 
 func (x *FindHourlyServerBandwidthStatsRequest) Reset() {
@@ -322,7 +322,7 @@ type FindDailyServerBandwidthStatsRequest struct {
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	Days     int32  `protobuf:"varint,2,opt,name=days,proto3" json:"days,omitempty"`
-	Algo     string `protobuf:"bytes,3,opt,name=algo,proto3" json:"algo,omitempty"` // 带宽算法，目前支持secondly和avg
+	Algo     string `protobuf:"bytes,3,opt,name=algo,proto3" json:"algo,omitempty"` // 带宽算法,目前支持secondly和avg
 }
 
 func (x *FindDailyServerBandwidthStatsRequest) Reset() {
@@ -447,13 +447,13 @@ type FindDailyServerBandwidthStatsBetweenDaysRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId       int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`             // 用户ID，和服务ID二选一
-	ServerId     int64  `protobuf:"varint,2,opt,name=serverId,proto3" json:"serverId,omitempty"`         // 服务ID，和用户ID二选一
+	UserId       int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`             // 用户ID,和服务ID二选一
+	ServerId     int64  `protobuf:"varint,2,opt,name=serverId,proto3" json:"serverId,omitempty"`         // 服务ID,和用户ID二选一
 	DayFrom      string `protobuf:"bytes,3,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`            // 开始日期 YYYYMMDD
 	DayTo        string `protobuf:"bytes,4,opt,name=dayTo,proto3" json:"dayTo,omitempty"`                // 结束日期 YYYYMMDD
-	Percentile   int32  `protobuf:"varint,5,opt,name=percentile,proto3" json:"percentile,omitempty"`     // 可选项，百分位（nth）带宽位置，0-100之间
-	NodeRegionId int64  `protobuf:"varint,6,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID，可选项（目前只有用户整体统计支持区域ID）
-	Algo         string `protobuf:"bytes,7,opt,name=algo,proto3" json:"algo,omitempty"`                  // 带宽算法，目前支持secondly和avg
+	Percentile   int32  `protobuf:"varint,5,opt,name=percentile,proto3" json:"percentile,omitempty"`     // 可选项,百分位(nth)带宽位置,0-100之间
+	NodeRegionId int64  `protobuf:"varint,6,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID,可选项(目前只有用户整体统计支持区域ID)
+	Algo         string `protobuf:"bytes,7,opt,name=algo,proto3" json:"algo,omitempty"`                  // 带宽算法,目前支持secondly和avg
 }
 
 func (x *FindDailyServerBandwidthStatsBetweenDaysRequest) Reset() {

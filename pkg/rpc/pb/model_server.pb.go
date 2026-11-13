@@ -55,7 +55,7 @@ type Server struct {
 	ReverseProxyJSON        []byte                    `protobuf:"bytes,16,opt,name=reverseProxyJSON,proto3" json:"reverseProxyJSON,omitempty"`
 	BandwidthTime           string                    `protobuf:"bytes,26,opt,name=bandwidthTime,proto3" json:"bandwidthTime,omitempty"`              // 带宽时间
 	BandwidthBytes          int64                     `protobuf:"varint,27,opt,name=bandwidthBytes,proto3" json:"bandwidthBytes,omitempty"`           // 带宽字节数
-	CountRequests           int64                     `protobuf:"varint,34,opt,name=countRequests,proto3" json:"countRequests,omitempty"`             // 最近（通常5分钟内）访问量
+	CountRequests           int64                     `protobuf:"varint,34,opt,name=countRequests,proto3" json:"countRequests,omitempty"`             // 最近(通常5分钟内)访问量
 	CountAttackRequests     int64                     `protobuf:"varint,35,opt,name=countAttackRequests,proto3" json:"countAttackRequests,omitempty"` // 最近识别到的攻击访问量
 	NodeCluster             *NodeCluster              `protobuf:"bytes,30,opt,name=nodeCluster,proto3" json:"nodeCluster,omitempty"`
 	ServerGroups            []*ServerGroup            `protobuf:"bytes,31,rep,name=serverGroups,proto3" json:"serverGroups,omitempty"`

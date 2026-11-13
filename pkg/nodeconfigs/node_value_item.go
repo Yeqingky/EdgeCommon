@@ -88,7 +88,7 @@ var nodeValueItemDefinitions = []*nodeValueItemDefinition{
 	{
 		Code:        NodeValueItemTrafficIn,
 		Name:        "上行流量",
-		Description: "平均每分钟客户端发送到服务器端的流量。",
+		Description: "平均每分钟客户端发送到服务器端的流量.",
 		Params: []*nodeValueItemParamDefinition{
 			{
 				Code:        "total",
@@ -100,7 +100,7 @@ var nodeValueItemDefinitions = []*nodeValueItemDefinition{
 	{
 		Code:        NodeValueItemTrafficOut,
 		Name:        "下行流量",
-		Description: "平均每分钟服务器端发送到客户端的流量。",
+		Description: "平均每分钟服务器端发送到客户端的流量.",
 		Params: []*nodeValueItemParamDefinition{
 			{
 				Code:        "total",
@@ -163,15 +163,15 @@ var nodeValueItemDefinitions = []*nodeValueItemDefinition{
 		Params: []*nodeValueItemParamDefinition{
 			{
 				Code: "tcpInPPS",
-				Name: "TCP入口包速率（pps）",
+				Name: "TCP入口包速率(pps)",
 			},
 			{
 				Code: "udpInPPS",
-				Name: "UDP入口包速率（pps）",
+				Name: "UDP入口包速率(pps)",
 			},
 			{
 				Code: "icmpInPPS",
-				Name: "ICMP入口包速率（pps）",
+				Name: "ICMP入口包速率(pps)",
 			},
 		},
 	},

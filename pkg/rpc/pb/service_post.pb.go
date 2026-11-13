@@ -27,11 +27,11 @@ type CreatePostRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	PostCategoryId int64  `protobuf:"varint,1,opt,name=postCategoryId,proto3" json:"postCategoryId,omitempty"` // 文章分类ID
-	Type           string `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`                      // 类型：normal, url
+	Type           string `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`                      // 类型:normal, url
 	ProductCode    string `protobuf:"bytes,3,opt,name=productCode,proto3" json:"productCode,omitempty"`        // 产品代号
 	Subject        string `protobuf:"bytes,4,opt,name=subject,proto3" json:"subject,omitempty"`                // 标题
-	Url            string `protobuf:"bytes,5,opt,name=url,proto3" json:"url,omitempty"`                        // 跳转的URL（type=url）
-	Body           string `protobuf:"bytes,6,opt,name=body,proto3" json:"body,omitempty"`                      // 文章内容（type=normal）
+	Url            string `protobuf:"bytes,5,opt,name=url,proto3" json:"url,omitempty"`                        // 跳转的URL(type=url)
+	Body           string `protobuf:"bytes,6,opt,name=body,proto3" json:"body,omitempty"`                      // 文章内容(type=normal)
 }
 
 func (x *CreatePostRequest) Reset() {
@@ -165,9 +165,9 @@ type UpdatePostRequest struct {
 	PostCategoryId int64  `protobuf:"varint,2,opt,name=postCategoryId,proto3" json:"postCategoryId,omitempty"` // 文章分类ID
 	ProductCode    string `protobuf:"bytes,3,opt,name=productCode,proto3" json:"productCode,omitempty"`        // 产品代号
 	Subject        string `protobuf:"bytes,4,opt,name=subject,proto3" json:"subject,omitempty"`                // 标题
-	Type           string `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`                      // 类型：normal, url
-	Url            string `protobuf:"bytes,6,opt,name=url,proto3" json:"url,omitempty"`                        // 跳转的URL（type=url）
-	Body           string `protobuf:"bytes,7,opt,name=body,proto3" json:"body,omitempty"`                      // 文章内容（type=normal）
+	Type           string `protobuf:"bytes,5,opt,name=type,proto3" json:"type,omitempty"`                      // 类型:normal, url
+	Url            string `protobuf:"bytes,6,opt,name=url,proto3" json:"url,omitempty"`                        // 跳转的URL(type=url)
+	Body           string `protobuf:"bytes,7,opt,name=body,proto3" json:"body,omitempty"`                      // 文章内容(type=normal)
 }
 
 func (x *UpdatePostRequest) Reset() {

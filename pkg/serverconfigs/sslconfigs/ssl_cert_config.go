@@ -24,7 +24,7 @@ type SSLCertConfig struct {
 	Description string `yaml:"description" json:"description"` // 说明
 	CertData    []byte `yaml:"certData" json:"certData"`       // 证书数据
 	KeyData     []byte `yaml:"keyData" json:"keyData"`         // 密钥数据
-	ServerName  string `yaml:"serverName" json:"serverName"`   // 证书使用的主机名，在请求TLS服务器时需要
+	ServerName  string `yaml:"serverName" json:"serverName"`   // 证书使用的主机名,在请求TLS服务器时需要
 	IsCA        bool   `yaml:"isCA" json:"isCA"`               // 是否为CA证书
 	IsACME      bool   `yaml:"isACME" json:"isACME"`           // 是否通过ACME协议免费申请
 
@@ -47,7 +47,7 @@ type SSLCertConfig struct {
 
 // Init 校验
 func (this *SSLCertConfig) Init(ctx context.Context) error {
-	// 如果没有指定数据， 则从ctx中读取数据
+	// 如果没有指定数据, 则从ctx中读取数据
 	if ctx != nil && len(this.CertData) < 128 {
 		var dataMapOne = ctx.Value("DataMap")
 		if dataMapOne != nil && !reflect.ValueOf(dataMapOne).IsNil() {

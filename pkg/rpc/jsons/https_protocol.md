@@ -7,7 +7,7 @@
   	"listen": [
       {
 		"protocol": "协议",
-		"host": "主机地址，通常为空",
+		"host": "主机地址,通常为空",
 		"portRange": "端口或者端口范围"
 	  },
 	  ...
@@ -19,7 +19,7 @@
 }
 ~~~
 
-其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。
+其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.
 
 ## 示例
 
@@ -41,7 +41,7 @@
 }
 ~~~
 
-其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。
+其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.
 
 ### 监听443和8443端口
 ~~~json
@@ -64,4 +64,4 @@
 }
 ~~~
 
-其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。
+其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.

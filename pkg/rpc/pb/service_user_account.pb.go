@@ -375,9 +375,9 @@ type UpdateUserAccountRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserAccountId int64   `protobuf:"varint,1,opt,name=userAccountId,proto3" json:"userAccountId,omitempty"` // 用户账户ID（非用户ID）
-	Delta         float64 `protobuf:"fixed64,2,opt,name=delta,proto3" json:"delta,omitempty"`                // 操作的数值，正值表示增加，负值表示减少
-	EventType     string  `protobuf:"bytes,3,opt,name=eventType,proto3" json:"eventType,omitempty"`          // 事件类型：charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage
+	UserAccountId int64   `protobuf:"varint,1,opt,name=userAccountId,proto3" json:"userAccountId,omitempty"` // 用户账户ID(非用户ID)
+	Delta         float64 `protobuf:"fixed64,2,opt,name=delta,proto3" json:"delta,omitempty"`                // 操作的数值,正值表示增加,负值表示减少
+	EventType     string  `protobuf:"bytes,3,opt,name=eventType,proto3" json:"eventType,omitempty"`          // 事件类型:charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage
 	Description   string  `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`      // 描述
 	ParamsJSON    []byte  `protobuf:"bytes,5,opt,name=paramsJSON,proto3" json:"paramsJSON,omitempty"`        // 相关参数
 }

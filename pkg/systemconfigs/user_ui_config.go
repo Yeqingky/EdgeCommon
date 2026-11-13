@@ -22,7 +22,7 @@ type UserUIConfig struct {
 	TimeZone string `json:"timeZone"` // 时区
 
 	DNSResolver struct {
-		Type string `json:"type"` // 类型，参考 DNSResolverType*
+		Type string `json:"type"` // 类型,参考 DNSResolverType*
 	} `json:"dnsResolver"` // DNS解析设置
 
 	ClientIPHeaderNames string `json:"clientIPHeaderNames"` // 客户端IP获取报头名称列表

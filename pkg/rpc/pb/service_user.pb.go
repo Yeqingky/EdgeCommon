@@ -578,7 +578,7 @@ type CountAllEnabledUsersRequest struct {
 
 	Keyword          string `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
 	IsVerifying      bool   `protobuf:"varint,2,opt,name=isVerifying,proto3" json:"isVerifying,omitempty"`
-	MobileIsVerified int32  `protobuf:"varint,3,opt,name=mobileIsVerified,proto3" json:"mobileIsVerified,omitempty"` // 手机号是否已验证，1表示已验证，0表示未验证，-1表示所有状态
+	MobileIsVerified int32  `protobuf:"varint,3,opt,name=mobileIsVerified,proto3" json:"mobileIsVerified,omitempty"` // 手机号是否已验证,1表示已验证,0表示未验证,-1表示所有状态
 }
 
 func (x *CountAllEnabledUsersRequest) Reset() {
@@ -642,7 +642,7 @@ type ListEnabledUsersRequest struct {
 
 	Keyword          string `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`
 	IsVerifying      bool   `protobuf:"varint,4,opt,name=isVerifying,proto3" json:"isVerifying,omitempty"`
-	MobileIsVerified int32  `protobuf:"varint,5,opt,name=mobileIsVerified,proto3" json:"mobileIsVerified,omitempty"` // 手机号是否已验证，1表示已验证，0表示未验证，-1表示所有状态
+	MobileIsVerified int32  `protobuf:"varint,5,opt,name=mobileIsVerified,proto3" json:"mobileIsVerified,omitempty"` // 手机号是否已验证,1表示已验证,0表示未验证,-1表示所有状态
 	Offset           int64  `protobuf:"varint,2,opt,name=offset,proto3" json:"offset,omitempty"`
 	Size             int64  `protobuf:"varint,3,opt,name=size,proto3" json:"size,omitempty"`
 }

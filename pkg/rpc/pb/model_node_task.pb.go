@@ -33,7 +33,7 @@ type NodeTask struct {
 	Error       string       `protobuf:"bytes,5,opt,name=error,proto3" json:"error,omitempty"`
 	UpdatedAt   int64        `protobuf:"varint,6,opt,name=updatedAt,proto3" json:"updatedAt,omitempty"`
 	Version     int64        `protobuf:"varint,7,opt,name=version,proto3" json:"version,omitempty"`
-	IsPrimary   bool         `protobuf:"varint,8,opt,name=isPrimary,proto3" json:"isPrimary,omitempty"` // 是否为主节点，非主节点稍等再同步有利于提升同步速度
+	IsPrimary   bool         `protobuf:"varint,8,opt,name=isPrimary,proto3" json:"isPrimary,omitempty"` // 是否为主节点,非主节点稍等再同步有利于提升同步速度
 	ServerId    int64        `protobuf:"varint,9,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	UserId      int64        `protobuf:"varint,10,opt,name=userId,proto3" json:"userId,omitempty"`
 	Node        *Node        `protobuf:"bytes,30,opt,name=node,proto3" json:"node,omitempty"`

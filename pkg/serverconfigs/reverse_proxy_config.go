@@ -19,7 +19,7 @@ const (
 
 func NewReverseProxyConfig() *ReverseProxyConfig {
 	return &ReverseProxyConfig{
-		Retry50X: false, // 不要改为true，太多人使用50x作为特殊业务代码使用了！
+		Retry50X: false, // 不要改为true,太多人使用50x作为特殊业务代码使用了!
 	}
 }
 
@@ -42,15 +42,15 @@ type ReverseProxyConfig struct {
 
 	StripPrefix              string          `yaml:"stripPrefix" json:"stripPrefix"`                           // 去除URL前缀
 	RequestHostType          RequestHostType `yaml:"requestHostType" json:"requestHostType"`                   // 请求Host类型
-	RequestHost              string          `yaml:"requestHost" json:"requestHost"`                           // 请求Host，支持变量
-	RequestURI               string          `yaml:"requestURI" json:"requestURI"`                             // 请求URI，支持变量，如果同时定义了StripPrefix，则先执行StripPrefix
+	RequestHost              string          `yaml:"requestHost" json:"requestHost"`                           // 请求Host,支持变量
+	RequestURI               string          `yaml:"requestURI" json:"requestURI"`                             // 请求URI,支持变量,如果同时定义了StripPrefix,则先执行StripPrefix
 	RequestHostExcludingPort bool            `yaml:"requestHostExcludingPort" json:"requestHostExcludingPort"` // 请求Host不包括端口
 	Retry50X                 bool            `yaml:"retry50X" json:"retry50X"`                                 // 50x 错误重试
 	Retry40X                 bool            `yaml:"retry40X" json:"retry40X"`                                 // 40x 内容重试源站
 
 	AddHeaders []string `yaml:"addHeaders" json:"addHeaders"` // 自动添加的Header
 
-	AutoFlush bool `yaml:"autoFlush" json:"autoFlush"` // 是否自动刷新缓冲区，在比如SSE（server-sent events）场景下很有用
+	AutoFlush bool `yaml:"autoFlush" json:"autoFlush"` // 是否自动刷新缓冲区,在比如SSE(server-sent events)场景下很有用
 
 	ProxyProtocol   *ProxyProtocolConfig  `yaml:"proxyProtocol" json:"proxyProtocol"`     // PROXY Protocol
 	FollowRedirects bool                  `yaml:"followRedirects" json:"followRedirects"` // 回源跟随
@@ -235,7 +235,7 @@ func (this *ReverseProxyConfig) AddBackupOrigin(origin *OriginConfig) {
 
 // NextOrigin 取得下一个可用的源站
 func (this *ReverseProxyConfig) NextOrigin(call *shared.RequestCall) *OriginConfig {
-	// 这里不能使用RLock/RUnlock，因为在NextOrigin()方法中可能会对调度对象动态调整
+	// 这里不能使用RLock/RUnlock,因为在NextOrigin()方法中可能会对调度对象动态调整
 	this.schedulingLocker.Lock()
 	defer this.schedulingLocker.Unlock()
 

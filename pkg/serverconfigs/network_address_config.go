@@ -14,11 +14,11 @@ var regexpSinglePort = regexp.MustCompile(`^\d+$`)
 
 // NetworkAddressConfig 网络地址配置
 type NetworkAddressConfig struct {
-	Protocol  Protocol `yaml:"protocol" json:"protocol"`   // 协议，http、tcp、tcp4、tcp6、unix、udp等
-	Host      string   `yaml:"host" json:"host"`           // 主机地址或主机名，支持变量
-	PortRange string   `yaml:"portRange" json:"portRange"` // 端口范围，支持 8080、8080-8090、8080:8090
+	Protocol  Protocol `yaml:"protocol" json:"protocol"`   // 协议,http,tcp,tcp4,tcp6,unix,udp等
+	Host      string   `yaml:"host" json:"host"`           // 主机地址或主机名,支持变量
+	PortRange string   `yaml:"portRange" json:"portRange"` // 端口范围,支持 8080,8080-8090,8080:8090
 
-	MinPort int `yaml:"minPort" json:"minPort"` // minPort和maxPort只是用来记录PortRange分解后的结果，不需要用户输入
+	MinPort int `yaml:"minPort" json:"minPort"` // minPort和maxPort只是用来记录PortRange分解后的结果,不需要用户输入
 	MaxPort int `yaml:"maxPort" json:"maxPort"`
 
 	hostHasVariables bool
@@ -28,7 +28,7 @@ type NetworkAddressConfig struct {
 func (this *NetworkAddressConfig) Init() error {
 	this.hostHasVariables = configutils.HasVariables(this.Host)
 
-	// 特殊端口自动修复，防止有些小白用户不了解HTTP和HTTPS的区别而选择了错误的协议
+	// 特殊端口自动修复,防止有些小白用户不了解HTTP和HTTPS的区别而选择了错误的协议
 	if this.PortRange == "80" && this.Protocol == ProtocolHTTPS {
 		this.Protocol = ProtocolHTTP
 	}
@@ -72,7 +72,7 @@ func (this *NetworkAddressConfig) Init() error {
 	return nil
 }
 
-// Addresses 所有的地址列表，不包括scheme
+// Addresses 所有的地址列表,不包括scheme
 func (this *NetworkAddressConfig) Addresses() []string {
 	result := []string{}
 	for i := this.MinPort; i <= this.MaxPort; i++ {
@@ -82,7 +82,7 @@ func (this *NetworkAddressConfig) Addresses() []string {
 	return result
 }
 
-// FullAddresses 所有的地址列表，包含scheme
+// FullAddresses 所有的地址列表,包含scheme
 func (this *NetworkAddressConfig) FullAddresses() []string {
 	result := []string{}
 	for i := this.MinPort; i <= this.MaxPort; i++ {

@@ -15,8 +15,8 @@
 ]
 ~~~
 
-其中：
-* `originId` - 源站ID，可以通过 `/OriginService/createOrigin` 接口创建源站后获得
+其中:
+* `originId` - 源站ID,可以通过 `/OriginService/createOrigin` 接口创建源站后获得
 
 ## 示例
 ~~~json

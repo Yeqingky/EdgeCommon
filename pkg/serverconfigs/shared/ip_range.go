@@ -17,7 +17,7 @@ const (
 	IPRangeTypeRange    IPRangeType = 1
 	IPRangeTypeCIDR     IPRangeType = 2
 	IPRangeTypeAll      IPRangeType = 3
-	IPRangeTypeWildcard IPRangeType = 4 // 通配符，可以使用*
+	IPRangeTypeWildcard IPRangeType = 4 // 通配符,可以使用*
 )
 
 // IPRangeConfig IP Range

@@ -20,12 +20,12 @@ func FindAllHTTPAuthTypes(role string) []*HTTPAuthTypeDefinition {
 		{
 			Name:        "基本认证",
 			Code:        HTTPAuthTypeBasicAuth,
-			Description: "BasicAuth，最简单的HTTP请求认证方式，通过传递<span class=\"ui label tiny basic text\">Authorization: Basic xxx</span> Header认证。",
+			Description: "BasicAuth,最简单的HTTP请求认证方式,通过传递<span class=\"ui label tiny basic text\">Authorization: Basic xxx</span> Header认证.",
 		},
 		{
 			Name:        "子请求",
 			Code:        HTTPAuthTypeSubRequest,
-			Description: "通过自定义的URL子请求来认证请求。",
+			Description: "通过自定义的URL子请求来认证请求.",
 		},
 	}
 }

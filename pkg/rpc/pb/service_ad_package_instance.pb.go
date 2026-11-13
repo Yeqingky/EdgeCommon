@@ -511,10 +511,10 @@ type CountADPackageInstancesRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AdNetworkId int64  `protobuf:"varint,1,opt,name=adNetworkId,proto3" json:"adNetworkId,omitempty"` // 可选，线路
-	AdPackageId int64  `protobuf:"varint,2,opt,name=adPackageId,proto3" json:"adPackageId,omitempty"` // 可选，如果不填则表示获取所有实例数量
-	UserId      int64  `protobuf:"varint,3,opt,name=userId,proto3" json:"userId,omitempty"`           // 可选，用户ID
-	Ip          string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                    // 可选，高防IP
+	AdNetworkId int64  `protobuf:"varint,1,opt,name=adNetworkId,proto3" json:"adNetworkId,omitempty"` // 可选,线路
+	AdPackageId int64  `protobuf:"varint,2,opt,name=adPackageId,proto3" json:"adPackageId,omitempty"` // 可选,如果不填则表示获取所有实例数量
+	UserId      int64  `protobuf:"varint,3,opt,name=userId,proto3" json:"userId,omitempty"`           // 可选,用户ID
+	Ip          string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                    // 可选,高防IP
 }
 
 func (x *CountADPackageInstancesRequest) Reset() {
@@ -583,10 +583,10 @@ type ListADPackageInstancesRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AdNetworkId int64  `protobuf:"varint,1,opt,name=adNetworkId,proto3" json:"adNetworkId,omitempty"` // 可选，线路
-	AdPackageId int64  `protobuf:"varint,2,opt,name=adPackageId,proto3" json:"adPackageId,omitempty"` // 可选，如果不填则表示获取所有实例数量
-	UserId      int64  `protobuf:"varint,3,opt,name=userId,proto3" json:"userId,omitempty"`           // 可选，用户ID
-	Ip          string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                    // 可选，高防IP
+	AdNetworkId int64  `protobuf:"varint,1,opt,name=adNetworkId,proto3" json:"adNetworkId,omitempty"` // 可选,线路
+	AdPackageId int64  `protobuf:"varint,2,opt,name=adPackageId,proto3" json:"adPackageId,omitempty"` // 可选,如果不填则表示获取所有实例数量
+	UserId      int64  `protobuf:"varint,3,opt,name=userId,proto3" json:"userId,omitempty"`           // 可选,用户ID
+	Ip          string `protobuf:"bytes,4,opt,name=ip,proto3" json:"ip,omitempty"`                    // 可选,高防IP
 	Offset      int64  `protobuf:"varint,5,opt,name=offset,proto3" json:"offset,omitempty"`
 	Size        int64  `protobuf:"varint,6,opt,name=size,proto3" json:"size,omitempty"`
 }

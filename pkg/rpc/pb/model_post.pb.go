@@ -29,7 +29,7 @@ type Post struct {
 	Id             int64         `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                         // ID
 	PostCategoryId int64         `protobuf:"varint,2,opt,name=postCategoryId,proto3" json:"postCategoryId,omitempty"` // 分类ID
 	ProductCode    string        `protobuf:"bytes,3,opt,name=productCode,proto3" json:"productCode,omitempty"`        // 产品代号
-	Type           string        `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`                      // 类型：normal, url
+	Type           string        `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`                      // 类型:normal, url
 	Subject        string        `protobuf:"bytes,5,opt,name=subject,proto3" json:"subject,omitempty"`                // 标题
 	Url            string        `protobuf:"bytes,6,opt,name=url,proto3" json:"url,omitempty"`                        // URL
 	Body           string        `protobuf:"bytes,7,opt,name=body,proto3" json:"body,omitempty"`                      // 内容

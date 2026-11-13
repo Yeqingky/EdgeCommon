@@ -112,17 +112,17 @@ type ListHTTPAccessLogsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RequestId           string `protobuf:"bytes,1,opt,name=requestId,proto3" json:"requestId,omitempty"`                      // 上一页请求ID，可选
+	RequestId           string `protobuf:"bytes,1,opt,name=requestId,proto3" json:"requestId,omitempty"`                      // 上一页请求ID,可选
 	ServerId            int64  `protobuf:"varint,2,opt,name=serverId,proto3" json:"serverId,omitempty"`                       // 服务ID
 	Size                int64  `protobuf:"varint,3,opt,name=size,proto3" json:"size,omitempty"`                               // 单页条数
-	Day                 string `protobuf:"bytes,4,opt,name=day,proto3" json:"day,omitempty"`                                  // 日期，格式YYYYMMDD
+	Day                 string `protobuf:"bytes,4,opt,name=day,proto3" json:"day,omitempty"`                                  // 日期,格式YYYYMMDD
 	HourFrom            string `protobuf:"bytes,17,opt,name=hourFrom,proto3" json:"hourFrom,omitempty"`                       // 开始小时
 	HourTo              string `protobuf:"bytes,18,opt,name=hourTo,proto3" json:"hourTo,omitempty"`                           // 结束小时
-	Reverse             bool   `protobuf:"varint,5,opt,name=reverse,proto3" json:"reverse,omitempty"`                         // 是否反向查找，可选
-	HasError            bool   `protobuf:"varint,6,opt,name=hasError,proto3" json:"hasError,omitempty"`                       // 是否有错误，可选
-	FirewallPolicyId    int64  `protobuf:"varint,7,opt,name=firewallPolicyId,proto3" json:"firewallPolicyId,omitempty"`       // WAF策略ID，可选
-	FirewallRuleGroupId int64  `protobuf:"varint,8,opt,name=firewallRuleGroupId,proto3" json:"firewallRuleGroupId,omitempty"` // WAF分组ID，可选
-	FirewallRuleSetId   int64  `protobuf:"varint,9,opt,name=firewallRuleSetId,proto3" json:"firewallRuleSetId,omitempty"`     // WAF规则集ID，可选
+	Reverse             bool   `protobuf:"varint,5,opt,name=reverse,proto3" json:"reverse,omitempty"`                         // 是否反向查找,可选
+	HasError            bool   `protobuf:"varint,6,opt,name=hasError,proto3" json:"hasError,omitempty"`                       // 是否有错误,可选
+	FirewallPolicyId    int64  `protobuf:"varint,7,opt,name=firewallPolicyId,proto3" json:"firewallPolicyId,omitempty"`       // WAF策略ID,可选
+	FirewallRuleGroupId int64  `protobuf:"varint,8,opt,name=firewallRuleGroupId,proto3" json:"firewallRuleGroupId,omitempty"` // WAF分组ID,可选
+	FirewallRuleSetId   int64  `protobuf:"varint,9,opt,name=firewallRuleSetId,proto3" json:"firewallRuleSetId,omitempty"`     // WAF规则集ID,可选
 	UserId              int64  `protobuf:"varint,10,opt,name=userId,proto3" json:"userId,omitempty"`                          // 用户ID
 	HasFirewallPolicy   bool   `protobuf:"varint,11,opt,name=hasFirewallPolicy,proto3" json:"hasFirewallPolicy,omitempty"`    // 是否有WAF策略
 	Keyword             string `protobuf:"bytes,12,opt,name=keyword,proto3" json:"keyword,omitempty"`                         // 关键词

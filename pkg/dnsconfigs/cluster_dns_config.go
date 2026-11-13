@@ -3,7 +3,7 @@ package dnsconfigs
 // ClusterDNSConfig 集群的DNS设置
 type ClusterDNSConfig struct {
 	CNAMERecords     []string `yaml:"cnameRecords" json:"cnameRecords"`         // 自动加入的CNAME
-	TTL              int32    `yaml:"ttl" json:"ttl"`                           // 默认TTL，各个DNS服务商对记录的TTL的限制各有不同
+	TTL              int32    `yaml:"ttl" json:"ttl"`                           // 默认TTL,各个DNS服务商对记录的TTL的限制各有不同
 	CNAMEAsDomain    bool     `yaml:"cnameAsDomain" json:"cnameAsDomain"`       // 是否可以像域名一样直接访问CNAME
 	SharedCNAME      bool     `yaml:"sharedCNAME" json:"sharedCNAME"`           // 所有网站是否共用一个CNAME
 	IncludingLnNodes bool     `yaml:"includingLnNodes" json:"includingLnNodes"` // 是否包含Ln节点

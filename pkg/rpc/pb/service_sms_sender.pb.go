@@ -29,7 +29,7 @@ type SendSMSRequest struct {
 	Mobile     string `protobuf:"bytes,1,opt,name=mobile,proto3" json:"mobile,omitempty"`         // 手机号
 	Body       string `protobuf:"bytes,2,opt,name=body,proto3" json:"body,omitempty"`             // 内容
 	Code       string `protobuf:"bytes,3,opt,name=code,proto3" json:"code,omitempty"`             // 验证码
-	Type       string `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`             // 渠道类型：webHook ...
+	Type       string `protobuf:"bytes,4,opt,name=type,proto3" json:"type,omitempty"`             // 渠道类型:webHook ...
 	ParamsJSON []byte `protobuf:"bytes,5,opt,name=paramsJSON,proto3" json:"paramsJSON,omitempty"` // 参数
 }
 
@@ -106,7 +106,7 @@ type SendSMSResponse struct {
 	unknownFields protoimpl.UnknownFields
 
 	IsOk   bool   `protobuf:"varint,1,opt,name=isOk,proto3" json:"isOk,omitempty"`    // 是否成功
-	Result string `protobuf:"bytes,2,opt,name=result,proto3" json:"result,omitempty"` // 发送返回内容，只有失败时才会有数据
+	Result string `protobuf:"bytes,2,opt,name=result,proto3" json:"result,omitempty"` // 发送返回内容,只有失败时才会有数据
 }
 
 func (x *SendSMSResponse) Reset() {

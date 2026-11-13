@@ -1184,8 +1184,8 @@ type CountAllEnabledAdminsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword         string `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`                  // 可选项，查询关键词
-	HasWeakPassword bool   `protobuf:"varint,2,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询
+	Keyword         string `protobuf:"bytes,1,opt,name=keyword,proto3" json:"keyword,omitempty"`                  // 可选项,查询关键词
+	HasWeakPassword bool   `protobuf:"varint,2,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询
 }
 
 func (x *CountAllEnabledAdminsRequest) Reset() {
@@ -1240,9 +1240,9 @@ type ListEnabledAdminsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Keyword         string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`                  // 可选项，查询关键词
-	HasWeakPassword bool   `protobuf:"varint,4,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询
-	Offset          int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`                   // 读取位置，从0开始
+	Keyword         string `protobuf:"bytes,3,opt,name=keyword,proto3" json:"keyword,omitempty"`                  // 可选项,查询关键词
+	HasWeakPassword bool   `protobuf:"varint,4,opt,name=hasWeakPassword,proto3" json:"hasWeakPassword,omitempty"` // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询
+	Offset          int64  `protobuf:"varint,1,opt,name=offset,proto3" json:"offset,omitempty"`                   // 读取位置,从0开始
 	Size            int64  `protobuf:"varint,2,opt,name=size,proto3" json:"size,omitempty"`                       // 读取数量
 }
 
@@ -1845,7 +1845,7 @@ type UpdateAdminLangRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	LangCode string `protobuf:"bytes,1,opt,name=langCode,proto3" json:"langCode,omitempty"` // 语言代号：en-us, zh-cn, ...，如果为空表示默认
+	LangCode string `protobuf:"bytes,1,opt,name=langCode,proto3" json:"langCode,omitempty"` // 语言代号:en-us, zh-cn, ...,如果为空表示默认
 }
 
 func (x *UpdateAdminLangRequest) Reset() {
@@ -1898,7 +1898,7 @@ type ComposeAdminDashboardResponse_DailyTrafficStat struct {
 	CountRequests       int64  `protobuf:"varint,4,opt,name=countRequests,proto3" json:"countRequests,omitempty"`
 	CountCachedRequests int64  `protobuf:"varint,5,opt,name=countCachedRequests,proto3" json:"countCachedRequests,omitempty"`
 	CountAttackRequests int64  `protobuf:"varint,6,opt,name=countAttackRequests,proto3" json:"countAttackRequests,omitempty"`
-	AttackBytes         int64  `protobuf:"varint,7,opt,name=attackBytes,proto3" json:"attackBytes,omitempty"` // 攻击流量（字节）
+	AttackBytes         int64  `protobuf:"varint,7,opt,name=attackBytes,proto3" json:"attackBytes,omitempty"` // 攻击流量(字节)
 	CountIPs            int64  `protobuf:"varint,8,opt,name=countIPs,proto3" json:"countIPs,omitempty"`       // 独立IP数量
 }
 

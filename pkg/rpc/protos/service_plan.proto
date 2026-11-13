@@ -47,8 +47,8 @@ message CreatePlanRequest {
 	bytes trafficLimitJSON = 3; // 流量限制
 	bytes bandwidthLimitPerNodeJSON = 20; // 单节点带宽限制 @link json:bit_size_capacity
 	bool hasFullFeatures = 18; // 是否有所有权限
-	bytes featuresJSON = 4; // 权限列表，[code1, code2, ...]
-	string priceType = 5; // 价格类型：traffic, bandwidth, period
+	bytes featuresJSON = 4; // 权限列表,[code1, code2, ...]
+	string priceType = 5; // 价格类型:traffic, bandwidth, period
 	bytes trafficPriceJSON = 6; // 流量价格配置
 	bytes bandwidthPriceJSON = 10; // 带宽价格配置
 	float monthlyPrice = 7; // 月度价格
@@ -78,8 +78,8 @@ message UpdatePlanRequest {
 	bytes trafficLimitJSON = 5; // 流量限制
 	bytes bandwidthLimitPerNodeJSON = 22; // 单节点带宽限制
 	bool hasFullFeatures = 20; // 是否有所有权限
-	bytes featuresJSON = 6; // 权限列表，[code1, code2, ...]
-	string priceType = 7; // 价格类型：traffic, bandwidth, period
+	bytes featuresJSON = 6; // 权限列表,[code1, code2, ...]
+	string priceType = 7; // 价格类型:traffic, bandwidth, period
 	bytes trafficPriceJSON = 8; // 流量价格配置
 	bytes bandwidthPriceJSON = 12; // 带宽价格配置
 	float monthlyPrice = 9; // 月费用
@@ -115,7 +115,7 @@ message FindBasicPlanRequest {
 }
 
 message FindBasicPlanResponse {
-	Plan plan = 1; // 套餐信息（只读取基本信息）
+	Plan plan = 1; // 套餐信息(只读取基本信息)
 }
 
 // 计算套餐数量

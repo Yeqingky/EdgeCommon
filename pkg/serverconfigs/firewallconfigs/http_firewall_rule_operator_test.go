@@ -15,9 +15,9 @@ func TestRuleOperator_Markdown(t *testing.T) {
 		def.Description = strings.ReplaceAll(def.Description, "</code-label>", "`")
 
 		var row = "## " + def.Name + "\n"
-		row += "* 名称：" + def.Name + "\n"
-		row += "* 代号：`" + def.Code + "`\n"
-		row += "* 描述：" + def.Description + "\n"
+		row += "* 名称:" + def.Name + "\n"
+		row += "* 代号:`" + def.Code + "`\n"
+		row += "* 描述:" + def.Description + "\n"
 		result = append(result, row)
 	}
 

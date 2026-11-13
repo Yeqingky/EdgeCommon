@@ -30,7 +30,7 @@ service TrafficPackageService {
 // 创建流量包
 message CreateTrafficPackageRequest {
 	int32 size = 1; // 流量包尺寸
-	string unit = 2; // 单位：gb, tb, pb
+	string unit = 2; // 单位:gb, tb, pb
 }
 
 message CreateTrafficPackageResponse {

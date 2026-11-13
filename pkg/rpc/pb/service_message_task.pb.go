@@ -614,7 +614,7 @@ func (x *ListMessageTasksWithStatusResponse) GetMessageTasks() []*MessageTask {
 }
 
 // 发送某个消息任务
-// 与创建消息任务放入到后台任务队列不同，此API是直接发送
+// 与创建消息任务放入到后台任务队列不同,此API是直接发送
 type SendMessageTaskRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

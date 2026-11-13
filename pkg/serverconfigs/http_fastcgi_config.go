@@ -36,7 +36,7 @@ type HTTPFastcgiConfig struct {
 	PoolSize        int                  `yaml:"poolSize" json:"poolSize"`               // 连接池尺寸
 	PathInfoPattern string               `yaml:"pathInfoPattern" json:"pathInfoPattern"` // PATH_INFO匹配正则
 
-	network string // 协议：tcp, unix
+	network string // 协议:tcp, unix
 	address string // 地址
 
 	paramsMap      maps.Map

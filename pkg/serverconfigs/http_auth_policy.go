@@ -26,7 +26,7 @@ func (this *HTTPAuthPolicy) MatchRequest(req *http.Request) bool {
 // Filter 过滤
 func (this *HTTPAuthPolicy) Filter(req *http.Request, subReqFunc func(subReq *http.Request) (status int, err error), formatter func(string) string) (ok bool, newURI string, uriChanged bool, err error) {
 	if this.method == nil {
-		// 如果设置正确的方法，我们直接允许请求
+		// 如果设置正确的方法,我们直接允许请求
 		return true, "", false, nil
 	}
 	return this.method.Filter(req, subReqFunc, formatter)

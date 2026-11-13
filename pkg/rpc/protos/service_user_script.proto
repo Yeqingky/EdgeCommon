@@ -38,7 +38,7 @@ message FindUserScriptResponse {
 
 // 根据代码MD5查找脚本
 message FindUserScriptWithMD5Request {
-	string codeMD5 = 1; // 代码MD5（32位）
+	string codeMD5 = 1; // 代码MD5(32位)
 }
 
 message FindUserScriptWithMD5Response {

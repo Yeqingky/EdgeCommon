@@ -112,14 +112,14 @@ type ListNSAccessLogsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RequestId   string `protobuf:"bytes,1,opt,name=requestId,proto3" json:"requestId,omitempty"`      // 上一页请求ID，可选
+	RequestId   string `protobuf:"bytes,1,opt,name=requestId,proto3" json:"requestId,omitempty"`      // 上一页请求ID,可选
 	NsClusterId int64  `protobuf:"varint,9,opt,name=nsClusterId,proto3" json:"nsClusterId,omitempty"` // 集群
 	NsNodeId    int64  `protobuf:"varint,2,opt,name=nsNodeId,proto3" json:"nsNodeId,omitempty"`       // 节点ID
 	NsDomainId  int64  `protobuf:"varint,3,opt,name=nsDomainId,proto3" json:"nsDomainId,omitempty"`   // 域名ID
 	NsRecordId  int64  `protobuf:"varint,4,opt,name=nsRecordId,proto3" json:"nsRecordId,omitempty"`   // 记录ID
 	Size        int64  `protobuf:"varint,5,opt,name=size,proto3" json:"size,omitempty"`               // 单页条数
-	Day         string `protobuf:"bytes,6,opt,name=day,proto3" json:"day,omitempty"`                  // 日期，格式YYYYMMDD
-	Reverse     bool   `protobuf:"varint,7,opt,name=reverse,proto3" json:"reverse,omitempty"`         // 是否反向查找，可选
+	Day         string `protobuf:"bytes,6,opt,name=day,proto3" json:"day,omitempty"`                  // 日期,格式YYYYMMDD
+	Reverse     bool   `protobuf:"varint,7,opt,name=reverse,proto3" json:"reverse,omitempty"`         // 是否反向查找,可选
 	Keyword     string `protobuf:"bytes,8,opt,name=keyword,proto3" json:"keyword,omitempty"`          // 关键词
 	RecordType  string `protobuf:"bytes,10,opt,name=recordType,proto3" json:"recordType,omitempty"`   // 记录类型
 }

@@ -3,7 +3,7 @@
 ~~~json
 {
   "isOn": "是否启用配置",
-  "key": "每个缓存的Key规则，里面可以有变量",
+  "key": "每个缓存的Key规则,里面可以有变量",
   "life": "缓存时长",
   "expiresTime": "客户端过期时间",
   "status": ["缓存的状态码1", "缓存的状态码2", ...],
@@ -16,7 +16,7 @@
   "allowChunkedEncoding": "是否允许分片内容",
   "allowPartialContent": "支持分段内容缓存",
   "conds": "请求条件",
-  "isReverse": "是否为反向条件，反向条件的不缓存"
+  "isReverse": "是否为反向条件,反向条件的不缓存"
 }
 ~~~
 

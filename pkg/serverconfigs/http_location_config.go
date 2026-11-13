@@ -15,7 +15,7 @@ type HTTPLocationConfig struct {
 	Pattern         string                         `yaml:"pattern" json:"pattern"`                 // 匹配规则 TODO 未来支持更多样的匹配规则
 	Name            string                         `yaml:"name" json:"name"`                       // 名称
 	Web             *HTTPWebConfig                 `yaml:"web" json:"web"`                         // Web配置
-	URLPrefix       string                         `yaml:"urlPrefix" json:"urlPrefix"`             // 实际的URL前缀，TODO 未来支持变量
+	URLPrefix       string                         `yaml:"urlPrefix" json:"urlPrefix"`             // 实际的URL前缀,TODO 未来支持变量
 	Description     string                         `yaml:"description" json:"description"`         // 描述
 	ReverseProxyRef *ReverseProxyRef               `yaml:"reverseProxyRef" json:"reverseProxyRef"` // 反向代理引用
 	ReverseProxy    *ReverseProxyConfig            `yaml:"reverseProxy" json:"reverseProxy"`       // 反向代理设置
@@ -24,14 +24,14 @@ type HTTPLocationConfig struct {
 	Conds           *shared.HTTPRequestCondsConfig `yaml:"conds" json:"conds"`                     // 匹配条件
 	Domains         []string                       `yaml:"domains" json:"domains"`                 // 所属域名
 
-	patternType HTTPLocationPatternType // 规则类型：LocationPattern*
+	patternType HTTPLocationPatternType // 规则类型:LocationPattern*
 	prefix      string                  // 前缀
 	suffix      string                  // 后缀
 	path        string                  // 精确的路径
 
 	reg             *regexp.Regexp // 匹配规则
 	caseInsensitive bool           // 大小写不敏感
-	reverse         bool           // 是否翻转规则，比如非前缀，非路径
+	reverse         bool           // 是否翻转规则,比如非前缀,非路径
 }
 
 func (this *HTTPLocationConfig) Init(ctx context.Context) error {
@@ -169,7 +169,7 @@ func (this *HTTPLocationConfig) ExtractPattern() error {
 				this.patternType = HTTPLocationPatternTypePrefix
 				this.prefix = pattern
 				this.caseInsensitive = true
-			} else if cmd == "!*" { // 大小写非敏感，翻转
+			} else if cmd == "!*" { // 大小写非敏感,翻转
 				this.patternType = HTTPLocationPatternTypePrefix
 				this.prefix = pattern
 				this.caseInsensitive = true
@@ -315,7 +315,7 @@ func (this *HTTPLocationConfig) Match(path string, formatter func(source string)
 		}
 	}
 
-	// TODO 正则表达式匹配会让请求延迟0.01-0.02ms，可以使用缓存加速正则匹配，因为大部分路径都是不变的
+	// TODO 正则表达式匹配会让请求延迟0.01-0.02ms,可以使用缓存加速正则匹配,因为大部分路径都是不变的
 	if this.patternType == HTTPLocationPatternTypeRegexp {
 		if this.reg != nil {
 			if this.reverse {

@@ -27,14 +27,14 @@ type HTTPRewriteRule struct {
 	IsOn bool  `yaml:"isOn" json:"isOn"` // 是否开启
 
 	// 开启的条件
-	// 语法为：cond param operator value 比如：
+	// 语法为:cond param operator value 比如:
 	// - cond ${status} gte 200
 	// - cond ${arg.name} eq lily
 	// - cond ${requestPath} regexp .*\.png
 	Conds *shared.HTTPRequestCondsConfig `yaml:"conds" json:"conds"` // 匹配条件
 
 	// 规则
-	// 语法为：pattern regexp 比如：
+	// 语法为:pattern regexp 比如:
 	// - pattern ^/article/(\d+).html
 	Pattern string `yaml:"pattern" json:"pattern"`
 
@@ -44,8 +44,8 @@ type HTTPRewriteRule struct {
 	ProxyHost      string          `yaml:"proxyHost" json:"proxyHost"`           // 代理模式下的Host
 
 	// 要替换成的URL
-	// 支持反向引用：${0}, ${1}, ...，也支持?P<NAME>语法
-	// - 如果以 proxy:// 开头，表示目标为代理，首先会尝试作为代理ID请求，如果找不到，会尝试作为代理Host请求
+	// 支持反向引用:${0}, ${1}, ...,也支持?P<NAME>语法
+	// - 如果以 proxy:// 开头,表示目标为代理,首先会尝试作为代理ID请求,如果找不到,会尝试作为代理Host请求
 	Replace string `yaml:"replace" json:"replace"`
 
 	// 其他选项

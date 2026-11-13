@@ -30,7 +30,7 @@ type LoginTicketServiceClient interface {
 	// 创建票据
 	CreateLoginTicket(ctx context.Context, in *CreateLoginTicketRequest, opts ...grpc.CallOption) (*CreateLoginTicketResponse, error)
 	// 查找票据
-	// 查找成功后，会自动删除票据信息，所以票据信息只能查询一次
+	// 查找成功后,会自动删除票据信息,所以票据信息只能查询一次
 	FindLoginTicketWithValue(ctx context.Context, in *FindLoginTicketWithValueRequest, opts ...grpc.CallOption) (*FindLoginTicketWithValueResponse, error)
 }
 
@@ -67,7 +67,7 @@ type LoginTicketServiceServer interface {
 	// 创建票据
 	CreateLoginTicket(context.Context, *CreateLoginTicketRequest) (*CreateLoginTicketResponse, error)
 	// 查找票据
-	// 查找成功后，会自动删除票据信息，所以票据信息只能查询一次
+	// 查找成功后,会自动删除票据信息,所以票据信息只能查询一次
 	FindLoginTicketWithValue(context.Context, *FindLoginTicketWithValueRequest) (*FindLoginTicketWithValueResponse, error)
 }
 

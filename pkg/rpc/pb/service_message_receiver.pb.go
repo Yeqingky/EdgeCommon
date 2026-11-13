@@ -31,7 +31,7 @@ type UpdateMessageReceiversRequest struct {
 	NodeId           int64                                                      `protobuf:"varint,2,opt,name=nodeId,proto3" json:"nodeId,omitempty"`
 	ServerId         int64                                                      `protobuf:"varint,3,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	ParamsJSON       []byte                                                     `protobuf:"bytes,5,opt,name=paramsJSON,proto3" json:"paramsJSON,omitempty"`
-	RecipientOptions map[string]*UpdateMessageReceiversRequest_RecipientOptions `protobuf:"bytes,6,rep,name=recipientOptions,proto3" json:"recipientOptions,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"` // type => options，type为recipient或者group
+	RecipientOptions map[string]*UpdateMessageReceiversRequest_RecipientOptions `protobuf:"bytes,6,rep,name=recipientOptions,proto3" json:"recipientOptions,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"` // type => options,type为recipient或者group
 }
 
 func (x *UpdateMessageReceiversRequest) Reset() {
@@ -114,7 +114,7 @@ type FindAllEnabledMessageReceiversRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`                    // 集群角色：node 或 dns
+	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`                    // 集群角色:node 或 dns
 	NodeClusterId int64  `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"` // 集群ID
 	NodeId        int64  `protobuf:"varint,2,opt,name=nodeId,proto3" json:"nodeId,omitempty"`               // 节点ID
 	ServerId      int64  `protobuf:"varint,3,opt,name=serverId,proto3" json:"serverId,omitempty"`           // 网站ID
@@ -376,7 +376,7 @@ type CountAllEnabledMessageReceiversRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`                    // 集群角色：node 或 dns
+	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`                    // 集群角色:node 或 dns
 	NodeClusterId int64  `protobuf:"varint,1,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"` // 集群ID
 	NodeId        int64  `protobuf:"varint,2,opt,name=nodeId,proto3" json:"nodeId,omitempty"`               // 节点ID
 	ServerId      int64  `protobuf:"varint,3,opt,name=serverId,proto3" json:"serverId,omitempty"`           // 网站ID

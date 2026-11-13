@@ -2,6 +2,7 @@
 
 ## v1.4.2-rc.1 (2026-11-13)
 
+- 全局标点符号统一为英文半角
 - 集群DNS配置新增 SharedCNAME, 用于所有网站共用一个CNAME
 - ClusterDNSConfig 默认关闭 CNAMEAsDomain
 - 移除WAF告警动作描述中的商业版标记

@@ -19,6 +19,6 @@ message UserPlan {
 	Plan plan = 31; // 套餐定义信息
 	repeated Server servers = 33; // 绑定的网站列表
 
-	Server server = 32 [deprecated = true]; // 绑定的网站，已过期，使用 servers 代替
+	Server server = 32 [deprecated = true]; // 绑定的网站,已过期,使用 servers 代替
 }
 

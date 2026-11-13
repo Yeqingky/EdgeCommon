@@ -27,7 +27,7 @@ type CreateHTTPPageRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	StatusList            []string `protobuf:"bytes,1,rep,name=statusList,proto3" json:"statusList,omitempty"`                       // 状态码列表
-	BodyType              string   `protobuf:"bytes,5,opt,name=bodyType,proto3" json:"bodyType,omitempty"`                           // 页面类型：html|url|redirectURL
+	BodyType              string   `protobuf:"bytes,5,opt,name=bodyType,proto3" json:"bodyType,omitempty"`                           // 页面类型:html|url|redirectURL
 	Url                   string   `protobuf:"bytes,2,opt,name=url,proto3" json:"url,omitempty"`                                     // 读取或者跳转的URL
 	Body                  string   `protobuf:"bytes,4,opt,name=body,proto3" json:"body,omitempty"`                                   // HTML内容
 	NewStatus             int32    `protobuf:"varint,3,opt,name=newStatus,proto3" json:"newStatus,omitempty"`                        // 新的状态码
@@ -171,7 +171,7 @@ type UpdateHTTPPageRequest struct {
 
 	HttpPageId            int64    `protobuf:"varint,1,opt,name=httpPageId,proto3" json:"httpPageId,omitempty"`
 	StatusList            []string `protobuf:"bytes,2,rep,name=statusList,proto3" json:"statusList,omitempty"`
-	BodyType              string   `protobuf:"bytes,6,opt,name=bodyType,proto3" json:"bodyType,omitempty"` // 页面类型：html|url|redirectURL
+	BodyType              string   `protobuf:"bytes,6,opt,name=bodyType,proto3" json:"bodyType,omitempty"` // 页面类型:html|url|redirectURL
 	Url                   string   `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
 	Body                  string   `protobuf:"bytes,5,opt,name=body,proto3" json:"body,omitempty"`
 	NewStatus             int32    `protobuf:"varint,4,opt,name=newStatus,proto3" json:"newStatus,omitempty"`

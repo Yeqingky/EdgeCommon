@@ -12,5 +12,5 @@ message UserMobileVerification {
 	int64 createdAt = 5; // 创建时间
 	bool isSent = 6; // 已发送
 	bool isVerified = 7; // 已激活
-	int64 expiresAt = 8; // 过期时间，动态计算而来
+	int64 expiresAt = 8; // 过期时间,动态计算而来
 }

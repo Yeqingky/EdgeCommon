@@ -225,7 +225,7 @@ message CreateNodeRequest {
 	int64 nodeClusterId = 2; // 节点所属集群
 	NodeLogin nodeLogin = 3; // 节点登录信息
 	int64 nodeGroupId = 4; // 节点所属分组
-	int64 dnsDomainId = 5 [deprecated = true]; // 节点域名ID，此参数已过期，请不要再使用
+	int64 dnsDomainId = 5 [deprecated = true]; // 节点域名ID,此参数已过期,请不要再使用
 	repeated string dnsRoutes = 6; // 节点DNS线路列表
 	int64 nodeRegionId = 7; // 节点所属区域
 }
@@ -260,7 +260,7 @@ message ListEnabledNodesMatchRequest {
 	string keyword = 6; // 关键词
 	int64 nodeGroupId = 7; // 节点分组ID
 	int64 nodeRegionId = 8; // 节点区域ID
-	int32 level = 9; // 节点级别，目前只有1（L1）和2（L2）
+	int32 level = 9; // 节点级别,目前只有1(L1)和2(L2)
 
 	bool cpuAsc = 20;
 	bool cpuDesc = 21;
@@ -283,7 +283,7 @@ message ListEnabledNodesMatchResponse {
 // 根据集群查找所有节点
 message FindAllEnabledNodesWithNodeClusterIdRequest {
 	int64 nodeClusterId = 1; // 集群ID
-	bool includeSecondary = 2; // 是否检查节点的从集群，如果为false，则只检查主集群ID
+	bool includeSecondary = 2; // 是否检查节点的从集群,如果为false,则只检查主集群ID
 }
 
 message FindAllEnabledNodesWithNodeClusterIdResponse {
@@ -335,7 +335,7 @@ message FindEnabledBasicNodeResponse {
 
 // 组合单个节点配置
 message FindCurrentNodeConfigRequest {
-	// 由于登录信息中已经包含了节点信息，所以这里不需要nodeId
+	// 由于登录信息中已经包含了节点信息,所以这里不需要nodeId
 	int64 version = 1;
 	bool compress = 2; // 是否压缩
 	int64 nodeTaskVersion = 3; // 通知任务版本
@@ -678,12 +678,12 @@ message FindEnabledNodeConfigInfoResponse {
 
 // 查找节点区域信息数量
 message CountAllNodeRegionInfoRequest {
-	int64 nodeRegionId = 1; // 区域ID，可选
+	int64 nodeRegionId = 1; // 区域ID,可选
 }
 
 // 列出单页节点区域信息
 message ListNodeRegionInfoRequest {
-	int64 nodeRegionId = 1; // 区域ID，可选
+	int64 nodeRegionId = 1; // 区域ID,可选
 	int64 offset = 2;
 	int64 size = 3;
 }
@@ -782,7 +782,7 @@ message FindNodeScheduleInfoResponse {
 	ScheduleInfo scheduleInfo = 1; // 调度信息
 
 	message ScheduleInfo {
-		string offlineDay = 1; // 下线日期，格式YYYYMMDD
+		string offlineDay = 1; // 下线日期,格式YYYYMMDD
 		bool isBackupForCluster = 2; // 是否为集群备份节点
 		bool isBackupForGroup = 3; // 是否为分组备份节点
 		repeated string backupIPs = 4; // 备用IP
@@ -793,7 +793,7 @@ message FindNodeScheduleInfoResponse {
 // 修改节点调度信息
 message UpdateNodeScheduleInfoRequest {
 	int64 nodeId = 1; // 节点ID
-	string offlineDay = 2; // 下线日期，格式YYYYMMDD
+	string offlineDay = 2; // 下线日期,格式YYYYMMDD
 	bool isBackupForCluster = 3; // 是否为集群备份节点
 	bool isBackupForGroup = 4; // 是否为分组备份节点
 	repeated string backupIPs = 5; // 备用IP
@@ -817,7 +817,7 @@ message FindAllNodeScheduleInfoWithNodeClusterIdResponse {
 		string nodeName = 2; // 节点名称
 		int64 nodeGroupId = 3; // 节点分组ID
 		string nodeGroupName = 4; // 节点分组名称
-		string offlineDay = 5; // 下线日期，格式YYYYMMDD
+		string offlineDay = 5; // 下线日期,格式YYYYMMDD
 		bool isBackupForCluster = 6; // 是否为集群备份节点
 		bool isBackupForGroup = 7; // 是否为分组备份节点
 		repeated string backupIPs = 8; // 备用IP

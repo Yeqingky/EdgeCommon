@@ -17,22 +17,22 @@ func FindAllCaptchaTypes() []*shared.Definition {
 		{
 			Code:        CaptchaTypeDefault,
 			Name:        "验证码",
-			Description: "通过输入验证码来验证人机。",
+			Description: "通过输入验证码来验证人机.",
 		},
 		{
 			Code:        CaptchaTypeOneClick,
 			Name:        "点击验证",
-			Description: "通过点击界面元素来验证人机。",
+			Description: "通过点击界面元素来验证人机.",
 		},
 		{
 			Code:        CaptchaTypeSlide,
 			Name:        "滑动解锁",
-			Description: "通过滑动方块解锁来验证人机。",
+			Description: "通过滑动方块解锁来验证人机.",
 		},
 		{
 			Code:        CaptchaTypeGeeTest,
 			Name:        "极验-行为验",
-			Description: "使用极验-行为验提供的人机验证方式。",
+			Description: "使用极验-行为验提供的人机验证方式.",
 		},
 	}
 }

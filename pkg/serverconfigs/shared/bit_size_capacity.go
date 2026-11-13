@@ -12,7 +12,7 @@ const (
 	BitSizeCapacityUnitTB BitSizeCapacityUnit = "tb"
 	BitSizeCapacityUnitPB BitSizeCapacityUnit = "pb"
 	BitSizeCapacityUnitEB BitSizeCapacityUnit = "eb"
-	//BitSizeCapacityUnitZB   BitSizeCapacityUnit = "zb" // zb和yb超出int64范围，暂不支持
+	//BitSizeCapacityUnitZB   BitSizeCapacityUnit = "zb" // zb和yb超出int64范围,暂不支持
 	//BitSizeCapacityUnitYB   BitSizeCapacityUnit = "yb"
 )
 

@@ -42,7 +42,7 @@ message Server {
 
 	string bandwidthTime = 26; // 带宽时间
 	int64 bandwidthBytes = 27; // 带宽字节数
-	int64 countRequests = 34; // 最近（通常5分钟内）访问量
+	int64 countRequests = 34; // 最近(通常5分钟内)访问量
 	int64 countAttackRequests = 35; // 最近识别到的攻击访问量
 
 	NodeCluster nodeCluster = 30;

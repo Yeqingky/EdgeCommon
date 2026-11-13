@@ -31,7 +31,7 @@ message NSRecord {
 	bool isOn = 11; // 是否启用
 
 	bytes healthCheckJSON = 18; // 健康检查配置
-	bool isUp = 19; // 是否在线（根据健康检查结果）
+	bool isUp = 19; // 是否在线(根据健康检查结果)
 
 	NSDomain nsDomain = 30; // 所属域名
 	repeated NSRoute nsRoutes = 31; // 线路

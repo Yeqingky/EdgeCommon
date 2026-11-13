@@ -34,7 +34,7 @@ type Origin struct {
 	Domains      []string        `protobuf:"bytes,6,rep,name=domains,proto3" json:"domains,omitempty"`
 	Host         string          `protobuf:"bytes,7,opt,name=host,proto3" json:"host,omitempty"`
 	FollowPort   bool            `protobuf:"varint,8,opt,name=followPort,proto3" json:"followPort,omitempty"`
-	Http2Enabled bool            `protobuf:"varint,10,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"` // 是否支持HTTP/2，只在HTTPS源站时生效
+	Http2Enabled bool            `protobuf:"varint,10,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"` // 是否支持HTTP/2,只在HTTPS源站时生效
 }
 
 func (x *Origin) Reset() {

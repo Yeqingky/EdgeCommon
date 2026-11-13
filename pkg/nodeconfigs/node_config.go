@@ -78,7 +78,7 @@ type NodeConfig struct {
 	ParentNodes map[int64][]*ParentNodeConfig `yaml:"parentNodes" json:"parentNodes"` // clusterId => []*ParentNodeConfig
 
 	// 全局配置
-	GlobalServerConfig *serverconfigs.GlobalServerConfig `yaml:"globalServerConfig" json:"globalServerConfig"` // 服务全局配置，用来替代 GlobalConfig
+	GlobalServerConfig *serverconfigs.GlobalServerConfig `yaml:"globalServerConfig" json:"globalServerConfig"` // 服务全局配置,用来替代 GlobalConfig
 	ProductConfig      *ProductConfig                    `yaml:"productConfig" json:"productConfig"`
 
 	// 集群统一配置
@@ -105,11 +105,11 @@ type NodeConfig struct {
 	// 脚本
 	CommonScripts []*serverconfigs.CommonScript `yaml:"commonScripts" json:"commonScripts"`
 
-	WebPImagePolicies     map[int64]*WebPImagePolicy          `yaml:"webpImagePolicies" json:"webpImagePolicies"`         // WebP相关配置，clusterId => *WebPImagePolicy
-	UAMPolicies           map[int64]*UAMPolicy                `yaml:"uamPolicies" json:"uamPolicies"`                     // UAM相关配置，clusterId => *UAMPolicy
-	HTTPCCPolicies        map[int64]*HTTPCCPolicy             `yaml:"httpCCPolicies" json:"httpCCPolicies"`               // CC相关配置， clusterId => *HTTPCCPolicy
-	HTTP3Policies         map[int64]*HTTP3Policy              `yaml:"http3Policies" json:"http3Policies"`                 // HTTP3相关配置， clusterId => *HTTP3Policy
-	HTTPPagesPolicies     map[int64]*HTTPPagesPolicy          `yaml:"httpPagesPolicies" json:"httpPagesPolicies"`         // 自定义页面，clusterId => *HTTPPagesPolicy
+	WebPImagePolicies     map[int64]*WebPImagePolicy          `yaml:"webpImagePolicies" json:"webpImagePolicies"`         // WebP相关配置,clusterId => *WebPImagePolicy
+	UAMPolicies           map[int64]*UAMPolicy                `yaml:"uamPolicies" json:"uamPolicies"`                     // UAM相关配置,clusterId => *UAMPolicy
+	HTTPCCPolicies        map[int64]*HTTPCCPolicy             `yaml:"httpCCPolicies" json:"httpCCPolicies"`               // CC相关配置, clusterId => *HTTPCCPolicy
+	HTTP3Policies         map[int64]*HTTP3Policy              `yaml:"http3Policies" json:"http3Policies"`                 // HTTP3相关配置, clusterId => *HTTP3Policy
+	HTTPPagesPolicies     map[int64]*HTTPPagesPolicy          `yaml:"httpPagesPolicies" json:"httpPagesPolicies"`         // 自定义页面,clusterId => *HTTPPagesPolicy
 	NetworkSecurityPolicy *NetworkSecurityPolicy              `yaml:"networkSecurityPolicy" json:"networkSecurityPolicy"` // 网络安全策略
 	Plans                 map[int64]*serverconfigs.PlanConfig `yaml:"plans" json:"plans"`                                 // 套餐 plan id => *serverconfigs.PlanConfig
 
@@ -269,7 +269,7 @@ func (this *NodeConfig) Init(ctx context.Context) (err error, serverErrors []*Se
 		// 初始化
 		errs := server.Init(ctx)
 		if len(errs) > 0 {
-			// 这里不返回错误，而是继续往下，防止单个服务错误而影响其他服务
+			// 这里不返回错误,而是继续往下,防止单个服务错误而影响其他服务
 			for _, serverErr := range errs {
 				serverErrors = append(serverErrors, NewServerError(server.Id, "server '"+strconv.FormatInt(server.Id, 10)+"' init failed: "+serverErr.Error()))
 			}

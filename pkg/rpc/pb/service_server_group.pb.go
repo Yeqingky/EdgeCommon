@@ -225,7 +225,7 @@ type FindAllEnabledServerGroupsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"` // 可选项，用户ID，只有管理员才可以指定用户ID
+	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"` // 可选项,用户ID,只有管理员才可以指定用户ID
 }
 
 func (x *FindAllEnabledServerGroupsRequest) Reset() {

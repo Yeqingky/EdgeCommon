@@ -122,7 +122,7 @@ message FindServerIdWithIPListIdRequest {
 }
 
 message FindServerIdWithIPListIdResponse {
-	int64 serverId = 1; // 网站ID（如果是公共IP名单，则对应的网站ID为0）
+	int64 serverId = 1; // 网站ID(如果是公共IP名单,则对应的网站ID为0)
 }
 
 // 根据IP名单代号获取IP名单ID

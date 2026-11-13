@@ -27,7 +27,7 @@ type CreateTrafficPackageRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Size int32  `protobuf:"varint,1,opt,name=size,proto3" json:"size,omitempty"` // 流量包尺寸
-	Unit string `protobuf:"bytes,2,opt,name=unit,proto3" json:"unit,omitempty"`  // 单位：gb, tb, pb
+	Unit string `protobuf:"bytes,2,opt,name=unit,proto3" json:"unit,omitempty"`  // 单位:gb, tb, pb
 }
 
 func (x *CreateTrafficPackageRequest) Reset() {

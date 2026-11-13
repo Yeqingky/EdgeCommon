@@ -11,12 +11,12 @@ func FindAllNodeLevels() []*NodeLevel {
 		{
 			Name:        "边缘节点",
 			Code:        1,
-			Description: "普通的边缘节点。",
+			Description: "普通的边缘节点.",
 		},
 		{
 			Name:        "L2节点",
 			Code:        2,
-			Description: "特殊的边缘节点，同时负责同组上一级节点的回源。",
+			Description: "特殊的边缘节点,同时负责同组上一级节点的回源.",
 		},
 	}
 }

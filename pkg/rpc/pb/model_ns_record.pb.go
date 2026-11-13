@@ -44,7 +44,7 @@ type NSRecord struct {
 	Version         int64      `protobuf:"varint,10,opt,name=version,proto3" json:"version,omitempty"`
 	IsOn            bool       `protobuf:"varint,11,opt,name=isOn,proto3" json:"isOn,omitempty"`                      // 是否启用
 	HealthCheckJSON []byte     `protobuf:"bytes,18,opt,name=healthCheckJSON,proto3" json:"healthCheckJSON,omitempty"` // 健康检查配置
-	IsUp            bool       `protobuf:"varint,19,opt,name=isUp,proto3" json:"isUp,omitempty"`                      // 是否在线（根据健康检查结果）
+	IsUp            bool       `protobuf:"varint,19,opt,name=isUp,proto3" json:"isUp,omitempty"`                      // 是否在线(根据健康检查结果)
 	NsDomain        *NSDomain  `protobuf:"bytes,30,opt,name=nsDomain,proto3" json:"nsDomain,omitempty"`               // 所属域名
 	NsRoutes        []*NSRoute `protobuf:"bytes,31,rep,name=nsRoutes,proto3" json:"nsRoutes,omitempty"`               // 线路
 }

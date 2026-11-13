@@ -94,7 +94,7 @@ message CreateNSDomainsResponse {
 }
 
 // 修改域名
-// 注意：名称不允许修改
+// 注意:名称不允许修改
 message UpdateNSDomainRequest {
 	int64 nsDomainId = 1;
 	int64 nsClusterId = 2;
@@ -131,7 +131,7 @@ message FindNSDomainResponse {
 
 // 根据域名名称查找域名
 message FindNSDomainWithNameRequest {
-	int64 userId = 2; // 用户ID，只有管理员才能指定用户
+	int64 userId = 2; // 用户ID,只有管理员才能指定用户
 	string name = 1; // 域名
 }
 
@@ -222,7 +222,7 @@ message FindNSDomainVerifyingInfoRequest {
 }
 
 message FindNSDomainVerifyingInfoResponse {
-	bool requireTXT = 4; // 是否需要TXT验证，如果不需要（值false），则表示用户不需要手动设置TXT，此时 txt 字段内容可能为空
+	bool requireTXT = 4; // 是否需要TXT验证,如果不需要(值false),则表示用户不需要手动设置TXT,此时 txt 字段内容可能为空
 	string txt = 1; // TXT记录
 	int64 expiresAt = 2; // TXT过期时间
 	string status = 3; // 当前状态

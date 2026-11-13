@@ -264,8 +264,8 @@ type CountHTTPCacheTaskKeysWithDayRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	KeyType string `protobuf:"bytes,1,opt,name=keyType,proto3" json:"keyType,omitempty"` // Key类型：清理：purge，预热：fetch
-	Day     string `protobuf:"bytes,2,opt,name=day,proto3" json:"day,omitempty"`         // 日期，格式：YYYYMMDD
+	KeyType string `protobuf:"bytes,1,opt,name=keyType,proto3" json:"keyType,omitempty"` // Key类型:清理:purge,预热:fetch
+	Day     string `protobuf:"bytes,2,opt,name=day,proto3" json:"day,omitempty"`         // 日期,格式:YYYYMMDD
 }
 
 func (x *CountHTTPCacheTaskKeysWithDayRequest) Reset() {

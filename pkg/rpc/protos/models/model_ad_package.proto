@@ -17,5 +17,5 @@ message ADPackage {
 
 	ADNetwork adNetwork = 30;
 	string summary = 31; // 概述
-	int64 countIdleADPackageInstances = 32; // 剩余可用的实例数，只有在获取可用高防产品的时候才会返回
+	int64 countIdleADPackageInstances = 32; // 剩余可用的实例数,只有在获取可用高防产品的时候才会返回
 }

@@ -35,7 +35,7 @@ type UserPlan struct {
 	Plan    *Plan     `protobuf:"bytes,31,opt,name=plan,proto3" json:"plan,omitempty"`       // 套餐定义信息
 	Servers []*Server `protobuf:"bytes,33,rep,name=servers,proto3" json:"servers,omitempty"` // 绑定的网站列表
 	// Deprecated: Marked as deprecated in models/model_user_plan.proto.
-	Server *Server `protobuf:"bytes,32,opt,name=server,proto3" json:"server,omitempty"` // 绑定的网站，已过期，使用 servers 代替
+	Server *Server `protobuf:"bytes,32,opt,name=server,proto3" json:"server,omitempty"` // 绑定的网站,已过期,使用 servers 代替
 }
 
 func (x *UserPlan) Reset() {

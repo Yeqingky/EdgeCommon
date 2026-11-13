@@ -32,10 +32,10 @@ message CreateMessageRecipientRequest {
 	int64 adminId = 1; // 关联的管理员ID
 	int64 messageMediaInstanceId = 2; // 媒介实例ID
 	repeated int64 messageRecipientGroupIds = 3; // 所属分组ID列表
-	string description = 4; // 可选项，备注描述
+	string description = 4; // 可选项,备注描述
 	string user = 5; // 用户标识
-	string timeFrom = 6; // 可选项，接收消息的，开始时间
-	string timeTo = 7; // 可选项，接收消息的，结束时间
+	string timeFrom = 6; // 可选项,接收消息的,开始时间
+	string timeTo = 7; // 可选项,接收消息的,结束时间
 
 	repeated int64  nodeClusterIds = 8; // 关联的CDN边缘节点集群ID列表
 }

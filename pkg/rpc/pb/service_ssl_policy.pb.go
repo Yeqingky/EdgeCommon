@@ -26,16 +26,16 @@ type CreateSSLPolicyRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Http2Enabled      bool     `protobuf:"varint,1,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`          // 可选项，是否启用HTTP/2
-	Http3Enabled      bool     `protobuf:"varint,10,opt,name=http3Enabled,proto3" json:"http3Enabled,omitempty"`         // 可选项，是否启用HTTP/3（在满足条件的基础上）
-	MinVersion        string   `protobuf:"bytes,2,opt,name=minVersion,proto3" json:"minVersion,omitempty"`               // 支持的最低SSL版本，可选择值： SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3
-	SslCertsJSON      []byte   `protobuf:"bytes,3,opt,name=sslCertsJSON,proto3" json:"sslCertsJSON,omitempty"`           // 可选项，关联的证书信息，可以在创建后再通过修改策略来配置 @link json:ssl_cert_refs
-	HstsJSON          []byte   `protobuf:"bytes,4,opt,name=hstsJSON,proto3" json:"hstsJSON,omitempty"`                   // 可选项，HSTS配置 @link json:hsts
-	ClientAuthType    int32    `protobuf:"varint,5,opt,name=clientAuthType,proto3" json:"clientAuthType,omitempty"`      // 可选项，客户端校验类型：0 无需证书，1 需要客户端证书，2 需要任一客户端证书，3 如果客户端上传了证书才校验，4 需要客户端证书而且需要校验
-	ClientCACertsJSON []byte   `protobuf:"bytes,6,opt,name=clientCACertsJSON,proto3" json:"clientCACertsJSON,omitempty"` // 可选项，CA证书内容
-	CipherSuites      []string `protobuf:"bytes,7,rep,name=cipherSuites,proto3" json:"cipherSuites,omitempty"`           // 可选项，自定义加密套件
-	CipherSuitesIsOn  bool     `protobuf:"varint,8,opt,name=cipherSuitesIsOn,proto3" json:"cipherSuitesIsOn,omitempty"`  // 可选项，是否启用自定义加密套件
-	OcspIsOn          bool     `protobuf:"varint,9,opt,name=ocspIsOn,proto3" json:"ocspIsOn,omitempty"`                  // 可选项，是否启用OCSP
+	Http2Enabled      bool     `protobuf:"varint,1,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`          // 可选项,是否启用HTTP/2
+	Http3Enabled      bool     `protobuf:"varint,10,opt,name=http3Enabled,proto3" json:"http3Enabled,omitempty"`         // 可选项,是否启用HTTP/3(在满足条件的基础上)
+	MinVersion        string   `protobuf:"bytes,2,opt,name=minVersion,proto3" json:"minVersion,omitempty"`               // 支持的最低SSL版本,可选择值: SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3
+	SslCertsJSON      []byte   `protobuf:"bytes,3,opt,name=sslCertsJSON,proto3" json:"sslCertsJSON,omitempty"`           // 可选项,关联的证书信息,可以在创建后再通过修改策略来配置 @link json:ssl_cert_refs
+	HstsJSON          []byte   `protobuf:"bytes,4,opt,name=hstsJSON,proto3" json:"hstsJSON,omitempty"`                   // 可选项,HSTS配置 @link json:hsts
+	ClientAuthType    int32    `protobuf:"varint,5,opt,name=clientAuthType,proto3" json:"clientAuthType,omitempty"`      // 可选项,客户端校验类型:0 无需证书,1 需要客户端证书,2 需要任一客户端证书,3 如果客户端上传了证书才校验,4 需要客户端证书而且需要校验
+	ClientCACertsJSON []byte   `protobuf:"bytes,6,opt,name=clientCACertsJSON,proto3" json:"clientCACertsJSON,omitempty"` // 可选项,CA证书内容
+	CipherSuites      []string `protobuf:"bytes,7,rep,name=cipherSuites,proto3" json:"cipherSuites,omitempty"`           // 可选项,自定义加密套件
+	CipherSuitesIsOn  bool     `protobuf:"varint,8,opt,name=cipherSuitesIsOn,proto3" json:"cipherSuitesIsOn,omitempty"`  // 可选项,是否启用自定义加密套件
+	OcspIsOn          bool     `protobuf:"varint,9,opt,name=ocspIsOn,proto3" json:"ocspIsOn,omitempty"`                  // 可选项,是否启用OCSP
 }
 
 func (x *CreateSSLPolicyRequest) Reset() {
@@ -194,16 +194,16 @@ type UpdateSSLPolicyRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	SslPolicyId       int64    `protobuf:"varint,1,opt,name=sslPolicyId,proto3" json:"sslPolicyId,omitempty"`            // 策略ID
-	Http2Enabled      bool     `protobuf:"varint,2,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`          // 可选项，是否启用HTTP/2
-	Http3Enabled      bool     `protobuf:"varint,11,opt,name=http3Enabled,proto3" json:"http3Enabled,omitempty"`         // 可选项，是否启用HTTP/3（在满足条件的基础上）
-	MinVersion        string   `protobuf:"bytes,3,opt,name=minVersion,proto3" json:"minVersion,omitempty"`               // 支持的最低SSL版本，可选择值： SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3
+	Http2Enabled      bool     `protobuf:"varint,2,opt,name=http2Enabled,proto3" json:"http2Enabled,omitempty"`          // 可选项,是否启用HTTP/2
+	Http3Enabled      bool     `protobuf:"varint,11,opt,name=http3Enabled,proto3" json:"http3Enabled,omitempty"`         // 可选项,是否启用HTTP/3(在满足条件的基础上)
+	MinVersion        string   `protobuf:"bytes,3,opt,name=minVersion,proto3" json:"minVersion,omitempty"`               // 支持的最低SSL版本,可选择值: SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3
 	SslCertsJSON      []byte   `protobuf:"bytes,4,opt,name=sslCertsJSON,proto3" json:"sslCertsJSON,omitempty"`           // 关联的证书信息 @link json:ssl_cert_refs
-	HstsJSON          []byte   `protobuf:"bytes,5,opt,name=hstsJSON,proto3" json:"hstsJSON,omitempty"`                   // 可选项，HSTS配置 @link json:hsts
-	ClientAuthType    int32    `protobuf:"varint,6,opt,name=clientAuthType,proto3" json:"clientAuthType,omitempty"`      // 可选项，客户端校验类型：0 无需证书，1 需要客户端证书，2 需要任一客户端证书，3 如果客户端上传了证书才校验，4 需要客户端证书而且需要校验
-	ClientCACertsJSON []byte   `protobuf:"bytes,7,opt,name=clientCACertsJSON,proto3" json:"clientCACertsJSON,omitempty"` // 可选项，CA证书内容
-	CipherSuites      []string `protobuf:"bytes,8,rep,name=cipherSuites,proto3" json:"cipherSuites,omitempty"`           // 可选项，自定义加密套件
-	CipherSuitesIsOn  bool     `protobuf:"varint,9,opt,name=cipherSuitesIsOn,proto3" json:"cipherSuitesIsOn,omitempty"`  // 可选项，是否启用自定义加密套件
-	OcspIsOn          bool     `protobuf:"varint,10,opt,name=ocspIsOn,proto3" json:"ocspIsOn,omitempty"`                 // 可选项，是否启用OCSP
+	HstsJSON          []byte   `protobuf:"bytes,5,opt,name=hstsJSON,proto3" json:"hstsJSON,omitempty"`                   // 可选项,HSTS配置 @link json:hsts
+	ClientAuthType    int32    `protobuf:"varint,6,opt,name=clientAuthType,proto3" json:"clientAuthType,omitempty"`      // 可选项,客户端校验类型:0 无需证书,1 需要客户端证书,2 需要任一客户端证书,3 如果客户端上传了证书才校验,4 需要客户端证书而且需要校验
+	ClientCACertsJSON []byte   `protobuf:"bytes,7,opt,name=clientCACertsJSON,proto3" json:"clientCACertsJSON,omitempty"` // 可选项,CA证书内容
+	CipherSuites      []string `protobuf:"bytes,8,rep,name=cipherSuites,proto3" json:"cipherSuites,omitempty"`           // 可选项,自定义加密套件
+	CipherSuitesIsOn  bool     `protobuf:"varint,9,opt,name=cipherSuitesIsOn,proto3" json:"cipherSuitesIsOn,omitempty"`  // 可选项,是否启用自定义加密套件
+	OcspIsOn          bool     `protobuf:"varint,10,opt,name=ocspIsOn,proto3" json:"ocspIsOn,omitempty"`                 // 可选项,是否启用OCSP
 }
 
 func (x *UpdateSSLPolicyRequest) Reset() {

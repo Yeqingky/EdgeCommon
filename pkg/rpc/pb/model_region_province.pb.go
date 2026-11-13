@@ -20,7 +20,7 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// 省份｜州|区域信息
+// 省份|州|区域信息
 type RegionProvince struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

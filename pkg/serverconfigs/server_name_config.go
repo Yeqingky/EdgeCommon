@@ -10,7 +10,7 @@ import (
 type ServerNameType = string
 
 const (
-	ServerNameTypeFull   ServerNameType = "full"   // 完整的域名，包含通配符等
+	ServerNameTypeFull   ServerNameType = "full"   // 完整的域名,包含通配符等
 	ServerNameTypePrefix ServerNameType = "prefix" // 前缀
 	ServerNameTypeSuffix ServerNameType = "suffix" // 后缀
 	ServerNameTypeMatch  ServerNameType = "match"  // 正则匹配
@@ -20,7 +20,7 @@ const (
 type ServerNameConfig struct {
 	Name     string   `yaml:"name" json:"name"`         // 名称
 	Type     string   `yaml:"type" json:"type"`         // 类型
-	SubNames []string `yaml:"subNames" json:"subNames"` // 子名称，用来支持大量的域名批量管理
+	SubNames []string `yaml:"subNames" json:"subNames"` // 子名称,用来支持大量的域名批量管理
 }
 
 // Normalize 格式化域名

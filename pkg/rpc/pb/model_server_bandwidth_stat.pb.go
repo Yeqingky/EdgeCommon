@@ -29,8 +29,8 @@ type ServerBandwidthStat struct {
 	Id                        int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`                                                // ID
 	UserId                    int64  `protobuf:"varint,2,opt,name=userId,proto3" json:"userId,omitempty"`                                        // 用户ID
 	ServerId                  int64  `protobuf:"varint,3,opt,name=serverId,proto3" json:"serverId,omitempty"`                                    //服务ID
-	Day                       string `protobuf:"bytes,4,opt,name=day,proto3" json:"day,omitempty"`                                               // 日期，格式YYYYMMDD
-	TimeAt                    string `protobuf:"bytes,5,opt,name=timeAt,proto3" json:"timeAt,omitempty"`                                         // 时间，格式HHII
+	Day                       string `protobuf:"bytes,4,opt,name=day,proto3" json:"day,omitempty"`                                               // 日期,格式YYYYMMDD
+	TimeAt                    string `protobuf:"bytes,5,opt,name=timeAt,proto3" json:"timeAt,omitempty"`                                         // 时间,格式HHII
 	Bytes                     int64  `protobuf:"varint,6,opt,name=bytes,proto3" json:"bytes,omitempty"`                                          // 峰值带宽字节
 	TotalBytes                int64  `protobuf:"varint,9,opt,name=totalBytes,proto3" json:"totalBytes,omitempty"`                                // 总流量
 	Bits                      int64  `protobuf:"varint,7,opt,name=bits,proto3" json:"bits,omitempty"`                                            // 峰值带宽比特

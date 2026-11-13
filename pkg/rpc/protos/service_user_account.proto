@@ -60,9 +60,9 @@ message FindEnabledUserAccountResponse {
 
 // 修改用户账户
 message UpdateUserAccountRequest {
-	int64 userAccountId = 1; // 用户账户ID（非用户ID）
-	double delta = 2; // 操作的数值，正值表示增加，负值表示减少
-	string eventType = 3; // 事件类型：charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage
+	int64 userAccountId = 1; // 用户账户ID(非用户ID)
+	double delta = 2; // 操作的数值,正值表示增加,负值表示减少
+	string eventType = 3; // 事件类型:charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage
 	string description = 4; // 描述
 	bytes paramsJSON = 5; // 相关参数
 }

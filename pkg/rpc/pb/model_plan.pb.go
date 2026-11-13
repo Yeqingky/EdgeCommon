@@ -33,8 +33,8 @@ type Plan struct {
 	TrafficLimitJSON            []byte  `protobuf:"bytes,5,opt,name=trafficLimitJSON,proto3" json:"trafficLimitJSON,omitempty"`                         // 流量限制
 	BandwidthLimitPerNodeJSON   []byte  `protobuf:"bytes,22,opt,name=bandwidthLimitPerNodeJSON,proto3" json:"bandwidthLimitPerNodeJSON,omitempty"`      // 单节点带宽限制
 	HasFullFeatures             bool    `protobuf:"varint,20,opt,name=hasFullFeatures,proto3" json:"hasFullFeatures,omitempty"`                         // 是否有所有权限
-	FeaturesJSON                []byte  `protobuf:"bytes,6,opt,name=featuresJSON,proto3" json:"featuresJSON,omitempty"`                                 // 权限列表，[code1, code2, ...]
-	PriceType                   string  `protobuf:"bytes,7,opt,name=priceType,proto3" json:"priceType,omitempty"`                                       // 价格类型：traffic, bandwidth, period
+	FeaturesJSON                []byte  `protobuf:"bytes,6,opt,name=featuresJSON,proto3" json:"featuresJSON,omitempty"`                                 // 权限列表,[code1, code2, ...]
+	PriceType                   string  `protobuf:"bytes,7,opt,name=priceType,proto3" json:"priceType,omitempty"`                                       // 价格类型:traffic, bandwidth, period
 	TrafficPriceJSON            []byte  `protobuf:"bytes,8,opt,name=trafficPriceJSON,proto3" json:"trafficPriceJSON,omitempty"`                         // 流量价格配置
 	BandwidthPriceJSON          []byte  `protobuf:"bytes,12,opt,name=bandwidthPriceJSON,proto3" json:"bandwidthPriceJSON,omitempty"`                    // 带宽价格配置
 	MonthlyPrice                float64 `protobuf:"fixed64,9,opt,name=monthlyPrice,proto3" json:"monthlyPrice,omitempty"`                               // 月度价格

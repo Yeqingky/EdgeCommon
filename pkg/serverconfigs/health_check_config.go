@@ -22,7 +22,7 @@ type HealthCheckConfig struct {
 	CountUp          int                  `yaml:"countUp" json:"countUp"`                   // 连续在线认定次数
 	CountDown        int                  `yaml:"countDown" json:"countDown"`               // 连续离线认定次数
 	UserAgent        string               `yaml:"userAgent" json:"userAgent"`               // 发起请求用的UserAgent
-	OnlyBasicRequest bool                 `yaml:"onlyBasicRequest" json:"onlyBasicRequest"` // 只做基础的请求，不处理WAF、反向代理等
+	OnlyBasicRequest bool                 `yaml:"onlyBasicRequest" json:"onlyBasicRequest"` // 只做基础的请求,不处理WAF,反向代理等
 	AccessLogIsOn    bool                 `yaml:"accessLogIsOn" json:"accessLogIsOn"`       // 是否关闭访问日志
 }
 

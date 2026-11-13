@@ -638,7 +638,7 @@ type ComposeServerStatBoardResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MinutelyPeekBandwidthBytes    int64                                               `protobuf:"varint,5,opt,name=minutelyPeekBandwidthBytes,proto3" json:"minutelyPeekBandwidthBytes,omitempty"`       // 当前带宽（N分钟峰值）
+	MinutelyPeekBandwidthBytes    int64                                               `protobuf:"varint,5,opt,name=minutelyPeekBandwidthBytes,proto3" json:"minutelyPeekBandwidthBytes,omitempty"`       // 当前带宽(N分钟峰值)
 	DailyPeekBandwidthBytes       int64                                               `protobuf:"varint,2,opt,name=dailyPeekBandwidthBytes,proto3" json:"dailyPeekBandwidthBytes,omitempty"`             // 当天带宽峰值
 	MonthlyPeekBandwidthBytes     int64                                               `protobuf:"varint,3,opt,name=monthlyPeekBandwidthBytes,proto3" json:"monthlyPeekBandwidthBytes,omitempty"`         // 当月带宽峰值
 	LastMonthlyPeekBandwidthBytes int64                                               `protobuf:"varint,4,opt,name=lastMonthlyPeekBandwidthBytes,proto3" json:"lastMonthlyPeekBandwidthBytes,omitempty"` // 上个月带宽峰值

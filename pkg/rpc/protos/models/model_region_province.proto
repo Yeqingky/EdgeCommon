@@ -5,7 +5,7 @@ package pb;
 
 import "models/model_region_country.proto";
 
-// 省份｜州|区域信息
+// 省份|州|区域信息
 message RegionProvince {
 	int64 id = 1;
 	string name = 2;

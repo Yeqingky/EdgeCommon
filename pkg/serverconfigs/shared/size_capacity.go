@@ -12,7 +12,7 @@ const (
 	SizeCapacityUnitTB   SizeCapacityUnit = "tb"
 	SizeCapacityUnitPB   SizeCapacityUnit = "pb"
 	SizeCapacityUnitEB   SizeCapacityUnit = "eb"
-	//SizeCapacityUnitZB   SizeCapacityUnit = "zb" // zb和yb超出int64范围，暂不支持
+	//SizeCapacityUnitZB   SizeCapacityUnit = "zb" // zb和yb超出int64范围,暂不支持
 	//SizeCapacityUnitYB   SizeCapacityUnit = "yb"
 )
 

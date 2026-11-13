@@ -27,20 +27,20 @@ type CreateIPItemRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	IpListId                      int64  `protobuf:"varint,1,opt,name=ipListId,proto3" json:"ipListId,omitempty"`                                            // 所属IP列表ID
-	Value                         string `protobuf:"bytes,15,opt,name=value,proto3" json:"value,omitempty"`                                                  // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数
+	Value                         string `protobuf:"bytes,15,opt,name=value,proto3" json:"value,omitempty"`                                                  // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数
 	IpFrom                        string `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"`                                                 // 开始IP
-	IpTo                          string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`                                                     // 结束IP（可选）
-	ExpiredAt                     int64  `protobuf:"varint,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`                                          // 过期时间戳（可选）
-	Reason                        string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"`                                                 // 加入理由（可选）
-	Type                          string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty"`                                                     // IP类型，值为ipv4或ipv6
-	EventLevel                    string `protobuf:"bytes,7,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"`                                         // 级别：debug, notice, warning, error, critical, fatal
-	NodeId                        int64  `protobuf:"varint,8,opt,name=nodeId,proto3" json:"nodeId,omitempty"`                                                // 可选项，所属节点ID
-	ServerId                      int64  `protobuf:"varint,9,opt,name=serverId,proto3" json:"serverId,omitempty"`                                            // 可选项，所属网站ID
-	SourceNodeId                  int64  `protobuf:"varint,10,opt,name=sourceNodeId,proto3" json:"sourceNodeId,omitempty"`                                   // 可选项，来源节点
-	SourceServerId                int64  `protobuf:"varint,11,opt,name=sourceServerId,proto3" json:"sourceServerId,omitempty"`                               // 可选项，来源网站ID
-	SourceHTTPFirewallPolicyId    int64  `protobuf:"varint,12,opt,name=sourceHTTPFirewallPolicyId,proto3" json:"sourceHTTPFirewallPolicyId,omitempty"`       // 可选项，来源WAF策略ID
-	SourceHTTPFirewallRuleGroupId int64  `protobuf:"varint,13,opt,name=sourceHTTPFirewallRuleGroupId,proto3" json:"sourceHTTPFirewallRuleGroupId,omitempty"` // 可选项，来源WAF规则分组ID
-	SourceHTTPFirewallRuleSetId   int64  `protobuf:"varint,14,opt,name=sourceHTTPFirewallRuleSetId,proto3" json:"sourceHTTPFirewallRuleSetId,omitempty"`     // 可选项，来源WAF规则集ID
+	IpTo                          string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`                                                     // 结束IP(可选)
+	ExpiredAt                     int64  `protobuf:"varint,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`                                          // 过期时间戳(可选)
+	Reason                        string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"`                                                 // 加入理由(可选)
+	Type                          string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty"`                                                     // IP类型,值为ipv4或ipv6
+	EventLevel                    string `protobuf:"bytes,7,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"`                                         // 级别:debug, notice, warning, error, critical, fatal
+	NodeId                        int64  `protobuf:"varint,8,opt,name=nodeId,proto3" json:"nodeId,omitempty"`                                                // 可选项,所属节点ID
+	ServerId                      int64  `protobuf:"varint,9,opt,name=serverId,proto3" json:"serverId,omitempty"`                                            // 可选项,所属网站ID
+	SourceNodeId                  int64  `protobuf:"varint,10,opt,name=sourceNodeId,proto3" json:"sourceNodeId,omitempty"`                                   // 可选项,来源节点
+	SourceServerId                int64  `protobuf:"varint,11,opt,name=sourceServerId,proto3" json:"sourceServerId,omitempty"`                               // 可选项,来源网站ID
+	SourceHTTPFirewallPolicyId    int64  `protobuf:"varint,12,opt,name=sourceHTTPFirewallPolicyId,proto3" json:"sourceHTTPFirewallPolicyId,omitempty"`       // 可选项,来源WAF策略ID
+	SourceHTTPFirewallRuleGroupId int64  `protobuf:"varint,13,opt,name=sourceHTTPFirewallRuleGroupId,proto3" json:"sourceHTTPFirewallRuleGroupId,omitempty"` // 可选项,来源WAF规则分组ID
+	SourceHTTPFirewallRuleSetId   int64  `protobuf:"varint,14,opt,name=sourceHTTPFirewallRuleSetId,proto3" json:"sourceHTTPFirewallRuleSetId,omitempty"`     // 可选项,来源WAF规则集ID
 }
 
 func (x *CreateIPItemRequest) Reset() {
@@ -329,9 +329,9 @@ type UpdateIPItemRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	IpItemId   int64  `protobuf:"varint,1,opt,name=ipItemId,proto3" json:"ipItemId,omitempty"`
-	Value      string `protobuf:"bytes,8,opt,name=value,proto3" json:"value,omitempty"`   // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数
+	Value      string `protobuf:"bytes,8,opt,name=value,proto3" json:"value,omitempty"`   // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数
 	IpFrom     string `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"` // 开始IP
-	IpTo       string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`     // 结束IP（可选）
+	IpTo       string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`     // 结束IP(可选)
 	ExpiredAt  int64  `protobuf:"varint,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`
 	Reason     string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"`
 	Type       string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty"`             // 类型
@@ -427,17 +427,17 @@ func (x *UpdateIPItemRequest) GetEventLevel() string {
 }
 
 // 删除IP
-// 可以使用 ipItemId 删除，也可以使用 ipFrom+ipTo+ipListId 删除，如果只是单个IP，则不需要指定ipTo
+// 可以使用 ipItemId 删除,也可以使用 ipFrom+ipTo+ipListId 删除,如果只是单个IP,则不需要指定ipTo
 type DeleteIPItemRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	IpItemId int64  `protobuf:"varint,1,opt,name=ipItemId,proto3" json:"ipItemId,omitempty"` // IP条目的ID
-	Value    string `protobuf:"bytes,5,opt,name=value,proto3" json:"value,omitempty"`        // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数
-	IpFrom   string `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"`      // v0.4.8新增，开始IP，和ipItemId二选一
-	IpTo     string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`          // v0.4.8新增，结束IP，和ipItemId二选一
-	IpListId int64  `protobuf:"varint,4,opt,name=ipListId,proto3" json:"ipListId,omitempty"` // v0.4.8新增，IP列表，IP所在的IP列表，如果不指定，则会删除所有IP列表中的相关IP信息
+	Value    string `protobuf:"bytes,5,opt,name=value,proto3" json:"value,omitempty"`        // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数
+	IpFrom   string `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"`      // v0.4.8新增,开始IP,和ipItemId二选一
+	IpTo     string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`          // v0.4.8新增,结束IP,和ipItemId二选一
+	IpListId int64  `protobuf:"varint,4,opt,name=ipListId,proto3" json:"ipListId,omitempty"` // v0.4.8新增,IP列表,IP所在的IP列表,如果不指定,则会删除所有IP列表中的相关IP信息
 }
 
 func (x *DeleteIPItemRequest) Reset() {
@@ -1221,12 +1221,12 @@ type CountAllEnabledIPItemsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Keyword    string `protobuf:"bytes,6,opt,name=keyword,proto3" json:"keyword,omitempty"`        // 关键词
-	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP，搜索单个IP时需要
+	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP,搜索单个IP时需要
 	GlobalOnly bool   `protobuf:"varint,2,opt,name=globalOnly,proto3" json:"globalOnly,omitempty"` // 是否为自动添加的IP
 	Unread     bool   `protobuf:"varint,3,opt,name=unread,proto3" json:"unread,omitempty"`         // 是否未读
 	EventLevel string `protobuf:"bytes,4,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"`  // 事件级别
-	ListType   string `protobuf:"bytes,5,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型：black|white
-	UserId     int64  `protobuf:"varint,7,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID，只有管理员才有权限指定用户ID
+	ListType   string `protobuf:"bytes,5,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型:black|white
+	UserId     int64  `protobuf:"varint,7,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID,只有管理员才有权限指定用户ID
 }
 
 func (x *CountAllEnabledIPItemsRequest) Reset() {
@@ -1317,13 +1317,13 @@ type ListAllEnabledIPItemsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Keyword    string `protobuf:"bytes,8,opt,name=keyword,proto3" json:"keyword,omitempty"`        // 关键词
-	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP，搜索单个IP时需要
+	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP,搜索单个IP时需要
 	GlobalOnly bool   `protobuf:"varint,2,opt,name=globalOnly,proto3" json:"globalOnly,omitempty"` // 是否为自动添加的IP
 	Unread     bool   `protobuf:"varint,5,opt,name=unread,proto3" json:"unread,omitempty"`         // 是否未读
 	EventLevel string `protobuf:"bytes,6,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"`  // 事件级别
-	ListType   string `protobuf:"bytes,7,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型：black|white
-	UserId     int64  `protobuf:"varint,9,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID，只有管理员才有权限指定用户ID
-	Offset     int64  `protobuf:"varint,3,opt,name=offset,proto3" json:"offset,omitempty"`         // 读取位置，从0开始
+	ListType   string `protobuf:"bytes,7,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型:black|white
+	UserId     int64  `protobuf:"varint,9,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID,只有管理员才有权限指定用户ID
+	Offset     int64  `protobuf:"varint,3,opt,name=offset,proto3" json:"offset,omitempty"`         // 读取位置,从0开始
 	Size       int64  `protobuf:"varint,4,opt,name=size,proto3" json:"size,omitempty"`             // 每次读取数量
 }
 
@@ -1476,13 +1476,13 @@ type ListAllIPItemIdsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	Keyword    string `protobuf:"bytes,8,opt,name=keyword,proto3" json:"keyword,omitempty"`        // 关键词
-	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP，搜索单个IP时需要
+	Ip         string `protobuf:"bytes,1,opt,name=ip,proto3" json:"ip,omitempty"`                  // 单个IP,搜索单个IP时需要
 	GlobalOnly bool   `protobuf:"varint,2,opt,name=globalOnly,proto3" json:"globalOnly,omitempty"` // 是否为自动添加的IP
 	Unread     bool   `protobuf:"varint,5,opt,name=unread,proto3" json:"unread,omitempty"`         // 是否未读
 	EventLevel string `protobuf:"bytes,6,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"`  // 事件级别
-	ListType   string `protobuf:"bytes,7,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型：black|white
-	UserId     int64  `protobuf:"varint,9,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID，只有管理员才有权限指定用户ID
-	Offset     int64  `protobuf:"varint,3,opt,name=offset,proto3" json:"offset,omitempty"`         // 读取位置，从0开始
+	ListType   string `protobuf:"bytes,7,opt,name=listType,proto3" json:"listType,omitempty"`      // 列表类型:black|white
+	UserId     int64  `protobuf:"varint,9,opt,name=userId,proto3" json:"userId,omitempty"`         // 用户ID,只有管理员才有权限指定用户ID
+	Offset     int64  `protobuf:"varint,3,opt,name=offset,proto3" json:"offset,omitempty"`         // 读取位置,从0开始
 	Size       int64  `protobuf:"varint,4,opt,name=size,proto3" json:"size,omitempty"`             // 每次读取数量
 }
 
@@ -1768,11 +1768,11 @@ type CreateIPItemsRequest_IPItem struct {
 	unknownFields protoimpl.UnknownFields
 
 	IpListId                      int64  `protobuf:"varint,1,opt,name=ipListId,proto3" json:"ipListId,omitempty"`    // IP列表ID
-	Value                         string `protobuf:"bytes,15,opt,name=value,proto3" json:"value,omitempty"`          // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数
+	Value                         string `protobuf:"bytes,15,opt,name=value,proto3" json:"value,omitempty"`          // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数
 	IpFrom                        string `protobuf:"bytes,2,opt,name=ipFrom,proto3" json:"ipFrom,omitempty"`         // 开始IP
-	IpTo                          string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`             // 结束IP（可选）
-	ExpiredAt                     int64  `protobuf:"varint,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`  // 过期时间戳（可选）
-	Reason                        string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"`         // 加入理由（可选）
+	IpTo                          string `protobuf:"bytes,3,opt,name=ipTo,proto3" json:"ipTo,omitempty"`             // 结束IP(可选)
+	ExpiredAt                     int64  `protobuf:"varint,4,opt,name=expiredAt,proto3" json:"expiredAt,omitempty"`  // 过期时间戳(可选)
+	Reason                        string `protobuf:"bytes,5,opt,name=reason,proto3" json:"reason,omitempty"`         // 加入理由(可选)
 	Type                          string `protobuf:"bytes,6,opt,name=type,proto3" json:"type,omitempty"`             // 类型
 	EventLevel                    string `protobuf:"bytes,7,opt,name=eventLevel,proto3" json:"eventLevel,omitempty"` // 级别
 	NodeId                        int64  `protobuf:"varint,8,opt,name=nodeId,proto3" json:"nodeId,omitempty"`        // 所属节点ID

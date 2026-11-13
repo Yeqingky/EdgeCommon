@@ -55,7 +55,7 @@ func (this *RoundRobinScheduling) Next(call *shared.RequestCall) CandidateInterf
 	}
 	var weight = this.currentWeights[this.index]
 
-	// 已经一轮了，则重置状态
+	// 已经一轮了,则重置状态
 	if weight == 0 {
 		if this.currentWeights[0] == 0 {
 			this.currentWeights = append([]uint{}, this.rawWeights...)
@@ -74,7 +74,7 @@ func (this *RoundRobinScheduling) Summary() maps.Map {
 	return maps.Map{
 		"code":        "roundRobin",
 		"name":        "RoundRobin轮询算法",
-		"description": "根据权重，依次分配源站",
+		"description": "根据权重,依次分配源站",
 		"networks":    []string{"http", "tcp", "udp", "unix"},
 	}
 }

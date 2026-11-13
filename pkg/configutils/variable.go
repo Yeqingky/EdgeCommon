@@ -52,7 +52,7 @@ func ParseVariables(source string, replacer func(varName string) (value string))
 		return source
 	}
 
-	// 只有一个占位时，我们快速返回
+	// 只有一个占位时,我们快速返回
 	if len(holders) == 1 {
 		var h = holders[0]
 		holder, ok := h.(VariableHolder)
@@ -66,7 +66,7 @@ func ParseVariables(source string, replacer func(varName string) (value string))
 		return source
 	}
 
-	// 多个占位时，使用Builder
+	// 多个占位时,使用Builder
 	var builder = stringBuilderPool.Get().(*strings.Builder)
 	builder.Reset()
 	defer stringBuilderPool.Put(builder)

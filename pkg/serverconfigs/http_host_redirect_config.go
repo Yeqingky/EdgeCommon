@@ -51,7 +51,7 @@ type HTTPHostRedirectConfig struct {
 
 	// 端口跳转
 	PortsAll        bool     `yaml:"portsAll" json:"portsAll"`               // 所有端口
-	PortsBefore     []string `yaml:"portsBefore" json:"portsBefore"`         // 跳转之前的端口：8080, 8080-8090
+	PortsBefore     []string `yaml:"portsBefore" json:"portsBefore"`         // 跳转之前的端口:8080, 8080-8090
 	PortAfter       int      `yaml:"port" json:"portAfter"`                  // 跳转之后的端口
 	PortAfterScheme string   `yaml:"portAfterScheme" json:"portAfterScheme"` // 跳转之后的协议
 

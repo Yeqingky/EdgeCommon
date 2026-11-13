@@ -268,7 +268,7 @@ func main() {
 						})
 
 						// 服务列表
-						// TODO 这里需要改进一下，当前实现方法如果方法注释里有括号（}），就会导致部分方法解析不到
+						// TODO 这里需要改进一下,当前实现方法如果方法注释里有括号(}),就会导致部分方法解析不到
 						var serviceNameReg = regexp.MustCompile(`(?sU)\n\s*service\s+(\w+)\s*\{(.+)}`)
 						var serviceMatches = serviceNameReg.FindAllSubmatch(data, -1)
 						var serviceNamePositions = serviceNameReg.FindAllIndex(data, -1)
@@ -416,7 +416,7 @@ func main() {
 		}
 	}
 
-	// 对消息进行排序，以保持稳定性
+	// 对消息进行排序,以保持稳定性
 	sort.Slice(messages, func(i, j int) bool {
 		return messages[i].Name < messages[j].Name
 	})

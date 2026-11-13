@@ -26,7 +26,7 @@ type CreateACMEUserRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId                int64  `protobuf:"varint,5,opt,name=userId,proto3" json:"userId,omitempty"`                               // 所属用户，只有管理员才有权限指定
+	UserId                int64  `protobuf:"varint,5,opt,name=userId,proto3" json:"userId,omitempty"`                               // 所属用户,只有管理员才有权限指定
 	Email                 string `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`                                  // 用户邮箱
 	Description           string `protobuf:"bytes,2,opt,name=description,proto3" json:"description,omitempty"`                      // 用户描述
 	AcmeProviderCode      string `protobuf:"bytes,3,opt,name=acmeProviderCode,proto3" json:"acmeProviderCode,omitempty"`            // 服务商代号

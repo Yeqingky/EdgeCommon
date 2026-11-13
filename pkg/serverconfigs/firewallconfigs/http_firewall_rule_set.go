@@ -37,7 +37,7 @@ func (this *HTTPFirewallRuleSet) Init() error {
 		if err != nil {
 			logs.Println("ERROR", "validate rule '"+rule.Summary()+"' failed: "+err.Error())
 
-			// 这里不阻断执行，因为先前有些用户填写了错误的规则
+			// 这里不阻断执行,因为先前有些用户填写了错误的规则
 		}
 	}
 

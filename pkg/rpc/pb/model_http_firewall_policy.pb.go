@@ -33,7 +33,7 @@ type HTTPFirewallPolicy struct {
 	Description         string `protobuf:"bytes,4,opt,name=description,proto3" json:"description,omitempty"`                  // 描述
 	InboundJSON         []byte `protobuf:"bytes,5,opt,name=inboundJSON,proto3" json:"inboundJSON,omitempty"`                  // 入站配置
 	OutboundJSON        []byte `protobuf:"bytes,6,opt,name=outboundJSON,proto3" json:"outboundJSON,omitempty"`                // 出站配置
-	ServerId            int64  `protobuf:"varint,8,opt,name=serverId,proto3" json:"serverId,omitempty"`                       // 所属网站ID（如果为0表示公共策略）
+	ServerId            int64  `protobuf:"varint,8,opt,name=serverId,proto3" json:"serverId,omitempty"`                       // 所属网站ID(如果为0表示公共策略)
 	UseLocalFirewall    bool   `protobuf:"varint,9,opt,name=useLocalFirewall,proto3" json:"useLocalFirewall,omitempty"`       // 是否使用本机防火墙
 	SynFloodJSON        []byte `protobuf:"bytes,10,opt,name=synFloodJSON,proto3" json:"synFloodJSON,omitempty"`               // synflood配置
 	BlockOptionsJSON    []byte `protobuf:"bytes,11,opt,name=blockOptionsJSON,proto3" json:"blockOptionsJSON,omitempty"`       // 阻止动作配置

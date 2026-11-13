@@ -27,7 +27,7 @@ type CreateSSLCertRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	IsOn        bool     `protobuf:"varint,1,opt,name=isOn,proto3" json:"isOn,omitempty"`
-	UserId      int64    `protobuf:"varint,12,opt,name=userId,proto3" json:"userId,omitempty"` // 所属用户，仅管理员才能指定
+	UserId      int64    `protobuf:"varint,12,opt,name=userId,proto3" json:"userId,omitempty"` // 所属用户,仅管理员才能指定
 	Name        string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	Description string   `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
 	ServerName  string   `protobuf:"bytes,4,opt,name=serverName,proto3" json:"serverName,omitempty"`
@@ -591,14 +591,14 @@ type CountSSLCertRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsCA         bool     `protobuf:"varint,1,opt,name=isCA,proto3" json:"isCA,omitempty"`                 // 可选项，是否为CA证书
-	IsAvailable  bool     `protobuf:"varint,2,opt,name=isAvailable,proto3" json:"isAvailable,omitempty"`   // 可选项，是否可用（在有效期内）
-	IsExpired    bool     `protobuf:"varint,3,opt,name=isExpired,proto3" json:"isExpired,omitempty"`       // 可选项，是否已过期
-	ExpiringDays int32    `protobuf:"varint,4,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"` // 可选项，离过期日的天数
-	Keyword      string   `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`            // 可选项，关键词
-	UserId       int64    `protobuf:"varint,6,opt,name=userId,proto3" json:"userId,omitempty"`             // 可选项，用户ID，不填则表示读取管理员上传的证书
-	Domains      []string `protobuf:"bytes,7,rep,name=domains,proto3" json:"domains,omitempty"`            // 可选项，搜索使用的域名列表
-	UserOnly     bool     `protobuf:"varint,8,opt,name=userOnly,proto3" json:"userOnly,omitempty"`         // 可选项，只列出用户上传的证书
+	IsCA         bool     `protobuf:"varint,1,opt,name=isCA,proto3" json:"isCA,omitempty"`                 // 可选项,是否为CA证书
+	IsAvailable  bool     `protobuf:"varint,2,opt,name=isAvailable,proto3" json:"isAvailable,omitempty"`   // 可选项,是否可用(在有效期内)
+	IsExpired    bool     `protobuf:"varint,3,opt,name=isExpired,proto3" json:"isExpired,omitempty"`       // 可选项,是否已过期
+	ExpiringDays int32    `protobuf:"varint,4,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"` // 可选项,离过期日的天数
+	Keyword      string   `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`            // 可选项,关键词
+	UserId       int64    `protobuf:"varint,6,opt,name=userId,proto3" json:"userId,omitempty"`             // 可选项,用户ID,不填则表示读取管理员上传的证书
+	Domains      []string `protobuf:"bytes,7,rep,name=domains,proto3" json:"domains,omitempty"`            // 可选项,搜索使用的域名列表
+	UserOnly     bool     `protobuf:"varint,8,opt,name=userOnly,proto3" json:"userOnly,omitempty"`         // 可选项,只列出用户上传的证书
 }
 
 func (x *CountSSLCertRequest) Reset() {
@@ -695,16 +695,16 @@ type ListSSLCertsRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	IsCA         bool     `protobuf:"varint,1,opt,name=isCA,proto3" json:"isCA,omitempty"`                 // 可选项，是否为CA证书
-	IsAvailable  bool     `protobuf:"varint,2,opt,name=isAvailable,proto3" json:"isAvailable,omitempty"`   // 可选项，是否可用（在有效期内）
-	IsExpired    bool     `protobuf:"varint,3,opt,name=isExpired,proto3" json:"isExpired,omitempty"`       //可选项， 是否已过期
-	ExpiringDays int32    `protobuf:"varint,4,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"` // 可选项，离过期日的天数
-	Keyword      string   `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`            // 可选项，关键词
-	UserId       int64    `protobuf:"varint,8,opt,name=userId,proto3" json:"userId,omitempty"`             // 可选项，用户ID，不填则表示读取管理员上传的证书
-	Domains      []string `protobuf:"bytes,9,rep,name=domains,proto3" json:"domains,omitempty"`            // 可选项，搜索使用的域名列表
+	IsCA         bool     `protobuf:"varint,1,opt,name=isCA,proto3" json:"isCA,omitempty"`                 // 可选项,是否为CA证书
+	IsAvailable  bool     `protobuf:"varint,2,opt,name=isAvailable,proto3" json:"isAvailable,omitempty"`   // 可选项,是否可用(在有效期内)
+	IsExpired    bool     `protobuf:"varint,3,opt,name=isExpired,proto3" json:"isExpired,omitempty"`       //可选项, 是否已过期
+	ExpiringDays int32    `protobuf:"varint,4,opt,name=expiringDays,proto3" json:"expiringDays,omitempty"` // 可选项,离过期日的天数
+	Keyword      string   `protobuf:"bytes,5,opt,name=keyword,proto3" json:"keyword,omitempty"`            // 可选项,关键词
+	UserId       int64    `protobuf:"varint,8,opt,name=userId,proto3" json:"userId,omitempty"`             // 可选项,用户ID,不填则表示读取管理员上传的证书
+	Domains      []string `protobuf:"bytes,9,rep,name=domains,proto3" json:"domains,omitempty"`            // 可选项,搜索使用的域名列表
 	Offset       int64    `protobuf:"varint,6,opt,name=offset,proto3" json:"offset,omitempty"`             // 读取位置
-	Size         int64    `protobuf:"varint,7,opt,name=size,proto3" json:"size,omitempty"`                 // 读取长度，不能小于0
-	UserOnly     bool     `protobuf:"varint,10,opt,name=userOnly,proto3" json:"userOnly,omitempty"`        // 可选项，只列出用户上传的证书
+	Size         int64    `protobuf:"varint,7,opt,name=size,proto3" json:"size,omitempty"`                 // 读取长度,不能小于0
+	UserOnly     bool     `protobuf:"varint,10,opt,name=userOnly,proto3" json:"userOnly,omitempty"`        // 可选项,只列出用户上传的证书
 }
 
 func (x *ListSSLCertsRequest) Reset() {
@@ -1306,7 +1306,7 @@ type FindSSLCertUserResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	User *User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"` // 用户信息，只包含几个基本的信息
+	User *User `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"` // 用户信息,只包含几个基本的信息
 }
 
 func (x *FindSSLCertUserResponse) Reset() {

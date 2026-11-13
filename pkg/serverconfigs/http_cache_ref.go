@@ -14,7 +14,7 @@ type HTTPCacheRef struct {
 	IsOn          bool  `yaml:"isOn" json:"isOn"`
 	CachePolicyId int64 `yaml:"cachePolicyId" json:"cachePolicyId"`
 
-	Key         string                 `yaml:"key" json:"key"`                 // 每个缓存的Key规则，里面可以有变量
+	Key         string                 `yaml:"key" json:"key"`                 // 每个缓存的Key规则,里面可以有变量
 	Life        *shared.TimeDuration   `yaml:"life" json:"life"`               // 时间
 	ExpiresTime *HTTPExpiresTimeConfig `yaml:"expiresTime" json:"expiresTime"` // 客户端过期时间
 	Status      []int                  `yaml:"status" json:"status"`           // 缓存的状态码列表
@@ -38,7 +38,7 @@ type HTTPCacheRef struct {
 
 	CachePolicy *HTTPCachePolicy `yaml:"cachePolicy" json:"cachePolicy"`
 
-	IsReverse bool `yaml:"isReverse" json:"isReverse"` // 是否为反向条件，反向条件的不缓存
+	IsReverse bool `yaml:"isReverse" json:"isReverse"` // 是否为反向条件,反向条件的不缓存
 
 	lifeSeconds                     int64
 	minSize                         int64

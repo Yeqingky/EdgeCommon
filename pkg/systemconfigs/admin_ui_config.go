@@ -13,7 +13,7 @@ type AdminUIConfig struct {
 	TimeZone           string   `json:"timeZone"`           // 时区
 	Modules            []string `json:"modules"`            // 开通模块
 	DNSResolver        struct {
-		Type string `json:"type"` // 类型，参考 DNSResolverType*
+		Type string `json:"type"` // 类型,参考 DNSResolverType*
 	} `json:"dnsResolver"` // DNS解析设置
 }
 

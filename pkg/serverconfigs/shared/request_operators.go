@@ -131,17 +131,17 @@ func AllRequestOperators() []maps.Map {
 		{
 			"name":        "扩展名",
 			"op":          RequestCondOperatorFileExt,
-			"description": "判断小写的扩展名（不带点）在某个列表中",
+			"description": "判断小写的扩展名(不带点)在某个列表中",
 		},
 		{
 			"name":        "MimeType",
 			"op":          RequestCondOperatorFileMimeType,
-			"description": "判断MimeType在某个列表中，支持类似于image/*的语法",
+			"description": "判断MimeType在某个列表中,支持类似于image/*的语法",
 		},
 		{
 			"name":        "版本号范围",
 			"op":          RequestCondOperatorVersionRange,
-			"description": "判断版本号在某个范围内，格式为version1,version2",
+			"description": "判断版本号在某个范围内,格式为version1,version2",
 		},
 		{
 			"name":        "整数等于",
@@ -176,17 +176,17 @@ func AllRequestOperators() []maps.Map {
 		{
 			"name":        "整数取模10",
 			"op":          RequestCondOperatorMod10,
-			"description": "对整数参数值取模，除数为10，对比值为余数",
+			"description": "对整数参数值取模,除数为10,对比值为余数",
 		},
 		{
 			"name":        "整数取模100",
 			"op":          RequestCondOperatorMod100,
-			"description": "对整数参数值取模，除数为100，对比值为余数",
+			"description": "对整数参数值取模,除数为100,对比值为余数",
 		},
 		{
 			"name":        "整数取模",
 			"op":          RequestCondOperatorMod,
-			"description": "对整数参数值取模，对比值格式为：除数,余数，比如10,1",
+			"description": "对整数参数值取模,对比值格式为:除数,余数,比如10,1",
 		},
 		{
 			"name":        "IP等于",
@@ -216,22 +216,22 @@ func AllRequestOperators() []maps.Map {
 		{
 			"name":        "IP范围",
 			"op":          RequestCondOperatorIPRange,
-			"description": "IP在某个范围之内，范围格式可以是英文逗号分隔的<code-label>开始IP,结束IP</code-label>，比如<code-label>192.168.1.100,192.168.2.200</code-label>，或者CIDR格式的ip/bits，比如<code-label>192.168.2.1/24</code-label>",
+			"description": "IP在某个范围之内,范围格式可以是英文逗号分隔的<code-label>开始IP,结束IP</code-label>,比如<code-label>192.168.1.100,192.168.2.200</code-label>,或者CIDR格式的ip/bits,比如<code-label>192.168.2.1/24</code-label>",
 		},
 		{
 			"name":        "IP取模10",
 			"op":          RequestCondOperatorIPMod10,
-			"description": "对IP参数值取模，除数为10，对比值为余数",
+			"description": "对IP参数值取模,除数为10,对比值为余数",
 		},
 		{
 			"name":        "IP取模100",
 			"op":          RequestCondOperatorIPMod100,
-			"description": "对IP参数值取模，除数为100，对比值为余数",
+			"description": "对IP参数值取模,除数为100,对比值为余数",
 		},
 		{
 			"name":        "IP取模",
 			"op":          RequestCondOperatorIPMod,
-			"description": "对IP参数值取模，对比值格式为：除数,余数，比如10,1",
+			"description": "对IP参数值取模,对比值格式为:除数,余数,比如10,1",
 		},
 
 		/**{

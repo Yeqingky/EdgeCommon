@@ -74,7 +74,7 @@ var HTTPAccessLogFields = []maps.Map{
 	},**/
 }
 
-// HTTPAccessLogShortFields 精简版的日志字段，用来用
+// HTTPAccessLogShortFields 精简版的日志字段,用来用
 var HTTPAccessLogShortFields = []maps.Map{
 	{
 		"code": HTTPAccessLogFieldHeader,

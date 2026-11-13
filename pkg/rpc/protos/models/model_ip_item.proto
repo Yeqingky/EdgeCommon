@@ -11,7 +11,7 @@ import "models/model_node.proto";
 
 message IPItem {
 	int64 id = 1;
-	string value = 22; // 原始值，比如单个IP、IP范围或者CIDR
+	string value = 22; // 原始值,比如单个IP,IP范围或者CIDR
 	string ipFrom = 2;
 	string ipTo = 3;
 	int64 version = 4;
@@ -21,8 +21,8 @@ message IPItem {
 	bool isDeleted = 8;
 	string type = 9;
 	string eventLevel = 10; // 级别
-	string listType = 11; // 所在名单类型，来自名单
-	bool isGlobal = 20; // 是否全局，来自名单
+	string listType = 11; // 所在名单类型,来自名单
+	bool isGlobal = 20; // 是否全局,来自名单
 	int64 createdAt = 12;
 
 	int64 nodeId = 13;

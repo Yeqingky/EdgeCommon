@@ -20,8 +20,8 @@ type HTTPCompressionConfig struct {
 	IsOn    bool `yaml:"isOn" json:"isOn"`
 
 	UseDefaultTypes bool                  `yaml:"useDefaultTypes" json:"useDefaultTypes"` // 是否使用默认的类型
-	Types           []HTTPCompressionType `yaml:"types" json:"types"`                     // 支持的类型，如果为空表示默认顺序
-	Level           int8                  `yaml:"level" json:"level"`                     // 级别：1-12
+	Types           []HTTPCompressionType `yaml:"types" json:"types"`                     // 支持的类型,如果为空表示默认顺序
+	Level           int8                  `yaml:"level" json:"level"`                     // 级别:1-12
 	DecompressData  bool                  `yaml:"decompressData" json:"decompressData"`   // 是否解压已压缩内容
 
 	GzipRef    *HTTPCompressionRef `yaml:"gzipRef" json:"gzipRef"`
@@ -34,8 +34,8 @@ type HTTPCompressionConfig struct {
 
 	MinLength            *shared.SizeCapacity           `yaml:"minLength" json:"minLength"`                       // 最小压缩对象比如4m, 24k
 	MaxLength            *shared.SizeCapacity           `yaml:"maxLength" json:"maxLength"`                       // 最大压缩对象
-	MimeTypes            []string                       `yaml:"mimeTypes" json:"mimeTypes"`                       // 支持的MimeType，支持image/*这样的通配符使用
-	Extensions           []string                       `yaml:"extensions" json:"extensions"`                     // 文件扩展名，包含点符号，不区分大小写
+	MimeTypes            []string                       `yaml:"mimeTypes" json:"mimeTypes"`                       // 支持的MimeType,支持image/*这样的通配符使用
+	Extensions           []string                       `yaml:"extensions" json:"extensions"`                     // 文件扩展名,包含点符号,不区分大小写
 	ExceptExtensions     []string                       `yaml:"exceptExtensions" json:"exceptExtensions"`         // 例外扩展名
 	Conds                *shared.HTTPRequestCondsConfig `yaml:"conds" json:"conds"`                               // 匹配条件
 	EnablePartialContent bool                           `yaml:"enablePartialContent" json:"enablePartialContent"` // 支持PartialContent压缩
@@ -239,7 +239,7 @@ func (this *HTTPCompressionConfig) MatchResponse(mimeType string, contentLength 
 		}
 	}
 
-	// 如果没有指定条件，则所有的都能压缩
+	// 如果没有指定条件,则所有的都能压缩
 	if len(this.extensions) == 0 && len(this.mimeTypeRules) == 0 {
 		return true
 	}

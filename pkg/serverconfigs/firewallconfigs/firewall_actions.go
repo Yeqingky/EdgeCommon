@@ -22,27 +22,27 @@ func FindAllFirewallActionTypes() []*FirewallActionTypeDefinition {
 		{
 			Name:        "ipset",
 			Code:        FirewallActionTypeIPSet,
-			Description: "使用特定的ipset管理IP，可以结合iptables和firewalld等工具一起工作。",
+			Description: "使用特定的ipset管理IP,可以结合iptables和firewalld等工具一起工作.",
 		},
 		{
 			Name:        "firewalld",
 			Code:        FirewallActionTypeFirewalld,
-			Description: "使用Firewalld管理IP，非持久保存，reload之后重置规则。",
+			Description: "使用Firewalld管理IP,非持久保存,reload之后重置规则.",
 		},
 		{
 			Name:        "iptables",
 			Code:        FirewallActionTypeIPTables,
-			Description: "使用IPTables管理IP，不支持超时时间设定，非持久保存，reload之后重置规则。",
+			Description: "使用IPTables管理IP,不支持超时时间设定,非持久保存,reload之后重置规则.",
 		},
 		{
 			Name:        "自定义脚本",
 			Code:        FirewallActionTypeScript,
-			Description: "使用自定义的脚本执行IP操作。",
+			Description: "使用自定义的脚本执行IP操作.",
 		},
 		{
 			Name:        "自定义HTTP API",
 			Code:        FirewallActionTypeHTTPAPI,
-			Description: "使用自定义的HTTP API执行IP操作。",
+			Description: "使用自定义的HTTP API执行IP操作.",
 		},
 		{
 			Name:        "显示HTML内容",

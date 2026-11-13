@@ -7,14 +7,14 @@
 }
 ~~~
 
-其中：
+其中:
 * `code` 调度方法代号
   * `random` - 随机
   * `roundRobin` - 轮询
   * `hash` - Hash算法
-    * `key` - 自定义Key，可以使用请求变量，比如 `${remoteAddr}`
+    * `key` - 自定义Key,可以使用请求变量,比如 `${remoteAddr}`
   * `sticky` - Sticky算法
-    * `type` - 类型：cookie、header、argument
+    * `type` - 类型:cookie,header,argument
     * `param` - 参数值
 
 

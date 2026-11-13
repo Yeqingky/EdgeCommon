@@ -861,7 +861,7 @@ type SyncDNSDomainDataRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	DnsDomainId     int64 `protobuf:"varint,1,opt,name=dnsDomainId,proto3" json:"dnsDomainId,omitempty"`
-	NodeClusterId   int64 `protobuf:"varint,2,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`     // 如果指定，表示只更新单个集群ID
+	NodeClusterId   int64 `protobuf:"varint,2,opt,name=nodeClusterId,proto3" json:"nodeClusterId,omitempty"`     // 如果指定,表示只更新单个集群ID
 	CheckNodeIssues bool  `protobuf:"varint,3,opt,name=checkNodeIssues,proto3" json:"checkNodeIssues,omitempty"` // 是否检查节点问题
 }
 
@@ -1170,7 +1170,7 @@ type ExistDNSDomainRecordRequest struct {
 
 	DnsDomainId int64  `protobuf:"varint,1,opt,name=dnsDomainId,proto3" json:"dnsDomainId,omitempty"`
 	Name        string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Type        string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`   // 解析类型，比如A, CNAME等
+	Type        string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`   // 解析类型,比如A, CNAME等
 	Route       string `protobuf:"bytes,4,opt,name=route,proto3" json:"route,omitempty"` // 线路
 	Value       string `protobuf:"bytes,5,opt,name=value,proto3" json:"value,omitempty"` // 值
 }

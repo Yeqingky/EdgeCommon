@@ -2630,7 +2630,7 @@
         }
       ],
       "filename": "service_http_firewall_policy.proto",
-      "doc": "HTTP防火墙（WAF）服务"
+      "doc": "HTTP防火墙(WAF)服务"
     },
     {
       "name": "HTTPFirewallRuleGroupService",
@@ -4449,7 +4449,7 @@
           "requestMessageName": "FindLoginTicketWithValueRequest",
           "responseMessageName": "FindLoginTicketWithValueResponse",
           "code": "rpc findLoginTicketWithValue(FindLoginTicketWithValueRequest) returns (FindLoginTicketWithValueResponse);",
-          "doc": "查找票据\n查找成功后，会自动删除票据信息，所以票据信息只能查询一次",
+          "doc": "查找票据\n查找成功后,会自动删除票据信息,所以票据信息只能查询一次",
           "roles": [
             "admin"
           ],
@@ -11569,7 +11569,7 @@
           "requestMessageName": "FindLatestServerMinutelyStatsRequest",
           "responseMessageName": "FindLatestServerMinutelyStatsResponse",
           "code": "rpc findLatestServerMinutelyStats (FindLatestServerMinutelyStatsRequest) returns (FindLatestServerMinutelyStatsResponse);",
-          "doc": "按分钟读取统计数据，并返回秒级平均流量",
+          "doc": "按分钟读取统计数据,并返回秒级平均流量",
           "roles": [
             "admin"
           ],
@@ -11614,7 +11614,7 @@
           "requestMessageName": "SumCurrentServerDailyStatsRequest",
           "responseMessageName": "SumCurrentServerDailyStatsResponse",
           "code": "rpc sumCurrentServerDailyStats(SumCurrentServerDailyStatsRequest) returns (SumCurrentServerDailyStatsResponse);",
-          "doc": "查找单个服务当前时刻（N分钟内）统计数据",
+          "doc": "查找单个服务当前时刻(N分钟内)统计数据",
           "roles": [
             "admin",
             "user"
@@ -14144,7 +14144,7 @@
     },
     {
       "name": "ADPackage",
-      "code": "message ADPackage {\n\tint64 id = 1;\n\tbool isOn = 2;\n\tint64 adNetworkId = 3;\n\tint32 protectionBandwidthSize = 4;\n\tstring protectionBandwidthUnit = 5;\n\tint32 serverBandwidthSize = 6;\n\tstring serverBandwidthUnit = 7;\n\n\tADNetwork adNetwork = 30;\n\tstring summary = 31; // 概述\n\tint64 countIdleADPackageInstances = 32; // 剩余可用的实例数，只有在获取可用高防产品的时候才会返回\n}",
+      "code": "message ADPackage {\n\tint64 id = 1;\n\tbool isOn = 2;\n\tint64 adNetworkId = 3;\n\tint32 protectionBandwidthSize = 4;\n\tstring protectionBandwidthUnit = 5;\n\tint32 serverBandwidthSize = 6;\n\tstring serverBandwidthUnit = 7;\n\n\tADNetwork adNetwork = 30;\n\tstring summary = 31; // 概述\n\tint64 countIdleADPackageInstances = 32; // 剩余可用的实例数,只有在获取可用高防产品的时候才会返回\n}",
       "doc": "高防产品"
     },
     {
@@ -14184,12 +14184,12 @@
     },
     {
       "name": "AddServerOriginRequest",
-      "code": "message AddServerOriginRequest {\n\tint64 serverId = 1; // 网站ID\n\tint64 originId = 2; // 源站ID，通过 OriginService 创建和查询\n\tbool isPrimary = 3; // 是否为主要源站\n}",
+      "code": "message AddServerOriginRequest {\n\tint64 serverId = 1; // 网站ID\n\tint64 originId = 2; // 源站ID,通过 OriginService 创建和查询\n\tbool isPrimary = 3; // 是否为主要源站\n}",
       "doc": "为网站添加源站"
     },
     {
       "name": "Admin",
-      "code": "message Admin {\n\tint64 id = 1; // ID\n\tstring fullname = 2; // 全称\n\tstring username = 3; // 用户名\n\tbool isOn = 4; // 是否启用\n\tbool isSuper = 5; // 是否为超级用户\n\tint64 createdAt = 6; // 创建时间\n\trepeated AdminModule Modules = 7; // 有权限的模块\n\tLogin otpLogin = 8; // OTP认证\n\tbool canLogin = 9; // 是否可以登录\n\tbool hasWeakPassword = 10; // 是否设置了弱密码，只有超级管理员能看到此项\n}",
+      "code": "message Admin {\n\tint64 id = 1; // ID\n\tstring fullname = 2; // 全称\n\tstring username = 3; // 用户名\n\tbool isOn = 4; // 是否启用\n\tbool isSuper = 5; // 是否为超级用户\n\tint64 createdAt = 6; // 创建时间\n\trepeated AdminModule Modules = 7; // 有权限的模块\n\tLogin otpLogin = 8; // OTP认证\n\tbool canLogin = 9; // 是否可以登录\n\tbool hasWeakPassword = 10; // 是否设置了弱密码,只有超级管理员能看到此项\n}",
       "doc": ""
     },
     {
@@ -14574,7 +14574,7 @@
     },
     {
       "name": "ComposeAdminDashboardResponse",
-      "code": "message ComposeAdminDashboardResponse {\n\tint64 countNodeClusters = 1;\n\tint64 countNodes = 2;\n\tint64 countOfflineNodes = 9;\n\tint64 countServers = 3;\n\tint64 countAuditingServers = 13;\n\tint64 countUsers = 4;\n\tint64 countAPINodes = 5;\n\tint64 countOfflineAPINodes = 10;\n\tint64 countDBNodes = 6;\n\tint64 countOfflineDBNodes = 11;\n\tint64 countUserNodes = 7;\n\tint64 countOfflineUserNodes = 12;\n\tint64 defaultNodeClusterId = 8;\n\n\trepeated DailyTrafficStat dailyTrafficStats = 30;\n\trepeated HourlyTrafficStat hourlyTrafficStats = 31;\n\n\tUpgradeInfo nodeUpgradeInfo = 32;\n\tUpgradeInfo apiNodeUpgradeInfo = 33;\n\tUpgradeInfo userNodeUpgradeInfo = 35;\n\tUpgradeInfo authorityNodeUpgradeInfo = 36;\n\tUpgradeInfo nsNodeUpgradeInfo = 37;\n\tUpgradeInfo reportNodeUpgradeInfo = 41;\n\n\trepeated NodeStat topNodeStats = 38;\n\trepeated DomainStat topDomainStats = 39;\n\trepeated CountryStat topCountryStats = 42;\n\n\trepeated MetricDataChart metricDataCharts = 40;\n\n\n\tmessage DailyTrafficStat {\n\t\tstring day = 1; // 日期 YYYYMMDD\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7; // 攻击流量（字节）\n\t\tint64 countIPs = 8; // 独立IP数量\n\t}\n\n\n\tmessage HourlyTrafficStat {\n\t\tstring hour = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage NodeStat {\n\t\tint64 nodeId = 1;\n\t\tstring nodeName = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t}\n\n\n\tmessage DomainStat {\n\t\tint64 serverId = 1;\n\t\tstring domain = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t}\n\n\n\tmessage CountryStat {\n\t\tstring countryName = 1;\n\t\tint64 bytes = 2;\n\t\tint64 countRequests = 3;\n\t\tfloat percent = 4; // 流量占比\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\t// 节点升级信息\n\n\tmessage UpgradeInfo {\n\t\tint64 countNodes = 1; // 节点数\n\t\tstring newVersion = 2; // 新版本\n\t}\n}",
+      "code": "message ComposeAdminDashboardResponse {\n\tint64 countNodeClusters = 1;\n\tint64 countNodes = 2;\n\tint64 countOfflineNodes = 9;\n\tint64 countServers = 3;\n\tint64 countAuditingServers = 13;\n\tint64 countUsers = 4;\n\tint64 countAPINodes = 5;\n\tint64 countOfflineAPINodes = 10;\n\tint64 countDBNodes = 6;\n\tint64 countOfflineDBNodes = 11;\n\tint64 countUserNodes = 7;\n\tint64 countOfflineUserNodes = 12;\n\tint64 defaultNodeClusterId = 8;\n\n\trepeated DailyTrafficStat dailyTrafficStats = 30;\n\trepeated HourlyTrafficStat hourlyTrafficStats = 31;\n\n\tUpgradeInfo nodeUpgradeInfo = 32;\n\tUpgradeInfo apiNodeUpgradeInfo = 33;\n\tUpgradeInfo userNodeUpgradeInfo = 35;\n\tUpgradeInfo authorityNodeUpgradeInfo = 36;\n\tUpgradeInfo nsNodeUpgradeInfo = 37;\n\tUpgradeInfo reportNodeUpgradeInfo = 41;\n\n\trepeated NodeStat topNodeStats = 38;\n\trepeated DomainStat topDomainStats = 39;\n\trepeated CountryStat topCountryStats = 42;\n\n\trepeated MetricDataChart metricDataCharts = 40;\n\n\n\tmessage DailyTrafficStat {\n\t\tstring day = 1; // 日期 YYYYMMDD\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7; // 攻击流量(字节)\n\t\tint64 countIPs = 8; // 独立IP数量\n\t}\n\n\n\tmessage HourlyTrafficStat {\n\t\tstring hour = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage NodeStat {\n\t\tint64 nodeId = 1;\n\t\tstring nodeName = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t}\n\n\n\tmessage DomainStat {\n\t\tint64 serverId = 1;\n\t\tstring domain = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t}\n\n\n\tmessage CountryStat {\n\t\tstring countryName = 1;\n\t\tint64 bytes = 2;\n\t\tint64 countRequests = 3;\n\t\tfloat percent = 4; // 流量占比\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\t// 节点升级信息\n\n\tmessage UpgradeInfo {\n\t\tint64 countNodes = 1; // 节点数\n\t\tstring newVersion = 2; // 新版本\n\t}\n}",
       "doc": ""
     },
     {
@@ -14654,7 +14654,7 @@
     },
     {
       "name": "ComposeServerStatBoardResponse",
-      "code": "message ComposeServerStatBoardResponse {\n\tint64 minutelyPeekBandwidthBytes = 5; // 当前带宽（N分钟峰值）\n\tint64 dailyPeekBandwidthBytes = 2; // 当天带宽峰值\n\tint64 monthlyPeekBandwidthBytes = 3; // 当月带宽峰值\n\tint64 lastMonthlyPeekBandwidthBytes = 4; // 上个月带宽峰值\n\tint64 dailyCountIPs = 9; // 当天独立IP\n\tint64 dailyTrafficBytes = 10; // 当天流量\n\n\tint32 bandwidthPercentile = 7;\n\trepeated ServerBandwidthStat minutelyBandwidthStats = 1; // 分钟级的带宽统计\n\tServerBandwidthStat minutelyNthBandwidthStat = 8;\n\n\trepeated DailyTrafficStat dailyTrafficStats = 30;\n\trepeated HourlyTrafficStat hourlyTrafficStats = 31;\n\trepeated NodeStat topNodeStats = 32;\n\trepeated CountryStat topCountryStats = 35;\n\n\trepeated MetricDataChart metricDataCharts = 34;\n\n\n\tmessage DailyTrafficStat {\n\t\tstring day = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage HourlyTrafficStat {\n\t\tstring hour = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage NodeStat {\n\t\tint64 nodeId = 1;\n\t\tstring nodeName = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage CountryStat {\n\t\tstring countryName = 1;\n\t\tint64 bytes = 2;\n\t\tint64 countRequests = 3;\n\t\tfloat percent = 4; // 流量占比\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n}",
+      "code": "message ComposeServerStatBoardResponse {\n\tint64 minutelyPeekBandwidthBytes = 5; // 当前带宽(N分钟峰值)\n\tint64 dailyPeekBandwidthBytes = 2; // 当天带宽峰值\n\tint64 monthlyPeekBandwidthBytes = 3; // 当月带宽峰值\n\tint64 lastMonthlyPeekBandwidthBytes = 4; // 上个月带宽峰值\n\tint64 dailyCountIPs = 9; // 当天独立IP\n\tint64 dailyTrafficBytes = 10; // 当天流量\n\n\tint32 bandwidthPercentile = 7;\n\trepeated ServerBandwidthStat minutelyBandwidthStats = 1; // 分钟级的带宽统计\n\tServerBandwidthStat minutelyNthBandwidthStat = 8;\n\n\trepeated DailyTrafficStat dailyTrafficStats = 30;\n\trepeated HourlyTrafficStat hourlyTrafficStats = 31;\n\trepeated NodeStat topNodeStats = 32;\n\trepeated CountryStat topCountryStats = 35;\n\n\trepeated MetricDataChart metricDataCharts = 34;\n\n\n\tmessage DailyTrafficStat {\n\t\tstring day = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage HourlyTrafficStat {\n\t\tstring hour = 1;\n\t\tint64 bytes = 2;\n\t\tint64 cachedBytes = 3;\n\t\tint64 countRequests = 4;\n\t\tint64 countCachedRequests = 5;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage NodeStat {\n\t\tint64 nodeId = 1;\n\t\tstring nodeName = 2;\n\t\tint64 countRequests = 3;\n\t\tint64 bytes = 4;\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n\n\n\tmessage CountryStat {\n\t\tstring countryName = 1;\n\t\tint64 bytes = 2;\n\t\tint64 countRequests = 3;\n\t\tfloat percent = 4; // 流量占比\n\t\tint64 countAttackRequests = 6;\n\t\tint64 attackBytes = 7;\n\t}\n}",
       "doc": ""
     },
     {
@@ -14709,12 +14709,12 @@
     },
     {
       "name": "CopyServerConfigRequest",
-      "code": "message CopyServerConfigRequest {\n\tint64 serverId = 1; // 被复制网站ID\n\tstring configCode = 2; // 要拷贝的配置代号：stat 统计；charset 字符编码；userAgent UA名单；referers 防盗链；webp WebP配置；accessLog 访问日志；cc CC配置；hostRedirects URL跳转；root ROOT配置；remoteAddr 访客设置；requestLimit 请求限制；compression 内容压缩设置；optimization 页面优化设置；cache 缓存设置；uam 五秒盾设置；websocket Websocket设置；pages 自定义页面设置；auth 访问鉴权；reverseProxy 反向代理设置；waf WAF设置\n\tstring targetType = 3; // 目标类型：servers, groups, cluster（当前集群下所有网站，只有管理员才有权限）、user（当前用户下所有网站）\n\trepeated int64 targetServerIds = 4; // 目标网站ID列表\n\trepeated int64 targetServerGroupIds = 5; // 目标网站分组ID列表\n\tint64 targetClusterId = 6; // 目标集群ID\n\tint64 targetUserId = 7; // 目标用户ID\n\n\tbool wafCopyRegions = 30; // 可选项，WAF独立配置：是否拷贝区域封禁设置\n}",
+      "code": "message CopyServerConfigRequest {\n\tint64 serverId = 1; // 被复制网站ID\n\tstring configCode = 2; // 要拷贝的配置代号:stat 统计;charset 字符编码;userAgent UA名单;referers 防盗链;webp WebP配置;accessLog 访问日志;cc CC配置;hostRedirects URL跳转;root ROOT配置;remoteAddr 访客设置;requestLimit 请求限制;compression 内容压缩设置;optimization 页面优化设置;cache 缓存设置;uam 五秒盾设置;websocket Websocket设置;pages 自定义页面设置;auth 访问鉴权;reverseProxy 反向代理设置;waf WAF设置\n\tstring targetType = 3; // 目标类型:servers, groups, cluster(当前集群下所有网站,只有管理员才有权限),user(当前用户下所有网站)\n\trepeated int64 targetServerIds = 4; // 目标网站ID列表\n\trepeated int64 targetServerGroupIds = 5; // 目标网站分组ID列表\n\tint64 targetClusterId = 6; // 目标集群ID\n\tint64 targetUserId = 7; // 目标用户ID\n\n\tbool wafCopyRegions = 30; // 可选项,WAF独立配置:是否拷贝区域封禁设置\n}",
       "doc": "在网站之间复制配置"
     },
     {
       "name": "CountADPackageInstancesRequest",
-      "code": "message CountADPackageInstancesRequest {\n\tint64 adNetworkId = 1; // 可选，线路\n\tint64 adPackageId = 2; // 可选，如果不填则表示获取所有实例数量\n\tint64 userId = 3; // 可选，用户ID\n\tstring ip = 4;  // 可选，高防IP\n}",
+      "code": "message CountADPackageInstancesRequest {\n\tint64 adNetworkId = 1; // 可选,线路\n\tint64 adPackageId = 2; // 可选,如果不填则表示获取所有实例数量\n\tint64 userId = 3; // 可选,用户ID\n\tstring ip = 4;  // 可选,高防IP\n}",
       "doc": "计算实例数量"
     },
     {
@@ -14754,7 +14754,7 @@
     },
     {
       "name": "CountAllEnabledACMETasksRequest",
-      "code": "message CountAllEnabledACMETasksRequest {\n\tint64 adminId = 1;\n\tint64 userId = 2;\n\tbool isAvailable = 3;\n\tbool isExpired = 4;\n\tint32 expiringDays = 5;\n\tstring keyword = 6;\n\tbool userOnly = 7; // 可选项，是否只列出用户上传的证书\n}",
+      "code": "message CountAllEnabledACMETasksRequest {\n\tint64 adminId = 1;\n\tint64 userId = 2;\n\tbool isAvailable = 3;\n\tbool isExpired = 4;\n\tint32 expiringDays = 5;\n\tstring keyword = 6;\n\tbool userOnly = 7; // 可选项,是否只列出用户上传的证书\n}",
       "doc": "计算所有任务数量"
     },
     {
@@ -14774,7 +14774,7 @@
     },
     {
       "name": "CountAllEnabledAdminsRequest",
-      "code": "message CountAllEnabledAdminsRequest {\n\tstring keyword = 1; // 可选项，查询关键词\n\tbool hasWeakPassword = 2; // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询\n}",
+      "code": "message CountAllEnabledAdminsRequest {\n\tstring keyword = 1; // 可选项,查询关键词\n\tbool hasWeakPassword = 2; // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询\n}",
       "doc": "计算管理员数量"
     },
     {
@@ -14804,7 +14804,7 @@
     },
     {
       "name": "CountAllEnabledIPItemsRequest",
-      "code": "message CountAllEnabledIPItemsRequest {\n\tstring keyword = 6; // 关键词\n\tstring ip = 1; // 单个IP，搜索单个IP时需要\n\tbool globalOnly = 2; // 是否为自动添加的IP\n\tbool unread = 3; // 是否未读\n\tstring eventLevel = 4; // 事件级别\n\tstring listType = 5; // 列表类型：black|white\n\tint64 userId = 7; // 用户ID，只有管理员才有权限指定用户ID\n}",
+      "code": "message CountAllEnabledIPItemsRequest {\n\tstring keyword = 6; // 关键词\n\tstring ip = 1; // 单个IP,搜索单个IP时需要\n\tbool globalOnly = 2; // 是否为自动添加的IP\n\tbool unread = 3; // 是否未读\n\tstring eventLevel = 4; // 事件级别\n\tstring listType = 5; // 列表类型:black|white\n\tint64 userId = 7; // 用户ID,只有管理员才有权限指定用户ID\n}",
       "doc": "计算所有IP数量"
     },
     {
@@ -14819,7 +14819,7 @@
     },
     {
       "name": "CountAllEnabledMessageReceiversRequest",
-      "code": "message CountAllEnabledMessageReceiversRequest {\n\tstring role = 4; // 集群角色：node 或 dns\n\tint64 nodeClusterId = 1; // 集群ID\n\tint64 nodeId = 2; // 节点ID\n\tint64 serverId = 3;  // 网站ID\n}",
+      "code": "message CountAllEnabledMessageReceiversRequest {\n\tstring role = 4; // 集群角色:node 或 dns\n\tint64 nodeClusterId = 1; // 集群ID\n\tint64 nodeId = 2; // 节点ID\n\tint64 serverId = 3;  // 网站ID\n}",
       "doc": "计算接收者数量"
     },
     {
@@ -14934,7 +14934,7 @@
     },
     {
       "name": "CountAllEnabledServersMatchRequest",
-      "code": "message CountAllEnabledServersMatchRequest {\n\tint64 serverGroupId = 1; // 网站分组ID，如果为-1表示查找未分组\n\tstring keyword = 2;\n\tint64 userId = 3;\n\tint64 nodeClusterId = 4;\n\tint32 auditingFlag = 5;\n\tstring protocolFamily = 6;\n\tint64 userPlanId = 7; // 用户套餐ID\n}",
+      "code": "message CountAllEnabledServersMatchRequest {\n\tint64 serverGroupId = 1; // 网站分组ID,如果为-1表示查找未分组\n\tstring keyword = 2;\n\tint64 userId = 3;\n\tint64 nodeClusterId = 4;\n\tint32 auditingFlag = 5;\n\tstring protocolFamily = 6;\n\tint64 userPlanId = 7; // 用户套餐ID\n}",
       "doc": "计算网站数量"
     },
     {
@@ -14974,7 +14974,7 @@
     },
     {
       "name": "CountAllEnabledUsersRequest",
-      "code": "message CountAllEnabledUsersRequest {\n\tstring keyword = 1;\n\tbool isVerifying = 2;\n\tint32 mobileIsVerified = 3; // 手机号是否已验证，1表示已验证，0表示未验证，-1表示所有状态\n}",
+      "code": "message CountAllEnabledUsersRequest {\n\tstring keyword = 1;\n\tbool isVerifying = 2;\n\tint32 mobileIsVerified = 3; // 手机号是否已验证,1表示已验证,0表示未验证,-1表示所有状态\n}",
       "doc": "计算用户数量"
     },
     {
@@ -15034,7 +15034,7 @@
     },
     {
       "name": "CountAllNodeRegionInfoRequest",
-      "code": "message CountAllNodeRegionInfoRequest {\n\tint64 nodeRegionId = 1; // 区域ID，可选\n}",
+      "code": "message CountAllNodeRegionInfoRequest {\n\tint64 nodeRegionId = 1; // 区域ID,可选\n}",
       "doc": "查找节点区域信息数量"
     },
     {
@@ -15079,7 +15079,7 @@
     },
     {
       "name": "CountAllUserBillsRequest",
-      "code": "message CountAllUserBillsRequest {\n\tint32 paidFlag = 1; // 可选，0|1|-1\n\tint64 userId = 2; // 可选，用户ID\n\tstring month = 3; // 可选，月份\n\tbool trafficRelated = 4; // 可选，是否为流量带宽相关\n\tint32 minDailyBillDays = 5; // 可选，按日计费账单生成最小天数\n\tint32 minMonthlyBillDays = 6; // 可选，按月计费账单生成最小天数\n}",
+      "code": "message CountAllUserBillsRequest {\n\tint32 paidFlag = 1; // 可选,0|1|-1\n\tint64 userId = 2; // 可选,用户ID\n\tstring month = 3; // 可选,月份\n\tbool trafficRelated = 4; // 可选,是否为流量带宽相关\n\tint32 minDailyBillDays = 5; // 可选,按日计费账单生成最小天数\n\tint32 minMonthlyBillDays = 6; // 可选,按月计费账单生成最小天数\n}",
       "doc": "计算所有账单数量"
     },
     {
@@ -15134,7 +15134,7 @@
     },
     {
       "name": "CountHTTPCacheTaskKeysWithDayRequest",
-      "code": "message CountHTTPCacheTaskKeysWithDayRequest {\n\tstring keyType = 1; // Key类型：清理：purge，预热：fetch\n\tstring day = 2; // 日期，格式：YYYYMMDD\n}",
+      "code": "message CountHTTPCacheTaskKeysWithDayRequest {\n\tstring keyType = 1; // Key类型:清理:purge,预热:fetch\n\tstring day = 2; // 日期,格式:YYYYMMDD\n}",
       "doc": "计算当天已经清理的Key数量"
     },
     {
@@ -15154,7 +15154,7 @@
     },
     {
       "name": "CountLogRequest",
-      "code": "message CountLogRequest {\n\tstring dayFrom = 1; // 可选项，开始日期\n\tstring dayTo = 2; // 可选项，结束日期\n\tstring keyword = 3; // 可选项，关键词\n\tstring userType = 4; // 可选项，用户类型：admin|user；用户端固定为user\n\tstring level = 5; // 可选项，错误级别：info, warn, error\n}",
+      "code": "message CountLogRequest {\n\tstring dayFrom = 1; // 可选项,开始日期\n\tstring dayTo = 2; // 可选项,结束日期\n\tstring keyword = 3; // 可选项,关键词\n\tstring userType = 4; // 可选项,用户类型:admin|user;用户端固定为user\n\tstring level = 5; // 可选项,错误级别:info, warn, error\n}",
       "doc": "计算日志数量"
     },
     {
@@ -15184,7 +15184,7 @@
     },
     {
       "name": "CountSSLCertRequest",
-      "code": "message CountSSLCertRequest {\n\tbool isCA = 1; // 可选项，是否为CA证书\n\tbool isAvailable = 2; // 可选项，是否可用（在有效期内）\n\tbool isExpired = 3; // 可选项，是否已过期\n\tint32 expiringDays = 4; // 可选项，离过期日的天数\n\tstring keyword = 5; // 可选项，关键词\n\tint64 userId = 6; // 可选项，用户ID，不填则表示读取管理员上传的证书\n\trepeated string domains = 7; // 可选项，搜索使用的域名列表\n\tbool userOnly = 8; // 可选项，只列出用户上传的证书\n}",
+      "code": "message CountSSLCertRequest {\n\tbool isCA = 1; // 可选项,是否为CA证书\n\tbool isAvailable = 2; // 可选项,是否可用(在有效期内)\n\tbool isExpired = 3; // 可选项,是否已过期\n\tint32 expiringDays = 4; // 可选项,离过期日的天数\n\tstring keyword = 5; // 可选项,关键词\n\tint64 userId = 6; // 可选项,用户ID,不填则表示读取管理员上传的证书\n\trepeated string domains = 7; // 可选项,搜索使用的域名列表\n\tbool userOnly = 8; // 可选项,只列出用户上传的证书\n}",
       "doc": "计算匹配的证书数量"
     },
     {
@@ -15249,7 +15249,7 @@
     },
     {
       "name": "CreateACMETaskRequest",
-      "code": "message CreateACMETaskRequest {\n\tint64 userId = 8; // 平台用户ID，只有管理员才有权限指定\n\tint64 acmeUserId = 1;\n\tint64 dnsProviderId = 2;\n\tstring dnsDomain = 3;\n\trepeated string domains = 4;\n\tbool autoRenew = 5;\n\tstring authType = 6;\n\tstring authURL = 7;\n}",
+      "code": "message CreateACMETaskRequest {\n\tint64 userId = 8; // 平台用户ID,只有管理员才有权限指定\n\tint64 acmeUserId = 1;\n\tint64 dnsProviderId = 2;\n\tstring dnsDomain = 3;\n\trepeated string domains = 4;\n\tbool autoRenew = 5;\n\tstring authType = 6;\n\tstring authURL = 7;\n}",
       "doc": "创建任务"
     },
     {
@@ -15259,7 +15259,7 @@
     },
     {
       "name": "CreateACMEUserRequest",
-      "code": "message CreateACMEUserRequest {\n\tint64 userId = 5; // 所属用户，只有管理员才有权限指定\n\tstring email = 1; // 用户邮箱\n\tstring description = 2; // 用户描述\n\tstring acmeProviderCode = 3; // 服务商代号\n\tint64 acmeProviderAccountId = 4; // 服务商帐号\n}",
+      "code": "message CreateACMEUserRequest {\n\tint64 userId = 5; // 所属用户,只有管理员才有权限指定\n\tstring email = 1; // 用户邮箱\n\tstring description = 2; // 用户描述\n\tstring acmeProviderCode = 3; // 服务商代号\n\tint64 acmeProviderAccountId = 4; // 服务商帐号\n}",
       "doc": "创建用户"
     },
     {
@@ -15329,7 +15329,7 @@
     },
     {
       "name": "CreateBasicHTTPServerRequest",
-      "code": "message CreateBasicHTTPServerRequest {\n\tint64 nodeClusterId = 1; // 部署的集群ID，用户创建时不需要指定此项\n\tint64 userId = 2; // 管理员创建网站时可以指定此用户ID，也可以为0表示不指定\n\trepeated string domains = 3; // 域名列表\n\trepeated int64 sslCertIds = 4; // HTTPS用到的证书ID列表\n\trepeated string originAddrs = 5; // 源站地址列表，每一个源站地址需要带协议部分，比如 http://example.com\n\n\tbool enableWebsocket = 6; // 可选项，是否启用Websocket\n}",
+      "code": "message CreateBasicHTTPServerRequest {\n\tint64 nodeClusterId = 1; // 部署的集群ID,用户创建时不需要指定此项\n\tint64 userId = 2; // 管理员创建网站时可以指定此用户ID,也可以为0表示不指定\n\trepeated string domains = 3; // 域名列表\n\trepeated int64 sslCertIds = 4; // HTTPS用到的证书ID列表\n\trepeated string originAddrs = 5; // 源站地址列表,每一个源站地址需要带协议部分,比如 http://example.com\n\n\tbool enableWebsocket = 6; // 可选项,是否启用Websocket\n}",
       "doc": "快速创建基本的HTTP网站"
     },
     {
@@ -15339,7 +15339,7 @@
     },
     {
       "name": "CreateBasicTCPServerRequest",
-      "code": "message CreateBasicTCPServerRequest {\n\tint64 nodeClusterId = 1; // 部署的集群ID，用户创建时不需要指定此项\n\tint64 userId = 2; // 管理员创建网站时可以指定此用户ID，也可以为0表示不指定\n\trepeated int32 tcpPorts = 3; // TCP端口\n\trepeated int32 tlsPorts = 4; // TLS端口\n\trepeated int64 sslCertIds = 5; // TLS用到的证书ID列表\n\trepeated string originAddrs = 6; // 源站地址列表，每一个源站地址需要带协议部分，比如 tcp://example.com, tls://example.com\n}",
+      "code": "message CreateBasicTCPServerRequest {\n\tint64 nodeClusterId = 1; // 部署的集群ID,用户创建时不需要指定此项\n\tint64 userId = 2; // 管理员创建网站时可以指定此用户ID,也可以为0表示不指定\n\trepeated int32 tcpPorts = 3; // TCP端口\n\trepeated int32 tlsPorts = 4; // TLS端口\n\trepeated int64 sslCertIds = 5; // TLS用到的证书ID列表\n\trepeated string originAddrs = 6; // 源站地址列表,每一个源站地址需要带协议部分,比如 tcp://example.com, tls://example.com\n}",
       "doc": "快速创建基本的TCP网站"
     },
     {
@@ -15474,7 +15474,7 @@
     },
     {
       "name": "CreateHTTPCacheTaskRequest",
-      "code": "message CreateHTTPCacheTaskRequest {\n\tstring type = 1; // 任务类型，值为 purge 或者 fetch；purge：删除缓存，fetch：预热缓存\n\tstring keyType = 2; // Key类型，值为 key 或者 prefix；如果是 key 表示处理的是URL，如果是 prefix 表示处理的是目录；预热的时候只能为 key\n\trepeated string keys = 3; // 要清理的Key，根据Key类型（keyType）来输入不同的内容\n}",
+      "code": "message CreateHTTPCacheTaskRequest {\n\tstring type = 1; // 任务类型,值为 purge 或者 fetch;purge:删除缓存,fetch:预热缓存\n\tstring keyType = 2; // Key类型,值为 key 或者 prefix;如果是 key 表示处理的是URL,如果是 prefix 表示处理的是目录;预热的时候只能为 key\n\trepeated string keys = 3; // 要清理的Key,根据Key类型(keyType)来输入不同的内容\n}",
       "doc": "创建任务"
     },
     {
@@ -15554,7 +15554,7 @@
     },
     {
       "name": "CreateHTTPPageRequest",
-      "code": "message CreateHTTPPageRequest {\n\trepeated string statusList = 1; // 状态码列表\n\tstring bodyType = 5; // 页面类型：html|url|redirectURL\n\tstring url = 2; // 读取或者跳转的URL\n\tstring body = 4; // HTML内容\n\tint32 newStatus = 3; // 新的状态码\n\tbytes exceptURLPatternsJSON = 6; // 例外URL列表\n\tbytes onlyURLPatternsJSON = 7; // 限制URL列表\n}",
+      "code": "message CreateHTTPPageRequest {\n\trepeated string statusList = 1; // 状态码列表\n\tstring bodyType = 5; // 页面类型:html|url|redirectURL\n\tstring url = 2; // 读取或者跳转的URL\n\tstring body = 4; // HTML内容\n\tint32 newStatus = 3; // 新的状态码\n\tbytes exceptURLPatternsJSON = 6; // 例外URL列表\n\tbytes onlyURLPatternsJSON = 7; // 限制URL列表\n}",
       "doc": "创建Page"
     },
     {
@@ -15574,7 +15574,7 @@
     },
     {
       "name": "CreateHTTPWebRequest",
-      "code": "message CreateHTTPWebRequest {\n\tbytes rootJSON = 1; // 可选，静态分发配置\n}",
+      "code": "message CreateHTTPWebRequest {\n\tbytes rootJSON = 1; // 可选,静态分发配置\n}",
       "doc": "创建Web配置"
     },
     {
@@ -15594,7 +15594,7 @@
     },
     {
       "name": "CreateIPItemRequest",
-      "code": "message CreateIPItemRequest {\n\tint64 ipListId = 1; // 所属IP列表ID\n\tstring value = 15; // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // 开始IP\n\tstring ipTo = 3; // 结束IP（可选）\n\tint64 expiredAt = 4; // 过期时间戳（可选）\n\tstring reason = 5; // 加入理由（可选）\n\tstring type = 6; // IP类型，值为ipv4或ipv6\n\tstring eventLevel = 7; // 级别：debug, notice, warning, error, critical, fatal\n\n\tint64 nodeId = 8; // 可选项，所属节点ID\n\tint64 serverId = 9; // 可选项，所属网站ID\n\n\tint64 sourceNodeId = 10; // 可选项，来源节点\n\tint64 sourceServerId = 11;  // 可选项，来源网站ID\n\tint64 sourceHTTPFirewallPolicyId = 12; // 可选项，来源WAF策略ID\n\tint64 sourceHTTPFirewallRuleGroupId = 13; // 可选项，来源WAF规则分组ID\n\tint64 sourceHTTPFirewallRuleSetId = 14; // 可选项，来源WAF规则集ID\n}",
+      "code": "message CreateIPItemRequest {\n\tint64 ipListId = 1; // 所属IP列表ID\n\tstring value = 15; // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // 开始IP\n\tstring ipTo = 3; // 结束IP(可选)\n\tint64 expiredAt = 4; // 过期时间戳(可选)\n\tstring reason = 5; // 加入理由(可选)\n\tstring type = 6; // IP类型,值为ipv4或ipv6\n\tstring eventLevel = 7; // 级别:debug, notice, warning, error, critical, fatal\n\n\tint64 nodeId = 8; // 可选项,所属节点ID\n\tint64 serverId = 9; // 可选项,所属网站ID\n\n\tint64 sourceNodeId = 10; // 可选项,来源节点\n\tint64 sourceServerId = 11;  // 可选项,来源网站ID\n\tint64 sourceHTTPFirewallPolicyId = 12; // 可选项,来源WAF策略ID\n\tint64 sourceHTTPFirewallRuleGroupId = 13; // 可选项,来源WAF规则分组ID\n\tint64 sourceHTTPFirewallRuleSetId = 14; // 可选项,来源WAF规则集ID\n}",
       "doc": "创建IP"
     },
     {
@@ -15604,7 +15604,7 @@
     },
     {
       "name": "CreateIPItemsRequest",
-      "code": "message CreateIPItemsRequest {\n\trepeated IPItem ipItems = 1; // 要创建的IP列表\n\n\n\tmessage IPItem {\n\t\tint64 ipListId = 1; // IP列表ID\n\t\tstring value = 15; // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数\n\t\tstring ipFrom = 2; // 开始IP\n\t\tstring ipTo = 3; // 结束IP（可选）\n\t\tint64 expiredAt = 4; // 过期时间戳（可选）\n\t\tstring reason = 5; // 加入理由（可选）\n\t\tstring type = 6; // 类型\n\t\tstring eventLevel = 7; // 级别\n\n\t\tint64 nodeId = 8; // 所属节点ID\n\t\tint64 serverId = 9; // 所属服务ID\n\n\t\tint64 sourceNodeId = 10;\n\t\tint64 sourceServerId = 11;\n\t\tint64 sourceHTTPFirewallPolicyId = 12;\n\t\tint64 sourceHTTPFirewallRuleGroupId = 13;\n\t\tint64 sourceHTTPFirewallRuleSetId = 14;\n\t}\n}",
+      "code": "message CreateIPItemsRequest {\n\trepeated IPItem ipItems = 1; // 要创建的IP列表\n\n\n\tmessage IPItem {\n\t\tint64 ipListId = 1; // IP列表ID\n\t\tstring value = 15; // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数\n\t\tstring ipFrom = 2; // 开始IP\n\t\tstring ipTo = 3; // 结束IP(可选)\n\t\tint64 expiredAt = 4; // 过期时间戳(可选)\n\t\tstring reason = 5; // 加入理由(可选)\n\t\tstring type = 6; // 类型\n\t\tstring eventLevel = 7; // 级别\n\n\t\tint64 nodeId = 8; // 所属节点ID\n\t\tint64 serverId = 9; // 所属服务ID\n\n\t\tint64 sourceNodeId = 10;\n\t\tint64 sourceServerId = 11;\n\t\tint64 sourceHTTPFirewallPolicyId = 12;\n\t\tint64 sourceHTTPFirewallRuleGroupId = 13;\n\t\tint64 sourceHTTPFirewallRuleSetId = 14;\n\t}\n}",
       "doc": "创建一组IP"
     },
     {
@@ -15654,7 +15654,7 @@
     },
     {
       "name": "CreateLogRequest",
-      "code": "message CreateLogRequest {\n\tstring level = 1; // 级别：info, warn, error\n\tstring description = 2; // 描述\n\tstring action = 3; // 可选项，发生操作所在的页面URL\n\tstring ip = 4; // 可选项，操作用户IP\n\tstring langMessageCode = 5; // 多语言消息\n\tbytes langMessageArgsJSON = 6; // 多语言消息中的参数项，格式：[arg1, arg2, ...]\n}",
+      "code": "message CreateLogRequest {\n\tstring level = 1; // 级别:info, warn, error\n\tstring description = 2; // 描述\n\tstring action = 3; // 可选项,发生操作所在的页面URL\n\tstring ip = 4; // 可选项,操作用户IP\n\tstring langMessageCode = 5; // 多语言消息\n\tbytes langMessageArgsJSON = 6; // 多语言消息中的参数项,格式:[arg1, arg2, ...]\n}",
       "doc": "创建日志"
     },
     {
@@ -15664,7 +15664,7 @@
     },
     {
       "name": "CreateLoginTicketRequest",
-      "code": "message CreateLoginTicketRequest {\n\tint64 adminId = 1; // 管理员ID，和用户ID二选一\n\tint64 userId = 2; // 用户ID\n\tstring ip = 3; // 可选参数，用户客户端IP\n}",
+      "code": "message CreateLoginTicketRequest {\n\tint64 adminId = 1; // 管理员ID,和用户ID二选一\n\tint64 userId = 2; // 用户ID\n\tstring ip = 3; // 可选参数,用户客户端IP\n}",
       "doc": "创建票据"
     },
     {
@@ -15694,7 +15694,7 @@
     },
     {
       "name": "CreateMessageRecipientRequest",
-      "code": "message CreateMessageRecipientRequest {\n\tint64 adminId = 1; // 关联的管理员ID\n\tint64 messageMediaInstanceId = 2; // 媒介实例ID\n\trepeated int64 messageRecipientGroupIds = 3; // 所属分组ID列表\n\tstring description = 4; // 可选项，备注描述\n\tstring user = 5; // 用户标识\n\tstring timeFrom = 6; // 可选项，接收消息的，开始时间\n\tstring timeTo = 7; // 可选项，接收消息的，结束时间\n\n\trepeated int64  nodeClusterIds = 8; // 关联的CDN边缘节点集群ID列表\n}",
+      "code": "message CreateMessageRecipientRequest {\n\tint64 adminId = 1; // 关联的管理员ID\n\tint64 messageMediaInstanceId = 2; // 媒介实例ID\n\trepeated int64 messageRecipientGroupIds = 3; // 所属分组ID列表\n\tstring description = 4; // 可选项,备注描述\n\tstring user = 5; // 用户标识\n\tstring timeFrom = 6; // 可选项,接收消息的,开始时间\n\tstring timeTo = 7; // 可选项,接收消息的,结束时间\n\n\trepeated int64  nodeClusterIds = 8; // 关联的CDN边缘节点集群ID列表\n}",
       "doc": "创建接收人"
     },
     {
@@ -15924,7 +15924,7 @@
     },
     {
       "name": "CreateNodeIPAddressRequest",
-      "code": "message CreateNodeIPAddressRequest {\n\tint64 nodeId = 1; // 节点ID\n\tstring role = 2; // 角色：node：边缘节点，dns：智能DNS节点\n\tstring name = 3; // 名称\n\tstring ip = 4; // IP地址\n\tbool canAccess = 5; // 是否能够访问\n\tbool isUp = 6; // 是否上线\n\trepeated int64 nodeClusterIds = 7; // 可选项，所属集群ID列表，如果没有指定，则表示应用于节点所属的所有集群\n}",
+      "code": "message CreateNodeIPAddressRequest {\n\tint64 nodeId = 1; // 节点ID\n\tstring role = 2; // 角色:node:边缘节点,dns:智能DNS节点\n\tstring name = 3; // 名称\n\tstring ip = 4; // IP地址\n\tbool canAccess = 5; // 是否能够访问\n\tbool isUp = 6; // 是否上线\n\trepeated int64 nodeClusterIds = 7; // 可选项,所属集群ID列表,如果没有指定,则表示应用于节点所属的所有集群\n}",
       "doc": "创建IP地址"
     },
     {
@@ -15944,7 +15944,7 @@
     },
     {
       "name": "CreateNodeIPAddressesRequest",
-      "code": "message CreateNodeIPAddressesRequest {\n\tint64 nodeId = 1;\n\tstring role = 2;\n\tstring name = 3;\n\trepeated string ipList = 4;\n\tbool canAccess = 5;\n\tbool isUp = 6;\n\tstring groupValue = 7;\n\trepeated int64 nodeClusterIds = 8; // 可选项，所属集群ID列表，如果没有指定，则表示应用于节点所属的所有集群\n}",
+      "code": "message CreateNodeIPAddressesRequest {\n\tint64 nodeId = 1;\n\tstring role = 2;\n\tstring name = 3;\n\trepeated string ipList = 4;\n\tbool canAccess = 5;\n\tbool isUp = 6;\n\tstring groupValue = 7;\n\trepeated int64 nodeClusterIds = 8; // 可选项,所属集群ID列表,如果没有指定,则表示应用于节点所属的所有集群\n}",
       "doc": "批量创建IP地址"
     },
     {
@@ -15984,7 +15984,7 @@
     },
     {
       "name": "CreateNodeRequest",
-      "code": "message CreateNodeRequest {\n\tstring name = 1; // 节点名称\n\tint64 nodeClusterId = 2; // 节点所属集群\n\tNodeLogin nodeLogin = 3; // 节点登录信息\n\tint64 nodeGroupId = 4; // 节点所属分组\n\tint64 dnsDomainId = 5 [deprecated = true]; // 节点域名ID，此参数已过期，请不要再使用\n\trepeated string dnsRoutes = 6; // 节点DNS线路列表\n\tint64 nodeRegionId = 7; // 节点所属区域\n}",
+      "code": "message CreateNodeRequest {\n\tstring name = 1; // 节点名称\n\tint64 nodeClusterId = 2; // 节点所属集群\n\tNodeLogin nodeLogin = 3; // 节点登录信息\n\tint64 nodeGroupId = 4; // 节点所属分组\n\tint64 dnsDomainId = 5 [deprecated = true]; // 节点域名ID,此参数已过期,请不要再使用\n\trepeated string dnsRoutes = 6; // 节点DNS线路列表\n\tint64 nodeRegionId = 7; // 节点所属区域\n}",
       "doc": "创建节点"
     },
     {
@@ -16039,7 +16039,7 @@
     },
     {
       "name": "CreateOriginRequest",
-      "code": "message CreateOriginRequest {\n\tstring name = 1; // 名称，为可选项\n\tNetworkAddress addr = 2; // 源站网络地址\n\tbytes ossJSON = 15; // OSS配置信息，源站网络地址中protocol为oss:开头时需要设置此项\n\tstring description = 3; // 描述，为可选项\n\tint32 weight = 4; // 权重，不小于0，一般设置为10\n\tbool isOn = 5; // 是否启用，一般为true\n\tbytes connTimeoutJSON = 6; // 可选项，连接超时时间\n\tbytes readTimeoutJSON = 7; // 可选项，读取超时时间\n\tbytes idleTimeoutJSON = 8; // 可选项，空闲超时时间\n\tint32 maxConns = 9; // 可选项，最大连接数\n\tint32 maxIdleConns = 10; // 可选项，最大空闲连接数\n\trepeated string domains = 11; // 可选项，专属域名列表\n\tbytes certRefJSON = 12; // 可选项，证书设置\n\tstring host = 13; // 可选项，回源主机名\n\tbool followPort = 14; // 可选项，是否跟随端口\n\tbool http2Enabled = 16; // 可选项，是否支持HTTP/2，只在HTTPS源站时生效\n}",
+      "code": "message CreateOriginRequest {\n\tstring name = 1; // 名称,为可选项\n\tNetworkAddress addr = 2; // 源站网络地址\n\tbytes ossJSON = 15; // OSS配置信息,源站网络地址中protocol为oss:开头时需要设置此项\n\tstring description = 3; // 描述,为可选项\n\tint32 weight = 4; // 权重,不小于0,一般设置为10\n\tbool isOn = 5; // 是否启用,一般为true\n\tbytes connTimeoutJSON = 6; // 可选项,连接超时时间\n\tbytes readTimeoutJSON = 7; // 可选项,读取超时时间\n\tbytes idleTimeoutJSON = 8; // 可选项,空闲超时时间\n\tint32 maxConns = 9; // 可选项,最大连接数\n\tint32 maxIdleConns = 10; // 可选项,最大空闲连接数\n\trepeated string domains = 11; // 可选项,专属域名列表\n\tbytes certRefJSON = 12; // 可选项,证书设置\n\tstring host = 13; // 可选项,回源主机名\n\tbool followPort = 14; // 可选项,是否跟随端口\n\tbool http2Enabled = 16; // 可选项,是否支持HTTP/2,只在HTTPS源站时生效\n}",
       "doc": "创建源站"
     },
     {
@@ -16049,7 +16049,7 @@
     },
     {
       "name": "CreatePlanRequest",
-      "code": "message CreatePlanRequest {\n\tstring name = 1; // 套餐名称\n\tstring description = 19; // 套餐简介\n\tint64 clusterId = 2; // 集群ID\n\tbytes trafficLimitJSON = 3; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 20; // 单节点带宽限制 @link json:bit_size_capacity\n\tbool hasFullFeatures = 18; // 是否有所有权限\n\tbytes featuresJSON = 4; // 权限列表，[code1, code2, ...]\n\tstring priceType = 5; // 价格类型：traffic, bandwidth, period\n\tbytes trafficPriceJSON = 6; // 流量价格配置\n\tbytes bandwidthPriceJSON = 10; // 带宽价格配置\n\tfloat monthlyPrice = 7; // 月度价格\n\tfloat seasonallyPrice = 8; // 季度价格\n\tfloat yearlyPrice = 9; // 年度价格\n\tint32 totalServers = 11; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 12; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 13; // 可以添加的域名总数\n\tint64 dailyRequests = 14; // 每日访问量额度\n\tint64 monthlyRequests = 15; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 16; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 17; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 21; // 文件最大上传尺寸 @link json:size_capacity\n}",
+      "code": "message CreatePlanRequest {\n\tstring name = 1; // 套餐名称\n\tstring description = 19; // 套餐简介\n\tint64 clusterId = 2; // 集群ID\n\tbytes trafficLimitJSON = 3; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 20; // 单节点带宽限制 @link json:bit_size_capacity\n\tbool hasFullFeatures = 18; // 是否有所有权限\n\tbytes featuresJSON = 4; // 权限列表,[code1, code2, ...]\n\tstring priceType = 5; // 价格类型:traffic, bandwidth, period\n\tbytes trafficPriceJSON = 6; // 流量价格配置\n\tbytes bandwidthPriceJSON = 10; // 带宽价格配置\n\tfloat monthlyPrice = 7; // 月度价格\n\tfloat seasonallyPrice = 8; // 季度价格\n\tfloat yearlyPrice = 9; // 年度价格\n\tint32 totalServers = 11; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 12; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 13; // 可以添加的域名总数\n\tint64 dailyRequests = 14; // 每日访问量额度\n\tint64 monthlyRequests = 15; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 16; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 17; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 21; // 文件最大上传尺寸 @link json:size_capacity\n}",
       "doc": "创建套餐"
     },
     {
@@ -16069,7 +16069,7 @@
     },
     {
       "name": "CreatePostRequest",
-      "code": "message CreatePostRequest {\n\tint64 postCategoryId = 1; // 文章分类ID\n\tstring type = 2; // 类型：normal, url\n\tstring productCode = 3; // 产品代号\n\tstring subject = 4; // 标题\n\tstring url = 5; // 跳转的URL（type=url）\n\tstring body = 6; // 文章内容（type=normal）\n}",
+      "code": "message CreatePostRequest {\n\tint64 postCategoryId = 1; // 文章分类ID\n\tstring type = 2; // 类型:normal, url\n\tstring productCode = 3; // 产品代号\n\tstring subject = 4; // 标题\n\tstring url = 5; // 跳转的URL(type=url)\n\tstring body = 6; // 文章内容(type=normal)\n}",
       "doc": "创建文章"
     },
     {
@@ -16099,7 +16099,7 @@
     },
     {
       "name": "CreateReverseProxyRequest",
-      "code": "message CreateReverseProxyRequest {\n\tbytes schedulingJSON = 1; // 可选项，调度设置 @link json:scheduling\n\tbytes primaryOriginsJSON = 2; // 可选项，主要源站 @link json:origin_refs\n\tbytes backupOriginsJSON = 3; // 可选项，备用源站 @link json:origin_refs\n}",
+      "code": "message CreateReverseProxyRequest {\n\tbytes schedulingJSON = 1; // 可选项,调度设置 @link json:scheduling\n\tbytes primaryOriginsJSON = 2; // 可选项,主要源站 @link json:origin_refs\n\tbytes backupOriginsJSON = 3; // 可选项,备用源站 @link json:origin_refs\n}",
       "doc": "创建反向代理"
     },
     {
@@ -16109,7 +16109,7 @@
     },
     {
       "name": "CreateSSLCertRequest",
-      "code": "message CreateSSLCertRequest {\n\tbool isOn = 1;\n\tint64 userId = 12; // 所属用户，仅管理员才能指定\n\tstring name = 2;\n\tstring description = 3;\n\tstring serverName = 4;\n\tbool isCA = 5;\n\tbytes certData = 6;\n\tbytes keyData = 7;\n\tint64 timeBeginAt = 8;\n\tint64 timeEndAt = 9;\n\trepeated string dnsNames = 10;\n\trepeated string commonNames = 11;\n}",
+      "code": "message CreateSSLCertRequest {\n\tbool isOn = 1;\n\tint64 userId = 12; // 所属用户,仅管理员才能指定\n\tstring name = 2;\n\tstring description = 3;\n\tstring serverName = 4;\n\tbool isCA = 5;\n\tbytes certData = 6;\n\tbytes keyData = 7;\n\tint64 timeBeginAt = 8;\n\tint64 timeEndAt = 9;\n\trepeated string dnsNames = 10;\n\trepeated string commonNames = 11;\n}",
       "doc": "创建证书"
     },
     {
@@ -16129,7 +16129,7 @@
     },
     {
       "name": "CreateSSLPolicyRequest",
-      "code": "message CreateSSLPolicyRequest {\n\tbool http2Enabled = 1; // 可选项，是否启用HTTP/2\n\tbool http3Enabled = 10; // 可选项，是否启用HTTP/3（在满足条件的基础上）\n\tstring minVersion = 2; // 支持的最低SSL版本，可选择值： SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3\n\tbytes sslCertsJSON = 3; // 可选项，关联的证书信息，可以在创建后再通过修改策略来配置 @link json:ssl_cert_refs\n\tbytes hstsJSON = 4; // 可选项，HSTS配置 @link json:hsts\n\tint32 clientAuthType = 5; // 可选项，客户端校验类型：0 无需证书，1 需要客户端证书，2 需要任一客户端证书，3 如果客户端上传了证书才校验，4 需要客户端证书而且需要校验\n\tbytes clientCACertsJSON = 6; // 可选项，CA证书内容\n\trepeated string cipherSuites = 7; // 可选项，自定义加密套件\n\tbool cipherSuitesIsOn = 8; // 可选项，是否启用自定义加密套件\n\tbool ocspIsOn = 9; // 可选项，是否启用OCSP\n}",
+      "code": "message CreateSSLPolicyRequest {\n\tbool http2Enabled = 1; // 可选项,是否启用HTTP/2\n\tbool http3Enabled = 10; // 可选项,是否启用HTTP/3(在满足条件的基础上)\n\tstring minVersion = 2; // 支持的最低SSL版本,可选择值: SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3\n\tbytes sslCertsJSON = 3; // 可选项,关联的证书信息,可以在创建后再通过修改策略来配置 @link json:ssl_cert_refs\n\tbytes hstsJSON = 4; // 可选项,HSTS配置 @link json:hsts\n\tint32 clientAuthType = 5; // 可选项,客户端校验类型:0 无需证书,1 需要客户端证书,2 需要任一客户端证书,3 如果客户端上传了证书才校验,4 需要客户端证书而且需要校验\n\tbytes clientCACertsJSON = 6; // 可选项,CA证书内容\n\trepeated string cipherSuites = 7; // 可选项,自定义加密套件\n\tbool cipherSuitesIsOn = 8; // 可选项,是否启用自定义加密套件\n\tbool ocspIsOn = 9; // 可选项,是否启用OCSP\n}",
       "doc": "创建策略"
     },
     {
@@ -16159,7 +16159,7 @@
     },
     {
       "name": "CreateServerRequest",
-      "code": "message CreateServerRequest {\n\tint64 userId = 1; // 可选项，用户ID，如果不想指定用户，此值可以为0\n\tint64 adminId = 2; // 可选项，管理员ID\n\tstring type = 3; // 类型：httpProxy（HTTP反向代理，一般CDN服务都选这个）、httpWeb（静态文件服务，只会从服务器上读取文件内容，不会转发到源站）、tcpProxy（TCP反向代理）、udpProxy（UDP反向代理）\n\tstring name = 4; // 网站名称，通常可以是一个域名\n\tstring description = 5; // 可选项，网站描述\n\n\t// 配置相关\n\tbytes serverNamesJSON = 8; // 域名列表 @link json:server_names\n\tbytes serverNamesJON = 19 [deprecated = true]; // 已过期，请使用 serverNamesJSON 代替\n\tbytes httpJSON = 9; // HTTP协议设置，当type为httpProxy或者httpWeb时填写 @link json:http_protocol\n\tbytes httpsJSON = 10;  // HTTPS协议设置，当type为httpProxy或者httpWeb时填写 @link json:https_protocol\n\tbytes tcpJSON = 11;  // TCP协议设置，当type为tcpProxy时填写 @link json:tcp_protocol\n\tbytes tlsJSON = 12;  // TLS协议设置，当type为tcpProxy时填写 @link json:tls_protocol\n\tbytes udpJSON = 14; // UDP协议设置，当type为udpProxy时填写 @link json:udp_protocol\n\tint64 webId = 15; // 可选项，Web配置ID，当type为httpProxy或者httpWeb时填写，可以通过 /HTTPWebService/createHTTPWeb 接口创建；如果你需要配置缓存等信息时需要在 HTTPWebService 接口操作\n\tbytes reverseProxyJSON = 16; // 反向代理（包含源站）配置引用，此项可以在创建网站后再设置 @link json:reverse_proxy_ref\n\trepeated int64 serverGroupIds = 17; // 可选项，所属网站分组ID列表\n\tint64 userPlanId = 18; // 可选项，套餐ID\n\n\tint64 nodeClusterId = 30; // 所部署的集群ID\n\tbytes includeNodesJSON = 31; // 备用参数，不用填写\n\tbytes excludeNodesJSON = 32; // 备用参数，不用填写\n}",
+      "code": "message CreateServerRequest {\n\tint64 userId = 1; // 可选项,用户ID,如果不想指定用户,此值可以为0\n\tint64 adminId = 2; // 可选项,管理员ID\n\tstring type = 3; // 类型:httpProxy(HTTP反向代理,一般CDN服务都选这个),httpWeb(静态文件服务,只会从服务器上读取文件内容,不会转发到源站),tcpProxy(TCP反向代理),udpProxy(UDP反向代理)\n\tstring name = 4; // 网站名称,通常可以是一个域名\n\tstring description = 5; // 可选项,网站描述\n\n\t// 配置相关\n\tbytes serverNamesJSON = 8; // 域名列表 @link json:server_names\n\tbytes serverNamesJON = 19 [deprecated = true]; // 已过期,请使用 serverNamesJSON 代替\n\tbytes httpJSON = 9; // HTTP协议设置,当type为httpProxy或者httpWeb时填写 @link json:http_protocol\n\tbytes httpsJSON = 10;  // HTTPS协议设置,当type为httpProxy或者httpWeb时填写 @link json:https_protocol\n\tbytes tcpJSON = 11;  // TCP协议设置,当type为tcpProxy时填写 @link json:tcp_protocol\n\tbytes tlsJSON = 12;  // TLS协议设置,当type为tcpProxy时填写 @link json:tls_protocol\n\tbytes udpJSON = 14; // UDP协议设置,当type为udpProxy时填写 @link json:udp_protocol\n\tint64 webId = 15; // 可选项,Web配置ID,当type为httpProxy或者httpWeb时填写,可以通过 /HTTPWebService/createHTTPWeb 接口创建;如果你需要配置缓存等信息时需要在 HTTPWebService 接口操作\n\tbytes reverseProxyJSON = 16; // 反向代理(包含源站)配置引用,此项可以在创建网站后再设置 @link json:reverse_proxy_ref\n\trepeated int64 serverGroupIds = 17; // 可选项,所属网站分组ID列表\n\tint64 userPlanId = 18; // 可选项,套餐ID\n\n\tint64 nodeClusterId = 30; // 所部署的集群ID\n\tbytes includeNodesJSON = 31; // 备用参数,不用填写\n\tbytes excludeNodesJSON = 32; // 备用参数,不用填写\n}",
       "doc": "创建网站"
     },
     {
@@ -16179,7 +16179,7 @@
     },
     {
       "name": "CreateTrafficPackageRequest",
-      "code": "message CreateTrafficPackageRequest {\n\tint32 size = 1; // 流量包尺寸\n\tstring unit = 2; // 单位：gb, tb, pb\n}",
+      "code": "message CreateTrafficPackageRequest {\n\tint32 size = 1; // 流量包尺寸\n\tstring unit = 2; // 单位:gb, tb, pb\n}",
       "doc": "创建流量包"
     },
     {
@@ -16454,8 +16454,8 @@
     },
     {
       "name": "DeleteIPItemRequest",
-      "code": "message DeleteIPItemRequest {\n\tint64 ipItemId = 1; // IP条目的ID\n\n\tstring value = 5; // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // v0.4.8新增，开始IP，和ipItemId二选一\n\tstring ipTo = 3; // v0.4.8新增，结束IP，和ipItemId二选一\n\tint64 ipListId = 4; // v0.4.8新增，IP列表，IP所在的IP列表，如果不指定，则会删除所有IP列表中的相关IP信息\n}",
-      "doc": "删除IP\n可以使用 ipItemId 删除，也可以使用 ipFrom+ipTo+ipListId 删除，如果只是单个IP，则不需要指定ipTo"
+      "code": "message DeleteIPItemRequest {\n\tint64 ipItemId = 1; // IP条目的ID\n\n\tstring value = 5; // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // v0.4.8新增,开始IP,和ipItemId二选一\n\tstring ipTo = 3; // v0.4.8新增,结束IP,和ipItemId二选一\n\tint64 ipListId = 4; // v0.4.8新增,IP列表,IP所在的IP列表,如果不指定,则会删除所有IP列表中的相关IP信息\n}",
+      "doc": "删除IP\n可以使用 ipItemId 删除,也可以使用 ipFrom+ipTo+ipListId 删除,如果只是单个IP,则不需要指定ipTo"
     },
     {
       "name": "DeleteIPItemsRequest",
@@ -16709,7 +16709,7 @@
     },
     {
       "name": "DeleteServerOriginRequest",
-      "code": "message DeleteServerOriginRequest {\n\tint64 serverId = 1; // 网站ID\n\tint64 originId = 2; // 源站ID，通过 OriginService 创建和查询\n}",
+      "code": "message DeleteServerOriginRequest {\n\tint64 serverId = 1; // 网站ID\n\tint64 originId = 2; // 源站ID,通过 OriginService 创建和查询\n}",
       "doc": "从网站中删除某个源站"
     },
     {
@@ -16719,7 +16719,7 @@
     },
     {
       "name": "DeleteServersRequest",
-      "code": "message DeleteServersRequest {\n\trepeated int64 serverIds = 1; // 网站ID列表：[1, 2, ...]\n}",
+      "code": "message DeleteServersRequest {\n\trepeated int64 serverIds = 1; // 网站ID列表:[1, 2, ...]\n}",
       "doc": "删除一组网站"
     },
     {
@@ -16879,7 +16879,7 @@
     },
     {
       "name": "ExistDNSDomainRecordRequest",
-      "code": "message ExistDNSDomainRecordRequest {\n\tint64 dnsDomainId = 1;\n\tstring name = 2;\n\tstring type = 3; // 解析类型，比如A, CNAME等\n\tstring route = 4; // 线路\n\tstring value = 5; // 值\n}",
+      "code": "message ExistDNSDomainRecordRequest {\n\tint64 dnsDomainId = 1;\n\tstring name = 2;\n\tstring type = 3; // 解析类型,比如A, CNAME等\n\tstring route = 4; // 线路\n\tstring value = 5; // 值\n}",
       "doc": "检查域名是否在记录中"
     },
     {
@@ -16989,7 +16989,7 @@
     },
     {
       "name": "FindACMETaskUserResponse",
-      "code": "message FindACMETaskUserResponse {\n\tUser user = 1; // 用户信息，只包含几个基本的信息\n}",
+      "code": "message FindACMETaskUserResponse {\n\tUser user = 1; // 用户信息,只包含几个基本的信息\n}",
       "doc": ""
     },
     {
@@ -17489,7 +17489,7 @@
     },
     {
       "name": "FindAllEnabledMessageReceiversRequest",
-      "code": "message FindAllEnabledMessageReceiversRequest {\n\tstring role = 4; // 集群角色：node 或 dns\n\tint64 nodeClusterId = 1; // 集群ID\n\tint64 nodeId = 2; // 节点ID\n\tint64 serverId = 3; // 网站ID\n}",
+      "code": "message FindAllEnabledMessageReceiversRequest {\n\tstring role = 4; // 集群角色:node 或 dns\n\tint64 nodeClusterId = 1; // 集群ID\n\tint64 nodeId = 2; // 节点ID\n\tint64 serverId = 3; // 网站ID\n}",
       "doc": "查找接收者"
     },
     {
@@ -17669,7 +17669,7 @@
     },
     {
       "name": "FindAllEnabledNodesWithNodeClusterIdRequest",
-      "code": "message FindAllEnabledNodesWithNodeClusterIdRequest {\n\tint64 nodeClusterId = 1; // 集群ID\n\tbool includeSecondary = 2; // 是否检查节点的从集群，如果为false，则只检查主集群ID\n}",
+      "code": "message FindAllEnabledNodesWithNodeClusterIdRequest {\n\tint64 nodeClusterId = 1; // 集群ID\n\tbool includeSecondary = 2; // 是否检查节点的从集群,如果为false,则只检查主集群ID\n}",
       "doc": "根据集群查找所有节点"
     },
     {
@@ -17749,7 +17749,7 @@
     },
     {
       "name": "FindAllEnabledServerGroupsRequest",
-      "code": "message FindAllEnabledServerGroupsRequest {\n\tint64 userId = 1; // 可选项，用户ID，只有管理员才可以指定用户ID\n}",
+      "code": "message FindAllEnabledServerGroupsRequest {\n\tint64 userId = 1; // 可选项,用户ID,只有管理员才可以指定用户ID\n}",
       "doc": "查询所有分组"
     },
     {
@@ -17984,7 +17984,7 @@
     },
     {
       "name": "FindAllNodeScheduleInfoWithNodeClusterIdResponse",
-      "code": "message FindAllNodeScheduleInfoWithNodeClusterIdResponse {\n\trepeated ScheduleInfo nodes = 1; // 调动信息列表\n\n\n\tmessage ScheduleInfo {\n\t\tint64 nodeId = 1; // 节点ID\n\t\tstring nodeName = 2; // 节点名称\n\t\tint64 nodeGroupId = 3; // 节点分组ID\n\t\tstring nodeGroupName = 4; // 节点分组名称\n\t\tstring offlineDay = 5; // 下线日期，格式YYYYMMDD\n\t\tbool isBackupForCluster = 6; // 是否为集群备份节点\n\t\tbool isBackupForGroup = 7; // 是否为分组备份节点\n\t\trepeated string backupIPs = 8; // 备用IP\n\t\tbytes actionStatusJSON = 9; // 动作状态\n\t}\n}",
+      "code": "message FindAllNodeScheduleInfoWithNodeClusterIdResponse {\n\trepeated ScheduleInfo nodes = 1; // 调动信息列表\n\n\n\tmessage ScheduleInfo {\n\t\tint64 nodeId = 1; // 节点ID\n\t\tstring nodeName = 2; // 节点名称\n\t\tint64 nodeGroupId = 3; // 节点分组ID\n\t\tstring nodeGroupName = 4; // 节点分组名称\n\t\tstring offlineDay = 5; // 下线日期,格式YYYYMMDD\n\t\tbool isBackupForCluster = 6; // 是否为集群备份节点\n\t\tbool isBackupForGroup = 7; // 是否为分组备份节点\n\t\trepeated string backupIPs = 8; // 备用IP\n\t\tbytes actionStatusJSON = 9; // 动作状态\n\t}\n}",
       "doc": ""
     },
     {
@@ -18294,7 +18294,7 @@
     },
     {
       "name": "FindBasicPlanResponse",
-      "code": "message FindBasicPlanResponse {\n\tPlan plan = 1; // 套餐信息（只读取基本信息）\n}",
+      "code": "message FindBasicPlanResponse {\n\tPlan plan = 1; // 套餐信息(只读取基本信息)\n}",
       "doc": ""
     },
     {
@@ -18309,7 +18309,7 @@
     },
     {
       "name": "FindCurrentAPINodeVersionResponse",
-      "code": "message FindCurrentAPINodeVersionResponse {\n\tstring version = 1; // 版本号\n\tstring os = 2; // 系统代号，比如linux\n\tstring arch = 3; // 架构，比如amd64\n\tstring role = 4; // 角色，通常为api\n}",
+      "code": "message FindCurrentAPINodeVersionResponse {\n\tstring version = 1; // 版本号\n\tstring os = 2; // 系统代号,比如linux\n\tstring arch = 3; // 架构,比如amd64\n\tstring role = 4; // 角色,通常为api\n}",
       "doc": ""
     },
     {
@@ -18324,7 +18324,7 @@
     },
     {
       "name": "FindCurrentNodeConfigRequest",
-      "code": "message FindCurrentNodeConfigRequest {\n\t// 由于登录信息中已经包含了节点信息，所以这里不需要nodeId\n\tint64 version = 1;\n\tbool compress = 2; // 是否压缩\n\tint64 nodeTaskVersion = 3; // 通知任务版本\n\tbool useDataMap = 4; // 是否使用公共的数据集\n}",
+      "code": "message FindCurrentNodeConfigRequest {\n\t// 由于登录信息中已经包含了节点信息,所以这里不需要nodeId\n\tint64 version = 1;\n\tbool compress = 2; // 是否压缩\n\tint64 nodeTaskVersion = 3; // 通知任务版本\n\tbool useDataMap = 4; // 是否使用公共的数据集\n}",
       "doc": "组合单个节点配置"
     },
     {
@@ -18364,7 +18364,7 @@
     },
     {
       "name": "FindDailyServerBandwidthStatsBetweenDaysRequest",
-      "code": "message FindDailyServerBandwidthStatsBetweenDaysRequest {\n\tint64 userId = 1; // 用户ID，和服务ID二选一\n\tint64 serverId = 2; // 服务ID，和用户ID二选一\n\tstring dayFrom = 3; // 开始日期 YYYYMMDD\n\tstring dayTo = 4; // 结束日期 YYYYMMDD\n\tint32 percentile = 5; // 可选项，百分位（nth）带宽位置，0-100之间\n\tint64 nodeRegionId = 6; // 区域ID，可选项（目前只有用户整体统计支持区域ID）\n\tstring algo = 7; // 带宽算法，目前支持secondly和avg\n}",
+      "code": "message FindDailyServerBandwidthStatsBetweenDaysRequest {\n\tint64 userId = 1; // 用户ID,和服务ID二选一\n\tint64 serverId = 2; // 服务ID,和用户ID二选一\n\tstring dayFrom = 3; // 开始日期 YYYYMMDD\n\tstring dayTo = 4; // 结束日期 YYYYMMDD\n\tint32 percentile = 5; // 可选项,百分位(nth)带宽位置,0-100之间\n\tint64 nodeRegionId = 6; // 区域ID,可选项(目前只有用户整体统计支持区域ID)\n\tstring algo = 7; // 带宽算法,目前支持secondly和avg\n}",
       "doc": "读取日期段内的带宽数据"
     },
     {
@@ -18374,7 +18374,7 @@
     },
     {
       "name": "FindDailyServerBandwidthStatsRequest",
-      "code": "message FindDailyServerBandwidthStatsRequest {\n\tint64 serverId = 1;\n\tint32 days = 2;\n\tstring algo = 3; // 带宽算法，目前支持secondly和avg\n}",
+      "code": "message FindDailyServerBandwidthStatsRequest {\n\tint64 serverId = 1;\n\tint32 days = 2;\n\tstring algo = 3; // 带宽算法,目前支持secondly和avg\n}",
       "doc": "获取最近N天峰值带宽"
     },
     {
@@ -19195,7 +19195,7 @@
     {
       "name": "FindEnabledServerUAMRequest",
       "code": "message FindEnabledServerUAMRequest {\n\tint64 serverId = 1; // 网站ID\n}",
-      "doc": "查找网站UAM（5秒盾）设置"
+      "doc": "查找网站UAM(5秒盾)设置"
     },
     {
       "name": "FindEnabledServerUAMResponse",
@@ -19434,7 +19434,7 @@
     },
     {
       "name": "FindHourlyServerBandwidthStatsRequest",
-      "code": "message FindHourlyServerBandwidthStatsRequest {\n\tint64 serverId = 1;\n\tint32 hours = 2;\n\tstring algo = 3; // 带宽算法，目前支持secondly和avg\n}",
+      "code": "message FindHourlyServerBandwidthStatsRequest {\n\tint64 serverId = 1;\n\tint32 hours = 2;\n\tstring algo = 3; // 带宽算法,目前支持secondly和avg\n}",
       "doc": "获取最近N小时峰值带宽"
     },
     {
@@ -19534,7 +19534,7 @@
     },
     {
       "name": "FindLatestServerDailyStatsRequest",
-      "code": "message FindLatestServerDailyStatsRequest {\n\tint64 serverId = 1;\n\tint64 nodeRegionId = 3; // 区域ID，可选\n\tint32 days = 2; // 天数\n}",
+      "code": "message FindLatestServerDailyStatsRequest {\n\tint64 serverId = 1;\n\tint64 nodeRegionId = 3; // 区域ID,可选\n\tint32 days = 2; // 天数\n}",
       "doc": "读取最近N日的统计数据"
     },
     {
@@ -19779,12 +19779,12 @@
     },
     {
       "name": "FindNSDomainVerifyingInfoResponse",
-      "code": "message FindNSDomainVerifyingInfoResponse {\n\tbool requireTXT = 4; // 是否需要TXT验证，如果不需要（值false），则表示用户不需要手动设置TXT，此时 txt 字段内容可能为空\n\tstring txt = 1; // TXT记录\n\tint64 expiresAt = 2; // TXT过期时间\n\tstring status = 3; // 当前状态\n}",
+      "code": "message FindNSDomainVerifyingInfoResponse {\n\tbool requireTXT = 4; // 是否需要TXT验证,如果不需要(值false),则表示用户不需要手动设置TXT,此时 txt 字段内容可能为空\n\tstring txt = 1; // TXT记录\n\tint64 expiresAt = 2; // TXT过期时间\n\tstring status = 3; // 当前状态\n}",
       "doc": ""
     },
     {
       "name": "FindNSDomainWithNameRequest",
-      "code": "message FindNSDomainWithNameRequest {\n\tint64 userId = 2; // 用户ID，只有管理员才能指定用户\n\tstring name = 1; // 域名\n}",
+      "code": "message FindNSDomainWithNameRequest {\n\tint64 userId = 2; // 用户ID,只有管理员才能指定用户\n\tstring name = 1; // 域名\n}",
       "doc": "根据域名名称查找域名"
     },
     {
@@ -20144,7 +20144,7 @@
     },
     {
       "name": "FindNodeScheduleInfoResponse",
-      "code": "message FindNodeScheduleInfoResponse {\n\tScheduleInfo scheduleInfo = 1; // 调度信息\n\n\n\tmessage ScheduleInfo {\n\t\tstring offlineDay = 1; // 下线日期，格式YYYYMMDD\n\t\tbool isBackupForCluster = 2; // 是否为集群备份节点\n\t\tbool isBackupForGroup = 3; // 是否为分组备份节点\n\t\trepeated string backupIPs = 4; // 备用IP\n\t\tbytes actionStatusJSON = 5; // 动作状态\n\t}\n}",
+      "code": "message FindNodeScheduleInfoResponse {\n\tScheduleInfo scheduleInfo = 1; // 调度信息\n\n\n\tmessage ScheduleInfo {\n\t\tstring offlineDay = 1; // 下线日期,格式YYYYMMDD\n\t\tbool isBackupForCluster = 2; // 是否为集群备份节点\n\t\tbool isBackupForGroup = 3; // 是否为分组备份节点\n\t\trepeated string backupIPs = 4; // 备用IP\n\t\tbytes actionStatusJSON = 5; // 动作状态\n\t}\n}",
       "doc": ""
     },
     {
@@ -20284,12 +20284,12 @@
     },
     {
       "name": "FindSSLCertUserResponse",
-      "code": "message FindSSLCertUserResponse {\n\tUser user = 1; // 用户信息，只包含几个基本的信息\n}",
+      "code": "message FindSSLCertUserResponse {\n\tUser user = 1; // 用户信息,只包含几个基本的信息\n}",
       "doc": ""
     },
     {
       "name": "FindServer5MinutelyStatsWithDayRequest",
-      "code": "message FindServer5MinutelyStatsWithDayRequest {\n\tint64 serverId = 1;\n\tstring day = 2; // 必需，格式：YYYYMMDD\n\tstring timeFrom = 3; // 可选，开始时间，格式：HHIISS，比如 130000\n\tstring timeTo = 4; // 可选，结束时间，格式：HHIISS，比如 130459\n}",
+      "code": "message FindServer5MinutelyStatsWithDayRequest {\n\tint64 serverId = 1;\n\tstring day = 2; // 必需,格式:YYYYMMDD\n\tstring timeFrom = 3; // 可选,开始时间,格式:HHIISS,比如 130000\n\tstring timeTo = 4; // 可选,结束时间,格式:HHIISS,比如 130459\n}",
       "doc": "读取某天的5分钟间隔流量"
     },
     {
@@ -20309,7 +20309,7 @@
     },
     {
       "name": "FindServerBandwidthStatsRequest",
-      "code": "message FindServerBandwidthStatsRequest {\n\tint64 serverId = 1; // 服务ID\n\tstring month = 2; // YYYYMM，month和day二选一\n\tstring day = 3; // YYYYMMDD\n\tstring algo = 4; // 带宽算法，目前支持secondly和avg\n}",
+      "code": "message FindServerBandwidthStatsRequest {\n\tint64 serverId = 1; // 服务ID\n\tstring month = 2; // YYYYMM,month和day二选一\n\tstring day = 3; // YYYYMMDD\n\tstring algo = 4; // 带宽算法,目前支持secondly和avg\n}",
       "doc": "获取服务的峰值带宽"
     },
     {
@@ -20319,7 +20319,7 @@
     },
     {
       "name": "FindServerDailyStatsBetweenDaysRequest",
-      "code": "message FindServerDailyStatsBetweenDaysRequest {\n\tint64 userId = 1; // 用户ID，和服务ID二选一\n\tint64 serverId = 2; // 服务ID，和用户ID二选一\n\tstring dayFrom = 3; // 开始日期 YYYYMMDD\n\tstring dayTo = 4; // 结束日期 YYYYMMDD\n\tint64 nodeRegionId = 5; // 区域ID\n}",
+      "code": "message FindServerDailyStatsBetweenDaysRequest {\n\tint64 userId = 1; // 用户ID,和服务ID二选一\n\tint64 serverId = 2; // 服务ID,和用户ID二选一\n\tstring dayFrom = 3; // 开始日期 YYYYMMDD\n\tstring dayTo = 4; // 结束日期 YYYYMMDD\n\tint64 nodeRegionId = 5; // 区域ID\n}",
       "doc": "读取日期段内的流量数据"
     },
     {
@@ -20344,7 +20344,7 @@
     },
     {
       "name": "FindServerIdWithHTTPFirewallPolicyIdResponse",
-      "code": "message FindServerIdWithHTTPFirewallPolicyIdResponse {\n\tint64 serverId = 1; // 防火墙策略对应的网站ID，公共的防火墙策略的网站ID为0\n}",
+      "code": "message FindServerIdWithHTTPFirewallPolicyIdResponse {\n\tint64 serverId = 1; // 防火墙策略对应的网站ID,公共的防火墙策略的网站ID为0\n}",
       "doc": ""
     },
     {
@@ -20374,7 +20374,7 @@
     },
     {
       "name": "FindServerIdWithIPListIdResponse",
-      "code": "message FindServerIdWithIPListIdResponse {\n\tint64 serverId = 1; // 网站ID（如果是公共IP名单，则对应的网站ID为0）\n}",
+      "code": "message FindServerIdWithIPListIdResponse {\n\tint64 serverId = 1; // 网站ID(如果是公共IP名单,则对应的网站ID为0)\n}",
       "doc": ""
     },
     {
@@ -20469,7 +20469,7 @@
     },
     {
       "name": "FindTrafficDailyStatWithDayRequest",
-      "code": "message FindTrafficDailyStatWithDayRequest {\n\tstring day = 1; // YYYYMMDD\n\tstring minute = 2; // HHIISS，可选项\n}",
+      "code": "message FindTrafficDailyStatWithDayRequest {\n\tstring day = 1; // YYYYMMDD\n\tstring minute = 2; // HHIISS,可选项\n}",
       "doc": "查找某日统计"
     },
     {
@@ -20539,7 +20539,7 @@
     },
     {
       "name": "FindUserBillRequest",
-      "code": "message FindUserBillRequest {\n\tint64 userBillId = 1; // ID，和单号二选一\n\tstring code = 2; // 单号\n}",
+      "code": "message FindUserBillRequest {\n\tint64 userBillId = 1; // ID,和单号二选一\n\tstring code = 2; // 单号\n}",
       "doc": "查找账单信息"
     },
     {
@@ -20599,7 +20599,7 @@
     },
     {
       "name": "FindUserScriptWithMD5Request",
-      "code": "message FindUserScriptWithMD5Request {\n\tstring codeMD5 = 1; // 代码MD5（32位）\n}",
+      "code": "message FindUserScriptWithMD5Request {\n\tstring codeMD5 = 1; // 代码MD5(32位)\n}",
       "doc": "根据代码MD5查找脚本"
     },
     {
@@ -20729,7 +20729,7 @@
     },
     {
       "name": "HTTPCacheTaskKey",
-      "code": "message HTTPCacheTaskKey {\n\tint64 id = 1; // 缓存键ID\n\tint64 taskId = 2; // 任务ID\n\tstring key = 3; // 缓存键\n\tstring type = 4; // 操作类型：purge|fetch\n\tstring keyType = 5; // 键类型：key|prefix\n\tbool isDone = 6; // 是否已完成\n\tbool isDoing = 9; // 是否执行中\n\tbytes errorsJSON = 7; // 错误信息\n\tint64 nodeClusterId = 8; // 所属集群ID\n\n\tNodeCluster nodeCluster = 30; // 所属集群，不一定有内容\n}",
+      "code": "message HTTPCacheTaskKey {\n\tint64 id = 1; // 缓存键ID\n\tint64 taskId = 2; // 任务ID\n\tstring key = 3; // 缓存键\n\tstring type = 4; // 操作类型:purge|fetch\n\tstring keyType = 5; // 键类型:key|prefix\n\tbool isDone = 6; // 是否已完成\n\tbool isDoing = 9; // 是否执行中\n\tbytes errorsJSON = 7; // 错误信息\n\tint64 nodeClusterId = 8; // 所属集群ID\n\n\tNodeCluster nodeCluster = 30; // 所属集群,不一定有内容\n}",
       "doc": ""
     },
     {
@@ -20739,7 +20739,7 @@
     },
     {
       "name": "HTTPFirewallPolicy",
-      "code": "message HTTPFirewallPolicy {\n\tint64 id = 1; // 策略ID\n\tstring name = 2; // 名称\n\tstring mode = 7; // 模式\n\tbool isOn = 3; // 是否启用\n\tstring description = 4; // 描述\n\tbytes inboundJSON = 5; // 入站配置\n\tbytes outboundJSON = 6; // 出站配置\n\tint64 serverId = 8; // 所属网站ID（如果为0表示公共策略）\n\tbool useLocalFirewall = 9; // 是否使用本机防火墙\n\tbytes synFloodJSON = 10; // synflood配置\n\tbytes blockOptionsJSON = 11; // 阻止动作配置\n\tbytes pageOptionsJSON = 13; // 显示网页动作配置\n\tbytes captchaOptionsJSON = 12; // 人机识别配置\n\tbytes jsCookieOptionsJSON = 14; // JSCookie动作配置\n}",
+      "code": "message HTTPFirewallPolicy {\n\tint64 id = 1; // 策略ID\n\tstring name = 2; // 名称\n\tstring mode = 7; // 模式\n\tbool isOn = 3; // 是否启用\n\tstring description = 4; // 描述\n\tbytes inboundJSON = 5; // 入站配置\n\tbytes outboundJSON = 6; // 出站配置\n\tint64 serverId = 8; // 所属网站ID(如果为0表示公共策略)\n\tbool useLocalFirewall = 9; // 是否使用本机防火墙\n\tbytes synFloodJSON = 10; // synflood配置\n\tbytes blockOptionsJSON = 11; // 阻止动作配置\n\tbytes pageOptionsJSON = 13; // 显示网页动作配置\n\tbytes captchaOptionsJSON = 12; // 人机识别配置\n\tbytes jsCookieOptionsJSON = 14; // JSCookie动作配置\n}",
       "doc": "WAF策略"
     },
     {
@@ -20769,7 +20769,7 @@
     },
     {
       "name": "IPItem",
-      "code": "message IPItem {\n\tint64 id = 1;\n\tstring value = 22; // 原始值，比如单个IP、IP范围或者CIDR\n\tstring ipFrom = 2;\n\tstring ipTo = 3;\n\tint64 version = 4;\n\tint64 expiredAt = 5;\n\tstring reason = 6;\n\tint64 listId = 7;\n\tbool isDeleted = 8;\n\tstring type = 9;\n\tstring eventLevel = 10; // 级别\n\tstring listType = 11; // 所在名单类型，来自名单\n\tbool isGlobal = 20; // 是否全局，来自名单\n\tint64 createdAt = 12;\n\n\tint64 nodeId = 13;\n\tint64 serverId = 14;\n\n\tint64 sourceNodeId = 15;\n\tint64 sourceServerId = 16;\n\tint64 sourceHTTPFirewallPolicyId = 17;\n\tint64 sourceHTTPFirewallRuleGroupId = 18;\n\tint64 sourceHTTPFirewallRuleSetId = 19;\n\n\tbool isRead = 21;\n\n\tServer sourceServer = 30;\n\tServer server = 34;\n\tHTTPFirewallPolicy  sourceHTTPFirewallPolicy = 31;\n\tHTTPFirewallRuleGroup sourceHTTPFirewallRuleGroup = 32;\n\tHTTPFirewallRuleSet sourceHTTPFirewallRuleSet = 33;\n\tNode sourceNode = 35;\n\n}",
+      "code": "message IPItem {\n\tint64 id = 1;\n\tstring value = 22; // 原始值,比如单个IP,IP范围或者CIDR\n\tstring ipFrom = 2;\n\tstring ipTo = 3;\n\tint64 version = 4;\n\tint64 expiredAt = 5;\n\tstring reason = 6;\n\tint64 listId = 7;\n\tbool isDeleted = 8;\n\tstring type = 9;\n\tstring eventLevel = 10; // 级别\n\tstring listType = 11; // 所在名单类型,来自名单\n\tbool isGlobal = 20; // 是否全局,来自名单\n\tint64 createdAt = 12;\n\n\tint64 nodeId = 13;\n\tint64 serverId = 14;\n\n\tint64 sourceNodeId = 15;\n\tint64 sourceServerId = 16;\n\tint64 sourceHTTPFirewallPolicyId = 17;\n\tint64 sourceHTTPFirewallRuleGroupId = 18;\n\tint64 sourceHTTPFirewallRuleSetId = 19;\n\n\tbool isRead = 21;\n\n\tServer sourceServer = 30;\n\tServer server = 34;\n\tHTTPFirewallPolicy  sourceHTTPFirewallPolicy = 31;\n\tHTTPFirewallRuleGroup sourceHTTPFirewallRuleGroup = 32;\n\tHTTPFirewallRuleSet sourceHTTPFirewallRuleSet = 33;\n\tNode sourceNode = 35;\n\n}",
       "doc": ""
     },
     {
@@ -20849,7 +20849,7 @@
     },
     {
       "name": "ListADPackageInstancesRequest",
-      "code": "message ListADPackageInstancesRequest {\n\tint64 adNetworkId = 1; // 可选，线路\n\tint64 adPackageId = 2; // 可选，如果不填则表示获取所有实例数量\n\tint64 userId = 3; // 可选，用户ID\n\tstring ip = 4; // 可选，高防IP\n\tint64 offset = 5;\n\tint64 size = 6;\n}",
+      "code": "message ListADPackageInstancesRequest {\n\tint64 adNetworkId = 1; // 可选,线路\n\tint64 adPackageId = 2; // 可选,如果不填则表示获取所有实例数量\n\tint64 userId = 3; // 可选,用户ID\n\tstring ip = 4; // 可选,高防IP\n\tint64 offset = 5;\n\tint64 size = 6;\n}",
       "doc": "列出单页实例"
     },
     {
@@ -20869,7 +20869,7 @@
     },
     {
       "name": "ListAllEnabledIPItemsRequest",
-      "code": "message ListAllEnabledIPItemsRequest {\n\tstring keyword = 8; // 关键词\n\tstring ip = 1; // 单个IP，搜索单个IP时需要\n\tbool globalOnly = 2;  // 是否为自动添加的IP\n\tbool unread = 5; // 是否未读\n\tstring eventLevel = 6; // 事件级别\n\tstring listType = 7; // 列表类型：black|white\n\tint64 userId = 9; // 用户ID，只有管理员才有权限指定用户ID\n\tint64 offset = 3; // 读取位置，从0开始\n\tint64 size = 4; // 每次读取数量\n}",
+      "code": "message ListAllEnabledIPItemsRequest {\n\tstring keyword = 8; // 关键词\n\tstring ip = 1; // 单个IP,搜索单个IP时需要\n\tbool globalOnly = 2;  // 是否为自动添加的IP\n\tbool unread = 5; // 是否未读\n\tstring eventLevel = 6; // 事件级别\n\tstring listType = 7; // 列表类型:black|white\n\tint64 userId = 9; // 用户ID,只有管理员才有权限指定用户ID\n\tint64 offset = 3; // 读取位置,从0开始\n\tint64 size = 4; // 每次读取数量\n}",
       "doc": "列出所有名单中的IP"
     },
     {
@@ -20879,7 +20879,7 @@
     },
     {
       "name": "ListAllIPItemIdsRequest",
-      "code": "message ListAllIPItemIdsRequest {\n\tstring keyword = 8; // 关键词\n\tstring ip = 1; // 单个IP，搜索单个IP时需要\n\tbool globalOnly = 2;  // 是否为自动添加的IP\n\tbool unread = 5; // 是否未读\n\tstring eventLevel = 6; // 事件级别\n\tstring listType = 7; // 列表类型：black|white\n\tint64 userId = 9; // 用户ID，只有管理员才有权限指定用户ID\n\tint64 offset = 3; // 读取位置，从0开始\n\tint64 size = 4; // 每次读取数量\n}",
+      "code": "message ListAllIPItemIdsRequest {\n\tstring keyword = 8; // 关键词\n\tstring ip = 1; // 单个IP,搜索单个IP时需要\n\tbool globalOnly = 2;  // 是否为自动添加的IP\n\tbool unread = 5; // 是否未读\n\tstring eventLevel = 6; // 事件级别\n\tstring listType = 7; // 列表类型:black|white\n\tint64 userId = 9; // 用户ID,只有管理员才有权限指定用户ID\n\tint64 offset = 3; // 读取位置,从0开始\n\tint64 size = 4; // 每次读取数量\n}",
       "doc": "列出所有名单中的IP ID"
     },
     {
@@ -20919,7 +20919,7 @@
     },
     {
       "name": "ListEnabledACMETasksRequest",
-      "code": "message ListEnabledACMETasksRequest {\n\tint64 adminId = 1;\n\tint64 userId = 2;\n\tint64 offset = 3;\n\tint64 size = 4;\n\tbool isAvailable = 5;\n\tbool isExpired = 6;\n\tint32 expiringDays = 7;\n\tstring keyword = 8;\n\tbool userOnly = 9; // 可选项，是否只列出用户上传的证书\n}",
+      "code": "message ListEnabledACMETasksRequest {\n\tint64 adminId = 1;\n\tint64 userId = 2;\n\tint64 offset = 3;\n\tint64 size = 4;\n\tbool isAvailable = 5;\n\tbool isExpired = 6;\n\tint32 expiringDays = 7;\n\tstring keyword = 8;\n\tbool userOnly = 9; // 可选项,是否只列出用户上传的证书\n}",
       "doc": "列出单页任务"
     },
     {
@@ -20939,7 +20939,7 @@
     },
     {
       "name": "ListEnabledAdminsRequest",
-      "code": "message ListEnabledAdminsRequest {\n\tstring keyword = 3; // 可选项，查询关键词\n\tbool hasWeakPassword = 4; // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询\n\tint64 offset = 1; // 读取位置，从0开始\n\tint64 size = 2; // 读取数量\n}",
+      "code": "message ListEnabledAdminsRequest {\n\tstring keyword = 3; // 可选项,查询关键词\n\tbool hasWeakPassword = 4; // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询\n\tint64 offset = 1; // 读取位置,从0开始\n\tint64 size = 2; // 读取数量\n}",
       "doc": "列出单页的管理员"
     },
     {
@@ -21039,7 +21039,7 @@
     },
     {
       "name": "ListEnabledNodeClustersRequest",
-      "code": "message ListEnabledNodeClustersRequest {\n\tint64 offset = 1;\n\tint64 size = 2;\n\tstring keyword = 3; // 可选项，搜索关键词\n\tbool idDesc = 4; // 可选项，是否按照ID倒序排列\n\tbool idAsc = 5; // 可选项，是否按照ID正序排列\n}",
+      "code": "message ListEnabledNodeClustersRequest {\n\tint64 offset = 1;\n\tint64 size = 2;\n\tstring keyword = 3; // 可选项,搜索关键词\n\tbool idDesc = 4; // 可选项,是否按照ID倒序排列\n\tbool idAsc = 5; // 可选项,是否按照ID正序排列\n}",
       "doc": "列出单页集群"
     },
     {
@@ -21069,7 +21069,7 @@
     },
     {
       "name": "ListEnabledNodesMatchRequest",
-      "code": "message ListEnabledNodesMatchRequest {\n\tint64 offset = 1; // 读取位置\n\tint64 size = 2; // 读取数量\n\tint64 nodeClusterId = 3; // 集群ID\n\tint32 installState = 4; // 安装状态\n\tint32 activeState = 5; // 在线状态\n\tstring keyword = 6; // 关键词\n\tint64 nodeGroupId = 7; // 节点分组ID\n\tint64 nodeRegionId = 8; // 节点区域ID\n\tint32 level = 9; // 节点级别，目前只有1（L1）和2（L2）\n\n\tbool cpuAsc = 20;\n\tbool cpuDesc = 21;\n\tbool memoryAsc = 22;\n\tbool memoryDesc = 23;\n\tbool trafficInAsc = 24;\n\tbool trafficInDesc = 25;\n\tbool trafficOutAsc = 26;\n\tbool trafficOutDesc = 27;\n\tbool loadAsc = 28;\n\tbool loadDesc = 29;\n\tbool connectionsAsc = 30;\n\tbool connectionsDesc = 31;\n}",
+      "code": "message ListEnabledNodesMatchRequest {\n\tint64 offset = 1; // 读取位置\n\tint64 size = 2; // 读取数量\n\tint64 nodeClusterId = 3; // 集群ID\n\tint32 installState = 4; // 安装状态\n\tint32 activeState = 5; // 在线状态\n\tstring keyword = 6; // 关键词\n\tint64 nodeGroupId = 7; // 节点分组ID\n\tint64 nodeRegionId = 8; // 节点区域ID\n\tint32 level = 9; // 节点级别,目前只有1(L1)和2(L2)\n\n\tbool cpuAsc = 20;\n\tbool cpuDesc = 21;\n\tbool memoryAsc = 22;\n\tbool memoryDesc = 23;\n\tbool trafficInAsc = 24;\n\tbool trafficInDesc = 25;\n\tbool trafficOutAsc = 26;\n\tbool trafficOutDesc = 27;\n\tbool loadAsc = 28;\n\tbool loadDesc = 29;\n\tbool connectionsAsc = 30;\n\tbool connectionsDesc = 31;\n}",
       "doc": "列出单页节点"
     },
     {
@@ -21109,7 +21109,7 @@
     },
     {
       "name": "ListEnabledServersMatchRequest",
-      "code": "message ListEnabledServersMatchRequest {\n\tint64 offset = 1;\n\tint64 size = 2;\n\tint64 serverGroupId = 3;  // 网站分组ID，如果为-1表示查找未分组\n\tstring keyword = 4;\n\tint64 userId = 5;\n\tint64 nodeClusterId = 6;\n\tint32 auditingFlag = 7;\n\tstring protocolFamily = 8;\n\tbool trafficOutAsc = 9; // 是否流量正排序\n\tbool trafficOutDesc = 10; // 是否流量倒排序\n\tbool requestsAsc = 13; // 请求数正排序\n\tbool requestsDesc = 14; // 请求数倒排序\n\tbool attackRequestsAsc = 15; // 攻击请求数正排序\n\tbool attackRequestsDesc = 16; // 攻击请求数倒排序\n\tbool ignoreServerNames = 11; // 忽略域名\n\tbool ignoreSSLCerts = 12; // 忽略证书\n}",
+      "code": "message ListEnabledServersMatchRequest {\n\tint64 offset = 1;\n\tint64 size = 2;\n\tint64 serverGroupId = 3;  // 网站分组ID,如果为-1表示查找未分组\n\tstring keyword = 4;\n\tint64 userId = 5;\n\tint64 nodeClusterId = 6;\n\tint32 auditingFlag = 7;\n\tstring protocolFamily = 8;\n\tbool trafficOutAsc = 9; // 是否流量正排序\n\tbool trafficOutDesc = 10; // 是否流量倒排序\n\tbool requestsAsc = 13; // 请求数正排序\n\tbool requestsDesc = 14; // 请求数倒排序\n\tbool attackRequestsAsc = 15; // 攻击请求数正排序\n\tbool attackRequestsDesc = 16; // 攻击请求数倒排序\n\tbool ignoreServerNames = 11; // 忽略域名\n\tbool ignoreSSLCerts = 12; // 忽略证书\n}",
       "doc": "列出单页网站"
     },
     {
@@ -21149,7 +21149,7 @@
     },
     {
       "name": "ListEnabledUsersRequest",
-      "code": "message ListEnabledUsersRequest {\n\tstring keyword = 1;\n\tbool isVerifying = 4;\n\tint32 mobileIsVerified = 5; // 手机号是否已验证，1表示已验证，0表示未验证，-1表示所有状态\n\tint64 offset = 2;\n\tint64 size = 3;\n}",
+      "code": "message ListEnabledUsersRequest {\n\tstring keyword = 1;\n\tbool isVerifying = 4;\n\tint32 mobileIsVerified = 5; // 手机号是否已验证,1表示已验证,0表示未验证,-1表示所有状态\n\tint64 offset = 2;\n\tint64 size = 3;\n}",
       "doc": "列出单页用户"
     },
     {
@@ -21189,7 +21189,7 @@
     },
     {
       "name": "ListHTTPAccessLogsRequest",
-      "code": "message ListHTTPAccessLogsRequest {\n\tstring requestId = 1; // 上一页请求ID，可选\n\tint64 serverId = 2; // 服务ID\n\tint64 size = 3; // 单页条数\n\tstring day = 4; // 日期，格式YYYYMMDD\n\tstring hourFrom = 17; // 开始小时\n\tstring hourTo = 18; // 结束小时\n\tbool reverse = 5; // 是否反向查找，可选\n\tbool hasError = 6; // 是否有错误，可选\n\tint64 firewallPolicyId = 7; // WAF策略ID，可选\n\tint64 firewallRuleGroupId = 8; // WAF分组ID，可选\n\tint64 firewallRuleSetId = 9; // WAF规则集ID，可选\n\tint64 userId = 10; // 用户ID\n\tbool hasFirewallPolicy = 11; // 是否有WAF策略\n\tstring keyword = 12; // 关键词\n\tstring ip = 13;\n\tstring domain = 14;\n\tint64 nodeClusterId = 15;\n\tint64 nodeId = 16;\n\tint32 partition = 19; // 分区\n}",
+      "code": "message ListHTTPAccessLogsRequest {\n\tstring requestId = 1; // 上一页请求ID,可选\n\tint64 serverId = 2; // 服务ID\n\tint64 size = 3; // 单页条数\n\tstring day = 4; // 日期,格式YYYYMMDD\n\tstring hourFrom = 17; // 开始小时\n\tstring hourTo = 18; // 结束小时\n\tbool reverse = 5; // 是否反向查找,可选\n\tbool hasError = 6; // 是否有错误,可选\n\tint64 firewallPolicyId = 7; // WAF策略ID,可选\n\tint64 firewallRuleGroupId = 8; // WAF分组ID,可选\n\tint64 firewallRuleSetId = 9; // WAF规则集ID,可选\n\tint64 userId = 10; // 用户ID\n\tbool hasFirewallPolicy = 11; // 是否有WAF策略\n\tstring keyword = 12; // 关键词\n\tstring ip = 13;\n\tstring domain = 14;\n\tint64 nodeClusterId = 15;\n\tint64 nodeId = 16;\n\tint32 partition = 19; // 分区\n}",
       "doc": "列出往前的单页访问日志"
     },
     {
@@ -21229,7 +21229,7 @@
     },
     {
       "name": "ListLogsRequest",
-      "code": "message ListLogsRequest {\n\tint64 offset = 1; // 读取位置，从0开始\n\tint64 size = 2; // 读取数量\n\tstring dayFrom = 3; // 可选项，开始日期\n\tstring dayTo = 4; // 可选项，结束日期\n\tstring keyword = 5; // 可选项，关键词\n\tstring userType = 6; // 可选项，用户类型：admin|user；用户端固定为user\n\tstring level = 7; // 可选项，错误级别：info, warn, error\n}",
+      "code": "message ListLogsRequest {\n\tint64 offset = 1; // 读取位置,从0开始\n\tint64 size = 2; // 读取数量\n\tstring dayFrom = 3; // 可选项,开始日期\n\tstring dayTo = 4; // 可选项,结束日期\n\tstring keyword = 5; // 可选项,关键词\n\tstring userType = 6; // 可选项,用户类型:admin|user;用户端固定为user\n\tstring level = 7; // 可选项,错误级别:info, warn, error\n}",
       "doc": "列出单页日志"
     },
     {
@@ -21264,7 +21264,7 @@
     },
     {
       "name": "ListNSAccessLogsRequest",
-      "code": "message ListNSAccessLogsRequest {\n\tstring requestId = 1; // 上一页请求ID，可选\n\tint64 nsClusterId = 9; // 集群\n\tint64 nsNodeId = 2; // 节点ID\n\tint64 nsDomainId = 3; // 域名ID\n\tint64 nsRecordId = 4; // 记录ID\n\tint64 size = 5; // 单页条数\n\tstring day = 6; // 日期，格式YYYYMMDD\n\tbool reverse = 7; // 是否反向查找，可选\n\tstring keyword = 8; // 关键词\n\tstring recordType = 10; // 记录类型\n}",
+      "code": "message ListNSAccessLogsRequest {\n\tstring requestId = 1; // 上一页请求ID,可选\n\tint64 nsClusterId = 9; // 集群\n\tint64 nsNodeId = 2; // 节点ID\n\tint64 nsDomainId = 3; // 域名ID\n\tint64 nsRecordId = 4; // 记录ID\n\tint64 size = 5; // 单页条数\n\tstring day = 6; // 日期,格式YYYYMMDD\n\tbool reverse = 7; // 是否反向查找,可选\n\tstring keyword = 8; // 关键词\n\tstring recordType = 10; // 记录类型\n}",
       "doc": "列出往前的单页访问日志"
     },
     {
@@ -21394,7 +21394,7 @@
     },
     {
       "name": "ListNodeRegionInfoRequest",
-      "code": "message ListNodeRegionInfoRequest {\n\tint64 nodeRegionId = 1; // 区域ID，可选\n\tint64 offset = 2;\n\tint64 size = 3;\n}",
+      "code": "message ListNodeRegionInfoRequest {\n\tint64 nodeRegionId = 1; // 区域ID,可选\n\tint64 offset = 2;\n\tint64 size = 3;\n}",
       "doc": "列出单页节点区域信息"
     },
     {
@@ -21444,7 +21444,7 @@
     },
     {
       "name": "ListSSLCertsRequest",
-      "code": "message ListSSLCertsRequest {\n\tbool isCA = 1; // 可选项，是否为CA证书\n\tbool isAvailable = 2; // 可选项，是否可用（在有效期内）\n\tbool isExpired = 3; //可选项， 是否已过期\n\tint32 expiringDays = 4; // 可选项，离过期日的天数\n\tstring keyword = 5; // 可选项，关键词\n\tint64 userId = 8; // 可选项，用户ID，不填则表示读取管理员上传的证书\n\trepeated string domains = 9; // 可选项，搜索使用的域名列表\n\tint64 offset = 6; // 读取位置\n\tint64 size = 7; // 读取长度，不能小于0\n\tbool userOnly = 10; // 可选项，只列出用户上传的证书\n}",
+      "code": "message ListSSLCertsRequest {\n\tbool isCA = 1; // 可选项,是否为CA证书\n\tbool isAvailable = 2; // 可选项,是否可用(在有效期内)\n\tbool isExpired = 3; //可选项, 是否已过期\n\tint32 expiringDays = 4; // 可选项,离过期日的天数\n\tstring keyword = 5; // 可选项,关键词\n\tint64 userId = 8; // 可选项,用户ID,不填则表示读取管理员上传的证书\n\trepeated string domains = 9; // 可选项,搜索使用的域名列表\n\tint64 offset = 6; // 读取位置\n\tint64 size = 7; // 读取长度,不能小于0\n\tbool userOnly = 10; // 可选项,只列出用户上传的证书\n}",
       "doc": "列出单页匹配的证书"
     },
     {
@@ -21679,7 +21679,7 @@
     },
     {
       "name": "MessageReceiver",
-      "code": "message MessageReceiver {\n\tint64 id = 1;\n\tint64 clusterId = 2;\n\tint64 nodeId = 3;\n\tint64 serverId = 4;\n\tstring type = 5;\n\tbytes paramsJSON = 6;\n\tstring role = 9; // 集群角色：node 或 dns\n\n\tMessageRecipient messageRecipient = 7;\n\tMessageRecipientGroup messageRecipientGroup = 8;\n}",
+      "code": "message MessageReceiver {\n\tint64 id = 1;\n\tint64 clusterId = 2;\n\tint64 nodeId = 3;\n\tint64 serverId = 4;\n\tstring type = 5;\n\tbytes paramsJSON = 6;\n\tstring role = 9; // 集群角色:node 或 dns\n\n\tMessageRecipient messageRecipient = 7;\n\tMessageRecipientGroup messageRecipientGroup = 8;\n}",
       "doc": ""
     },
     {
@@ -21774,7 +21774,7 @@
     },
     {
       "name": "NSRecord",
-      "code": "message NSRecord {\n\tint64 id = 1; // 记录ID\n\tstring description = 2; // 备注\n\tstring name = 3; // 记录名\n\tstring type = 4; // 记录类型\n\tstring value = 5; // 记录值\n\n\tint32 mxPriority = 12; // mx优先级\n\n\tint32 srvPriority = 13; // SRV优先级\n\tint32 srvWeight = 14; // SRV权重\n\tint32 srvPort = 15; // SRV端口\n\n\tint32 caaFlag = 16; // CAA Flag\n\tstring caaTag = 17; // CAA TAG\n\n\tint32 ttl = 6; // TTL\n\tint32 weight = 7; // 权重\n\tint64 createdAt = 8;\n\tbool isDeleted = 9;\n\tint64 version = 10;\n\tbool isOn = 11; // 是否启用\n\n\tbytes healthCheckJSON = 18; // 健康检查配置\n\tbool isUp = 19; // 是否在线（根据健康检查结果）\n\n\tNSDomain nsDomain = 30; // 所属域名\n\trepeated NSRoute nsRoutes = 31; // 线路\n}",
+      "code": "message NSRecord {\n\tint64 id = 1; // 记录ID\n\tstring description = 2; // 备注\n\tstring name = 3; // 记录名\n\tstring type = 4; // 记录类型\n\tstring value = 5; // 记录值\n\n\tint32 mxPriority = 12; // mx优先级\n\n\tint32 srvPriority = 13; // SRV优先级\n\tint32 srvWeight = 14; // SRV权重\n\tint32 srvPort = 15; // SRV端口\n\n\tint32 caaFlag = 16; // CAA Flag\n\tstring caaTag = 17; // CAA TAG\n\n\tint32 ttl = 6; // TTL\n\tint32 weight = 7; // 权重\n\tint64 createdAt = 8;\n\tbool isDeleted = 9;\n\tint64 version = 10;\n\tbool isOn = 11; // 是否启用\n\n\tbytes healthCheckJSON = 18; // 健康检查配置\n\tbool isUp = 19; // 是否在线(根据健康检查结果)\n\n\tNSDomain nsDomain = 30; // 所属域名\n\trepeated NSRoute nsRoutes = 31; // 线路\n}",
       "doc": "域名记录"
     },
     {
@@ -21894,7 +21894,7 @@
     },
     {
       "name": "NodeTask",
-      "code": "message NodeTask {\n\tint64 id = 1;\n\tstring type = 2;\n\tbool isDone = 3;\n\tbool isOk = 4;\n\tstring error = 5;\n\tint64 updatedAt = 6;\n\tint64 version = 7;\n\tbool isPrimary = 8; // 是否为主节点，非主节点稍等再同步有利于提升同步速度\n\tint64 serverId = 9;\n\tint64 userId = 10;\n\n\tNode node = 30;\n\tNodeCluster nodeCluster = 31;\n\tNodeCluster server = 32;\n}",
+      "code": "message NodeTask {\n\tint64 id = 1;\n\tstring type = 2;\n\tbool isDone = 3;\n\tbool isOk = 4;\n\tstring error = 5;\n\tint64 updatedAt = 6;\n\tint64 version = 7;\n\tbool isPrimary = 8; // 是否为主节点,非主节点稍等再同步有利于提升同步速度\n\tint64 serverId = 9;\n\tint64 userId = 10;\n\n\tNode node = 30;\n\tNodeCluster nodeCluster = 31;\n\tNodeCluster server = 32;\n}",
       "doc": "节点相关同步任务"
     },
     {
@@ -21934,7 +21934,7 @@
     },
     {
       "name": "Origin",
-      "code": "message Origin {\n\tint64 id = 1;\n\tbool isOn = 2;\n\tstring name = 3;\n\tNetworkAddress addr = 4; // 源站网络地址\n\tbytes ossJSON = 9; // 源站网络地址为oss:开头时有此内容\n\tstring description = 5;\n\trepeated string domains = 6;\n\tstring host = 7;\n\tbool followPort = 8;\n\tbool http2Enabled = 10; // 是否支持HTTP/2，只在HTTPS源站时生效\n}",
+      "code": "message Origin {\n\tint64 id = 1;\n\tbool isOn = 2;\n\tstring name = 3;\n\tNetworkAddress addr = 4; // 源站网络地址\n\tbytes ossJSON = 9; // 源站网络地址为oss:开头时有此内容\n\tstring description = 5;\n\trepeated string domains = 6;\n\tstring host = 7;\n\tbool followPort = 8;\n\tbool http2Enabled = 10; // 是否支持HTTP/2,只在HTTPS源站时生效\n}",
       "doc": ""
     },
     {
@@ -21959,12 +21959,12 @@
     },
     {
       "name": "Plan",
-      "code": "message Plan {\n\tint64 id = 1; // 套餐ID\n\tbool isOn = 2; // 是否启用\n\tstring name = 3; // 套餐名称\n\tstring description = 21; // 套餐简介\n\tint64 clusterId = 4;  // 集群ID\n\tbytes trafficLimitJSON = 5; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 22; // 单节点带宽限制\n\tbool hasFullFeatures = 20; // 是否有所有权限\n\tbytes featuresJSON = 6; // 权限列表，[code1, code2, ...]\n\tstring priceType = 7; // 价格类型：traffic, bandwidth, period\n\tbytes trafficPriceJSON = 8; // 流量价格配置\n\tbytes bandwidthPriceJSON = 12; // 带宽价格配置\n\tdouble monthlyPrice = 9; // 月度价格\n\tdouble seasonallyPrice = 10;  // 季度价格\n\tdouble yearlyPrice = 11;  // 年度价格\n\tint32 totalServers = 13; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 14; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 15; // 可以添加的域名总数\n\tint64 dailyRequests = 16; // 每日访问量额度\n\tint64 monthlyRequests = 17; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 18; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 19; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 23; // 文件最大上传尺寸 @link json:size_capacity\n}",
+      "code": "message Plan {\n\tint64 id = 1; // 套餐ID\n\tbool isOn = 2; // 是否启用\n\tstring name = 3; // 套餐名称\n\tstring description = 21; // 套餐简介\n\tint64 clusterId = 4;  // 集群ID\n\tbytes trafficLimitJSON = 5; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 22; // 单节点带宽限制\n\tbool hasFullFeatures = 20; // 是否有所有权限\n\tbytes featuresJSON = 6; // 权限列表,[code1, code2, ...]\n\tstring priceType = 7; // 价格类型:traffic, bandwidth, period\n\tbytes trafficPriceJSON = 8; // 流量价格配置\n\tbytes bandwidthPriceJSON = 12; // 带宽价格配置\n\tdouble monthlyPrice = 9; // 月度价格\n\tdouble seasonallyPrice = 10;  // 季度价格\n\tdouble yearlyPrice = 11;  // 年度价格\n\tint32 totalServers = 13; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 14; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 15; // 可以添加的域名总数\n\tint64 dailyRequests = 16; // 每日访问量额度\n\tint64 monthlyRequests = 17; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 18; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 19; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 23; // 文件最大上传尺寸 @link json:size_capacity\n}",
       "doc": ""
     },
     {
       "name": "Post",
-      "code": "message Post {\n\tint64 id = 1; // ID\n\tint64 postCategoryId = 2; // 分类ID\n\tstring productCode = 3; // 产品代号\n\tstring type = 4; // 类型：normal, url\n\tstring subject = 5; // 标题\n\tstring url = 6; // URL\n\tstring body = 7; // 内容\n\tint64 createdAt = 8; // 创建时间\n\tbool isPublished = 9; // 是否已发布\n\tint64 publishedAt = 10; // 发布时间\n\n\tPostCategory postCategory = 30; // 分类信息\n}",
+      "code": "message Post {\n\tint64 id = 1; // ID\n\tint64 postCategoryId = 2; // 分类ID\n\tstring productCode = 3; // 产品代号\n\tstring type = 4; // 类型:normal, url\n\tstring subject = 5; // 标题\n\tstring url = 6; // URL\n\tstring body = 7; // 内容\n\tint64 createdAt = 8; // 创建时间\n\tbool isPublished = 9; // 是否已发布\n\tint64 publishedAt = 10; // 发布时间\n\n\tPostCategory postCategory = 30; // 分类信息\n}",
       "doc": "文章"
     },
     {
@@ -22050,7 +22050,7 @@
     {
       "name": "RegionProvince",
       "code": "message RegionProvince {\n\tint64 id = 1;\n\tstring name = 2;\n\trepeated string codes = 3;\n\tint64 regionCountryId = 4;\n\tstring customName = 5;\n\trepeated string customCodes = 6;\n\tstring displayName = 7;\n\n\tRegionCountry regionCountry = 30; // 国家|地区信息\n}",
-      "doc": "省份｜州|区域信息"
+      "doc": "省份|州|区域信息"
     },
     {
       "name": "RegionTown",
@@ -22195,7 +22195,7 @@
     {
       "name": "SendMessageTaskRequest",
       "code": "message SendMessageTaskRequest {\n\tint64 messageMediaInstanceId = 1; // 媒介实例ID\n\tstring user = 2; // 用户标识\n\tstring subject = 3; // 标题\n\tstring body = 4; // 内容\n}",
-      "doc": "发送某个消息任务\n与创建消息任务放入到后台任务队列不同，此API是直接发送"
+      "doc": "发送某个消息任务\n与创建消息任务放入到后台任务队列不同,此API是直接发送"
     },
     {
       "name": "SendMessageTaskResponse",
@@ -22204,12 +22204,12 @@
     },
     {
       "name": "SendSMSRequest",
-      "code": "message SendSMSRequest {\n\tstring mobile = 1; // 手机号\n\tstring body = 2; // 内容\n\tstring code = 3; // 验证码\n\tstring type = 4; // 渠道类型：webHook ...\n\tbytes paramsJSON = 5; // 参数\n}",
+      "code": "message SendSMSRequest {\n\tstring mobile = 1; // 手机号\n\tstring body = 2; // 内容\n\tstring code = 3; // 验证码\n\tstring type = 4; // 渠道类型:webHook ...\n\tbytes paramsJSON = 5; // 参数\n}",
       "doc": "发送短信"
     },
     {
       "name": "SendSMSResponse",
-      "code": "message SendSMSResponse {\n\tbool isOk = 1; // 是否成功\n\tstring result = 2; // 发送返回内容，只有失败时才会有数据\n}",
+      "code": "message SendSMSResponse {\n\tbool isOk = 1; // 是否成功\n\tstring result = 2; // 发送返回内容,只有失败时才会有数据\n}",
       "doc": ""
     },
     {
@@ -22229,7 +22229,7 @@
     },
     {
       "name": "SendUserVerifyCodeRequest",
-      "code": "message SendUserVerifyCodeRequest {\n\tstring type = 1; // 类型：重置密码（resetPassword）\n\tstring email = 2; // 已验证邮箱地址\n\tstring mobile = 3; // 已验证手机号\n}",
+      "code": "message SendUserVerifyCodeRequest {\n\tstring type = 1; // 类型:重置密码(resetPassword)\n\tstring email = 2; // 已验证邮箱地址\n\tstring mobile = 3; // 已验证手机号\n}",
       "doc": "发送重置密码验证码"
     },
     {
@@ -22239,12 +22239,12 @@
     },
     {
       "name": "Server",
-      "code": "message Server {\n\tint64 id = 1;\n\tbool isOn = 18;\n\tstring type = 2;\n\tstring name = 3;\n\tstring description = 4;\n\tbytes includeNodes = 5;\n\tbytes excludeNodes = 6;\n\tint64 createdAt = 7;\n\tstring dnsName = 19;\n\tbool supportCNAME = 23;\n\tint64 userPlanId = 24;\n\tint64 userId = 29; // 所属用户ID\n\n\t// 配置相关\n\tbytes config = 17;\n\tbytes serverNamesJSON = 8;\n\tstring firstServerName = 33;\n\tint32 countServerNames = 28;\n\tbool isAuditing = 20;\n\tint64 auditingAt = 25;\n\tbytes auditingServerNamesJSON = 21;\n\tServerNameAuditingResult auditingResult = 22;\n\n\tbytes httpJSON = 9;\n\tbytes httpsJSON = 10;\n\tbytes tcpJSON = 11;\n\tbytes tlsJSON = 12;\n\tbytes udpJSON = 14;\n\tint64 webId = 15;\n\tbytes reverseProxyJSON = 16;\n\n\tstring bandwidthTime = 26; // 带宽时间\n\tint64 bandwidthBytes = 27; // 带宽字节数\n\tint64 countRequests = 34; // 最近（通常5分钟内）访问量\n\tint64 countAttackRequests = 35; // 最近识别到的攻击访问量\n\n\tNodeCluster nodeCluster = 30;\n\trepeated ServerGroup serverGroups = 31;\n\tUser user = 32;\n}",
+      "code": "message Server {\n\tint64 id = 1;\n\tbool isOn = 18;\n\tstring type = 2;\n\tstring name = 3;\n\tstring description = 4;\n\tbytes includeNodes = 5;\n\tbytes excludeNodes = 6;\n\tint64 createdAt = 7;\n\tstring dnsName = 19;\n\tbool supportCNAME = 23;\n\tint64 userPlanId = 24;\n\tint64 userId = 29; // 所属用户ID\n\n\t// 配置相关\n\tbytes config = 17;\n\tbytes serverNamesJSON = 8;\n\tstring firstServerName = 33;\n\tint32 countServerNames = 28;\n\tbool isAuditing = 20;\n\tint64 auditingAt = 25;\n\tbytes auditingServerNamesJSON = 21;\n\tServerNameAuditingResult auditingResult = 22;\n\n\tbytes httpJSON = 9;\n\tbytes httpsJSON = 10;\n\tbytes tcpJSON = 11;\n\tbytes tlsJSON = 12;\n\tbytes udpJSON = 14;\n\tint64 webId = 15;\n\tbytes reverseProxyJSON = 16;\n\n\tstring bandwidthTime = 26; // 带宽时间\n\tint64 bandwidthBytes = 27; // 带宽字节数\n\tint64 countRequests = 34; // 最近(通常5分钟内)访问量\n\tint64 countAttackRequests = 35; // 最近识别到的攻击访问量\n\n\tNodeCluster nodeCluster = 30;\n\trepeated ServerGroup serverGroups = 31;\n\tUser user = 32;\n}",
       "doc": ""
     },
     {
       "name": "ServerBandwidthStat",
-      "code": "message ServerBandwidthStat {\n\tint64 id = 1; // ID\n\tint64 userId = 2; // 用户ID\n\tint64 serverId = 3; //服务ID\n\tstring day = 4; // 日期，格式YYYYMMDD\n\tstring timeAt = 5; // 时间，格式HHII\n\tint64 bytes = 6; // 峰值带宽字节\n\tint64 totalBytes = 9; // 总流量\n\tint64 bits = 7; // 峰值带宽比特\n\tint64 nodeRegionId = 8; // 节点所在区域ID\n\tint64 cachedBytes = 10; // 总缓存流量\n\tint64 attackBytes = 11; // 总攻击流量\n\tint64 countRequests = 12; // 总请求数\n\tint64 countCachedRequests = 13; // 总缓存请求数\n\tint64 countAttackRequests = 14; // 总攻击请求数\n\tint64 userPlanId = 15; // 绑定的用户套餐ID\n\tint64 countWebsocketConnections = 16; // Websocket连接数\n\tint64 countIPs = 17; // 总IP数\n}",
+      "code": "message ServerBandwidthStat {\n\tint64 id = 1; // ID\n\tint64 userId = 2; // 用户ID\n\tint64 serverId = 3; //服务ID\n\tstring day = 4; // 日期,格式YYYYMMDD\n\tstring timeAt = 5; // 时间,格式HHII\n\tint64 bytes = 6; // 峰值带宽字节\n\tint64 totalBytes = 9; // 总流量\n\tint64 bits = 7; // 峰值带宽比特\n\tint64 nodeRegionId = 8; // 节点所在区域ID\n\tint64 cachedBytes = 10; // 总缓存流量\n\tint64 attackBytes = 11; // 总攻击流量\n\tint64 countRequests = 12; // 总请求数\n\tint64 countCachedRequests = 13; // 总缓存请求数\n\tint64 countAttackRequests = 14; // 总攻击请求数\n\tint64 userPlanId = 15; // 绑定的用户套餐ID\n\tint64 countWebsocketConnections = 16; // Websocket连接数\n\tint64 countIPs = 17; // 总IP数\n}",
       "doc": "带宽统计数据"
     },
     {
@@ -22370,7 +22370,7 @@
     {
       "name": "SumCurrentServerDailyStatsRequest",
       "code": "message SumCurrentServerDailyStatsRequest {\n\tint64 serverId = 1;\n}",
-      "doc": "查找单个服务当前时刻（N分钟内）统计数据"
+      "doc": "查找单个服务当前时刻(N分钟内)统计数据"
     },
     {
       "name": "SumCurrentServerDailyStatsResponse",
@@ -22389,7 +22389,7 @@
     },
     {
       "name": "SumServerDailyStatsRequest",
-      "code": "message SumServerDailyStatsRequest {\n\tint64 userId = 3;\n\tint64 serverId = 1;\n\tint64 nodeRegionId = 6;\n\n\tstring day = 2; // YYYYMMDD\n\n\tstring dayFrom = 4; // day 和 dayFrom+dayTo 二选一， YYYYMMDD\n\tstring dayTo = 5; // day 和 dayFrom+dayTo 二选一，YYYYMMDD\n}",
+      "code": "message SumServerDailyStatsRequest {\n\tint64 userId = 3;\n\tint64 serverId = 1;\n\tint64 nodeRegionId = 6;\n\n\tstring day = 2; // YYYYMMDD\n\n\tstring dayFrom = 4; // day 和 dayFrom+dayTo 二选一, YYYYMMDD\n\tstring dayTo = 5; // day 和 dayFrom+dayTo 二选一,YYYYMMDD\n}",
       "doc": "计算单个服务的日统计"
     },
     {
@@ -22419,7 +22419,7 @@
     },
     {
       "name": "SyncDNSDomainDataRequest",
-      "code": "message SyncDNSDomainDataRequest {\n\tint64 dnsDomainId = 1;\n\tint64 nodeClusterId = 2; // 如果指定，表示只更新单个集群ID\n\tbool checkNodeIssues = 3; // 是否检查节点问题\n}",
+      "code": "message SyncDNSDomainDataRequest {\n\tint64 dnsDomainId = 1;\n\tint64 nodeClusterId = 2; // 如果指定,表示只更新单个集群ID\n\tbool checkNodeIssues = 3; // 是否检查节点问题\n}",
       "doc": "同步域名数据"
     },
     {
@@ -22544,7 +22544,7 @@
     },
     {
       "name": "UpdateAPINodeRequest",
-      "code": "message UpdateAPINodeRequest {\n\tint64 apiNodeId = 1; // API节点ID\n\tstring name = 2; // API节点名称\n\tstring description = 3; // API节点描述\n\tbytes httpJSON = 4; // 监听HTTP地址配置 @link json:http_protocol\n\tbytes httpsJSON = 5; // 监听HTTPS地址配置 @link json:https_protocol\n\tbytes accessAddrsJSON = 6; // 访问地址 @link json:network_address\n\tbool isOn = 7; // 是否启用当前API节点\n\tbool restIsOn = 8; // 是否启用API\n\tbytes restHTTPJSON = 9; // API地址HTTP地址配置 @link json:http_protocol\n\tbytes restHTTPSJSON = 10; // API地址HTTPS地址配置 @link json:https_protocol\n\tbool isPrimary = 11; // 是否为主要API节点，日常任务主要运行在主要API节点上\n}",
+      "code": "message UpdateAPINodeRequest {\n\tint64 apiNodeId = 1; // API节点ID\n\tstring name = 2; // API节点名称\n\tstring description = 3; // API节点描述\n\tbytes httpJSON = 4; // 监听HTTP地址配置 @link json:http_protocol\n\tbytes httpsJSON = 5; // 监听HTTPS地址配置 @link json:https_protocol\n\tbytes accessAddrsJSON = 6; // 访问地址 @link json:network_address\n\tbool isOn = 7; // 是否启用当前API节点\n\tbool restIsOn = 8; // 是否启用API\n\tbytes restHTTPJSON = 9; // API地址HTTP地址配置 @link json:http_protocol\n\tbytes restHTTPSJSON = 10; // API地址HTTPS地址配置 @link json:https_protocol\n\tbool isPrimary = 11; // 是否为主要API节点,日常任务主要运行在主要API节点上\n}",
       "doc": "修改API节点"
     },
     {
@@ -22554,7 +22554,7 @@
     },
     {
       "name": "UpdateAdminLangRequest",
-      "code": "message UpdateAdminLangRequest {\n\tstring langCode = 1; // 语言代号：en-us, zh-cn, ...，如果为空表示默认\n}",
+      "code": "message UpdateAdminLangRequest {\n\tstring langCode = 1; // 语言代号:en-us, zh-cn, ...,如果为空表示默认\n}",
       "doc": "修改管理员使用的语言"
     },
     {
@@ -22669,7 +22669,7 @@
     },
     {
       "name": "UpdateHTTPFirewallPolicyRequest",
-      "code": "message UpdateHTTPFirewallPolicyRequest {\n\tint64 httpFirewallPolicyId = 1;\n\tbool isOn = 2;\n\tstring name = 3;\n\tstring description = 4;\n\trepeated string firewallGroupCodes = 5;\n\tbytes blockOptionsJSON = 6; // 阻止动作配置\n\tbytes pageOptionsJSON = 15; // 显示网页动作配置\n\tbytes captchaOptionsJSON = 11; // 验证码动作配置\n\tbytes jsCookieOptionsJSON = 16; // JSCookie动作配置\n\tstring mode = 7;\n\tbool useLocalFirewall = 8; // 是否使用本地防火墙\n\tbytes synFloodJSON = 9; // SYN Flood相关配置\n\tbytes LogJSON = 10; // 日志相关配置\n\tint64 maxRequestBodySize = 12; // 最大文件尺寸，单位为字节\n\tstring denyCountryHTML = 13; // 区域封禁提示\n\tstring denyProvinceHTML = 14; // 省份封禁提示\n}",
+      "code": "message UpdateHTTPFirewallPolicyRequest {\n\tint64 httpFirewallPolicyId = 1;\n\tbool isOn = 2;\n\tstring name = 3;\n\tstring description = 4;\n\trepeated string firewallGroupCodes = 5;\n\tbytes blockOptionsJSON = 6; // 阻止动作配置\n\tbytes pageOptionsJSON = 15; // 显示网页动作配置\n\tbytes captchaOptionsJSON = 11; // 验证码动作配置\n\tbytes jsCookieOptionsJSON = 16; // JSCookie动作配置\n\tstring mode = 7;\n\tbool useLocalFirewall = 8; // 是否使用本地防火墙\n\tbytes synFloodJSON = 9; // SYN Flood相关配置\n\tbytes LogJSON = 10; // 日志相关配置\n\tint64 maxRequestBodySize = 12; // 最大文件尺寸,单位为字节\n\tstring denyCountryHTML = 13; // 区域封禁提示\n\tstring denyProvinceHTML = 14; // 省份封禁提示\n}",
       "doc": "修改防火墙策略"
     },
     {
@@ -22749,7 +22749,7 @@
     },
     {
       "name": "UpdateHTTPPageRequest",
-      "code": "message UpdateHTTPPageRequest {\n\tint64 httpPageId = 1;\n\trepeated string statusList = 2;\n\tstring bodyType = 6; // 页面类型：html|url|redirectURL\n\tstring url = 3;\n\tstring body = 5;\n\tint32 newStatus = 4;\n\tbytes exceptURLPatternsJSON = 7; // 例外URL列表\n\tbytes onlyURLPatternsJSON = 8; // 限制URL列表\n}",
+      "code": "message UpdateHTTPPageRequest {\n\tint64 httpPageId = 1;\n\trepeated string statusList = 2;\n\tstring bodyType = 6; // 页面类型:html|url|redirectURL\n\tstring url = 3;\n\tstring body = 5;\n\tint32 newStatus = 4;\n\tbytes exceptURLPatternsJSON = 7; // 例外URL列表\n\tbytes onlyURLPatternsJSON = 8; // 限制URL列表\n}",
       "doc": "修改Page"
     },
     {
@@ -22914,7 +22914,7 @@
     },
     {
       "name": "UpdateIPItemRequest",
-      "code": "message UpdateIPItemRequest {\n\tint64 ipItemId = 1;\n\tstring value = 8; // IP原始值，比如单个IP、IP范围或者CIDR，指定了原始值后，无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // 开始IP\n\tstring ipTo = 3; // 结束IP（可选）\n\tint64 expiredAt = 4;\n\tstring reason = 5;\n\tstring type = 6; // 类型\n\tstring eventLevel = 7; // 级别\n}",
+      "code": "message UpdateIPItemRequest {\n\tint64 ipItemId = 1;\n\tstring value = 8; // IP原始值,比如单个IP,IP范围或者CIDR,指定了原始值后,无需设置ipFrom和ipTo两个参数\n\tstring ipFrom = 2; // 开始IP\n\tstring ipTo = 3; // 结束IP(可选)\n\tint64 expiredAt = 4;\n\tstring reason = 5;\n\tstring type = 6; // 类型\n\tstring eventLevel = 7; // 级别\n}",
       "doc": "修改IP"
     },
     {
@@ -22954,7 +22954,7 @@
     },
     {
       "name": "UpdateMessageReceiversRequest",
-      "code": "message UpdateMessageReceiversRequest {\n\tstring role = 7;\n\tint64 nodeClusterId = 1;\n\tint64 nodeId = 2;\n\tint64 serverId = 3;\n\tbytes paramsJSON = 5;\n\tmap\u003cstring, RecipientOptions\u003e recipientOptions = 6; // type =\u003e options，type为recipient或者group\n\n\n\tmessage RecipientOption {\n\t\tint64 messageRecipientId = 1;\n\t\tint64 messageRecipientGroupId = 2;\n\t}\n\n\n\tmessage RecipientOptions {\n\t\trepeated RecipientOption recipientOptions = 1;\n\t}\n}",
+      "code": "message UpdateMessageReceiversRequest {\n\tstring role = 7;\n\tint64 nodeClusterId = 1;\n\tint64 nodeId = 2;\n\tint64 serverId = 3;\n\tbytes paramsJSON = 5;\n\tmap\u003cstring, RecipientOptions\u003e recipientOptions = 6; // type =\u003e options,type为recipient或者group\n\n\n\tmessage RecipientOption {\n\t\tint64 messageRecipientId = 1;\n\t\tint64 messageRecipientGroupId = 2;\n\t}\n\n\n\tmessage RecipientOptions {\n\t\trepeated RecipientOption recipientOptions = 1;\n\t}\n}",
       "doc": "修改接收者"
     },
     {
@@ -23009,7 +23009,7 @@
     },
     {
       "name": "UpdateNSClusterRequest",
-      "code": "message UpdateNSClusterRequest {\n\tint64 nsClusterId = 1;\n\tstring name = 2;\n\tbool isOn = 3;\n\trepeated string hosts = 4;\n\tstring email = 8;\n\tbool autoRemoteStart = 5;\n\tstring timeZone = 6;\n\tbool detectAgents = 7;\n\tbool checkingPorts = 9; // 是否检查端口连通性（目前仅在节点列表上）\n}",
+      "code": "message UpdateNSClusterRequest {\n\tint64 nsClusterId = 1;\n\tstring name = 2;\n\tbool isOn = 3;\n\trepeated string hosts = 4;\n\tstring email = 8;\n\tbool autoRemoteStart = 5;\n\tstring timeZone = 6;\n\tbool detectAgents = 7;\n\tbool checkingPorts = 9; // 是否检查端口连通性(目前仅在节点列表上)\n}",
       "doc": "修改集群"
     },
     {
@@ -23045,7 +23045,7 @@
     {
       "name": "UpdateNSDomainRequest",
       "code": "message UpdateNSDomainRequest {\n\tint64 nsDomainId = 1;\n\tint64 nsClusterId = 2;\n\tint64 userId = 3;\n\trepeated int64 nsDomainGroupIds = 5; // 域名分组ID\n\tbool isOn = 4;\n}",
-      "doc": "修改域名\n注意：名称不允许修改"
+      "doc": "修改域名\n注意:名称不允许修改"
     },
     {
       "name": "UpdateNSDomainStatusRequest",
@@ -23309,7 +23309,7 @@
     },
     {
       "name": "UpdateNodeIPAddressRequest",
-      "code": "message UpdateNodeIPAddressRequest {\n\tint64 nodeIPAddressId = 1; // IP地址ID\n\tstring name = 2;\n\tstring ip = 3;\n\tbool canAccess = 4; // 是否能够访问\n\tbool isOn = 5; // 是否启用\n\tbool isUp = 6; // 是否上线\n\trepeated int64 clusterIds = 7; // 可选项，所属集群ID列表，如果没有指定，则表示应用于节点所属的所有集群\n}",
+      "code": "message UpdateNodeIPAddressRequest {\n\tint64 nodeIPAddressId = 1; // IP地址ID\n\tstring name = 2;\n\tstring ip = 3;\n\tbool canAccess = 4; // 是否能够访问\n\tbool isOn = 5; // 是否启用\n\tbool isUp = 6; // 是否上线\n\trepeated int64 clusterIds = 7; // 可选项,所属集群ID列表,如果没有指定,则表示应用于节点所属的所有集群\n}",
       "doc": "修改IP地址"
     },
     {
@@ -23369,7 +23369,7 @@
     },
     {
       "name": "UpdateNodeScheduleInfoRequest",
-      "code": "message UpdateNodeScheduleInfoRequest {\n\tint64 nodeId = 1; // 节点ID\n\tstring offlineDay = 2; // 下线日期，格式YYYYMMDD\n\tbool isBackupForCluster = 3; // 是否为集群备份节点\n\tbool isBackupForGroup = 4; // 是否为分组备份节点\n\trepeated string backupIPs = 5; // 备用IP\n}",
+      "code": "message UpdateNodeScheduleInfoRequest {\n\tint64 nodeId = 1; // 节点ID\n\tstring offlineDay = 2; // 下线日期,格式YYYYMMDD\n\tbool isBackupForCluster = 3; // 是否为集群备份节点\n\tbool isBackupForGroup = 4; // 是否为分组备份节点\n\trepeated string backupIPs = 5; // 备用IP\n}",
       "doc": "修改节点调度信息"
     },
     {
@@ -23409,12 +23409,12 @@
     },
     {
       "name": "UpdateOriginRequest",
-      "code": "message UpdateOriginRequest {\n\tint64 originId = 1; // 源站ID\n\tstring name = 2; // 可选项\n\tNetworkAddress addr = 3; // 源站网络地址\n\tbytes ossJSON = 16; // OSS配置信息，源站网络地址中protocol为oss:开头时需要设置此项\n\tstring description = 4; // 可选项\n\tint32 weight = 5; // 权重，不小于0，一般设置为10\n\tbool isOn = 6; // 是否启用\n\tbytes connTimeoutJSON = 7; // 可选项\n\tbytes readTimeoutJSON = 8; // 可选项\n\tbytes idleTimeoutJSON = 9; // 可选项\n\tint32 maxConns = 10; // 可选项\n\tint32 maxIdleConns = 11; // 可选项\n\trepeated string domains = 12; // 可选项\n\tbytes certRefJSON = 13; // 可选项\n\tstring host = 14; // 可选项\n\tbool followPort = 15; // 可选项\n\tbool http2Enabled = 17; // 可选项，是否支持HTTP/2，只在HTTPS源站时生效\n}",
+      "code": "message UpdateOriginRequest {\n\tint64 originId = 1; // 源站ID\n\tstring name = 2; // 可选项\n\tNetworkAddress addr = 3; // 源站网络地址\n\tbytes ossJSON = 16; // OSS配置信息,源站网络地址中protocol为oss:开头时需要设置此项\n\tstring description = 4; // 可选项\n\tint32 weight = 5; // 权重,不小于0,一般设置为10\n\tbool isOn = 6; // 是否启用\n\tbytes connTimeoutJSON = 7; // 可选项\n\tbytes readTimeoutJSON = 8; // 可选项\n\tbytes idleTimeoutJSON = 9; // 可选项\n\tint32 maxConns = 10; // 可选项\n\tint32 maxIdleConns = 11; // 可选项\n\trepeated string domains = 12; // 可选项\n\tbytes certRefJSON = 13; // 可选项\n\tstring host = 14; // 可选项\n\tbool followPort = 15; // 可选项\n\tbool http2Enabled = 17; // 可选项,是否支持HTTP/2,只在HTTPS源站时生效\n}",
       "doc": "修改源站"
     },
     {
       "name": "UpdatePlanRequest",
-      "code": "message UpdatePlanRequest {\n\tint64 planId = 1; // 套餐ID\n\tstring name = 2; // 套餐名称\n\tstring description = 21; // 套餐简介\n\tbool isOn = 3; // 是否启用\n\tint64 clusterId = 4; // 集群ID\n\tbytes trafficLimitJSON = 5; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 22; // 单节点带宽限制\n\tbool hasFullFeatures = 20; // 是否有所有权限\n\tbytes featuresJSON = 6; // 权限列表，[code1, code2, ...]\n\tstring priceType = 7; // 价格类型：traffic, bandwidth, period\n\tbytes trafficPriceJSON = 8; // 流量价格配置\n\tbytes bandwidthPriceJSON = 12; // 带宽价格配置\n\tfloat monthlyPrice = 9; // 月费用\n\tfloat seasonallyPrice = 10; // 季度费用\n\tfloat yearlyPrice = 11; // 年度费用\n\tint32 totalServers = 13; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 14; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 15; // 可以添加的域名总数\n\tint64 dailyRequests = 16; // 每日访问量额度\n\tint64 monthlyRequests = 17; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 18; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 19; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 23; // 文件最大上传尺寸 @link json:size_capacity\n}",
+      "code": "message UpdatePlanRequest {\n\tint64 planId = 1; // 套餐ID\n\tstring name = 2; // 套餐名称\n\tstring description = 21; // 套餐简介\n\tbool isOn = 3; // 是否启用\n\tint64 clusterId = 4; // 集群ID\n\tbytes trafficLimitJSON = 5; // 流量限制\n\tbytes bandwidthLimitPerNodeJSON = 22; // 单节点带宽限制\n\tbool hasFullFeatures = 20; // 是否有所有权限\n\tbytes featuresJSON = 6; // 权限列表,[code1, code2, ...]\n\tstring priceType = 7; // 价格类型:traffic, bandwidth, period\n\tbytes trafficPriceJSON = 8; // 流量价格配置\n\tbytes bandwidthPriceJSON = 12; // 带宽价格配置\n\tfloat monthlyPrice = 9; // 月费用\n\tfloat seasonallyPrice = 10; // 季度费用\n\tfloat yearlyPrice = 11; // 年度费用\n\tint32 totalServers = 13; // 可以添加的网站数\n\tint32 totalServerNamesPerServer = 14; // 每个网站可以添加的域名数\n\tint32 totalServerNames = 15; // 可以添加的域名总数\n\tint64 dailyRequests = 16; // 每日访问量额度\n\tint64 monthlyRequests = 17; // 每月访问量额度\n\tint64 dailyWebsocketConnections = 18; // 每日Websocket连接数额度\n\tint64 monthlyWebsocketConnections = 19; // 每月Websocket连接数额度\n\tbytes maxUploadSizeJSON = 23; // 文件最大上传尺寸 @link json:size_capacity\n}",
       "doc": "修改套餐"
     },
     {
@@ -23424,7 +23424,7 @@
     },
     {
       "name": "UpdatePostRequest",
-      "code": "message UpdatePostRequest {\n\tint64 postId = 1; // 文章ID\n\tint64 postCategoryId = 2; // 文章分类ID\n\tstring productCode = 3; // 产品代号\n\tstring subject = 4; // 标题\n\tstring type = 5; // 类型：normal, url\n\tstring url = 6; // 跳转的URL（type=url）\n\tstring body = 7; // 文章内容（type=normal）\n}",
+      "code": "message UpdatePostRequest {\n\tint64 postId = 1; // 文章ID\n\tint64 postCategoryId = 2; // 文章分类ID\n\tstring productCode = 3; // 产品代号\n\tstring subject = 4; // 标题\n\tstring type = 5; // 类型:normal, url\n\tstring url = 6; // 跳转的URL(type=url)\n\tstring body = 7; // 文章内容(type=normal)\n}",
       "doc": "修改文章"
     },
     {
@@ -23489,7 +23489,7 @@
     },
     {
       "name": "UpdateReverseProxyRequest",
-      "code": "message UpdateReverseProxyRequest {\n\tint64 reverseProxyId = 1; // 反向代理ID\n\tint32 requestHostType = 6; // 可选参数，回源主机名类型：0 跟随CDN域名，1跟随源站，2自定义\n\tstring requestHost = 2; // 可选参数，自定义回源主机名\n\tbool requestHostExcludingPort = 15; // 可选参数，回源主机名中去除端口\n\tstring requestURI = 3; // 可选参数，请求URI\n\tstring stripPrefix = 4; // 可选参数，去除URI前缀\n\tbool autoFlush = 5; // 可选参数，自动刷新\n\trepeated string addHeaders = 7; // 可选参数，可以添加的请求报头\n\tbytes connTimeoutJSON = 8; // 可选参数，连接超时时间\n\tbytes readTimeoutJSON = 9; // 可选参数，读取超时时间\n\tbytes idleTimeoutJSON = 10; // 可选参数，空闲连接超时时间\n\tint32 maxConns = 11; // 可选参数，最大连接数\n\tint32 maxIdleConns = 12; // 可选参数，最大空闲连接数\n\tbytes proxyProtocolJSON = 13; // 可选参数，PROXY Protocol设置\n\tbool followRedirects = 14; // 可选参数，跳转跟随\n\tbool retry50X = 16; // 可选参数，是否启用50X重试\n\tbool retry40X = 17; // 可选参数，是否启用40X重试\n}",
+      "code": "message UpdateReverseProxyRequest {\n\tint64 reverseProxyId = 1; // 反向代理ID\n\tint32 requestHostType = 6; // 可选参数,回源主机名类型:0 跟随CDN域名,1跟随源站,2自定义\n\tstring requestHost = 2; // 可选参数,自定义回源主机名\n\tbool requestHostExcludingPort = 15; // 可选参数,回源主机名中去除端口\n\tstring requestURI = 3; // 可选参数,请求URI\n\tstring stripPrefix = 4; // 可选参数,去除URI前缀\n\tbool autoFlush = 5; // 可选参数,自动刷新\n\trepeated string addHeaders = 7; // 可选参数,可以添加的请求报头\n\tbytes connTimeoutJSON = 8; // 可选参数,连接超时时间\n\tbytes readTimeoutJSON = 9; // 可选参数,读取超时时间\n\tbytes idleTimeoutJSON = 10; // 可选参数,空闲连接超时时间\n\tint32 maxConns = 11; // 可选参数,最大连接数\n\tint32 maxIdleConns = 12; // 可选参数,最大空闲连接数\n\tbytes proxyProtocolJSON = 13; // 可选参数,PROXY Protocol设置\n\tbool followRedirects = 14; // 可选参数,跳转跟随\n\tbool retry50X = 16; // 可选参数,是否启用50X重试\n\tbool retry40X = 17; // 可选参数,是否启用40X重试\n}",
       "doc": "修改反向代理设置"
     },
     {
@@ -23504,7 +23504,7 @@
     },
     {
       "name": "UpdateSSLPolicyRequest",
-      "code": "message UpdateSSLPolicyRequest {\n\tint64 sslPolicyId = 1; // 策略ID\n\tbool http2Enabled = 2; // 可选项，是否启用HTTP/2\n\tbool http3Enabled = 11; // 可选项，是否启用HTTP/3（在满足条件的基础上）\n\tstring minVersion = 3; // 支持的最低SSL版本，可选择值： SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3\n\tbytes sslCertsJSON = 4; // 关联的证书信息 @link json:ssl_cert_refs\n\tbytes hstsJSON = 5; // 可选项，HSTS配置 @link json:hsts\n\tint32 clientAuthType = 6; // 可选项，客户端校验类型：0 无需证书，1 需要客户端证书，2 需要任一客户端证书，3 如果客户端上传了证书才校验，4 需要客户端证书而且需要校验\n\tbytes clientCACertsJSON = 7; // 可选项，CA证书内容\n\trepeated string cipherSuites = 8; // 可选项，自定义加密套件\n\tbool cipherSuitesIsOn = 9; // 可选项，是否启用自定义加密套件\n\tbool ocspIsOn = 10; // 可选项，是否启用OCSP\n}",
+      "code": "message UpdateSSLPolicyRequest {\n\tint64 sslPolicyId = 1; // 策略ID\n\tbool http2Enabled = 2; // 可选项,是否启用HTTP/2\n\tbool http3Enabled = 11; // 可选项,是否启用HTTP/3(在满足条件的基础上)\n\tstring minVersion = 3; // 支持的最低SSL版本,可选择值: SSL 3.0, TLS 1.0, TLS 1.1, TLS 1.2, TLS 1.3\n\tbytes sslCertsJSON = 4; // 关联的证书信息 @link json:ssl_cert_refs\n\tbytes hstsJSON = 5; // 可选项,HSTS配置 @link json:hsts\n\tint32 clientAuthType = 6; // 可选项,客户端校验类型:0 无需证书,1 需要客户端证书,2 需要任一客户端证书,3 如果客户端上传了证书才校验,4 需要客户端证书而且需要校验\n\tbytes clientCACertsJSON = 7; // 可选项,CA证书内容\n\trepeated string cipherSuites = 8; // 可选项,自定义加密套件\n\tbool cipherSuitesIsOn = 9; // 可选项,是否启用自定义加密套件\n\tbool ocspIsOn = 10; // 可选项,是否启用OCSP\n}",
       "doc": "修改策略"
     },
     {
@@ -23514,7 +23514,7 @@
     },
     {
       "name": "UpdateServerBasicRequest",
-      "code": "message UpdateServerBasicRequest {\n\tint64 serverId = 1; // 网站ID\n\tstring name = 2; // 网站名称\n\tstring description = 3; // 可选项，网站描述\n\tint64 nodeClusterId = 4; // 集群ID\n\tbool keepOldConfigs = 7; // 可选项，是否在老节点上保留一段时间配置\n\tbool isOn = 5; // 是否启用\n\trepeated int64 serverGroupIds = 6; // 可选项，网站分组ID列表\n}",
+      "code": "message UpdateServerBasicRequest {\n\tint64 serverId = 1; // 网站ID\n\tstring name = 2; // 网站名称\n\tstring description = 3; // 可选项,网站描述\n\tint64 nodeClusterId = 4; // 集群ID\n\tbool keepOldConfigs = 7; // 可选项,是否在老节点上保留一段时间配置\n\tbool isOn = 5; // 是否启用\n\trepeated int64 serverGroupIds = 6; // 可选项,网站分组ID列表\n}",
       "doc": "修改网站基本信息"
     },
     {
@@ -23559,12 +23559,12 @@
     },
     {
       "name": "UpdateServerHTTPRequest",
-      "code": "message UpdateServerHTTPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes httpJSON = 2; // HTTP协议设置，当type为httpProxy或者httpWeb时填写 @link json:http_protocol\n}",
+      "code": "message UpdateServerHTTPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes httpJSON = 2; // HTTP协议设置,当type为httpProxy或者httpWeb时填写 @link json:http_protocol\n}",
       "doc": "修改网站的HTTP等设置"
     },
     {
       "name": "UpdateServerHTTPSRequest",
-      "code": "message UpdateServerHTTPSRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes httpsJSON = 2; // HTTPS协议设置，当type为httpProxy或者httpWeb时填写 @link json:https_protocol\n}",
+      "code": "message UpdateServerHTTPSRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes httpsJSON = 2; // HTTPS协议设置,当type为httpProxy或者httpWeb时填写 @link json:https_protocol\n}",
       "doc": ""
     },
     {
@@ -23589,17 +23589,17 @@
     },
     {
       "name": "UpdateServerReverseProxyRequest",
-      "code": "message UpdateServerReverseProxyRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes reverseProxyJSON = 2; // 反向代理（包含源站）配置引用，此项可以在创建网站后再设置 @link json:reverse_proxy_ref\n}",
+      "code": "message UpdateServerReverseProxyRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes reverseProxyJSON = 2; // 反向代理(包含源站)配置引用,此项可以在创建网站后再设置 @link json:reverse_proxy_ref\n}",
       "doc": "修改网站的反向代理设置"
     },
     {
       "name": "UpdateServerTCPRequest",
-      "code": "message UpdateServerTCPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes tcpJSON = 2; // TCP协议设置，当type为tcpProxy时填写 @link json:tcp_protocol\n}",
+      "code": "message UpdateServerTCPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes tcpJSON = 2; // TCP协议设置,当type为tcpProxy时填写 @link json:tcp_protocol\n}",
       "doc": ""
     },
     {
       "name": "UpdateServerTLSRequest",
-      "code": "message UpdateServerTLSRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes tlsJSON = 2; // TLS协议设置，当type为tcpProxy时填写 @link json:tls_protocol\n}",
+      "code": "message UpdateServerTLSRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes tlsJSON = 2; // TLS协议设置,当type为tcpProxy时填写 @link json:tls_protocol\n}",
       "doc": ""
     },
     {
@@ -23610,11 +23610,11 @@
     {
       "name": "UpdateServerUAMRequest",
       "code": "message UpdateServerUAMRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes uamJSON = 2;\n}",
-      "doc": "修改网站UAM（5秒盾）设置"
+      "doc": "修改网站UAM(5秒盾)设置"
     },
     {
       "name": "UpdateServerUDPRequest",
-      "code": "message UpdateServerUDPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes udpJSON = 2; // UDP协议设置，当type为udpProxy时填写 @link json:udp_protocol\n}",
+      "code": "message UpdateServerUDPRequest {\n\tint64 serverId = 1; // 网站ID\n\tbytes udpJSON = 2; // UDP协议设置,当type为udpProxy时填写 @link json:udp_protocol\n}",
       "doc": ""
     },
     {
@@ -23664,7 +23664,7 @@
     },
     {
       "name": "UpdateUserAccountRequest",
-      "code": "message UpdateUserAccountRequest {\n\tint64 userAccountId = 1; // 用户账户ID（非用户ID）\n\tdouble delta = 2; // 操作的数值，正值表示增加，负值表示减少\n\tstring eventType = 3; // 事件类型：charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage\n\tstring description = 4; // 描述\n\tbytes paramsJSON = 5; // 相关参数\n}",
+      "code": "message UpdateUserAccountRequest {\n\tint64 userAccountId = 1; // 用户账户ID(非用户ID)\n\tdouble delta = 2; // 操作的数值,正值表示增加,负值表示减少\n\tstring eventType = 3; // 事件类型:charge, award, buyPlan, payBill, refund, withdraw, buyNSPlan, buyTrafficPackage, buyAntiDDoSPackage, renewAntiDDoSPackage\n\tstring description = 4; // 描述\n\tbytes paramsJSON = 5; // 相关参数\n}",
       "doc": "修改用户账户"
     },
     {
@@ -23784,7 +23784,7 @@
     },
     {
       "name": "UserADInstance",
-      "code": "message UserADInstance {\n\tint64 id = 1;\n\tint64 userId = 2;\n\tint64 adPackageInstanceId = 3;\n\tint64 adPackagePeriodId = 4;\n\tint32 adPackagePeriodCount = 5;\n\tstring adPackagePeriodUnit = 6;\n\tstring dayFrom = 7; // 开始日期，格式：YYYYMMDD\n\tstring dayTo = 8; // 结束日期，格式：YYYYMMDD\n\tint64 createdAt = 9;\n\tint32 maxObjects = 10;\n\trepeated string objectCodes = 11;\n\n\tADPackageInstance adPackageInstance = 30;\n\tUser user = 31;\n\tbool canDelete = 32;\n\tbool isAvailable = 33; // 当前是否在生效中\n\tint32 countObjects = 34; // 防护对象数量\n\tbytes objectsJSON = 35; // 对象JSON\n}",
+      "code": "message UserADInstance {\n\tint64 id = 1;\n\tint64 userId = 2;\n\tint64 adPackageInstanceId = 3;\n\tint64 adPackagePeriodId = 4;\n\tint32 adPackagePeriodCount = 5;\n\tstring adPackagePeriodUnit = 6;\n\tstring dayFrom = 7; // 开始日期,格式:YYYYMMDD\n\tstring dayTo = 8; // 结束日期,格式:YYYYMMDD\n\tint64 createdAt = 9;\n\tint32 maxObjects = 10;\n\trepeated string objectCodes = 11;\n\n\tADPackageInstance adPackageInstance = 30;\n\tUser user = 31;\n\tbool canDelete = 32;\n\tbool isAvailable = 33; // 当前是否在生效中\n\tint32 countObjects = 34; // 防护对象数量\n\tbytes objectsJSON = 35; // 对象JSON\n}",
       "doc": "高防实例"
     },
     {
@@ -23819,7 +23819,7 @@
     },
     {
       "name": "UserEmailVerification",
-      "code": "message UserEmailVerification {\n\tint64 id = 1;\n\tstring email = 2; // Email\n\tint64 userId = 3; // 用户ID\n\tstring code = 4; // 代号\n\tint64 createdAt = 5; // 创建时间\n\tbool isSent = 6; // 已发送\n\tbool isVerified = 7; // 已激活\n\tint64 expiresAt = 8; // 过期时间，动态计算而来\n}",
+      "code": "message UserEmailVerification {\n\tint64 id = 1;\n\tstring email = 2; // Email\n\tint64 userId = 3; // 用户ID\n\tstring code = 4; // 代号\n\tint64 createdAt = 5; // 创建时间\n\tbool isSent = 6; // 已发送\n\tbool isVerified = 7; // 已激活\n\tint64 expiresAt = 8; // 过期时间,动态计算而来\n}",
       "doc": "电子邮箱认证"
     },
     {
@@ -23834,7 +23834,7 @@
     },
     {
       "name": "UserMobileVerification",
-      "code": "message UserMobileVerification {\n\tint64 id = 1; // ID\n\tstring mobile = 2; // 手机号码\n\tint64 userId = 3; // 用户ID\n\tstring code = 4; // 代号\n\tint64 createdAt = 5; // 创建时间\n\tbool isSent = 6; // 已发送\n\tbool isVerified = 7; // 已激活\n\tint64 expiresAt = 8; // 过期时间，动态计算而来\n}",
+      "code": "message UserMobileVerification {\n\tint64 id = 1; // ID\n\tstring mobile = 2; // 手机号码\n\tint64 userId = 3; // 用户ID\n\tstring code = 4; // 代号\n\tint64 createdAt = 5; // 创建时间\n\tbool isSent = 6; // 已发送\n\tbool isVerified = 7; // 已激活\n\tint64 expiresAt = 8; // 过期时间,动态计算而来\n}",
       "doc": "手机号码认证"
     },
     {
@@ -23849,7 +23849,7 @@
     },
     {
       "name": "UserPlan",
-      "code": "message UserPlan {\n\tint64 id = 1; // 套餐ID\n\tint64 userId = 2; // 用户ID\n\tint64 planId = 3; // 套餐定义ID\n\tbool isOn = 4; // 是否启用\n\tstring dayTo = 5; // 到期日期Y-m-d\n\tstring name = 6; // 自定义备注名称\n\n\tUser user = 30; // 用户信息\n\tPlan plan = 31; // 套餐定义信息\n\trepeated Server servers = 33; // 绑定的网站列表\n\n\tServer server = 32 [deprecated = true]; // 绑定的网站，已过期，使用 servers 代替\n}",
+      "code": "message UserPlan {\n\tint64 id = 1; // 套餐ID\n\tint64 userId = 2; // 用户ID\n\tint64 planId = 3; // 套餐定义ID\n\tbool isOn = 4; // 是否启用\n\tstring dayTo = 5; // 到期日期Y-m-d\n\tstring name = 6; // 自定义备注名称\n\n\tUser user = 30; // 用户信息\n\tPlan plan = 31; // 套餐定义信息\n\trepeated Server servers = 33; // 绑定的网站列表\n\n\tServer server = 32 [deprecated = true]; // 绑定的网站,已过期,使用 servers 代替\n}",
       "doc": ""
     },
     {
@@ -23894,7 +23894,7 @@
     },
     {
       "name": "ValidateUserVerifyCodeRequest",
-      "code": "message ValidateUserVerifyCodeRequest {\n\tstring type = 1; // 类型：重置密码（resetPassword）\n\tstring email = 2; // 已验证邮箱地址\n\tstring mobile = 3; // 已验证手机号\n\tstring code = 4; // 验证码\n\n\t// 找回密码\n\tstring newPassword = 10; // 新密码\n}",
+      "code": "message ValidateUserVerifyCodeRequest {\n\tstring type = 1; // 类型:重置密码(resetPassword)\n\tstring email = 2; // 已验证邮箱地址\n\tstring mobile = 3; // 已验证手机号\n\tstring code = 4; // 验证码\n\n\t// 找回密码\n\tstring newPassword = 10; // 新密码\n}",
       "doc": "校验验证码"
     },
     {
@@ -23919,7 +23919,7 @@
     },
     {
       "name": "VerifyUserEmailResponse",
-      "code": "message VerifyUserEmailResponse {\n\tint64 userId = 1; // 邮箱对应的用户ID\n\tstring email = 2; // 邮箱地址\n\tstring errorCode = 3; // 错误代号，如果为空，说明没有错误\n\tstring errorMessage = 4; // 错误信息\n}",
+      "code": "message VerifyUserEmailResponse {\n\tint64 userId = 1; // 邮箱对应的用户ID\n\tstring email = 2; // 邮箱地址\n\tstring errorCode = 3; // 错误代号,如果为空,说明没有错误\n\tstring errorMessage = 4; // 错误信息\n}",
       "doc": ""
     },
     {
@@ -23934,7 +23934,7 @@
     },
     {
       "name": "VerifyUserMobileResponse",
-      "code": "message VerifyUserMobileResponse {\n\tint64 userId = 1; // 手机号码对应的用户ID\n\tstring mobile = 2; // 手机号码\n\tstring errorCode = 3; // 错误代号，如果为空，说明没有错误\n\tstring errorMessage = 4; // 错误信息\n}",
+      "code": "message VerifyUserMobileResponse {\n\tint64 userId = 1; // 手机号码对应的用户ID\n\tstring mobile = 2; // 手机号码\n\tstring errorCode = 3; // 错误代号,如果为空,说明没有错误\n\tstring errorMessage = 4; // 错误信息\n}",
       "doc": ""
     },
     {
@@ -23956,31 +23956,31 @@
   "links": [
     {
       "name": "json:bit_size_capacity",
-      "content": "# 比特位尺寸\n## 定义\n~~~json\n{\n  \"count\": \"数量\",\n  \"unit\": \"单位\"\n}\n~~~\n\n其中：\n* `数量` - 必须是一个整数数字\n* `单位` - 有以下几个值：\n  * `b` - 比特\n  * `kb` - Kb\n  * `mb` - Mb\n  * `gb` - Gb\n  * `tb` - Tb\n  * `pb` - Pb\n  * `eb` - Eb\n\n## 示例\n100Mb：\n~~~\n{\n  \"count\": 100,\n  \"unit\": \"mb\"\n}\n~~~\n\n\n32Gb：\n~~~\n{\n  \"count\": 32,\n  \"unit\": \"gb\"\n}\n~~~"
+      "content": "# 比特位尺寸\n## 定义\n~~~json\n{\n  \"count\": \"数量\",\n  \"unit\": \"单位\"\n}\n~~~\n\n其中:\n* `数量` - 必须是一个整数数字\n* `单位` - 有以下几个值:\n  * `b` - 比特\n  * `kb` - Kb\n  * `mb` - Mb\n  * `gb` - Gb\n  * `tb` - Tb\n  * `pb` - Pb\n  * `eb` - Eb\n\n## 示例\n100Mb:\n~~~\n{\n  \"count\": 100,\n  \"unit\": \"mb\"\n}\n~~~\n\n\n32Gb:\n~~~\n{\n  \"count\": 32,\n  \"unit\": \"gb\"\n}\n~~~"
     },
     {
       "name": "json:hsts",
-      "content": "# HSTS\n\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用\",\n  \"maxAge\": \"最大有效期，单位秒\",\n  \"includeSubDomains\": \"可选项，是否包含子域名\",\n  \"preload\": \"可选项，是否预加载\",\n  \"domains\": [\"可选项，支持的域名1\", \"可选项，支持的域名2\" ...]\n}\n~~~\n\n其中：\n* `maxAge` 可以填写一天（86400秒）或者更长时间\n* 如果不填写 `domains` 则支持所有域名\n\n## 示例\n### 不限制任何域名\n~~~json\n{\n  \"isOn\": true,\n  \"maxAge\": 86400,\n  \"includeSubDomains\":false, \n  \"preload\":false,\n  \"domains\":[]\n}\n~~~\n\n### 限制域名\n~~~json\n{\n  \"isOn\": true,\n  \"maxAge\": 86400,\n  \"includeSubDomains\":false, \n  \"preload\":false,\n  \"domains\":[\"example.com\", \"www.example.com\"]\n}\n~~~"
+      "content": "# HSTS\n\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用\",\n  \"maxAge\": \"最大有效期,单位秒\",\n  \"includeSubDomains\": \"可选项,是否包含子域名\",\n  \"preload\": \"可选项,是否预加载\",\n  \"domains\": [\"可选项,支持的域名1\", \"可选项,支持的域名2\" ...]\n}\n~~~\n\n其中:\n* `maxAge` 可以填写一天(86400秒)或者更长时间\n* 如果不填写 `domains` 则支持所有域名\n\n## 示例\n### 不限制任何域名\n~~~json\n{\n  \"isOn\": true,\n  \"maxAge\": 86400,\n  \"includeSubDomains\":false, \n  \"preload\":false,\n  \"domains\":[]\n}\n~~~\n\n### 限制域名\n~~~json\n{\n  \"isOn\": true,\n  \"maxAge\": 86400,\n  \"includeSubDomains\":false, \n  \"preload\":false,\n  \"domains\":[\"example.com\", \"www.example.com\"]\n}\n~~~"
     },
     {
       "name": "json:http_access_log_ref",
-      "content": "# 访问日志引用\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖父级应用\",\n  \"isOn\": \"是否启用配置\",\n  \"fields\": [\"字段1\", \"字段2\", ...] // 可以留空\n  \"status1\": \"是否启用状态1xx\",\n  \"status2\": \"是否启用状态2xx\",\n  \"status3\": \"是否启用状态3xx\",\n  \"status4\": \"是否启用状态4xx\",\n  \"status5\": \"是否启用状态5xx\",\n  \"enableClientClosed\": \"是否记录客户端关闭事件\",\n  \"firewallOnly\": \"是否只记录防火墙（WAF）相关日志\"\n}\n~~~\n\n### 字段值\n* `1` - 请求Header\n* `2` - 响应Header\n* `3` - 请求URL参数\n* `4` - Cookie\n* `5` - 扩展信息\n* `6` - Referer\n* `7` - UserAgent\n* `8` - 请求Body\n* `9` - 响应Body（目前不支持）\n\n## 示例\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"fields\": [],\n  \"status1\": true,\n  \"status2\": true,\n  \"status3\": true,\n  \"status4\": true,\n  \"status5\": true,\n  \"enableClientClosed\": true,\n  \"firewallOnly\": true\n}\n~~~"
+      "content": "# 访问日志引用\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖父级应用\",\n  \"isOn\": \"是否启用配置\",\n  \"fields\": [\"字段1\", \"字段2\", ...] // 可以留空\n  \"status1\": \"是否启用状态1xx\",\n  \"status2\": \"是否启用状态2xx\",\n  \"status3\": \"是否启用状态3xx\",\n  \"status4\": \"是否启用状态4xx\",\n  \"status5\": \"是否启用状态5xx\",\n  \"enableClientClosed\": \"是否记录客户端关闭事件\",\n  \"firewallOnly\": \"是否只记录防火墙(WAF)相关日志\"\n}\n~~~\n\n### 字段值\n* `1` - 请求Header\n* `2` - 响应Header\n* `3` - 请求URL参数\n* `4` - Cookie\n* `5` - 扩展信息\n* `6` - Referer\n* `7` - UserAgent\n* `8` - 请求Body\n* `9` - 响应Body(目前不支持)\n\n## 示例\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"fields\": [],\n  \"status1\": true,\n  \"status2\": true,\n  \"status3\": true,\n  \"status4\": true,\n  \"status5\": true,\n  \"enableClientClosed\": true,\n  \"firewallOnly\": true\n}\n~~~"
     },
     {
       "name": "json:http_cache_config",
-      "content": "# HTTP缓存配置\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖上级配置\",\n  \"isOn\": \"是否启用配置\",\n  \"addStatusHeader\": \"是否增加命中状态Header（X-Cache）\",\n  \"addAgeHeader\": \"是否增加Age Header\",\n  \"enableCacheControlMaxAge\": \"是否支持Cache-Control: max-age=...\",\n  \"disablePolicyRefs\": \"是否停用策略中定义的条件\",\n  \"purgeIsOn\": \"是否允许使用Purge方法清理\",\n  \"purgeKey\": \"Purge时使用的X-Edge-Purge-Key\",\n  \"stale\": \"陈旧缓存使用策略\",\n  \"key\": \"主域名配置\",\n  \"cacheRefs\": [\"缓存条件1\", \"缓存条件2\", ...]\n}\n~~~\n其中：\n* `缓存条件` - 参考 {json:http_cache_ref}\n* `主域名配置` 参考本文“主域名”配置部分\n\n## 示例\n### 无缓存条件\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"addStatusHeader\": true,\n  \"addAgeHeader\": true,\n  \"enableCacheControlMaxAge\": true,\n  \"disablePolicyRefs\": false,\n  \"purgeIsOn\": false,\n  \"purgeKey\": \"\",\n  \"stale\": null,\n  \"cacheRefs\": []\n}\n~~~\n\n### 加入缓存条件\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"addStatusHeader\": true,\n  \"addAgeHeader\": true,\n  \"enableCacheControlMaxAge\": true,\n  \"disablePolicyRefs\": false,\n  \"purgeIsOn\": false,\n  \"purgeKey\": \"\",\n  \"stale\": null,\n  \"cacheRefs\": [\n    {\n\t  \"id\": 0,\n\t  \"isOn\": true,\n\t  \"key\": \"${scheme}://${host}${requestPath}${isArgs}${args}\",\n\t  \"life\": {\"count\": 2, \"unit\": \"hour\"},\n\t  \"status\": [200],\n      \"maxSize\": {\"count\": 32, \"unit\": \"mb\"},\n      \"minSize\": {\"count\": 0, \"unit\": \"kb\"},\n      \"skipCacheControlValues\": [\"private\", \"no-cache\", \"no-store\"],\n      \"skipSetCookie\": true,\n      \"enableRequestCachePragma\": false,\n      \"conds\": {\n        \"isOn\": true,\n        \"connector\": \"or\",\n        \"groups\": [\n          {\n            \"isOn\": true,\n            \"connector\": \"and\",\n            \"conds\": [\n              {\n                \"type\": \"url-extension\",\n                \"isRequest\": true,\n                \"param\": \"${requestPathLowerExtension}\",\n                \"operator\": \"in\",\n                \"value\": \"[\\\".css\\\",\\\".png\\\",\\\".js\\\",\\\".woff2\\\"]\",\n                \"isReverse\": false,\n                \"isCaseInsensitive\": false,\n                \"typeName\": \"URL扩展名\"\n              }\n            ],\n            \"isReverse\": false,\n            \"description\": \"\"\n          }\n        ]\n      },\n      \"allowChunkedEncoding\": true,\n      \"allowPartialContent\": false,\n      \"isReverse\": false,\n      \"methods\": []\n\t}\n  ]\n}\n~~~\n\n\n## 主域名配置\n~~~json\n{\n  \"isOn\": \"true|false\",\n  \"scheme\": \"https|http\",\n  \"host\": \"域名，必须是当前网站已绑定的域名\"\n}\n~~~\n\n### 示例\n#### 不使用主域名\n~~~json\n{\n  \"isOn\": false\n}\n~~~\n\n#### 使用主域名\n~~~json\n{\n  \"isOn\": true,\n  \"scheme\": \"https\",\n  \"host\": \"example.com\"\n}\n~~~\n\n如果启用主域名，则缓存键值中的域名会被自动换成主域名，清理缓存的时候也需要使用此主域名。"
+      "content": "# HTTP缓存配置\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖上级配置\",\n  \"isOn\": \"是否启用配置\",\n  \"addStatusHeader\": \"是否增加命中状态Header(X-Cache)\",\n  \"addAgeHeader\": \"是否增加Age Header\",\n  \"enableCacheControlMaxAge\": \"是否支持Cache-Control: max-age=...\",\n  \"disablePolicyRefs\": \"是否停用策略中定义的条件\",\n  \"purgeIsOn\": \"是否允许使用Purge方法清理\",\n  \"purgeKey\": \"Purge时使用的X-Edge-Purge-Key\",\n  \"stale\": \"陈旧缓存使用策略\",\n  \"key\": \"主域名配置\",\n  \"cacheRefs\": [\"缓存条件1\", \"缓存条件2\", ...]\n}\n~~~\n其中:\n* `缓存条件` - 参考 {json:http_cache_ref}\n* `主域名配置` 参考本文\"主域名\"配置部分\n\n## 示例\n### 无缓存条件\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"addStatusHeader\": true,\n  \"addAgeHeader\": true,\n  \"enableCacheControlMaxAge\": true,\n  \"disablePolicyRefs\": false,\n  \"purgeIsOn\": false,\n  \"purgeKey\": \"\",\n  \"stale\": null,\n  \"cacheRefs\": []\n}\n~~~\n\n### 加入缓存条件\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"addStatusHeader\": true,\n  \"addAgeHeader\": true,\n  \"enableCacheControlMaxAge\": true,\n  \"disablePolicyRefs\": false,\n  \"purgeIsOn\": false,\n  \"purgeKey\": \"\",\n  \"stale\": null,\n  \"cacheRefs\": [\n    {\n\t  \"id\": 0,\n\t  \"isOn\": true,\n\t  \"key\": \"${scheme}://${host}${requestPath}${isArgs}${args}\",\n\t  \"life\": {\"count\": 2, \"unit\": \"hour\"},\n\t  \"status\": [200],\n      \"maxSize\": {\"count\": 32, \"unit\": \"mb\"},\n      \"minSize\": {\"count\": 0, \"unit\": \"kb\"},\n      \"skipCacheControlValues\": [\"private\", \"no-cache\", \"no-store\"],\n      \"skipSetCookie\": true,\n      \"enableRequestCachePragma\": false,\n      \"conds\": {\n        \"isOn\": true,\n        \"connector\": \"or\",\n        \"groups\": [\n          {\n            \"isOn\": true,\n            \"connector\": \"and\",\n            \"conds\": [\n              {\n                \"type\": \"url-extension\",\n                \"isRequest\": true,\n                \"param\": \"${requestPathLowerExtension}\",\n                \"operator\": \"in\",\n                \"value\": \"[\\\".css\\\",\\\".png\\\",\\\".js\\\",\\\".woff2\\\"]\",\n                \"isReverse\": false,\n                \"isCaseInsensitive\": false,\n                \"typeName\": \"URL扩展名\"\n              }\n            ],\n            \"isReverse\": false,\n            \"description\": \"\"\n          }\n        ]\n      },\n      \"allowChunkedEncoding\": true,\n      \"allowPartialContent\": false,\n      \"isReverse\": false,\n      \"methods\": []\n\t}\n  ]\n}\n~~~\n\n\n## 主域名配置\n~~~json\n{\n  \"isOn\": \"true|false\",\n  \"scheme\": \"https|http\",\n  \"host\": \"域名,必须是当前网站已绑定的域名\"\n}\n~~~\n\n### 示例\n#### 不使用主域名\n~~~json\n{\n  \"isOn\": false\n}\n~~~\n\n#### 使用主域名\n~~~json\n{\n  \"isOn\": true,\n  \"scheme\": \"https\",\n  \"host\": \"example.com\"\n}\n~~~\n\n如果启用主域名,则缓存键值中的域名会被自动换成主域名,清理缓存的时候也需要使用此主域名."
     },
     {
       "name": "json:http_cache_ref",
-      "content": "# 缓存条件设置\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用配置\",\n  \"key\": \"每个缓存的Key规则，里面可以有变量\",\n  \"life\": \"缓存时长\",\n  \"expiresTime\": \"客户端过期时间\",\n  \"status\": [\"缓存的状态码1\", \"缓存的状态码2\", ...],\n  \"minSize\": \"能够缓存的最小尺寸\",\n  \"maxSize\": \"能够缓存的最大尺寸\",\n  \"methods\": [\"支持的请求方法1\", \"支持的请求方法2\", ...],\n  \"skipCacheControlValues\": \"可以跳过的响应的Cache-Control值\",\n  \"skipSetCookie\": \"是否跳过响应的Set-Cookie Header\",\n  \"enableRequestCachePragma\": \"是否支持客户端的Pragma: no-cache\",\n  \"allowChunkedEncoding\": \"是否允许分片内容\",\n  \"allowPartialContent\": \"支持分段内容缓存\",\n  \"conds\": \"请求条件\",\n  \"isReverse\": \"是否为反向条件，反向条件的不缓存\"\n}\n~~~\n\n## 示例\n~~~json\n{\n\t\"isOn\": true,\n\t\"key\": \"${scheme}://${host}${requestURI}\",\n\t\"life\": {\n\t\t\"count\": 1,\n\t\t\"unit\": \"day\"\n\t},\n\t\"expiresTime\": {\n\t\t\"isPrior\": true,\n\t\t\"isOn\": true,\n\t\t\"overwrite\": true,\n\t\t\"autoCalculate\": false,\n\t\t\"duration\": {\n\t\t\t\"count\": 1,\n\t\t\t\"unit\": \"day\"\n\t\t}\n\t},\n\t\"status\": [\n\t\t200\n\t],\n\t\"minSize\": {\n\t\t\"count\": 0,\n\t\t\"unit\": \"kb\"\n\t},\n\t\"maxSize\": {\n\t\t\"count\": 32,\n\t\t\"unit\": \"mb\"\n\t},\n\t\"methods\": [],\n\t\"skipCacheControlValues\": [\n\t\t\"private\",\n\t\t\"no-cache\",\n\t\t\"no-store\"\n\t],\n\t\"skipSetCookie\": true,\n\t\"enableRequestCachePragma\": false,\n\t\"allowChunkedEncoding\": true,\n\t\"allowPartialContent\": false,\n\t\"conds\": {\n\t\t\"isOn\": true,\n\t\t\"connector\": \"or\",\n\t\t\"groups\": [\n\t\t\t{\n\t\t\t\t\"isOn\": true,\n\t\t\t\t\"connector\": \"and\",\n\t\t\t\t\"conds\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url-extension\",\n\t\t\t\t\t\t\"isRequest\": true,\n\t\t\t\t\t\t\"param\": \"${requestPathLowerExtension}\",\n\t\t\t\t\t\t\"operator\": \"in\",\n\t\t\t\t\t\t\"value\": \"[\\\".css\\\",\\\".png\\\",\\\".js\\\",\\\".woff2\\\"]\",\n\t\t\t\t\t\t\"isReverse\": false,\n\t\t\t\t\t\t\"isCaseInsensitive\": false,\n\t\t\t\t\t\t\"typeName\": \"URL扩展名\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"isReverse\": false,\n\t\t\t\t\"description\": \"\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cachePolicy\": null,\n\t\"isReverse\": false,\n\t\"id\": 1\n}\n~~~"
+      "content": "# 缓存条件设置\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用配置\",\n  \"key\": \"每个缓存的Key规则,里面可以有变量\",\n  \"life\": \"缓存时长\",\n  \"expiresTime\": \"客户端过期时间\",\n  \"status\": [\"缓存的状态码1\", \"缓存的状态码2\", ...],\n  \"minSize\": \"能够缓存的最小尺寸\",\n  \"maxSize\": \"能够缓存的最大尺寸\",\n  \"methods\": [\"支持的请求方法1\", \"支持的请求方法2\", ...],\n  \"skipCacheControlValues\": \"可以跳过的响应的Cache-Control值\",\n  \"skipSetCookie\": \"是否跳过响应的Set-Cookie Header\",\n  \"enableRequestCachePragma\": \"是否支持客户端的Pragma: no-cache\",\n  \"allowChunkedEncoding\": \"是否允许分片内容\",\n  \"allowPartialContent\": \"支持分段内容缓存\",\n  \"conds\": \"请求条件\",\n  \"isReverse\": \"是否为反向条件,反向条件的不缓存\"\n}\n~~~\n\n## 示例\n~~~json\n{\n\t\"isOn\": true,\n\t\"key\": \"${scheme}://${host}${requestURI}\",\n\t\"life\": {\n\t\t\"count\": 1,\n\t\t\"unit\": \"day\"\n\t},\n\t\"expiresTime\": {\n\t\t\"isPrior\": true,\n\t\t\"isOn\": true,\n\t\t\"overwrite\": true,\n\t\t\"autoCalculate\": false,\n\t\t\"duration\": {\n\t\t\t\"count\": 1,\n\t\t\t\"unit\": \"day\"\n\t\t}\n\t},\n\t\"status\": [\n\t\t200\n\t],\n\t\"minSize\": {\n\t\t\"count\": 0,\n\t\t\"unit\": \"kb\"\n\t},\n\t\"maxSize\": {\n\t\t\"count\": 32,\n\t\t\"unit\": \"mb\"\n\t},\n\t\"methods\": [],\n\t\"skipCacheControlValues\": [\n\t\t\"private\",\n\t\t\"no-cache\",\n\t\t\"no-store\"\n\t],\n\t\"skipSetCookie\": true,\n\t\"enableRequestCachePragma\": false,\n\t\"allowChunkedEncoding\": true,\n\t\"allowPartialContent\": false,\n\t\"conds\": {\n\t\t\"isOn\": true,\n\t\t\"connector\": \"or\",\n\t\t\"groups\": [\n\t\t\t{\n\t\t\t\t\"isOn\": true,\n\t\t\t\t\"connector\": \"and\",\n\t\t\t\t\"conds\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url-extension\",\n\t\t\t\t\t\t\"isRequest\": true,\n\t\t\t\t\t\t\"param\": \"${requestPathLowerExtension}\",\n\t\t\t\t\t\t\"operator\": \"in\",\n\t\t\t\t\t\t\"value\": \"[\\\".css\\\",\\\".png\\\",\\\".js\\\",\\\".woff2\\\"]\",\n\t\t\t\t\t\t\"isReverse\": false,\n\t\t\t\t\t\t\"isCaseInsensitive\": false,\n\t\t\t\t\t\t\"typeName\": \"URL扩展名\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"isReverse\": false,\n\t\t\t\t\"description\": \"\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cachePolicy\": null,\n\t\"isReverse\": false,\n\t\"id\": 1\n}\n~~~"
     },
     {
       "name": "json:http_firewall_ref",
-      "content": "# HTTP防火墙（即WAF）引用\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖上级配置\",\n  \"isOn\": \"是否启用配置\",\n  \"firewallPolicyId\": \"WAF策略ID\",\n  \"ignoreGlobalRules\": \"是否忽略系统定义的全局规则\",\n  \"defaultCaptchaType\": \"默认人机识别方式，可以选none（不设置）、default（默认）、oneClick（单击验证）、slide（滑动解锁）、geetest（极验）\"\n}\n~~~\n\n## 示例\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"firewallPolicyId\": 123,\n  \"ignoreGlobalRules\": false,\n  \"defaultCaptchaType\": \"none\"\n}\n~~~"
+      "content": "# HTTP防火墙(即WAF)引用\n## 定义\n~~~json\n{\n  \"isPrior\": \"是否覆盖上级配置\",\n  \"isOn\": \"是否启用配置\",\n  \"firewallPolicyId\": \"WAF策略ID\",\n  \"ignoreGlobalRules\": \"是否忽略系统定义的全局规则\",\n  \"defaultCaptchaType\": \"默认人机识别方式,可以选none(不设置),default(默认),oneClick(单击验证),slide(滑动解锁),geetest(极验)\"\n}\n~~~\n\n## 示例\n~~~json\n{\n  \"isPrior\": true,\n  \"isOn\": true,\n  \"firewallPolicyId\": 123,\n  \"ignoreGlobalRules\": false,\n  \"defaultCaptchaType\": \"none\"\n}\n~~~"
     },
     {
       "name": "json:http_protocol",
-      "content": "# HTTP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址，通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听80端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"http\",\n      \"host\": \"\",\n      \"portRange\": \"80\"\n\t}\n  ]\n}\n~~~\n\n### 监听80和8080端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"http\",\n      \"portRange\": \"80\"\n\t},\n    {\n      \"protocol\": \"http\",\n      \"portRange\": \"8080\"\n\t}\n  ]\n}\n~~~"
+      "content": "# HTTP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址,通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听80端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"http\",\n      \"host\": \"\",\n      \"portRange\": \"80\"\n\t}\n  ]\n}\n~~~\n\n### 监听80和8080端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"http\",\n      \"portRange\": \"80\"\n\t},\n    {\n      \"protocol\": \"http\",\n      \"portRange\": \"8080\"\n\t}\n  ]\n}\n~~~"
     },
     {
       "name": "json:http_remote_addr_config",
@@ -23992,27 +23992,27 @@
     },
     {
       "name": "json:http_websocket_ref",
-      "content": "# WebSocket引用\n\n## 定义\n~~~json\n{\n\t\"isPrior\": \"是否覆盖上级配置，true|false\",\n\t\"isOn\": \"是否启用，true|false\",\n\t\"websocketId\": \"Websocket配置ID\"\n}\n~~~\n其中：\n* `Websocket配置ID` - 需要调用 `HTTPWebsocketService.CreateHTTPWebsocketRequest()` 生成 \n\n## 示例\n~~~json\n{\n\t\"isPrior\": true,\n\t\"isOn\": true,\n\t\"websocketId\": 123\n}\n~~~"
+      "content": "# WebSocket引用\n\n## 定义\n~~~json\n{\n\t\"isPrior\": \"是否覆盖上级配置,true|false\",\n\t\"isOn\": \"是否启用,true|false\",\n\t\"websocketId\": \"Websocket配置ID\"\n}\n~~~\n其中:\n* `Websocket配置ID` - 需要调用 `HTTPWebsocketService.CreateHTTPWebsocketRequest()` 生成 \n\n## 示例\n~~~json\n{\n\t\"isPrior\": true,\n\t\"isOn\": true,\n\t\"websocketId\": 123\n}\n~~~"
     },
     {
       "name": "json:https_protocol",
-      "content": "# HTTPS协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址，通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t],\n  \t\"sslPolicyRef\": {\n\t  \"isOn\": \"启用SSL策略\",\n\t  \"sslPolicyId\": \"SSL策略ID\"\n\t}\n}\n~~~\n\n其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。\n\n## 示例\n\n### 监听443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"https\",\n      \"host\": \"\",\n      \"portRange\": \"443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。\n\n### 监听443和8443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"https\",\n      \"portRange\": \"443\"\n\t},\n    {\n      \"protocol\": \"https\",\n      \"portRange\": \"8443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。"
+      "content": "# HTTPS协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址,通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t],\n  \t\"sslPolicyRef\": {\n\t  \"isOn\": \"启用SSL策略\",\n\t  \"sslPolicyId\": \"SSL策略ID\"\n\t}\n}\n~~~\n\n其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.\n\n## 示例\n\n### 监听443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"https\",\n      \"host\": \"\",\n      \"portRange\": \"443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.\n\n### 监听443和8443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"https\",\n      \"portRange\": \"443\"\n\t},\n    {\n      \"protocol\": \"https\",\n      \"portRange\": \"8443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建."
     },
     {
       "name": "json:network_address",
-      "content": "# 网络地址定义\n\n## 定义\n~~~json\n{\n\t\"protocol\": \"协议\",\n\t\"host\": \"主机地址，通常为空\",\n\t\"portRange\": \"端口或者端口范围\"\n}\n~~~\n\n## 示例\n对于 `http://example.com`：\n~~~json\n{\n  \"protocol\": \"http\",\n  \"host\": \"example.com\",\n  \"portRange\": \"80\"\n}\n~~~\n\n\n对于 `https://example.com`：\n~~~json\n{\n  \"protocol\": \"https\",\n  \"host\": \"example.com\",\n  \"portRange\": \"443\"\n}\n~~~\n"
+      "content": "# 网络地址定义\n\n## 定义\n~~~json\n{\n\t\"protocol\": \"协议\",\n\t\"host\": \"主机地址,通常为空\",\n\t\"portRange\": \"端口或者端口范围\"\n}\n~~~\n\n## 示例\n对于 `http://example.com`:\n~~~json\n{\n  \"protocol\": \"http\",\n  \"host\": \"example.com\",\n  \"portRange\": \"80\"\n}\n~~~\n\n\n对于 `https://example.com`:\n~~~json\n{\n  \"protocol\": \"https\",\n  \"host\": \"example.com\",\n  \"portRange\": \"443\"\n}\n~~~\n"
     },
     {
       "name": "json:origin_refs",
-      "content": "# 源站引用列表\n\n## 定义\n~~~json\n[\n  {\n\t\"isOn\": \"是否启用\",\n\t\"originId\": \"源站ID 1\"\n  },\n  {\n    \"isOn\": \"是否启用\",\n    \"originId\": \"源站ID 2\"\n  },\n  ...\n]\n~~~\n\n其中：\n* `originId` - 源站ID，可以通过 `/OriginService/createOrigin` 接口创建源站后获得\n\n## 示例\n~~~json\n[\n  {\n\t\"isOn\": true,\n\t\"originId\": 1\n  },\n  {\n    \"isOn\": true,\n    \"originId\": 2,\n  }\n]\n~~~"
+      "content": "# 源站引用列表\n\n## 定义\n~~~json\n[\n  {\n\t\"isOn\": \"是否启用\",\n\t\"originId\": \"源站ID 1\"\n  },\n  {\n    \"isOn\": \"是否启用\",\n    \"originId\": \"源站ID 2\"\n  },\n  ...\n]\n~~~\n\n其中:\n* `originId` - 源站ID,可以通过 `/OriginService/createOrigin` 接口创建源站后获得\n\n## 示例\n~~~json\n[\n  {\n\t\"isOn\": true,\n\t\"originId\": 1\n  },\n  {\n    \"isOn\": true,\n    \"originId\": 2,\n  }\n]\n~~~"
     },
     {
       "name": "json:reverse_proxy_ref",
-      "content": "# 反向代理引用\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用\",\n  \"isPrior\": \"是否覆盖上级配置，用于路由规则\",\n  \"reverseProxyId\": \"反向代理ID\"\n}\n~~~\n其中：\n* `reverseProxyId` - 反向代理ID，可以通过 `/ReverseProxyService/createReverseProxy` 创建\n\n## 示例\n~~~json\n{\n  \"isOn\": true,\n  \"reverseProxyId\": 123\n}\n~~~"
+      "content": "# 反向代理引用\n## 定义\n~~~json\n{\n  \"isOn\": \"是否启用\",\n  \"isPrior\": \"是否覆盖上级配置,用于路由规则\",\n  \"reverseProxyId\": \"反向代理ID\"\n}\n~~~\n其中:\n* `reverseProxyId` - 反向代理ID,可以通过 `/ReverseProxyService/createReverseProxy` 创建\n\n## 示例\n~~~json\n{\n  \"isOn\": true,\n  \"reverseProxyId\": 123\n}\n~~~"
     },
     {
       "name": "json:scheduling",
-      "content": "# 反向代理调度\n## 定义\n~~~json\n{\n\t\"code\": \"调度方法代号\",\n    \"options\": \"调度选项\"\n}\n~~~\n\n其中：\n* `code` 调度方法代号\n  * `random` - 随机\n  * `roundRobin` - 轮询\n  * `hash` - Hash算法\n    * `key` - 自定义Key，可以使用请求变量，比如 `${remoteAddr}`\n  * `sticky` - Sticky算法\n    * `type` - 类型：cookie、header、argument\n    * `param` - 参数值\n\n\n## 示例\n~~~json\n{\n  \"code\": \"random\",\n  \"options\": null\n}\n~~~"
+      "content": "# 反向代理调度\n## 定义\n~~~json\n{\n\t\"code\": \"调度方法代号\",\n    \"options\": \"调度选项\"\n}\n~~~\n\n其中:\n* `code` 调度方法代号\n  * `random` - 随机\n  * `roundRobin` - 轮询\n  * `hash` - Hash算法\n    * `key` - 自定义Key,可以使用请求变量,比如 `${remoteAddr}`\n  * `sticky` - Sticky算法\n    * `type` - 类型:cookie,header,argument\n    * `param` - 参数值\n\n\n## 示例\n~~~json\n{\n  \"code\": \"random\",\n  \"options\": null\n}\n~~~"
     },
     {
       "name": "json:server_name",
@@ -24020,27 +24020,27 @@
     },
     {
       "name": "json:server_names",
-      "content": "# 域名信息列表\n\n## 定义\n~~~\n[ 域名信息1, 域名信息2, ... ]\n~~~\n其中 `域名信息N` 等是单个域名信息定义，具体请参考 {json:server_name}\n\n## 示例\n### 示例1：单个域名\n~~~json\n[\n\t{\n\t\t\"name\": \"example.com\",\n\t\t\"type\": \"full\"\n\t}\n]\n~~~\n\n### 示例2：多个域名\n~~~json\n[\n\t{\n\t\t\"name\": \"example.com\",\n\t\t\"type\": \"full\"\n\t},\n\t{\n      \t\"name\": \"google.com\",\n      \t\"type\": \"full\"\n  \t},\n  \t{\n\t\t\"name\": \"facebook.com\",\n\t  \t\"type\": \"full\"\n  \t}\n]\n~~~\n\n### 示例3：域名合集\n域名合集效果跟多个域名是一样的，只不过在界面上以一个目录的形式呈现。\n~~~json\n[\n  \t{\n\t\t\"name\": \"\",\n\t  \t\"type\": \"full\",\n\t  \t\"subNames\": [\"example.com\", \"google.com\", \"facebook.com\"]\n  \t}\n]\n~~~\n"
+      "content": "# 域名信息列表\n\n## 定义\n~~~\n[ 域名信息1, 域名信息2, ... ]\n~~~\n其中 `域名信息N` 等是单个域名信息定义,具体请参考 {json:server_name}\n\n## 示例\n### 示例1:单个域名\n~~~json\n[\n\t{\n\t\t\"name\": \"example.com\",\n\t\t\"type\": \"full\"\n\t}\n]\n~~~\n\n### 示例2:多个域名\n~~~json\n[\n\t{\n\t\t\"name\": \"example.com\",\n\t\t\"type\": \"full\"\n\t},\n\t{\n      \t\"name\": \"google.com\",\n      \t\"type\": \"full\"\n  \t},\n  \t{\n\t\t\"name\": \"facebook.com\",\n\t  \t\"type\": \"full\"\n  \t}\n]\n~~~\n\n### 示例3:域名合集\n域名合集效果跟多个域名是一样的,只不过在界面上以一个目录的形式呈现.\n~~~json\n[\n  \t{\n\t\t\"name\": \"\",\n\t  \t\"type\": \"full\",\n\t  \t\"subNames\": [\"example.com\", \"google.com\", \"facebook.com\"]\n  \t}\n]\n~~~\n"
     },
     {
       "name": "json:size_capacity",
-      "content": "# 容量\n## 定义\n~~~json\n{\n  \"count\": \"数量\",\n  \"unit\": \"单位\"\n}\n~~~\n\n其中：\n* `数量` - 必须是一个整数数字\n* `单位` - 有以下几个值：\n  * `byte` - 字节\n  * `kb` - KB\n  * `mb` - MB\n  * `gb` - GB\n  * `tb` - TB\n  * `pb` - PB\n  * `eb` - EB\n\n## 示例\n100MB：\n~~~\n{\n  \"count\": 100,\n  \"unit\": \"mb\"\n}\n~~~\n\n\n32GB：\n~~~\n{\n  \"count\": 32,\n  \"unit\": \"gb\"\n}\n~~~"
+      "content": "# 容量\n## 定义\n~~~json\n{\n  \"count\": \"数量\",\n  \"unit\": \"单位\"\n}\n~~~\n\n其中:\n* `数量` - 必须是一个整数数字\n* `单位` - 有以下几个值:\n  * `byte` - 字节\n  * `kb` - KB\n  * `mb` - MB\n  * `gb` - GB\n  * `tb` - TB\n  * `pb` - PB\n  * `eb` - EB\n\n## 示例\n100MB:\n~~~\n{\n  \"count\": 100,\n  \"unit\": \"mb\"\n}\n~~~\n\n\n32GB:\n~~~\n{\n  \"count\": 32,\n  \"unit\": \"gb\"\n}\n~~~"
     },
     {
       "name": "json:ssl_cert_refs",
-      "content": "# SSL证书引用\n\n可以用来引用一组证书。\n\n## 定义\n~~~json\n[\n  {\n\t\"isOn\": \"是否启用\",\n\t\"certId\": \"证书ID 1\"\n  },\n  {\n    \"isOn\": \"是否启用\",\n    \"certId\": \"证书ID 2\"\n  },\n  ...\n]\n~~~\n\n## 示例\n~~~json\n[\n  {\n    \"isOn\": true,\n    \"certId\": 12345\n  },\n  {\n    \"isOn\": true,\n    \"certId\": 12346\n  }\n]\n~~~\n\n其中：\n* `certId` - 证书的ID"
+      "content": "# SSL证书引用\n\n可以用来引用一组证书.\n\n## 定义\n~~~json\n[\n  {\n\t\"isOn\": \"是否启用\",\n\t\"certId\": \"证书ID 1\"\n  },\n  {\n    \"isOn\": \"是否启用\",\n    \"certId\": \"证书ID 2\"\n  },\n  ...\n]\n~~~\n\n## 示例\n~~~json\n[\n  {\n    \"isOn\": true,\n    \"certId\": 12345\n  },\n  {\n    \"isOn\": true,\n    \"certId\": 12346\n  }\n]\n~~~\n\n其中:\n* `certId` - 证书的ID"
     },
     {
       "name": "json:tcp_protocol",
-      "content": "# TCP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址，通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听1234端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"host\": \"\",\n      \"portRange\": \"1234\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234和2345端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"portRange\": \"1234\"\n\t},\n    {\n      \"protocol\": \"tcp\",\n      \"portRange\": \"2345\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234到1240之间的所有端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"host\": \"\",\n      \"portRange\": \"1234-1240\"\n\t}\n  ]\n}\n~~~"
+      "content": "# TCP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址,通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听1234端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"host\": \"\",\n      \"portRange\": \"1234\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234和2345端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"portRange\": \"1234\"\n\t},\n    {\n      \"protocol\": \"tcp\",\n      \"portRange\": \"2345\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234到1240之间的所有端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tcp\",\n      \"host\": \"\",\n      \"portRange\": \"1234-1240\"\n\t}\n  ]\n}\n~~~"
     },
     {
       "name": "json:tls_protocol",
-      "content": "# TLS协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址，通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t],\n  \t\"sslPolicyRef\": {\n\t  \"isOn\": \"启用SSL策略\",\n\t  \"sslPolicyId\": \"SSL策略ID\"\n\t}\n}\n~~~\n\n其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。\n\n## 示例\n\n### 监听8443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tls\",\n      \"host\": \"\",\n      \"portRange\": \"8443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。\n\n### 监听8443和8543端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tls\",\n      \"portRange\": \"8443\"\n\t},\n    {\n      \"protocol\": \"tls\",\n      \"portRange\": \"8543\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建。\n\n"
+      "content": "# TLS协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址,通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t],\n  \t\"sslPolicyRef\": {\n\t  \"isOn\": \"启用SSL策略\",\n\t  \"sslPolicyId\": \"SSL策略ID\"\n\t}\n}\n~~~\n\n其中 `SSL策略ID` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.\n\n## 示例\n\n### 监听8443端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tls\",\n      \"host\": \"\",\n      \"portRange\": \"8443\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.\n\n### 监听8443和8543端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"tls\",\n      \"portRange\": \"8443\"\n\t},\n    {\n      \"protocol\": \"tls\",\n      \"portRange\": \"8543\"\n\t}\n  ],\n  \"sslPolicyRef\": {\n    \"isOn\": true,\n    \"sslPolicyId\": 123\n  }\n}\n~~~\n\n其中SSL策略ID `123` 通过 `/SSLPolicyService/createSSLPolicy` 接口创建.\n\n"
     },
     {
       "name": "json:udp_protocol",
-      "content": "# UDP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址，通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听1234端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"host\": \"\",\n      \"portRange\": \"1234\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234和2345端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"portRange\": \"1234\"\n\t},\n    {\n      \"protocol\": \"udp\",\n      \"portRange\": \"2345\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234到1240之间的所有端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"host\": \"\",\n      \"portRange\": \"1234-1240\"\n\t}\n  ]\n}\n~~~"
+      "content": "# UDP协议配置\n\n## 定义\n~~~json\n{\n\t\"isOn\": \"是否启用\",\n  \t\"listen\": [\n      {\n\t\t\"protocol\": \"协议\",\n\t\t\"host\": \"主机地址,通常为空\",\n\t\t\"portRange\": \"端口或者端口范围\"\n\t  },\n\t  ...\n\t]\n}\n~~~\n\n## 示例\n\n### 监听1234端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"host\": \"\",\n      \"portRange\": \"1234\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234和2345端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"portRange\": \"1234\"\n\t},\n    {\n      \"protocol\": \"udp\",\n      \"portRange\": \"2345\"\n\t}\n  ]\n}\n~~~\n\n### 监听1234到1240之间的所有端口\n~~~json\n{\n  \"isOn\": true,\n  \"listen\": [\n    {\n      \"protocol\": \"udp\",\n      \"host\": \"\",\n      \"portRange\": \"1234-1240\"\n\t}\n  ]\n}\n~~~"
     }
   ]
 }

@@ -11,15 +11,15 @@ service LoginTicketService {
 	rpc createLoginTicket(CreateLoginTicketRequest) returns (CreateLoginTicketResponse);
 
 	// 查找票据
-	// 查找成功后，会自动删除票据信息，所以票据信息只能查询一次
+	// 查找成功后,会自动删除票据信息,所以票据信息只能查询一次
 	rpc findLoginTicketWithValue(FindLoginTicketWithValueRequest) returns (FindLoginTicketWithValueResponse);
 }
 
 // 创建票据
 message CreateLoginTicketRequest {
-	int64 adminId = 1; // 管理员ID，和用户ID二选一
+	int64 adminId = 1; // 管理员ID,和用户ID二选一
 	int64 userId = 2; // 用户ID
-	string ip = 3; // 可选参数，用户客户端IP
+	string ip = 3; // 可选参数,用户客户端IP
 }
 
 message CreateLoginTicketResponse {

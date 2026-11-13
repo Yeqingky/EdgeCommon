@@ -14,11 +14,11 @@ message SendSMSRequest {
 	string mobile = 1; // 手机号
 	string body = 2; // 内容
 	string code = 3; // 验证码
-	string type = 4; // 渠道类型：webHook ...
+	string type = 4; // 渠道类型:webHook ...
 	bytes paramsJSON = 5; // 参数
 }
 
 message SendSMSResponse {
 	bool isOk = 1; // 是否成功
-	string result = 2; // 发送返回内容，只有失败时才会有数据
+	string result = 2; // 发送返回内容,只有失败时才会有数据
 }

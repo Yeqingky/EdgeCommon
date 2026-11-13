@@ -12,7 +12,7 @@ message HTTPFirewallPolicy {
 	string description = 4; // 描述
 	bytes inboundJSON = 5; // 入站配置
 	bytes outboundJSON = 6; // 出站配置
-	int64 serverId = 8; // 所属网站ID（如果为0表示公共策略）
+	int64 serverId = 8; // 所属网站ID(如果为0表示公共策略)
 	bool useLocalFirewall = 9; // 是否使用本机防火墙
 	bytes synFloodJSON = 10; // synflood配置
 	bytes blockOptionsJSON = 11; // 阻止动作配置

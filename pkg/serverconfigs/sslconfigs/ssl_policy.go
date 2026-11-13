@@ -162,7 +162,7 @@ func (this *SSLPolicy) FirstCert() *tls.Certificate {
 	return nil
 }
 
-// CAPool CA证书Pool，用于TLS对客户端进行认证
+// CAPool CA证书Pool,用于TLS对客户端进行认证
 func (this *SSLPolicy) CAPool() *x509.CertPool {
 	return this.clientCAPool
 }

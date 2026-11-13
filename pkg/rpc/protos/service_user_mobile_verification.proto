@@ -26,7 +26,7 @@ message VerifyUserMobileRequest {
 message VerifyUserMobileResponse {
 	int64 userId = 1; // 手机号码对应的用户ID
 	string mobile = 2; // 手机号码
-	string errorCode = 3; // 错误代号，如果为空，说明没有错误
+	string errorCode = 3; // 错误代号,如果为空,说明没有错误
 	string errorMessage = 4; // 错误信息
 }
 

@@ -35,7 +35,7 @@ type ADPackage struct {
 	ServerBandwidthUnit         string     `protobuf:"bytes,7,opt,name=serverBandwidthUnit,proto3" json:"serverBandwidthUnit,omitempty"`
 	AdNetwork                   *ADNetwork `protobuf:"bytes,30,opt,name=adNetwork,proto3" json:"adNetwork,omitempty"`
 	Summary                     string     `protobuf:"bytes,31,opt,name=summary,proto3" json:"summary,omitempty"`                                          // 概述
-	CountIdleADPackageInstances int64      `protobuf:"varint,32,opt,name=countIdleADPackageInstances,proto3" json:"countIdleADPackageInstances,omitempty"` // 剩余可用的实例数，只有在获取可用高防产品的时候才会返回
+	CountIdleADPackageInstances int64      `protobuf:"varint,32,opt,name=countIdleADPackageInstances,proto3" json:"countIdleADPackageInstances,omitempty"` // 剩余可用的实例数,只有在获取可用高防产品的时候才会返回
 }
 
 func (x *ADPackage) Reset() {

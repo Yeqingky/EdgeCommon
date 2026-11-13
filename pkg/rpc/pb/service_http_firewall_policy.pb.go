@@ -387,7 +387,7 @@ type UpdateHTTPFirewallPolicyRequest struct {
 	UseLocalFirewall     bool     `protobuf:"varint,8,opt,name=useLocalFirewall,proto3" json:"useLocalFirewall,omitempty"`      // 是否使用本地防火墙
 	SynFloodJSON         []byte   `protobuf:"bytes,9,opt,name=synFloodJSON,proto3" json:"synFloodJSON,omitempty"`               // SYN Flood相关配置
 	LogJSON              []byte   `protobuf:"bytes,10,opt,name=LogJSON,proto3" json:"LogJSON,omitempty"`                        // 日志相关配置
-	MaxRequestBodySize   int64    `protobuf:"varint,12,opt,name=maxRequestBodySize,proto3" json:"maxRequestBodySize,omitempty"` // 最大文件尺寸，单位为字节
+	MaxRequestBodySize   int64    `protobuf:"varint,12,opt,name=maxRequestBodySize,proto3" json:"maxRequestBodySize,omitempty"` // 最大文件尺寸,单位为字节
 	DenyCountryHTML      string   `protobuf:"bytes,13,opt,name=denyCountryHTML,proto3" json:"denyCountryHTML,omitempty"`        // 区域封禁提示
 	DenyProvinceHTML     string   `protobuf:"bytes,14,opt,name=denyProvinceHTML,proto3" json:"denyProvinceHTML,omitempty"`      // 省份封禁提示
 }
@@ -1337,7 +1337,7 @@ type FindServerIdWithHTTPFirewallPolicyIdResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ServerId int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 防火墙策略对应的网站ID，公共的防火墙策略的网站ID为0
+	ServerId int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"` // 防火墙策略对应的网站ID,公共的防火墙策略的网站ID为0
 }
 
 func (x *FindServerIdWithHTTPFirewallPolicyIdResponse) Reset() {

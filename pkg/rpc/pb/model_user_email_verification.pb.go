@@ -33,7 +33,7 @@ type UserEmailVerification struct {
 	CreatedAt  int64  `protobuf:"varint,5,opt,name=createdAt,proto3" json:"createdAt,omitempty"`   // 创建时间
 	IsSent     bool   `protobuf:"varint,6,opt,name=isSent,proto3" json:"isSent,omitempty"`         // 已发送
 	IsVerified bool   `protobuf:"varint,7,opt,name=isVerified,proto3" json:"isVerified,omitempty"` // 已激活
-	ExpiresAt  int64  `protobuf:"varint,8,opt,name=expiresAt,proto3" json:"expiresAt,omitempty"`   // 过期时间，动态计算而来
+	ExpiresAt  int64  `protobuf:"varint,8,opt,name=expiresAt,proto3" json:"expiresAt,omitempty"`   // 过期时间,动态计算而来
 }
 
 func (x *UserEmailVerification) Reset() {

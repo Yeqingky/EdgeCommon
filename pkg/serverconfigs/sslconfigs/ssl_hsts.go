@@ -8,7 +8,7 @@ import (
 )
 
 // HSTS设置
-// 参考： https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+// 参考: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
 type HSTSConfig struct {
 	IsOn              bool     `yaml:"isOn" json:"isOn"`
 	MaxAge            int      `yaml:"maxAge" json:"maxAge"` // 单位秒

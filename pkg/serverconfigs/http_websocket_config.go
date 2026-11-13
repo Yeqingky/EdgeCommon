@@ -15,13 +15,13 @@ type HTTPWebsocketConfig struct {
 	// 握手超时时间
 	HandshakeTimeout *shared.TimeDuration `yaml:"handshakeTimeout" json:"handshakeTimeout"`
 
-	// 允许的来源域名，支持 www.example.com, example.com, .example.com, *.example.com
+	// 允许的来源域名,支持 www.example.com, example.com, .example.com, *.example.com
 	AllowAllOrigins bool     `yaml:"allowAllOrigins" json:"allowAllOrigins"`
 	AllowedOrigins  []string `yaml:"allowedOrigins" json:"allowedOrigins"`
 
 	// 向后传递的来源
 	RequestSameOrigin bool   `yaml:"requestSameOrigin" json:"requestSameOrigin"` // 和请求一致
-	RequestOrigin     string `yaml:"requestOrigin" json:"requestOrigin"`         // 自行指定Origin，支持变量
+	RequestOrigin     string `yaml:"requestOrigin" json:"requestOrigin"`         // 自行指定Origin,支持变量
 
 	handshakeTimeoutDuration  time.Duration
 	requestOriginHasVariables bool

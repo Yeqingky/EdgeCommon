@@ -187,15 +187,15 @@ message UpdateAdminRequest {
 
 // 计算管理员数量
 message CountAllEnabledAdminsRequest {
-	string keyword = 1; // 可选项，查询关键词
-	bool hasWeakPassword = 2; // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询
+	string keyword = 1; // 可选项,查询关键词
+	bool hasWeakPassword = 2; // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询
 }
 
 // 列出单页的管理员
 message ListEnabledAdminsRequest {
-	string keyword = 3; // 可选项，查询关键词
-	bool hasWeakPassword = 4; // 可选项，筛选有弱密码的管理员，只有超级管理员才能查询
-	int64 offset = 1; // 读取位置，从0开始
+	string keyword = 3; // 可选项,查询关键词
+	bool hasWeakPassword = 4; // 可选项,筛选有弱密码的管理员,只有超级管理员才能查询
+	int64 offset = 1; // 读取位置,从0开始
 	int64 size = 2; // 读取数量
 }
 
@@ -260,7 +260,7 @@ message ComposeAdminDashboardResponse {
 		int64 countRequests = 4;
 		int64 countCachedRequests = 5;
 		int64 countAttackRequests = 6;
-		int64 attackBytes = 7; // 攻击流量（字节）
+		int64 attackBytes = 7; // 攻击流量(字节)
 		int64 countIPs = 8; // 独立IP数量
 	}
 
@@ -312,5 +312,5 @@ message UpdateAdminThemeRequest {
 
 // 修改管理员使用的语言
 message UpdateAdminLangRequest {
-	string langCode = 1; // 语言代号：en-us, zh-cn, ...，如果为空表示默认
+	string langCode = 1; // 语言代号:en-us, zh-cn, ...,如果为空表示默认
 }

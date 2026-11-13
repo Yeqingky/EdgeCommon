@@ -32,8 +32,8 @@ type UserADInstance struct {
 	AdPackagePeriodId    int64              `protobuf:"varint,4,opt,name=adPackagePeriodId,proto3" json:"adPackagePeriodId,omitempty"`
 	AdPackagePeriodCount int32              `protobuf:"varint,5,opt,name=adPackagePeriodCount,proto3" json:"adPackagePeriodCount,omitempty"`
 	AdPackagePeriodUnit  string             `protobuf:"bytes,6,opt,name=adPackagePeriodUnit,proto3" json:"adPackagePeriodUnit,omitempty"`
-	DayFrom              string             `protobuf:"bytes,7,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"` // 开始日期，格式：YYYYMMDD
-	DayTo                string             `protobuf:"bytes,8,opt,name=dayTo,proto3" json:"dayTo,omitempty"`     // 结束日期，格式：YYYYMMDD
+	DayFrom              string             `protobuf:"bytes,7,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"` // 开始日期,格式:YYYYMMDD
+	DayTo                string             `protobuf:"bytes,8,opt,name=dayTo,proto3" json:"dayTo,omitempty"`     // 结束日期,格式:YYYYMMDD
 	CreatedAt            int64              `protobuf:"varint,9,opt,name=createdAt,proto3" json:"createdAt,omitempty"`
 	MaxObjects           int32              `protobuf:"varint,10,opt,name=maxObjects,proto3" json:"maxObjects,omitempty"`
 	ObjectCodes          []string           `protobuf:"bytes,11,rep,name=objectCodes,proto3" json:"objectCodes,omitempty"`

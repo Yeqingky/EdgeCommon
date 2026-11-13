@@ -8,8 +8,8 @@ import (
 )
 
 // MatchDomains 从一组规则中匹配域名
-// 支持的格式：example.com, www.example.com, .example.com, *.example.com, ~(\d+).example.com
-// 更多参考：http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name
+// 支持的格式:example.com, www.example.com, .example.com, *.example.com, ~(\d+).example.com
+// 更多参考:http://nginx.org/en/docs/http/ngx_http_core_module.html#server_name
 func MatchDomains(patterns []string, domain string) (isMatched bool) {
 	if len(patterns) == 0 {
 		return

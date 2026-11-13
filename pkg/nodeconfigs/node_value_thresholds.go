@@ -24,70 +24,70 @@ func FindAllIPAddressThresholdItems() []maps.Map {
 		{
 			"name":        "节点平均请求数",
 			"code":        IPAddressThresholdItemNodeAvgRequests,
-			"description": "当前节点在单位时间内接收到的平均请求数。",
+			"description": "当前节点在单位时间内接收到的平均请求数.",
 			"unit":        "个",
 		},
 		{
 			"name":        "节点平均下行流量",
 			"code":        IPAddressThresholdItemNodeAvgTrafficOut,
-			"description": "当前节点在单位时间内发送的下行流量。",
+			"description": "当前节点在单位时间内发送的下行流量.",
 			"unit":        "M",
 		},
 		{
 			"name":        "节点平均上行流量",
 			"code":        IPAddressThresholdItemNodeAvgTrafficIn,
-			"description": "当前节点在单位时间内接收的上行流量。",
+			"description": "当前节点在单位时间内接收的上行流量.",
 			"unit":        "M",
 		},
 		{
 			"name":        "节点健康检查结果",
 			"code":        IPAddressThresholdItemNodeHealthCheck,
-			"description": "当前节点健康检查结果。",
+			"description": "当前节点健康检查结果.",
 			"unit":        "",
 		},
 
 		{
 			"name":        "IP连通性",
 			"code":        IPAddressThresholdItemConnectivity,
-			"description": "通过区域监控得到的当前IP地址的连通性数值，取值在0和100之间。",
+			"description": "通过区域监控得到的当前IP地址的连通性数值,取值在0和100之间.",
 			"unit":        "%",
 		},
 
 		{
 			"name":        "分组平均请求数",
 			"code":        IPAddressThresholdItemGroupAvgRequests,
-			"description": "当前节点所在分组在单位时间内接收到的平均请求数。",
+			"description": "当前节点所在分组在单位时间内接收到的平均请求数.",
 			"unit":        "个",
 		},
 		{
 			"name":        "分组平均下行流量",
 			"code":        IPAddressThresholdItemGroupAvgTrafficOut,
-			"description": "当前节点所在分组在单位时间内发送的下行流量。",
+			"description": "当前节点所在分组在单位时间内发送的下行流量.",
 			"unit":        "M",
 		},
 		{
 			"name":        "分组平均上行流量",
 			"code":        IPAddressThresholdItemGroupAvgTrafficIn,
-			"description": "当前节点所在分组在单位时间内接收的上行流量。",
+			"description": "当前节点所在分组在单位时间内接收的上行流量.",
 			"unit":        "M",
 		},
 
 		{
 			"name":        "集群平均请求数",
 			"code":        IPAddressThresholdItemClusterAvgRequests,
-			"description": "当前节点所在集群在单位时间内接收到的平均请求数。",
+			"description": "当前节点所在集群在单位时间内接收到的平均请求数.",
 			"unit":        "个",
 		},
 		{
 			"name":        "集群平均下行流量",
 			"code":        IPAddressThresholdItemClusterAvgTrafficOut,
-			"description": "当前节点所在集群在单位时间内发送的下行流量。",
+			"description": "当前节点所在集群在单位时间内发送的下行流量.",
 			"unit":        "M",
 		},
 		{
 			"name":        "集群平均上行流量",
 			"code":        IPAddressThresholdItemClusterAvgTrafficIn,
-			"description": "当前节点所在集群在单位时间内接收的上行流量。",
+			"description": "当前节点所在集群在单位时间内接收的上行流量.",
 			"unit":        "M",
 		},
 	}
@@ -132,27 +132,27 @@ func FindAllIPAddressThresholdActions() []maps.Map {
 		{
 			"name":        "上线",
 			"code":        IPAddressThresholdActionUp,
-			"description": "上线当前IP。",
+			"description": "上线当前IP.",
 		},
 		{
 			"name":        "下线",
 			"code":        IPAddressThresholdActionDown,
-			"description": "下线当前IP。",
+			"description": "下线当前IP.",
 		},
 		{
 			"name":        "通知",
 			"code":        IPAddressThresholdActionNotify,
-			"description": "发送已达到阈值通知。",
+			"description": "发送已达到阈值通知.",
 		},
 		{
 			"name":        "切换",
 			"code":        IPAddressThresholdActionSwitch,
-			"description": "在DNS中记录中将IP切换到指定的备用IP。",
+			"description": "在DNS中记录中将IP切换到指定的备用IP.",
 		},
 		{
 			"name":        "WebHook",
 			"code":        IPAddressThresholdActionWebHook,
-			"description": "调用外部的WebHook。",
+			"description": "调用外部的WebHook.",
 		},
 	}
 }

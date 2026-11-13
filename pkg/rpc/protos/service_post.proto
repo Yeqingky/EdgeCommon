@@ -33,11 +33,11 @@ service PostService {
 // 创建文章
 message CreatePostRequest {
 	int64 postCategoryId = 1; // 文章分类ID
-	string type = 2; // 类型：normal, url
+	string type = 2; // 类型:normal, url
 	string productCode = 3; // 产品代号
 	string subject = 4; // 标题
-	string url = 5; // 跳转的URL（type=url）
-	string body = 6; // 文章内容（type=normal）
+	string url = 5; // 跳转的URL(type=url)
+	string body = 6; // 文章内容(type=normal)
 }
 
 message CreatePostResponse {
@@ -50,9 +50,9 @@ message UpdatePostRequest {
 	int64 postCategoryId = 2; // 文章分类ID
 	string productCode = 3; // 产品代号
 	string subject = 4; // 标题
-	string type = 5; // 类型：normal, url
-	string url = 6; // 跳转的URL（type=url）
-	string body = 7; // 文章内容（type=normal）
+	string type = 5; // 类型:normal, url
+	string url = 6; // 跳转的URL(type=url)
+	string body = 7; // 文章内容(type=normal)
 }
 
 // 删除文章

@@ -6,7 +6,7 @@
   "log_delete_user": "删除用户 %d",
   "log_update_user_features": "设置用户 %d 的功能列表",
   "log_update_user": "修改用户 %d",
-  "log_verify_user": "审核用户：%d 结果：%s",
+  "log_verify_user": "审核用户:%d 结果:%s",
 
   "log_update_user_profile": "修改个人资料",
 

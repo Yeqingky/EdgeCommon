@@ -161,7 +161,7 @@ type UpdateNSClusterRequest struct {
 	AutoRemoteStart bool     `protobuf:"varint,5,opt,name=autoRemoteStart,proto3" json:"autoRemoteStart,omitempty"`
 	TimeZone        string   `protobuf:"bytes,6,opt,name=timeZone,proto3" json:"timeZone,omitempty"`
 	DetectAgents    bool     `protobuf:"varint,7,opt,name=detectAgents,proto3" json:"detectAgents,omitempty"`
-	CheckingPorts   bool     `protobuf:"varint,9,opt,name=checkingPorts,proto3" json:"checkingPorts,omitempty"` // 是否检查端口连通性（目前仅在节点列表上）
+	CheckingPorts   bool     `protobuf:"varint,9,opt,name=checkingPorts,proto3" json:"checkingPorts,omitempty"` // 是否检查端口连通性(目前仅在节点列表上)
 }
 
 func (x *UpdateNSClusterRequest) Reset() {

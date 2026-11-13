@@ -24,7 +24,7 @@ type TrafficLimitConfig struct {
 	MonthlySize *shared.SizeCapacity `yaml:"monthlySize" json:"monthlySize"` // 每月限制
 	TotalSize   *shared.SizeCapacity `yaml:"totalSize" json:"totalSize"`     // 总限制 TODO 需要实现
 
-	NoticePageBody string `yaml:"noticePageBody" json:"noticePageBody"` // 超出限制时的提醒，支持请求变量
+	NoticePageBody string `yaml:"noticePageBody" json:"noticePageBody"` // 超出限制时的提醒,支持请求变量
 }
 
 func (this *TrafficLimitConfig) Init() error {
@@ -32,7 +32,7 @@ func (this *TrafficLimitConfig) Init() error {
 }
 
 // DailyBytes 每天限制
-// 不使用Init()来初始化数据，是为了让其他地方不经过Init()也能得到计算值
+// 不使用Init()来初始化数据,是为了让其他地方不经过Init()也能得到计算值
 func (this *TrafficLimitConfig) DailyBytes() int64 {
 	if this.DailySize != nil {
 		return this.DailySize.Bytes()

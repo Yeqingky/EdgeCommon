@@ -26,9 +26,9 @@ type CreateReverseProxyRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	SchedulingJSON     []byte `protobuf:"bytes,1,opt,name=schedulingJSON,proto3" json:"schedulingJSON,omitempty"`         // 可选项，调度设置 @link json:scheduling
-	PrimaryOriginsJSON []byte `protobuf:"bytes,2,opt,name=primaryOriginsJSON,proto3" json:"primaryOriginsJSON,omitempty"` // 可选项，主要源站 @link json:origin_refs
-	BackupOriginsJSON  []byte `protobuf:"bytes,3,opt,name=backupOriginsJSON,proto3" json:"backupOriginsJSON,omitempty"`   // 可选项，备用源站 @link json:origin_refs
+	SchedulingJSON     []byte `protobuf:"bytes,1,opt,name=schedulingJSON,proto3" json:"schedulingJSON,omitempty"`         // 可选项,调度设置 @link json:scheduling
+	PrimaryOriginsJSON []byte `protobuf:"bytes,2,opt,name=primaryOriginsJSON,proto3" json:"primaryOriginsJSON,omitempty"` // 可选项,主要源站 @link json:origin_refs
+	BackupOriginsJSON  []byte `protobuf:"bytes,3,opt,name=backupOriginsJSON,proto3" json:"backupOriginsJSON,omitempty"`   // 可选项,备用源站 @link json:origin_refs
 }
 
 func (x *CreateReverseProxyRequest) Reset() {
@@ -496,22 +496,22 @@ type UpdateReverseProxyRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ReverseProxyId           int64    `protobuf:"varint,1,opt,name=reverseProxyId,proto3" json:"reverseProxyId,omitempty"`                      // 反向代理ID
-	RequestHostType          int32    `protobuf:"varint,6,opt,name=requestHostType,proto3" json:"requestHostType,omitempty"`                    // 可选参数，回源主机名类型：0 跟随CDN域名，1跟随源站，2自定义
-	RequestHost              string   `protobuf:"bytes,2,opt,name=requestHost,proto3" json:"requestHost,omitempty"`                             // 可选参数，自定义回源主机名
-	RequestHostExcludingPort bool     `protobuf:"varint,15,opt,name=requestHostExcludingPort,proto3" json:"requestHostExcludingPort,omitempty"` // 可选参数，回源主机名中去除端口
-	RequestURI               string   `protobuf:"bytes,3,opt,name=requestURI,proto3" json:"requestURI,omitempty"`                               // 可选参数，请求URI
-	StripPrefix              string   `protobuf:"bytes,4,opt,name=stripPrefix,proto3" json:"stripPrefix,omitempty"`                             // 可选参数，去除URI前缀
-	AutoFlush                bool     `protobuf:"varint,5,opt,name=autoFlush,proto3" json:"autoFlush,omitempty"`                                // 可选参数，自动刷新
-	AddHeaders               []string `protobuf:"bytes,7,rep,name=addHeaders,proto3" json:"addHeaders,omitempty"`                               // 可选参数，可以添加的请求报头
-	ConnTimeoutJSON          []byte   `protobuf:"bytes,8,opt,name=connTimeoutJSON,proto3" json:"connTimeoutJSON,omitempty"`                     // 可选参数，连接超时时间
-	ReadTimeoutJSON          []byte   `protobuf:"bytes,9,opt,name=readTimeoutJSON,proto3" json:"readTimeoutJSON,omitempty"`                     // 可选参数，读取超时时间
-	IdleTimeoutJSON          []byte   `protobuf:"bytes,10,opt,name=idleTimeoutJSON,proto3" json:"idleTimeoutJSON,omitempty"`                    // 可选参数，空闲连接超时时间
-	MaxConns                 int32    `protobuf:"varint,11,opt,name=maxConns,proto3" json:"maxConns,omitempty"`                                 // 可选参数，最大连接数
-	MaxIdleConns             int32    `protobuf:"varint,12,opt,name=maxIdleConns,proto3" json:"maxIdleConns,omitempty"`                         // 可选参数，最大空闲连接数
-	ProxyProtocolJSON        []byte   `protobuf:"bytes,13,opt,name=proxyProtocolJSON,proto3" json:"proxyProtocolJSON,omitempty"`                // 可选参数，PROXY Protocol设置
-	FollowRedirects          bool     `protobuf:"varint,14,opt,name=followRedirects,proto3" json:"followRedirects,omitempty"`                   // 可选参数，跳转跟随
-	Retry50X                 bool     `protobuf:"varint,16,opt,name=retry50X,proto3" json:"retry50X,omitempty"`                                 // 可选参数，是否启用50X重试
-	Retry40X                 bool     `protobuf:"varint,17,opt,name=retry40X,proto3" json:"retry40X,omitempty"`                                 // 可选参数，是否启用40X重试
+	RequestHostType          int32    `protobuf:"varint,6,opt,name=requestHostType,proto3" json:"requestHostType,omitempty"`                    // 可选参数,回源主机名类型:0 跟随CDN域名,1跟随源站,2自定义
+	RequestHost              string   `protobuf:"bytes,2,opt,name=requestHost,proto3" json:"requestHost,omitempty"`                             // 可选参数,自定义回源主机名
+	RequestHostExcludingPort bool     `protobuf:"varint,15,opt,name=requestHostExcludingPort,proto3" json:"requestHostExcludingPort,omitempty"` // 可选参数,回源主机名中去除端口
+	RequestURI               string   `protobuf:"bytes,3,opt,name=requestURI,proto3" json:"requestURI,omitempty"`                               // 可选参数,请求URI
+	StripPrefix              string   `protobuf:"bytes,4,opt,name=stripPrefix,proto3" json:"stripPrefix,omitempty"`                             // 可选参数,去除URI前缀
+	AutoFlush                bool     `protobuf:"varint,5,opt,name=autoFlush,proto3" json:"autoFlush,omitempty"`                                // 可选参数,自动刷新
+	AddHeaders               []string `protobuf:"bytes,7,rep,name=addHeaders,proto3" json:"addHeaders,omitempty"`                               // 可选参数,可以添加的请求报头
+	ConnTimeoutJSON          []byte   `protobuf:"bytes,8,opt,name=connTimeoutJSON,proto3" json:"connTimeoutJSON,omitempty"`                     // 可选参数,连接超时时间
+	ReadTimeoutJSON          []byte   `protobuf:"bytes,9,opt,name=readTimeoutJSON,proto3" json:"readTimeoutJSON,omitempty"`                     // 可选参数,读取超时时间
+	IdleTimeoutJSON          []byte   `protobuf:"bytes,10,opt,name=idleTimeoutJSON,proto3" json:"idleTimeoutJSON,omitempty"`                    // 可选参数,空闲连接超时时间
+	MaxConns                 int32    `protobuf:"varint,11,opt,name=maxConns,proto3" json:"maxConns,omitempty"`                                 // 可选参数,最大连接数
+	MaxIdleConns             int32    `protobuf:"varint,12,opt,name=maxIdleConns,proto3" json:"maxIdleConns,omitempty"`                         // 可选参数,最大空闲连接数
+	ProxyProtocolJSON        []byte   `protobuf:"bytes,13,opt,name=proxyProtocolJSON,proto3" json:"proxyProtocolJSON,omitempty"`                // 可选参数,PROXY Protocol设置
+	FollowRedirects          bool     `protobuf:"varint,14,opt,name=followRedirects,proto3" json:"followRedirects,omitempty"`                   // 可选参数,跳转跟随
+	Retry50X                 bool     `protobuf:"varint,16,opt,name=retry50X,proto3" json:"retry50X,omitempty"`                                 // 可选参数,是否启用50X重试
+	Retry40X                 bool     `protobuf:"varint,17,opt,name=retry40X,proto3" json:"retry40X,omitempty"`                                 // 可选参数,是否启用40X重试
 }
 
 func (x *UpdateReverseProxyRequest) Reset() {

@@ -16,5 +16,5 @@ message Admin {
 	repeated AdminModule Modules = 7; // 有权限的模块
 	Login otpLogin = 8; // OTP认证
 	bool canLogin = 9; // 是否可以登录
-	bool hasWeakPassword = 10; // 是否设置了弱密码，只有超级管理员能看到此项
+	bool hasWeakPassword = 10; // 是否设置了弱密码,只有超级管理员能看到此项
 }

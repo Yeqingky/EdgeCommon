@@ -31,7 +31,7 @@ func AllSSLClientAuthTypes() []maps.Map {
 			"requireCA": true,
 		},
 		{
-			"name":      "需要客户端证书，但不校验",
+			"name":      "需要客户端证书,但不校验",
 			"type":      SSLClientAuthTypeRequireAnyClientCert,
 			"requireCA": true,
 		},

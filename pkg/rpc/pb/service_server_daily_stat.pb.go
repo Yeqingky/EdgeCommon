@@ -289,9 +289,9 @@ type FindServer5MinutelyStatsWithDayRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`
-	Day      string `protobuf:"bytes,2,opt,name=day,proto3" json:"day,omitempty"`           // 必需，格式：YYYYMMDD
-	TimeFrom string `protobuf:"bytes,3,opt,name=timeFrom,proto3" json:"timeFrom,omitempty"` // 可选，开始时间，格式：HHIISS，比如 130000
-	TimeTo   string `protobuf:"bytes,4,opt,name=timeTo,proto3" json:"timeTo,omitempty"`     // 可选，结束时间，格式：HHIISS，比如 130459
+	Day      string `protobuf:"bytes,2,opt,name=day,proto3" json:"day,omitempty"`           // 必需,格式:YYYYMMDD
+	TimeFrom string `protobuf:"bytes,3,opt,name=timeFrom,proto3" json:"timeFrom,omitempty"` // 可选,开始时间,格式:HHIISS,比如 130000
+	TimeTo   string `protobuf:"bytes,4,opt,name=timeTo,proto3" json:"timeTo,omitempty"`     // 可选,结束时间,格式:HHIISS,比如 130459
 }
 
 func (x *FindServer5MinutelyStatsWithDayRequest) Reset() {
@@ -408,7 +408,7 @@ type FindLatestServerDailyStatsRequest struct {
 	unknownFields protoimpl.UnknownFields
 
 	ServerId     int64 `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`
-	NodeRegionId int64 `protobuf:"varint,3,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID，可选
+	NodeRegionId int64 `protobuf:"varint,3,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID,可选
 	Days         int32 `protobuf:"varint,2,opt,name=days,proto3" json:"days,omitempty"`                 // 天数
 }
 
@@ -518,8 +518,8 @@ type FindServerDailyStatsBetweenDaysRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId       int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`             // 用户ID，和服务ID二选一
-	ServerId     int64  `protobuf:"varint,2,opt,name=serverId,proto3" json:"serverId,omitempty"`         // 服务ID，和用户ID二选一
+	UserId       int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`             // 用户ID,和服务ID二选一
+	ServerId     int64  `protobuf:"varint,2,opt,name=serverId,proto3" json:"serverId,omitempty"`         // 服务ID,和用户ID二选一
 	DayFrom      string `protobuf:"bytes,3,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"`            // 开始日期 YYYYMMDD
 	DayTo        string `protobuf:"bytes,4,opt,name=dayTo,proto3" json:"dayTo,omitempty"`                // 结束日期 YYYYMMDD
 	NodeRegionId int64  `protobuf:"varint,5,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"` // 区域ID
@@ -639,7 +639,7 @@ func (x *FindServerDailyStatsBetweenDaysResponse) GetStats() []*FindServerDailyS
 	return nil
 }
 
-// 查找单个服务当前时刻（N分钟内）统计数据
+// 查找单个服务当前时刻(N分钟内)统计数据
 type SumCurrentServerDailyStatsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -744,8 +744,8 @@ type SumServerDailyStatsRequest struct {
 	ServerId     int64  `protobuf:"varint,1,opt,name=serverId,proto3" json:"serverId,omitempty"`
 	NodeRegionId int64  `protobuf:"varint,6,opt,name=nodeRegionId,proto3" json:"nodeRegionId,omitempty"`
 	Day          string `protobuf:"bytes,2,opt,name=day,proto3" json:"day,omitempty"`         // YYYYMMDD
-	DayFrom      string `protobuf:"bytes,4,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"` // day 和 dayFrom+dayTo 二选一， YYYYMMDD
-	DayTo        string `protobuf:"bytes,5,opt,name=dayTo,proto3" json:"dayTo,omitempty"`     // day 和 dayFrom+dayTo 二选一，YYYYMMDD
+	DayFrom      string `protobuf:"bytes,4,opt,name=dayFrom,proto3" json:"dayFrom,omitempty"` // day 和 dayFrom+dayTo 二选一, YYYYMMDD
+	DayTo        string `protobuf:"bytes,5,opt,name=dayTo,proto3" json:"dayTo,omitempty"`     // day 和 dayFrom+dayTo 二选一,YYYYMMDD
 }
 
 func (x *SumServerDailyStatsRequest) Reset() {

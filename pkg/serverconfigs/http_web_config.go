@@ -50,7 +50,7 @@ type HTTPWebConfig struct {
 	Referers      *ReferersConfig           `yaml:"referers" json:"referers"`           // 防盗链设置
 
 	RemoteAddr   *HTTPRemoteAddrConfig `yaml:"remoteAddr" json:"remoteAddr"`     // 客户端IP获取方式
-	MergeSlashes bool                  `yaml:"mergeSlashes" json:"mergeSlashes"` // 是否合并路径中的斜杠（/）
+	MergeSlashes bool                  `yaml:"mergeSlashes" json:"mergeSlashes"` // 是否合并路径中的斜杠(/)
 
 	RequestLimit   *HTTPRequestLimitConfig   `yaml:"requestLimit" json:"requestLimit"`     // 并发请求限制
 	RequestScripts *HTTPRequestScriptsConfig `yaml:"requestScripts" json:"requestScripts"` // HTTP请求相关脚本

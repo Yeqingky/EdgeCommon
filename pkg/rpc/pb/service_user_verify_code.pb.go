@@ -26,7 +26,7 @@ type SendUserVerifyCodeRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type   string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`     // 类型：重置密码（resetPassword）
+	Type   string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`     // 类型:重置密码(resetPassword)
 	Email  string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`   // 已验证邮箱地址
 	Mobile string `protobuf:"bytes,3,opt,name=mobile,proto3" json:"mobile,omitempty"` // 已验证手机号
 }
@@ -137,7 +137,7 @@ type ValidateUserVerifyCodeRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type   string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`     // 类型：重置密码（resetPassword）
+	Type   string `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`     // 类型:重置密码(resetPassword)
 	Email  string `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`   // 已验证邮箱地址
 	Mobile string `protobuf:"bytes,3,opt,name=mobile,proto3" json:"mobile,omitempty"` // 已验证手机号
 	Code   string `protobuf:"bytes,4,opt,name=code,proto3" json:"code,omitempty"`     // 验证码

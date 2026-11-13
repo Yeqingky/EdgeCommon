@@ -1,5 +1,5 @@
 {
-  "log_delete_ip_batch": "批量删除IP名单中的IP：%s",
+  "log_delete_ip_batch": "批量删除IP名单中的IP:%s",
   "log_create_ip_items_batch": "在IP名单 %d 中批量添加IP",
   "log_bind_ip_list_waf_policy": "绑定IP名单 %d 到WAF策略 %d",
   "log_unbind_ip_list_waf_policy": "解除绑定IP名单 %d WAF策略 %d",

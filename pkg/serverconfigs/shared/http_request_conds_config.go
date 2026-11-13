@@ -1,7 +1,7 @@
 package shared
 
 // HTTPRequestCondsConfig 条件配置
-// 数据结构：conds -> []groups -> []cond
+// 数据结构:conds -> []groups -> []cond
 type HTTPRequestCondsConfig struct {
 	IsOn      bool                    `yaml:"isOn" json:"isOn"`
 	Connector string                  `yaml:"connector" json:"connector"`

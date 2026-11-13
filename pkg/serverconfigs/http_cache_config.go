@@ -10,7 +10,7 @@ type HTTPCacheConfig struct {
 	IsPrior bool `yaml:"isPrior" json:"isPrior"`
 	IsOn    bool `yaml:"isOn" json:"isOn"`
 
-	AddStatusHeader          bool `yaml:"addStatusHeader" json:"addStatusHeader"`                   // 是否增加命中状态Header（X-Cache）
+	AddStatusHeader          bool `yaml:"addStatusHeader" json:"addStatusHeader"`                   // 是否增加命中状态Header(X-Cache)
 	AddAgeHeader             bool `yaml:"addAgeHeader" json:"addAgeHeader"`                         // 是否增加Age Header
 	EnableCacheControlMaxAge bool `yaml:"enableCacheControlMaxAge" json:"enableCacheControlMaxAge"` // 是否支持Cache-Control: max-age=...
 	DisablePolicyRefs        bool `yaml:"disablePolicyRefs" json:"disablePolicyRefs"`               // 是否停用策略中定义的条件
