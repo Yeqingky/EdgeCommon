@@ -1,5 +1,3 @@
-// Copyright 2022 GoEdge CDN goedge.cdn@gmail.com. All rights reserved.
-
 package nodeconfigs
 
 import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"

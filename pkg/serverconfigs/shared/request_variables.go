@@ -1,5 +1,3 @@
-// Copyright 2021 GoEdge CDN goedge.cdn@gmail.com. All rights reserved.
-
 package shared
 
 import "github.com/iwind/TeaGo/maps"
