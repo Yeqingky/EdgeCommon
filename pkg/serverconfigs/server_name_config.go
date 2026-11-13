@@ -3,7 +3,7 @@ package serverconfigs
 import (
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
 	"github.com/iwind/TeaGo/lists"
 )
 

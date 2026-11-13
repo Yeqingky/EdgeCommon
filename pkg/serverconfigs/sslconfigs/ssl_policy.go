@@ -7,7 +7,7 @@ import (
 	"crypto/x509"
 	"time"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
 	"golang.org/x/net/http2"
 )
 

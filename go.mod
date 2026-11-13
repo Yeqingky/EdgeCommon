@@ -1,4 +1,4 @@
-module github.com/TeaOSLab/EdgeCommon
+module git.ovh.im/yeqing/EdgeCommon
 
 go 1.27.4
 

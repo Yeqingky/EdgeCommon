@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/langs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/langs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
 )
 
 var SharedLogDAO = NewLogDAO()

@@ -5,7 +5,7 @@ package iputils_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/iputils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/iputils"
 )
 
 func TestParseCIDR(t *testing.T) {

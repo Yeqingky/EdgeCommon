@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
 )
 
 const varPrefix = "lang."

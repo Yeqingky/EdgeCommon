@@ -3,7 +3,7 @@
 package codes
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/langs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/langs"
 )
 
 const (

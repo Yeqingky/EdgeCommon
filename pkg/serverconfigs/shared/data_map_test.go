@@ -5,7 +5,7 @@ package shared_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 )
 
 func TestNewDataMap(t *testing.T) {

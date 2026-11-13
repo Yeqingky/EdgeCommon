@@ -5,7 +5,7 @@ package iplibrary_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/iplibrary"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/iplibrary"
 	"github.com/iwind/TeaGo/rands"
 	"github.com/iwind/TeaGo/types"
 	stringutil "github.com/iwind/TeaGo/utils/string"

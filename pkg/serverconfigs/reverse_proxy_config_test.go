@@ -6,7 +6,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 )
 
 func TestReverseProxyConfig_Init(t *testing.T) {

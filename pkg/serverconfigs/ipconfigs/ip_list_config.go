@@ -1,6 +1,6 @@
 package ipconfigs
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 
 // IP名单配置
 type IPListConfig struct {

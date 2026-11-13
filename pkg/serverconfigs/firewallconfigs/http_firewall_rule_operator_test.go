@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/firewallconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/firewallconfigs"
 )
 
 func TestRuleOperator_Markdown(t *testing.T) {

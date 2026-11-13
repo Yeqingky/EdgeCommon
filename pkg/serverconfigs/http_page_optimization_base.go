@@ -5,7 +5,7 @@ package serverconfigs
 import (
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 )
 
 type HTTPBaseOptimizationConfig struct {

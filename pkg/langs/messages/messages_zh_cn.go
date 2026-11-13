@@ -3,7 +3,7 @@
 package messages
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/langs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/langs"
 )
 
 func init() {

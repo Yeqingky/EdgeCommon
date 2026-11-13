@@ -2,7 +2,7 @@
 
 package serverconfigs
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 
 // HLSEncryptingConfig HLS加密配置
 type HLSEncryptingConfig struct {

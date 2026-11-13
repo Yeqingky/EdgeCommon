@@ -2,7 +2,7 @@
 
 package serverconfigs
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 
 // DefaultTrafficLimitNoticePageBody 达到流量限制时默认提示内容
 const DefaultTrafficLimitNoticePageBody = `<!DOCTYPE html>

@@ -2,7 +2,7 @@
 
 package nodeconfigs
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 
 func init() {
 	_ = DefaultWebPImagePolicy.Init()

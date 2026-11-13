@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/configutils"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/configutils"
 )
 
 // HTTPHeaderReplaceValue 值替换定义

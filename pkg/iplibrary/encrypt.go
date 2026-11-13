@@ -2,7 +2,7 @@
 
 package iplibrary
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/nodeutils"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/nodeutils"
 
 type Encrypt struct {
 }

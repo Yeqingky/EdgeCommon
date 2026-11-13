@@ -2,7 +2,7 @@
 
 package userconfigs
 
-import "github.com/TeaOSLab/EdgeCommon/pkg/rpc/pb"
+import "git.ovh.im/yeqing/EdgeCommon/pkg/rpc/pb"
 
 // UserFeatureCode 用户功能代号
 type UserFeatureCode = string

@@ -5,7 +5,7 @@ package langs_test
 import (
 	"testing"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/langs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/langs"
 )
 
 func TestMessage(t *testing.T) {

@@ -1,7 +1,7 @@
 package firewallconfigs
 
 import (
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/ipconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/ipconfigs"
 )
 
 // HTTPFirewallInboundConfig HTTP防火墙入口配置

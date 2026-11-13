@@ -3,8 +3,8 @@ package firewallconfigs
 import (
 	"strings"
 
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/regionconfigs"
-	"github.com/TeaOSLab/EdgeCommon/pkg/serverconfigs/shared"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/regionconfigs"
+	"git.ovh.im/yeqing/EdgeCommon/pkg/serverconfigs/shared"
 )
 
 type HTTPFirewallRegionConfig struct {
