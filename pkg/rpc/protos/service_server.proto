@@ -537,6 +537,7 @@ message FindEnabledServerDNSResponse {
 	string dnsName = 1;
 	DNSDomain domain = 2;
 	bool supportCNAME = 3;
+	bool sharedCNAME = 4;
 }
 
 // 检查网站是否属于某个用户

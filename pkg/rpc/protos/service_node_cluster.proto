@@ -321,6 +321,7 @@ message FindEnabledNodeClusterDNSResponse {
 	int32 ttl = 8;
 	bool cnameAsDomain = 9;
 	bool includingLnNodes = 10;
+	bool sharedCNAME = 11;
 }
 
 // 计算使用某个DNS服务商的集群数量
@@ -363,6 +364,7 @@ message UpdateNodeClusterDNSRequest {
 	int32 ttl = 7;
 	bool cnameAsDomain = 8;
 	bool includingLnNodes = 9;
+	bool sharedCNAME = 10;
 }
 
 // 检查集群的DNS是否有变化

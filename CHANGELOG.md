@@ -2,6 +2,8 @@
 
 ## v1.4.2-rc.1 (2026-11-13)
 
+- 集群DNS配置新增 SharedCNAME, 用于所有网站共用一个CNAME
+- ClusterDNSConfig 默认关闭 CNAMEAsDomain
 - 移除WAF告警动作描述中的商业版标记
 - 授权相关菜单文案改为授权信息和授权认证
 - systemconfigs.AdminUIConfig 移除 ShowOpenSourceInfo 字段
