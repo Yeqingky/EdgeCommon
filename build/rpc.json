@@ -6240,6 +6240,28 @@
           "isDeprecated": false
         },
         {
+          "name": "findNodeClusterFRP",
+          "requestMessageName": "FindNodeClusterFRPRequest",
+          "responseMessageName": "FindNodeClusterFRPResponse",
+          "code": "rpc findNodeClusterFRP(FindNodeClusterFRPRequest) returns (FindNodeClusterFRPResponse);",
+          "doc": "获取集群的FRP设置",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "updateNodeClusterFRP",
+          "requestMessageName": "UpdateNodeClusterFRPRequest",
+          "responseMessageName": "RPCSuccess",
+          "code": "rpc updateNodeClusterFRP(UpdateNodeClusterFRPRequest) returns (RPCSuccess);",
+          "doc": "修改集群的FRP设置",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
           "name": "findNodeClusterHTTPPagesPolicy",
           "requestMessageName": "FindNodeClusterHTTPPagesPolicyRequest",
           "responseMessageName": "FindNodeClusterHTTPPagesPolicyResponse",
@@ -18915,6 +18937,16 @@
       "doc": ""
     },
     {
+      "name": "FindNodeClusterFRPRequest",
+      "code": "message FindNodeClusterFRPRequest {\n\tint64 nodeClusterId = 1; // 集群ID\n}",
+      "doc": "获取集群的FRP设置"
+    },
+    {
+      "name": "FindNodeClusterFRPResponse",
+      "code": "message FindNodeClusterFRPResponse {\n\tbytes frpJSON = 1; // FRP服务端配置\n}",
+      "doc": ""
+    },
+    {
       "name": "FindNodeClusterGlobalServerConfigRequest",
       "code": "message FindNodeClusterGlobalServerConfigRequest {\n\tint64 nodeClusterId = 1;\n}",
       "doc": "获取集群的全局服务设置"
@@ -20741,7 +20773,7 @@
     },
     {
       "name": "NodeCluster",
-      "code": "message NodeCluster {\n\tint64 id = 1;\n\tstring name = 2;\n\tint64 createdAt = 3;\n\tint64 nodeGrantId = 4;\n\tstring installDir = 5;\n\tstring uniqueId = 6;\n\tstring secret = 7;\n\tstring dnsName = 8;\n\tint64 dnsDomainId = 9;\n\tstring dnsDefaultRoute = 22; // DNS默认线路\n\tint64 httpCachePolicyId = 10;\n\tint64 httpFirewallPolicyId = 11;\n\tbool isOn = 12;\n\tstring timeZone = 13;\n\tint32 nodeMaxThreads = 14;\n\tbool autoOpenPorts = 16;\n\tbool isPinned = 17;\n\tbytes clockJSON = 18;\n\tbool autoRemoteStart = 19;\n\tbool autoInstallNftables = 20;\n\tbytes sshParamsJSON = 21;\n\tbool autoSystemTuning = 23; // 是否自动调节系统参数\n\tbool autoTrimDisks = 24; // 是否自动TRIM硬盘\n\tint32 maxConcurrentReads = 25; // 最大并发读\n\tint32 maxConcurrentWrites = 26; // 最大并发写\n}",
+      "code": "message NodeCluster {\n\tint64 id = 1;\n\tstring name = 2;\n\tint64 createdAt = 3;\n\tint64 nodeGrantId = 4;\n\tstring installDir = 5;\n\tstring uniqueId = 6;\n\tstring secret = 7;\n\tstring dnsName = 8;\n\tint64 dnsDomainId = 9;\n\tstring dnsDefaultRoute = 22; // DNS默认线路\n\tint64 httpCachePolicyId = 10;\n\tint64 httpFirewallPolicyId = 11;\n\tbool isOn = 12;\n\tstring timeZone = 13;\n\tint32 nodeMaxThreads = 14;\n\tbool autoOpenPorts = 16;\n\tbool isPinned = 17;\n\tbytes clockJSON = 18;\n\tbool autoRemoteStart = 19;\n\tbool autoInstallNftables = 20;\n\tbytes sshParamsJSON = 21;\n\tbool autoSystemTuning = 23; // 是否自动调节系统参数\n\tbool autoTrimDisks = 24; // 是否自动TRIM硬盘\n\tint32 maxConcurrentReads = 25; // 最大并发读\n\tint32 maxConcurrentWrites = 26; // 最大并发写\n\tbytes frpJSON = 27; // FRP服务端配置\n}",
       "doc": ""
     },
     {
@@ -22078,6 +22110,11 @@
       "name": "UpdateNodeClusterDNSRequest",
       "code": "message UpdateNodeClusterDNSRequest {\n\tint64 nodeClusterId = 1;\n\tstring dnsName = 2;\n\tint64 dnsDomainId = 3;\n\tbool nodesAutoSync = 4;\n\tbool serversAutoSync = 5;\n\trepeated string cnameRecords = 6;\n\tint32 ttl = 7;\n\tbool cnameAsDomain = 8;\n\tbool includingLnNodes = 9;\n\tbool sharedCNAME = 10;\n}",
       "doc": "修改集群的域名设置"
+    },
+    {
+      "name": "UpdateNodeClusterFRPRequest",
+      "code": "message UpdateNodeClusterFRPRequest {\n\tint64 nodeClusterId = 1; // 集群ID\n\tbytes frpJSON = 2; // FRP服务端配置\n}",
+      "doc": "修改集群的FRP设置"
     },
     {
       "name": "UpdateNodeClusterFirewallActionRequest",

@@ -80,6 +80,7 @@ type NodeConfig struct {
 	// 全局配置
 	GlobalServerConfig *serverconfigs.GlobalServerConfig `yaml:"globalServerConfig" json:"globalServerConfig"` // 服务全局配置,用来替代 GlobalConfig
 	ProductConfig      *ProductConfig                    `yaml:"productConfig" json:"productConfig"`
+	FRP                *FRPConfig                        `yaml:"frp" json:"frp"` // FRP服务端配置
 
 	// 集群统一配置
 	HTTPFirewallPolicies []*firewallconfigs.HTTPFirewallPolicy   `yaml:"httpFirewallPolicies" json:"httpFirewallPolicies"`
@@ -304,6 +305,14 @@ func (this *NodeConfig) Init(ctx context.Context) (err error, serverErrors []*Se
 	// TOA
 	if this.TOA != nil {
 		err = this.TOA.Init()
+		if err != nil {
+			return
+		}
+	}
+
+	// FRP
+	if this.FRP != nil {
+		err = this.FRP.Init()
 		if err != nil {
 			return
 		}

@@ -64,6 +64,8 @@ const (
 	NodeClusterService_UpdateNodeClusterDDoSProtection_FullMethodName                     = "/pb.NodeClusterService/updateNodeClusterDDoSProtection"
 	NodeClusterService_FindNodeClusterGlobalServerConfig_FullMethodName                   = "/pb.NodeClusterService/findNodeClusterGlobalServerConfig"
 	NodeClusterService_UpdateNodeClusterGlobalServerConfig_FullMethodName                 = "/pb.NodeClusterService/updateNodeClusterGlobalServerConfig"
+	NodeClusterService_FindNodeClusterFRP_FullMethodName                                  = "/pb.NodeClusterService/findNodeClusterFRP"
+	NodeClusterService_UpdateNodeClusterFRP_FullMethodName                                = "/pb.NodeClusterService/updateNodeClusterFRP"
 	NodeClusterService_FindNodeClusterHTTPPagesPolicy_FullMethodName                      = "/pb.NodeClusterService/findNodeClusterHTTPPagesPolicy"
 	NodeClusterService_UpdateNodeClusterHTTPPagesPolicy_FullMethodName                    = "/pb.NodeClusterService/updateNodeClusterHTTPPagesPolicy"
 	NodeClusterService_FindNodeClusterHTTP3Policy_FullMethodName                          = "/pb.NodeClusterService/findNodeClusterHTTP3Policy"
@@ -166,6 +168,10 @@ type NodeClusterServiceClient interface {
 	FindNodeClusterGlobalServerConfig(ctx context.Context, in *FindNodeClusterGlobalServerConfigRequest, opts ...grpc.CallOption) (*FindNodeClusterGlobalServerConfigResponse, error)
 	// 修改集群的全局服务设置
 	UpdateNodeClusterGlobalServerConfig(ctx context.Context, in *UpdateNodeClusterGlobalServerConfigRequest, opts ...grpc.CallOption) (*RPCSuccess, error)
+	// 获取集群的FRP设置
+	FindNodeClusterFRP(ctx context.Context, in *FindNodeClusterFRPRequest, opts ...grpc.CallOption) (*FindNodeClusterFRPResponse, error)
+	// 修改集群的FRP设置
+	UpdateNodeClusterFRP(ctx context.Context, in *UpdateNodeClusterFRPRequest, opts ...grpc.CallOption) (*RPCSuccess, error)
 	// 获取集群的自定义页面设置
 	FindNodeClusterHTTPPagesPolicy(ctx context.Context, in *FindNodeClusterHTTPPagesPolicyRequest, opts ...grpc.CallOption) (*FindNodeClusterHTTPPagesPolicyResponse, error)
 	// 修改集群的自定义页面设置
@@ -593,6 +599,24 @@ func (c *nodeClusterServiceClient) UpdateNodeClusterGlobalServerConfig(ctx conte
 	return out, nil
 }
 
+func (c *nodeClusterServiceClient) FindNodeClusterFRP(ctx context.Context, in *FindNodeClusterFRPRequest, opts ...grpc.CallOption) (*FindNodeClusterFRPResponse, error) {
+	out := new(FindNodeClusterFRPResponse)
+	err := c.cc.Invoke(ctx, NodeClusterService_FindNodeClusterFRP_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *nodeClusterServiceClient) UpdateNodeClusterFRP(ctx context.Context, in *UpdateNodeClusterFRPRequest, opts ...grpc.CallOption) (*RPCSuccess, error) {
+	out := new(RPCSuccess)
+	err := c.cc.Invoke(ctx, NodeClusterService_UpdateNodeClusterFRP_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *nodeClusterServiceClient) FindNodeClusterHTTPPagesPolicy(ctx context.Context, in *FindNodeClusterHTTPPagesPolicyRequest, opts ...grpc.CallOption) (*FindNodeClusterHTTPPagesPolicyResponse, error) {
 	out := new(FindNodeClusterHTTPPagesPolicyResponse)
 	err := c.cc.Invoke(ctx, NodeClusterService_FindNodeClusterHTTPPagesPolicy_FullMethodName, in, out, opts...)
@@ -741,6 +765,10 @@ type NodeClusterServiceServer interface {
 	FindNodeClusterGlobalServerConfig(context.Context, *FindNodeClusterGlobalServerConfigRequest) (*FindNodeClusterGlobalServerConfigResponse, error)
 	// 修改集群的全局服务设置
 	UpdateNodeClusterGlobalServerConfig(context.Context, *UpdateNodeClusterGlobalServerConfigRequest) (*RPCSuccess, error)
+	// 获取集群的FRP设置
+	FindNodeClusterFRP(context.Context, *FindNodeClusterFRPRequest) (*FindNodeClusterFRPResponse, error)
+	// 修改集群的FRP设置
+	UpdateNodeClusterFRP(context.Context, *UpdateNodeClusterFRPRequest) (*RPCSuccess, error)
 	// 获取集群的自定义页面设置
 	FindNodeClusterHTTPPagesPolicy(context.Context, *FindNodeClusterHTTPPagesPolicyRequest) (*FindNodeClusterHTTPPagesPolicyResponse, error)
 	// 修改集群的自定义页面设置
@@ -893,6 +921,12 @@ func (UnimplementedNodeClusterServiceServer) FindNodeClusterGlobalServerConfig(c
 }
 func (UnimplementedNodeClusterServiceServer) UpdateNodeClusterGlobalServerConfig(context.Context, *UpdateNodeClusterGlobalServerConfigRequest) (*RPCSuccess, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateNodeClusterGlobalServerConfig not implemented")
+}
+func (UnimplementedNodeClusterServiceServer) FindNodeClusterFRP(context.Context, *FindNodeClusterFRPRequest) (*FindNodeClusterFRPResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FindNodeClusterFRP not implemented")
+}
+func (UnimplementedNodeClusterServiceServer) UpdateNodeClusterFRP(context.Context, *UpdateNodeClusterFRPRequest) (*RPCSuccess, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateNodeClusterFRP not implemented")
 }
 func (UnimplementedNodeClusterServiceServer) FindNodeClusterHTTPPagesPolicy(context.Context, *FindNodeClusterHTTPPagesPolicyRequest) (*FindNodeClusterHTTPPagesPolicyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FindNodeClusterHTTPPagesPolicy not implemented")
@@ -1734,6 +1768,42 @@ func _NodeClusterService_UpdateNodeClusterGlobalServerConfig_Handler(srv interfa
 	return interceptor(ctx, in, info, handler)
 }
 
+func _NodeClusterService_FindNodeClusterFRP_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FindNodeClusterFRPRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NodeClusterServiceServer).FindNodeClusterFRP(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: NodeClusterService_FindNodeClusterFRP_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NodeClusterServiceServer).FindNodeClusterFRP(ctx, req.(*FindNodeClusterFRPRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NodeClusterService_UpdateNodeClusterFRP_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateNodeClusterFRPRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NodeClusterServiceServer).UpdateNodeClusterFRP(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: NodeClusterService_UpdateNodeClusterFRP_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NodeClusterServiceServer).UpdateNodeClusterFRP(ctx, req.(*UpdateNodeClusterFRPRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _NodeClusterService_FindNodeClusterHTTPPagesPolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(FindNodeClusterHTTPPagesPolicyRequest)
 	if err := dec(in); err != nil {
@@ -2028,6 +2098,14 @@ var NodeClusterService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "updateNodeClusterGlobalServerConfig",
 			Handler:    _NodeClusterService_UpdateNodeClusterGlobalServerConfig_Handler,
+		},
+		{
+			MethodName: "findNodeClusterFRP",
+			Handler:    _NodeClusterService_FindNodeClusterFRP_Handler,
+		},
+		{
+			MethodName: "updateNodeClusterFRP",
+			Handler:    _NodeClusterService_UpdateNodeClusterFRP_Handler,
 		},
 		{
 			MethodName: "findNodeClusterHTTPPagesPolicy",

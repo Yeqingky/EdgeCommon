@@ -147,6 +147,12 @@ service NodeClusterService {
 	// 修改集群的全局服务设置
 	rpc updateNodeClusterGlobalServerConfig(UpdateNodeClusterGlobalServerConfigRequest) returns (RPCSuccess);
 
+	// 获取集群的FRP设置
+	rpc findNodeClusterFRP(FindNodeClusterFRPRequest) returns (FindNodeClusterFRPResponse);
+
+	// 修改集群的FRP设置
+	rpc updateNodeClusterFRP(UpdateNodeClusterFRPRequest) returns (RPCSuccess);
+
 	// 获取集群的自定义页面设置
 	rpc findNodeClusterHTTPPagesPolicy(FindNodeClusterHTTPPagesPolicyRequest) returns (FindNodeClusterHTTPPagesPolicyResponse);
 
@@ -581,6 +587,21 @@ message FindNodeClusterGlobalServerConfigResponse {
 message UpdateNodeClusterGlobalServerConfigRequest {
 	int64 nodeClusterId = 1; // 集群ID
 	bytes globalServerConfigJSON = 2; // 网站全局配置
+}
+
+// 获取集群的FRP设置
+message FindNodeClusterFRPRequest {
+	int64 nodeClusterId = 1; // 集群ID
+}
+
+message FindNodeClusterFRPResponse {
+	bytes frpJSON = 1; // FRP服务端配置
+}
+
+// 修改集群的FRP设置
+message UpdateNodeClusterFRPRequest {
+	int64 nodeClusterId = 1; // 集群ID
+	bytes frpJSON = 2; // FRP服务端配置
 }
 
 // 获取集群的自定义页面设置
