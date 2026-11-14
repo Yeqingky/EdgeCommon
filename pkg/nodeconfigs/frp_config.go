@@ -7,10 +7,22 @@ import (
 
 // FRPConfig FRP 服务端配置
 type FRPConfig struct {
-	IsOn     bool   `json:"isOn" yaml:"isOn"`
-	BindAddr string `json:"bindAddr" yaml:"bindAddr"`
-	BindPort int    `json:"bindPort" yaml:"bindPort"`
-	Token    string `json:"token" yaml:"token"`
+	IsOn        bool              `json:"isOn" yaml:"isOn"`
+	BindAddr    string            `json:"bindAddr" yaml:"bindAddr"`
+	BindPort    int               `json:"bindPort" yaml:"bindPort"`
+	Token       string            `json:"token" yaml:"token"`
+	Tunnels     []FRPTunnelConfig `json:"tunnels,omitempty" yaml:"tunnels,omitempty"`
+	ServerAddrs []FRPServerAddr   `json:"serverAddrs,omitempty" yaml:"serverAddrs,omitempty"`
+}
+
+type FRPTunnelConfig struct {
+	ID     int64  `json:"id" yaml:"id"`
+	Secret string `json:"secret" yaml:"secret"`
+}
+
+type FRPServerAddr struct {
+	Addr string `json:"addr" yaml:"addr"`
+	Port int    `json:"port" yaml:"port"`
 }
 
 func NewFRPConfig() *FRPConfig {

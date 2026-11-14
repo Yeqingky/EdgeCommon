@@ -7,4 +7,5 @@ message NetworkAddress {
 	string protocol = 1;
 	string host = 2;
 	string portRange = 3;
+	int64 tunnelNodeId = 4;
 }

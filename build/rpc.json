@@ -20955,7 +20955,7 @@
     },
     {
       "name": "NetworkAddress",
-      "code": "message NetworkAddress {\n\tstring protocol = 1;\n\tstring host = 2;\n\tstring portRange = 3;\n}",
+      "code": "message NetworkAddress {\n\tstring protocol = 1;\n\tstring host = 2;\n\tstring portRange = 3;\n\tint64 tunnelNodeId = 4;\n}",
       "doc": ""
     },
     {

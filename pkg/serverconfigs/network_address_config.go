@@ -21,6 +21,9 @@ type NetworkAddressConfig struct {
 	MinPort int `yaml:"minPort" json:"minPort"` // minPort和maxPort只是用来记录PortRange分解后的结果,不需要用户输入
 	MaxPort int `yaml:"maxPort" json:"maxPort"`
 
+	// TunnelNodeId references a tunnel node used as the origin.
+	TunnelNodeId int64 `yaml:"tunnelNodeId" json:"tunnelNodeId,omitempty"`
+
 	hostHasVariables bool
 }
 
