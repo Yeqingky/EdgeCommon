@@ -4,6 +4,8 @@
 
 - 新增 nodeconfigs.FRPConfig 与 NodeConfig.FRP, 集群模型新增 frp 配置字段及 find/updateNodeClusterFRP 接口
 
+- 新增 TunnelNode/TunnelLog RPC 模型和 TunnelNodeService
+
 ## v1.4.2-rc.1 (2026-11-13)
 
 - 新增 Gitea 工作流 mirror-to-github: 全部分支和标签强制镜像到 github.com/Yeqingky/EdgeCommon, 推送前过滤 AGENTS.md 和 .gitea, 并删除 GitHub 端多余的分支和标签

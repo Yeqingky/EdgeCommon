@@ -1,0 +1,113 @@
+syntax = "proto3";
+option go_package = "./pb";
+
+package pb;
+
+import "models/model_tunnel_node.proto";
+import "models/rpc_messages.proto";
+
+// TunnelNodeService 隧道节点管理
+service TunnelNodeService {
+	rpc createTunnelNode (CreateTunnelNodeRequest) returns (CreateTunnelNodeResponse);
+	rpc listTunnelNodes (ListTunnelNodesRequest) returns (ListTunnelNodesResponse);
+	rpc countTunnelNodes (CountTunnelNodesRequest) returns (RPCCountResponse);
+	rpc findTunnelNode (FindTunnelNodeRequest) returns (FindTunnelNodeResponse);
+	rpc findTunnelNodeWithToken (FindTunnelNodeWithTokenRequest) returns (FindTunnelNodeWithTokenResponse);
+	rpc findTunnelNodeConfigWithToken (FindTunnelNodeConfigWithTokenRequest) returns (FindTunnelNodeConfigWithTokenResponse);
+	rpc deleteTunnelNode (DeleteTunnelNodeRequest) returns (RPCSuccess);
+	rpc updateTunnelNode (UpdateTunnelNodeRequest) returns (RPCSuccess);
+	rpc updateTunnelNodeIsInstalled (UpdateTunnelNodeIsInstalledRequest) returns (RPCSuccess);
+	rpc createTunnelLog (CreateTunnelLogRequest) returns (RPCSuccess);
+	rpc listTunnelLogs (ListTunnelLogsRequest) returns (ListTunnelLogsResponse);
+}
+
+message CreateTunnelNodeRequest {
+	string name = 1;
+	int64 clusterId = 2;
+	int64 userId = 3;
+	string serverAddr = 4;
+	int32 serverPort = 5;
+	string os = 6;
+	string arch = 7;
+}
+
+message CreateTunnelNodeResponse {
+	int64 tunnelNodeId = 1;
+	string token = 2;
+}
+
+message ListTunnelNodesRequest {
+	int64 offset = 1;
+	int64 size = 2;
+	int64 userId = 3;
+	int64 clusterId = 4;
+	string keyword = 5;
+}
+
+message ListTunnelNodesResponse {
+	repeated TunnelNode tunnelNodes = 1;
+}
+
+message CountTunnelNodesRequest {
+	int64 userId = 1;
+	int64 clusterId = 2;
+	string keyword = 3;
+}
+
+message FindTunnelNodeRequest {
+	int64 tunnelNodeId = 1;
+}
+
+message FindTunnelNodeResponse {
+	TunnelNode tunnelNode = 1;
+}
+
+message FindTunnelNodeWithTokenRequest {
+	string token = 1;
+}
+
+message FindTunnelNodeWithTokenResponse {
+	TunnelNode tunnelNode = 1;
+}
+
+message DeleteTunnelNodeRequest {
+	int64 tunnelNodeId = 1;
+}
+
+message UpdateTunnelNodeRequest {
+	int64 tunnelNodeId = 1;
+	string name = 2;
+	string serverAddr = 3;
+	int32 serverPort = 4;
+	bool isOn = 5;
+}
+
+message UpdateTunnelNodeIsInstalledRequest {
+	int64 tunnelNodeId = 1;
+	bool isInstalled = 2;
+}
+
+message CreateTunnelLogRequest {
+	string token = 1;
+	repeated TunnelLog logs = 2;
+}
+
+message ListTunnelLogsRequest {
+	int64 tunnelNodeId = 1;
+	int64 offset = 2;
+	int64 size = 3;
+}
+
+message ListTunnelLogsResponse {
+	repeated TunnelLog logs = 1;
+}
+
+message FindTunnelNodeConfigWithTokenRequest {
+	string token = 1;
+	string baseURL = 2;
+}
+
+message FindTunnelNodeConfigWithTokenResponse {
+	bytes configJSON = 1;
+	int64 configVersion = 2;
+}

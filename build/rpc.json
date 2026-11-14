@@ -11750,6 +11750,128 @@
       "doc": "流量包价格服务"
     },
     {
+      "name": "TunnelNodeService",
+      "methods": [
+        {
+          "name": "createTunnelNode",
+          "requestMessageName": "CreateTunnelNodeRequest",
+          "responseMessageName": "CreateTunnelNodeResponse",
+          "code": "rpc createTunnelNode (CreateTunnelNodeRequest) returns (CreateTunnelNodeResponse);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "listTunnelNodes",
+          "requestMessageName": "ListTunnelNodesRequest",
+          "responseMessageName": "ListTunnelNodesResponse",
+          "code": "rpc listTunnelNodes (ListTunnelNodesRequest) returns (ListTunnelNodesResponse);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "countTunnelNodes",
+          "requestMessageName": "CountTunnelNodesRequest",
+          "responseMessageName": "RPCCountResponse",
+          "code": "rpc countTunnelNodes (CountTunnelNodesRequest) returns (RPCCountResponse);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "findTunnelNode",
+          "requestMessageName": "FindTunnelNodeRequest",
+          "responseMessageName": "FindTunnelNodeResponse",
+          "code": "rpc findTunnelNode (FindTunnelNodeRequest) returns (FindTunnelNodeResponse);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "findTunnelNodeWithToken",
+          "requestMessageName": "FindTunnelNodeWithTokenRequest",
+          "responseMessageName": "FindTunnelNodeWithTokenResponse",
+          "code": "rpc findTunnelNodeWithToken (FindTunnelNodeWithTokenRequest) returns (FindTunnelNodeWithTokenResponse);",
+          "doc": "",
+          "roles": [],
+          "isDeprecated": false
+        },
+        {
+          "name": "findTunnelNodeConfigWithToken",
+          "requestMessageName": "FindTunnelNodeConfigWithTokenRequest",
+          "responseMessageName": "FindTunnelNodeConfigWithTokenResponse",
+          "code": "rpc findTunnelNodeConfigWithToken (FindTunnelNodeConfigWithTokenRequest) returns (FindTunnelNodeConfigWithTokenResponse);",
+          "doc": "",
+          "roles": [],
+          "isDeprecated": false
+        },
+        {
+          "name": "deleteTunnelNode",
+          "requestMessageName": "DeleteTunnelNodeRequest",
+          "responseMessageName": "RPCSuccess",
+          "code": "rpc deleteTunnelNode (DeleteTunnelNodeRequest) returns (RPCSuccess);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "updateTunnelNode",
+          "requestMessageName": "UpdateTunnelNodeRequest",
+          "responseMessageName": "RPCSuccess",
+          "code": "rpc updateTunnelNode (UpdateTunnelNodeRequest) returns (RPCSuccess);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "updateTunnelNodeIsInstalled",
+          "requestMessageName": "UpdateTunnelNodeIsInstalledRequest",
+          "responseMessageName": "RPCSuccess",
+          "code": "rpc updateTunnelNodeIsInstalled (UpdateTunnelNodeIsInstalledRequest) returns (RPCSuccess);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        },
+        {
+          "name": "createTunnelLog",
+          "requestMessageName": "CreateTunnelLogRequest",
+          "responseMessageName": "RPCSuccess",
+          "code": "rpc createTunnelLog (CreateTunnelLogRequest) returns (RPCSuccess);",
+          "doc": "",
+          "roles": [],
+          "isDeprecated": false
+        },
+        {
+          "name": "listTunnelLogs",
+          "requestMessageName": "ListTunnelLogsRequest",
+          "responseMessageName": "ListTunnelLogsResponse",
+          "code": "rpc listTunnelLogs (ListTunnelLogsRequest) returns (ListTunnelLogsResponse);",
+          "doc": "",
+          "roles": [
+            "admin"
+          ],
+          "isDeprecated": false
+        }
+      ],
+      "filename": "service_tunnel_node.proto",
+      "doc": "TunnelNodeService 隧道节点管理"
+    },
+    {
       "name": "UpdatingServerListService",
       "methods": [
         {
@@ -14152,6 +14274,11 @@
       "doc": "计算流量包价格项数量"
     },
     {
+      "name": "CountTunnelNodesRequest",
+      "code": "message CountTunnelNodesRequest {\n\tint64 userId = 1;\n\tint64 clusterId = 2;\n\tstring keyword = 3;\n}",
+      "doc": ""
+    },
+    {
       "name": "CountUnreadMessagesRequest",
       "code": "message CountUnreadMessagesRequest {\n\n}",
       "doc": "计算未读消息数"
@@ -15142,6 +15269,21 @@
       "doc": ""
     },
     {
+      "name": "CreateTunnelLogRequest",
+      "code": "message CreateTunnelLogRequest {\n\tstring token = 1;\n\trepeated TunnelLog logs = 2;\n}",
+      "doc": ""
+    },
+    {
+      "name": "CreateTunnelNodeRequest",
+      "code": "message CreateTunnelNodeRequest {\n\tstring name = 1;\n\tint64 clusterId = 2;\n\tint64 userId = 3;\n\tstring serverAddr = 4;\n\tint32 serverPort = 5;\n\tstring os = 6;\n\tstring arch = 7;\n}",
+      "doc": ""
+    },
+    {
+      "name": "CreateTunnelNodeResponse",
+      "code": "message CreateTunnelNodeResponse {\n\tint64 tunnelNodeId = 1;\n\tstring token = 2;\n}",
+      "doc": ""
+    },
+    {
       "name": "CreateUserADInstanceRequest",
       "code": "message CreateUserADInstanceRequest {\n\tint64 userId = 1;\n\tint64 adPackageId = 2;\n\tint64 adPackagePeriodId = 3;\n\tint32 count = 4;\n}",
       "doc": "创建用户高防实例"
@@ -15685,6 +15827,11 @@
       "name": "DeleteTrafficPackageRequest",
       "code": "message DeleteTrafficPackageRequest {\n\tint64 trafficPackageId = 1;\n}",
       "doc": "删除流量包"
+    },
+    {
+      "name": "DeleteTunnelNodeRequest",
+      "code": "message DeleteTunnelNodeRequest {\n\tint64 tunnelNodeId = 1;\n}",
+      "doc": ""
     },
     {
       "name": "DeleteUserADInstanceRequest",
@@ -19472,6 +19619,36 @@
       "doc": ""
     },
     {
+      "name": "FindTunnelNodeConfigWithTokenRequest",
+      "code": "message FindTunnelNodeConfigWithTokenRequest {\n\tstring token = 1;\n\tstring baseURL = 2;\n}",
+      "doc": ""
+    },
+    {
+      "name": "FindTunnelNodeConfigWithTokenResponse",
+      "code": "message FindTunnelNodeConfigWithTokenResponse {\n\tbytes configJSON = 1;\n\tint64 configVersion = 2;\n}",
+      "doc": ""
+    },
+    {
+      "name": "FindTunnelNodeRequest",
+      "code": "message FindTunnelNodeRequest {\n\tint64 tunnelNodeId = 1;\n}",
+      "doc": ""
+    },
+    {
+      "name": "FindTunnelNodeResponse",
+      "code": "message FindTunnelNodeResponse {\n\tTunnelNode tunnelNode = 1;\n}",
+      "doc": ""
+    },
+    {
+      "name": "FindTunnelNodeWithTokenRequest",
+      "code": "message FindTunnelNodeWithTokenRequest {\n\tstring token = 1;\n}",
+      "doc": ""
+    },
+    {
+      "name": "FindTunnelNodeWithTokenResponse",
+      "code": "message FindTunnelNodeWithTokenResponse {\n\tTunnelNode tunnelNode = 1;\n}",
+      "doc": ""
+    },
+    {
       "name": "FindUpdatingServerListsRequest",
       "code": "message FindUpdatingServerListsRequest {\n\tint64 lastId = 1; // 上一次读取的列表ID\n}",
       "doc": "查找要更新的服务配置"
@@ -20434,6 +20611,26 @@
     {
       "name": "ListTopServerDomainStatsWithServerIdResponse",
       "code": "message ListTopServerDomainStatsWithServerIdResponse {\n\trepeated ServerDomainHourlyStat  domainStats = 1;\n}",
+      "doc": ""
+    },
+    {
+      "name": "ListTunnelLogsRequest",
+      "code": "message ListTunnelLogsRequest {\n\tint64 tunnelNodeId = 1;\n\tint64 offset = 2;\n\tint64 size = 3;\n}",
+      "doc": ""
+    },
+    {
+      "name": "ListTunnelLogsResponse",
+      "code": "message ListTunnelLogsResponse {\n\trepeated TunnelLog logs = 1;\n}",
+      "doc": ""
+    },
+    {
+      "name": "ListTunnelNodesRequest",
+      "code": "message ListTunnelNodesRequest {\n\tint64 offset = 1;\n\tint64 size = 2;\n\tint64 userId = 3;\n\tint64 clusterId = 4;\n\tstring keyword = 5;\n}",
+      "doc": ""
+    },
+    {
+      "name": "ListTunnelNodesResponse",
+      "code": "message ListTunnelNodesResponse {\n\trepeated TunnelNode tunnelNodes = 1;\n}",
       "doc": ""
     },
     {
@@ -21415,6 +21612,16 @@
       "name": "TruncateDBTableRequest",
       "code": "message TruncateDBTableRequest {\n\tstring dbTable = 1;\n}",
       "doc": "清空表"
+    },
+    {
+      "name": "TunnelLog",
+      "code": "message TunnelLog {\n\tint64 id = 1;\n\tint64 tunnelNodeId = 2;\n\tstring level = 3;\n\tstring message = 4;\n\tint64 createdAt = 5;\n}",
+      "doc": "TunnelLog 隧道节点日志"
+    },
+    {
+      "name": "TunnelNode",
+      "code": "message TunnelNode {\n\tint64 id = 1;\n\tint64 clusterId = 2;\n\tint64 userId = 3;\n\tstring name = 4;\n\tstring token = 5;\n\tstring serverAddr = 6;\n\tint32 serverPort = 7;\n\tstring os = 8;\n\tstring arch = 9;\n\tstring version = 10;\n\tbool isOn = 11;\n\tbool isInstalled = 12;\n\tint64 configVersion = 13;\n\tint64 createdAt = 14;\n\tint64 updatedAt = 15;\n}",
+      "doc": "TunnelNode 隧道节点 (frpc)"
     },
     {
       "name": "UninstallNodeRequest",
@@ -22580,6 +22787,16 @@
       "name": "UpdateTrafficPackageRequest",
       "code": "message UpdateTrafficPackageRequest {\n\tint64 trafficPackageId = 1;\n\tbool isOn = 2;\n}",
       "doc": "修改流量包"
+    },
+    {
+      "name": "UpdateTunnelNodeIsInstalledRequest",
+      "code": "message UpdateTunnelNodeIsInstalledRequest {\n\tint64 tunnelNodeId = 1;\n\tbool isInstalled = 2;\n}",
+      "doc": ""
+    },
+    {
+      "name": "UpdateTunnelNodeRequest",
+      "code": "message UpdateTunnelNodeRequest {\n\tint64 tunnelNodeId = 1;\n\tstring name = 2;\n\tstring serverAddr = 3;\n\tint32 serverPort = 4;\n\tbool isOn = 5;\n}",
+      "doc": ""
     },
     {
       "name": "UpdateUserADInstanceObjectsRequest",
