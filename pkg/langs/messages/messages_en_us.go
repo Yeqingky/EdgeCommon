@@ -62,7 +62,7 @@ func init() {
 		"admin_login@log_system_error":                                        "",
 		"admin_login@log_update_login":                                        "",
 		"admin_menu@admin_recipients":                                         "Notification Medias",
-		"admin_menu@admins":                                                   "System Users",
+		"admin_menu@admins":                                                   "Admins",
 		"admin_menu@dashboard":                                                "Dashboard",
 		"admin_menu@dns":                                                      "DNS Service",
 		"admin_menu@dns_clusters":                                             "Clusters",
