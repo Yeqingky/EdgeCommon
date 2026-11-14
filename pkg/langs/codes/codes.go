@@ -83,6 +83,10 @@ const (
 	AdminMenu_NodeLogs                                          langs.MessageCode = "admin_menu@node_logs"                                                // 节点日志
 	AdminMenu_NodeRegions                                       langs.MessageCode = "admin_menu@node_regions"                                             // 区域设置
 	AdminMenu_NodeSSHGrants                                     langs.MessageCode = "admin_menu@node_ssh_grants"                                          // 节点SSH
+	AdminMenu_NodeManagement                                    langs.MessageCode = "admin_menu@node_management"                                         // 节点管理
+	AdminMenu_Tunnels                                           langs.MessageCode = "admin_menu@tunnels"                                                 // 隧道管理
+	AdminMenu_TunnelNodes                                       langs.MessageCode = "admin_menu@tunnel_nodes"                                            // 隧道节点
+	AdminMenu_TunnelLogs                                        langs.MessageCode = "admin_menu@tunnel_logs"                                             // 隧道节点日志
 	AdminMenu_Nodes                                             langs.MessageCode = "admin_menu@nodes"                                                    // 边缘节点
 	AdminMenu_NS                                                langs.MessageCode = "admin_menu@ns"                                                       // 智能DNS
 	AdminMenu_NSAccessLogs                                      langs.MessageCode = "admin_menu@ns_access_logs"                                           // 访问日志
