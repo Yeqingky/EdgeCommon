@@ -5,8 +5,9 @@
 - 新增 nodeconfigs.FRPConfig 与 NodeConfig.FRP, 集群模型新增 frp 配置字段及 find/updateNodeClusterFRP 接口
 
 - 新增 TunnelNode/TunnelLog RPC 模型和 TunnelNodeService
-- FRP 配置支持多个服务端地址和加密隧道, 源站地址可关联隧道节点
-- 新增网站创建与隧道选择的 Gitea 端到端工作流
+- FRP 配置支持多个服务端地址和加密隧道
+- 新增网站创建和源站配置的 Gitea 端到端工作流
+- 节点状态新增不含 Token 的 FRPS 进程快照
 
 ## v1.4.2-rc.1 (2026-11-13)
 

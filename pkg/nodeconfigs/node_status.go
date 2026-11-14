@@ -1,5 +1,14 @@
 package nodeconfigs
 
+// FRPSStatus describes the FRPS process managed by this node.
+type FRPSStatus struct {
+	IsEnabled bool   `json:"isEnabled"`
+	IsRunning bool   `json:"isRunning"`
+	BindAddr  string `json:"bindAddr"`
+	BindPort  int    `json:"bindPort"`
+	PID       int    `json:"pid"`
+}
+
 // NodeStatus 节点状态
 type NodeStatus struct {
 	BuildVersion     string `json:"buildVersion"`     // 编译版本
@@ -36,8 +45,8 @@ type NodeStatus struct {
 	CacheTotalDiskSize   int64 `json:"cacheTotalDiskSize"`
 	CacheTotalMemorySize int64 `json:"cacheTotalMemorySize"`
 
-	LocalFirewallName string `json:"localFirewallName"`
-
-	IsActive bool   `json:"isActive"`
-	Error    string `json:"error"`
+	LocalFirewallName string      `json:"localFirewallName"`
+	FRPS              *FRPSStatus `json:"frps,omitempty"`
+	IsActive          bool        `json:"isActive"`
+	Error             string      `json:"error"`
 }
